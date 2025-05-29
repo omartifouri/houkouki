@@ -1,7 +1,9 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Brain, FileText, Calendar, Shield, CheckCircle, Star, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -233,7 +235,11 @@ const Index = () => {
                     <Calendar className="h-5 w-5 text-red-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Gestion des rendez-vous</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      <Link to="/booking" className="hover:text-red-600 transition-colors border-b border-red-200 hover:border-red-600">
+                        Gestion des rendez-vous
+                      </Link>
+                    </h3>
                     <p className="text-gray-600">Sélectionnez facilement vos créneaux avec nos psychologues et chargés de recrutement via notre formulaire en ligne.</p>
                   </div>
                 </div>
