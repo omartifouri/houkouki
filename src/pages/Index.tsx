@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -19,6 +18,7 @@ const Index = () => {
           <nav className="hidden md:flex space-x-6">
             <a href="#services" className="text-gray-600 hover:text-red-600 transition-colors">Services</a>
             <a href="#prestation" className="text-gray-600 hover:text-red-600 transition-colors">Prestations</a>
+            <a href="/create-cv" className="text-gray-600 hover:text-red-600 transition-colors">Créer un CV</a>
             <a href="#contact" className="text-gray-600 hover:text-red-600 transition-colors">Contact</a>
           </nav>
         </div>
@@ -44,6 +44,12 @@ const Index = () => {
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white">
               Découvrir nos services
+            </Button>
+            <Button size="lg" asChild className="bg-gradient-to-r from-[#C0997A] to-[#B8926F] hover:from-[#B8926F] hover:to-[#A68963] text-lg px-8 py-4">
+              <a href="/create-cv">
+                <FileText className="mr-2 h-5 w-5" />
+                Créer mon CV
+              </a>
             </Button>
           </div>
         </div>
