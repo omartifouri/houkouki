@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -21,9 +20,6 @@ const Index = () => {
             <a href="#prestation" className="text-gray-600 hover:text-red-600 transition-colors">Prestations</a>
             <a href="#contact" className="text-gray-600 hover:text-red-600 transition-colors">Contact</a>
           </nav>
-          <Button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800">
-            S'abonner
-          </Button>
         </div>
       </header>
 
