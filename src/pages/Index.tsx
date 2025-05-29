@@ -12,10 +12,11 @@ const Index = () => {
       <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-red-600 to-red-800 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">H</span>
-            </div>
-            <span className="text-2xl font-bold text-red-800">Houkouki</span>
+            <img 
+              src="/lovable-uploads/746a9b0d-7942-4f17-9351-aaeff6fff194.png" 
+              alt="Houkouki Logo" 
+              className="h-10 w-auto"
+            />
           </div>
           <nav className="hidden md:flex space-x-6">
             <a href="#services" className="text-gray-600 hover:text-red-600 transition-colors">Services</a>
@@ -317,10 +318,11 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-red-600 to-red-800 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">H</span>
-                </div>
-                <span className="text-2xl font-bold">Houkouki</span>
+                <img 
+                  src="/lovable-uploads/746a9b0d-7942-4f17-9351-aaeff6fff194.png" 
+                  alt="Houkouki Logo" 
+                  className="h-8 w-auto filter brightness-0 invert"
+                />
               </div>
               <p className="text-gray-400">
                 Votre partenaire de confiance pour un accompagnement professionnel personnalisé et efficace.
