@@ -25,7 +25,7 @@ export const useBookings = () => {
     "Préparation mentale aux entretiens"
   ];
 
-  // Générer les créneaux de 45 minutes de 9h à 17h
+  // Générer les créneaux de 45 minutes de 9h à 17h (sans pause déjeuner 12h-13h45)
   const generateTimeSlots = (date: string): TimeSlot[] => {
     const slots: TimeSlot[] = [];
     const startHour = 9;
@@ -35,6 +35,10 @@ export const useBookings = () => {
       const times = [`${hour.toString().padStart(2, '0')}:00`, `${hour.toString().padStart(2, '0')}:45`];
       times.forEach(time => {
         if (hour === 16 && time === '16:45') return; // Dernier créneau à 16h00
+        
+        // Exclure les créneaux de pause déjeuner (12h00, 12h45, 13h00, 13h45)
+        if ((hour === 12) || (hour === 13)) return;
+        
         const isBooked = bookings.some(booking => 
           booking.date === date && booking.time === time
         );
