@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Users, Brain, FileText, Calendar, Shield, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
   return (
@@ -13,7 +14,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/746a9b0d-7942-4f17-9351-aaeff6fff194.png" 
+              src="/lovable-uploads/0c9a97ff-4b6e-42f7-ac26-9d56ab3eb51f.png" 
               alt="Houkouki Logo" 
               className="h-10 w-auto"
             />
@@ -41,10 +42,12 @@ const Index = () => {
             Houkouki combine coaching psychologique, stratégie de recherche d'emploi et mise en réseau avec des recruteurs pour maximiser vos chances de réussite professionnelle.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-lg px-8 py-4">
-              Commencer mon accompagnement
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <ContactForm>
+              <Button size="lg" className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-lg px-8 py-4">
+                Commencer mon accompagnement
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </ContactForm>
             <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white">
               Découvrir nos services
             </Button>
@@ -305,10 +308,12 @@ const Index = () => {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Rejoignez les centaines de professionnels qui ont fait confiance à Houkouki pour réussir leur projet professionnel.
           </p>
-          <Button size="lg" className="bg-white text-[#C0997A] hover:bg-gray-100 text-lg px-8 py-4">
-            Commencer mon accompagnement
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <ContactForm>
+            <Button size="lg" className="bg-white text-[#C0997A] hover:bg-gray-100 text-lg px-8 py-4">
+              Commencer mon accompagnement
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </ContactForm>
         </div>
       </section>
 
@@ -319,7 +324,7 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <img 
-                  src="/lovable-uploads/746a9b0d-7942-4f17-9351-aaeff6fff194.png" 
+                  src="/lovable-uploads/0c9a97ff-4b6e-42f7-ac26-9d56ab3eb51f.png" 
                   alt="Houkouki Logo" 
                   className="h-8 w-auto filter brightness-0 invert"
                 />
