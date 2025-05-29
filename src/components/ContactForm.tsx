@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -48,12 +47,12 @@ const ContactForm = ({ children }: ContactFormProps) => {
       description: "Nous avons bien reçu votre demande, vous serez contacté dans les plus brefs délais.",
     });
 
-    // Réinitialiser après 3 secondes
+    // Réinitialiser après 30 secondes
     setTimeout(() => {
       setIsSubmitted(false);
       setIsOpen(false);
       form.reset();
-    }, 3000);
+    }, 30000);
   };
 
   return (
