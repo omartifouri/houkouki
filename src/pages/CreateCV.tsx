@@ -208,189 +208,122 @@ const CreateCV = () => {
     const lineHeight = 7;
     const sectionSpacing = 10;
     
-    // Fonction pour ajouter la photo si elle existe
-    const addPhotoAndContinue = () => {
-      // Titre et infos personnelles
-      if (personalInfo.photo) {
-        // Ajouter la photo
-        try {
-          pdf.addImage(personalInfo.photo, 'JPEG', margin, yPosition, 30, 30);
-          // Décaler le texte à droite de la photo
-          const textStartX = margin + 35;
-          
-          // Titre à côté de la photo
-          pdf.setFontSize(20);
-          pdf.setFont('helvetica', 'bold');
-          pdf.text(`${personalInfo.firstName} ${personalInfo.lastName}`, textStartX, yPosition + 10);
-          
-          // Informations personnelles à côté de la photo
-          pdf.setFontSize(10);
-          pdf.setFont('helvetica', 'normal');
-          let infoY = yPosition + 17;
-          if (personalInfo.email) {
-            pdf.text(`Email: ${personalInfo.email}`, textStartX, infoY);
-            infoY += lineHeight;
-          }
-          if (personalInfo.phone) {
-            pdf.text(`Téléphone: ${personalInfo.phone}`, textStartX, infoY);
-            infoY += lineHeight;
-          }
-          if (personalInfo.address) {
-            pdf.text(`Adresse: ${personalInfo.address}`, textStartX, infoY);
-            infoY += lineHeight;
-          }
-          if (personalInfo.linkedin) {
-            pdf.text(`LinkedIn: ${personalInfo.linkedin}`, textStartX, infoY);
-            infoY += lineHeight;
-          }
-          
-          yPosition = Math.max(yPosition + 35, infoY + 5);
-        } catch (error) {
-          console.error('Erreur lors de l\'ajout de la photo:', error);
-          // Si erreur avec la photo, continuer sans photo
-          addContentWithoutPhoto();
-          return;
-        }
-      } else {
-        addContentWithoutPhoto();
-        return;
-      }
-      
-      yPosition += sectionSpacing;
-      addRestOfContent();
-    };
+    // Titre
+    pdf.setFontSize(20);
+    pdf.setFont('helvetica', 'bold');
+    pdf.text(`${personalInfo.firstName} ${personalInfo.lastName}`, margin, yPosition);
+    yPosition += lineHeight + 5;
     
-    const addContentWithoutPhoto = () => {
-      // Titre sans photo
-      pdf.setFontSize(20);
+    // Informations personnelles
+    pdf.setFontSize(10);
+    pdf.setFont('helvetica', 'normal');
+    pdf.text(`Email: ${personalInfo.email}`, margin, yPosition);
+    yPosition += lineHeight;
+    pdf.text(`Téléphone: ${personalInfo.phone}`, margin, yPosition);
+    yPosition += lineHeight;
+    pdf.text(`Adresse: ${personalInfo.address}`, margin, yPosition);
+    yPosition += lineHeight;
+    if (personalInfo.linkedin) {
+      pdf.text(`LinkedIn: ${personalInfo.linkedin}`, margin, yPosition);
+      yPosition += lineHeight;
+    }
+    yPosition += sectionSpacing;
+    
+    // Résumé
+    if (summary) {
       pdf.setFont('helvetica', 'bold');
-      pdf.text(`${personalInfo.firstName} ${personalInfo.lastName}`, margin, yPosition);
-      yPosition += lineHeight + 5;
+      pdf.setFontSize(14);
+      pdf.text('Résumé Professionnel', margin, yPosition);
+      yPosition += lineHeight;
       
-      // Informations personnelles sans photo
-      pdf.setFontSize(10);
       pdf.setFont('helvetica', 'normal');
-      if (personalInfo.email) {
-        pdf.text(`Email: ${personalInfo.email}`, margin, yPosition);
+      pdf.setFontSize(10);
+      const summaryLines = pdf.splitTextToSize(summary, 170);
+      pdf.text(summaryLines, margin, yPosition);
+      yPosition += summaryLines.length * lineHeight + sectionSpacing;
+    }
+    
+    // Expérience professionnelle
+    if (experience.length > 0) {
+      pdf.setFont('helvetica', 'bold');
+      pdf.setFontSize(14);
+      pdf.text('Expérience Professionnelle', margin, yPosition);
+      yPosition += lineHeight + 3;
+      
+      experience.forEach(exp => {
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(12);
+        pdf.text(exp.position, margin, yPosition);
         yPosition += lineHeight;
-      }
-      if (personalInfo.phone) {
-        pdf.text(`Téléphone: ${personalInfo.phone}`, margin, yPosition);
+        
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(10);
+        pdf.text(`${exp.company} | ${exp.startDate} - ${exp.endDate}`, margin, yPosition);
         yPosition += lineHeight;
-      }
-      if (personalInfo.address) {
-        pdf.text(`Adresse: ${personalInfo.address}`, margin, yPosition);
-        yPosition += lineHeight;
-      }
-      if (personalInfo.linkedin) {
-        pdf.text(`LinkedIn: ${personalInfo.linkedin}`, margin, yPosition);
-        yPosition += lineHeight;
-      }
+        
+        if (exp.description) {
+          const descLines = pdf.splitTextToSize(exp.description, 170);
+          pdf.text(descLines, margin, yPosition);
+          yPosition += descLines.length * lineHeight;
+        }
+        yPosition += 5;
+      });
       yPosition += sectionSpacing;
-      
-      addRestOfContent();
-    };
+    }
     
-    const addRestOfContent = () => {
-      // Résumé
-      if (summary) {
+    // Formation
+    if (education.length > 0) {
+      pdf.setFont('helvetica', 'bold');
+      pdf.setFontSize(14);
+      pdf.text('Formation', margin, yPosition);
+      yPosition += lineHeight + 3;
+      
+      education.forEach(edu => {
         pdf.setFont('helvetica', 'bold');
-        pdf.setFontSize(14);
-        pdf.text('Résumé Professionnel', margin, yPosition);
+        pdf.setFontSize(12);
+        pdf.text(edu.degree, margin, yPosition);
         yPosition += lineHeight;
         
         pdf.setFont('helvetica', 'normal');
         pdf.setFontSize(10);
-        const summaryLines = pdf.splitTextToSize(summary, 170);
-        pdf.text(summaryLines, margin, yPosition);
-        yPosition += summaryLines.length * lineHeight + sectionSpacing;
-      }
-      
-      // Expérience professionnelle
-      if (experience.length > 0) {
-        pdf.setFont('helvetica', 'bold');
-        pdf.setFontSize(14);
-        pdf.text('Expérience Professionnelle', margin, yPosition);
+        pdf.text(`${edu.institution} | ${edu.startDate} - ${edu.endDate}`, margin, yPosition);
         yPosition += lineHeight + 3;
-        
-        experience.forEach(exp => {
-          pdf.setFont('helvetica', 'bold');
-          pdf.setFontSize(12);
-          pdf.text(exp.position, margin, yPosition);
-          yPosition += lineHeight;
-          
-          pdf.setFont('helvetica', 'normal');
-          pdf.setFontSize(10);
-          pdf.text(`${exp.company} | ${exp.startDate} - ${exp.endDate}`, margin, yPosition);
-          yPosition += lineHeight;
-          
-          if (exp.description) {
-            const descLines = pdf.splitTextToSize(exp.description, 170);
-            pdf.text(descLines, margin, yPosition);
-            yPosition += descLines.length * lineHeight;
-          }
-          yPosition += 5;
-        });
-        yPosition += sectionSpacing;
-      }
+      });
+      yPosition += sectionSpacing;
+    }
+    
+    // Compétences
+    if (skills.length > 0) {
+      pdf.setFont('helvetica', 'bold');
+      pdf.setFontSize(14);
+      pdf.text('Compétences', margin, yPosition);
+      yPosition += lineHeight + 3;
       
-      // Formation
-      if (education.length > 0) {
-        pdf.setFont('helvetica', 'bold');
-        pdf.setFontSize(14);
-        pdf.text('Formation', margin, yPosition);
-        yPosition += lineHeight + 3;
-        
-        education.forEach(edu => {
-          pdf.setFont('helvetica', 'bold');
-          pdf.setFontSize(12);
-          pdf.text(edu.degree, margin, yPosition);
-          yPosition += lineHeight;
-          
-          pdf.setFont('helvetica', 'normal');
-          pdf.setFontSize(10);
-          pdf.text(`${edu.institution} | ${edu.startDate} - ${edu.endDate}`, margin, yPosition);
-          yPosition += lineHeight + 3;
-        });
-        yPosition += sectionSpacing;
-      }
+      pdf.setFont('helvetica', 'normal');
+      pdf.setFontSize(10);
+      const skillsText = skills.join(' • ');
+      const skillsLines = pdf.splitTextToSize(skillsText, 170);
+      pdf.text(skillsLines, margin, yPosition);
+      yPosition += skillsLines.length * lineHeight + sectionSpacing;
+    }
+    
+    // Langues
+    if (languages.length > 0) {
+      pdf.setFont('helvetica', 'bold');
+      pdf.setFontSize(14);
+      pdf.text('Langues', margin, yPosition);
+      yPosition += lineHeight + 3;
       
-      // Compétences
-      if (skills.length > 0) {
-        pdf.setFont('helvetica', 'bold');
-        pdf.setFontSize(14);
-        pdf.text('Compétences', margin, yPosition);
-        yPosition += lineHeight + 3;
-        
+      languages.forEach(lang => {
         pdf.setFont('helvetica', 'normal');
         pdf.setFontSize(10);
-        const skillsText = skills.join(' • ');
-        const skillsLines = pdf.splitTextToSize(skillsText, 170);
-        pdf.text(skillsLines, margin, yPosition);
-        yPosition += skillsLines.length * lineHeight + sectionSpacing;
-      }
-      
-      // Langues
-      if (languages.length > 0) {
-        pdf.setFont('helvetica', 'bold');
-        pdf.setFontSize(14);
-        pdf.text('Langues', margin, yPosition);
-        yPosition += lineHeight + 3;
-        
-        languages.forEach(lang => {
-          pdf.setFont('helvetica', 'normal');
-          pdf.setFontSize(10);
-          pdf.text(`${lang.language}: ${lang.level}`, margin, yPosition);
-          yPosition += lineHeight;
-        });
-      }
-      
-      // Télécharger le PDF
-      pdf.save(`CV_${personalInfo.firstName}_${personalInfo.lastName}.pdf`);
-    };
+        pdf.text(`${lang.language}: ${lang.level}`, margin, yPosition);
+        yPosition += lineHeight;
+      });
+    }
     
-    // Commencer le processus
-    addPhotoAndContinue();
+    // Télécharger le PDF
+    pdf.save(`CV_${personalInfo.firstName}_${personalInfo.lastName}.pdf`);
   };
 
   return (
