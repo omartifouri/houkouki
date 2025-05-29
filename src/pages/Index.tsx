@@ -13,7 +13,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/52bc0c0c-34a4-4850-b667-a57ab1fe2408.png" 
+              src="/lovable-uploads/5d7e7c1c-ebd4-4271-a028-9798957bf332.png" 
               alt="Houkouki Logo" 
               className="h-10 w-auto"
             />
@@ -323,7 +323,7 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <img 
-                  src="/lovable-uploads/52bc0c0c-34a4-4850-b667-a57ab1fe2408.png" 
+                  src="/lovable-uploads/5d7e7c1c-ebd4-4271-a028-9798957bf332.png" 
                   alt="Houkouki Logo" 
                   className="h-8 w-auto filter brightness-0 invert"
                 />
