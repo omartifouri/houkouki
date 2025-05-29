@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -41,7 +42,7 @@ const Index = () => {
               Commencer mon accompagnement
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-200 text-red-700 hover:bg-red-50">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white">
               Découvrir nos services
             </Button>
           </div>
@@ -76,12 +77,12 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-green-100 hover:border-green-300 transition-all duration-300 hover:shadow-lg">
+            <Card className="border-2 border-[#C0997A] hover:border-[#B8926F] transition-all duration-300 hover:shadow-lg">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#C0997A] to-[#B8926F] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-green-800">Jeunes diplômés</CardTitle>
+                <CardTitle className="text-[#C0997A]">Jeunes diplômés</CardTitle>
                 <CardDescription>À la recherche d'un premier emploi</CardDescription>
               </CardHeader>
               <CardContent>
@@ -110,7 +111,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="prestation" className="py-16 px-4 bg-gray-50">
+      <section id="prestation" className="py-16 px-4 bg-gradient-to-br from-[#C0997A]/10 to-gray-50">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -134,15 +135,15 @@ const Index = () => {
               <CardContent>
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#C0997A] mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-600">1 séance d'1h par an avec un psychologue clinicien</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#C0997A] mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-600">Identification des débouchés selon votre profil</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#C0997A] mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-600">Séances supplémentaires à 200 DH HT</span>
                   </li>
                 </ul>
@@ -152,8 +153,8 @@ const Index = () => {
             {/* Préparation aux entretiens */}
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-green-600" />
+                <div className="w-12 h-12 bg-[#C0997A]/20 rounded-lg flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-[#C0997A]" />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Préparation entretiens</CardTitle>
                 <CardDescription>Coaching psychologique spécialisé</CardDescription>
@@ -232,8 +233,8 @@ const Index = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <FileText className="h-5 w-5 text-green-600" />
+                  <div className="w-10 h-10 bg-[#C0997A]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FileText className="h-5 w-5 text-[#C0997A]" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">CV optimisé</h3>
@@ -253,12 +254,12 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-red-50 to-purple-50 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-[#C0997A]/10 to-red-50 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Options de suivi au choix</h3>
               
               <div className="space-y-6">
-                <div className="bg-white rounded-lg p-6 border-2 border-red-100">
-                  <h4 className="font-semibold text-red-800 mb-3">Espace personnel sécurisé</h4>
+                <div className="bg-white rounded-lg p-6 border-2 border-[#C0997A]/30">
+                  <h4 className="font-semibold text-[#C0997A] mb-3">Espace personnel sécurisé</h4>
                   <ul className="space-y-2 text-sm text-gray-600">
                     <li>• Statut du dossier en temps réel</li>
                     <li>• Contact direct avec les recruteurs</li>
@@ -267,8 +268,8 @@ const Index = () => {
                   </ul>
                 </div>
 
-                <div className="bg-white rounded-lg p-6 border-2 border-green-100">
-                  <h4 className="font-semibold text-green-800 mb-3">Suivi par notification</h4>
+                <div className="bg-white rounded-lg p-6 border-2 border-red-100">
+                  <h4 className="font-semibold text-red-800 mb-3">Suivi par notification</h4>
                   <ul className="space-y-2 text-sm text-gray-600">
                     <li>• Notifications e-mail et WhatsApp</li>
                     <li>• Confirmation de réception du dossier</li>
@@ -283,15 +284,15 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-red-600 to-red-800">
+      <section className="py-20 px-4 bg-gradient-to-r from-[#C0997A] to-red-600">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Prêt à donner un nouvel élan à votre carrière ?
           </h2>
-          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Rejoignez les centaines de professionnels qui ont fait confiance à Houkouki pour réussir leur projet professionnel.
           </p>
-          <Button size="lg" className="bg-white text-red-700 hover:bg-gray-100 text-lg px-8 py-4">
+          <Button size="lg" className="bg-white text-[#C0997A] hover:bg-gray-100 text-lg px-8 py-4">
             Commencer mon accompagnement
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
