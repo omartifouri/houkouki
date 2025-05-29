@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,7 +13,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/0c9a97ff-4b6e-42f7-ac26-9d56ab3eb51f.png" 
+              src="/lovable-uploads/52bc0c0c-34a4-4850-b667-a57ab1fe2408.png" 
               alt="Houkouki Logo" 
               className="h-10 w-auto"
             />
@@ -324,7 +323,7 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <img 
-                  src="/lovable-uploads/0c9a97ff-4b6e-42f7-ac26-9d56ab3eb51f.png" 
+                  src="/lovable-uploads/52bc0c0c-34a4-4850-b667-a57ab1fe2408.png" 
                   alt="Houkouki Logo" 
                   className="h-8 w-auto filter brightness-0 invert"
                 />
