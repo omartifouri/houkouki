@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CVData } from '@/pages/CreateCV';
 
@@ -13,14 +12,28 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ cvData }) => {
     <div className="bg-white p-6 border rounded-lg shadow-sm max-h-[800px] overflow-y-auto">
       {/* En-tête */}
       <div className="border-b pb-4 mb-4">
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">
-          {personalInfo.firstName} {personalInfo.lastName}
-        </h1>
-        <div className="space-y-1 text-sm text-gray-600">
-          {personalInfo.email && <div>📧 {personalInfo.email}</div>}
-          {personalInfo.phone && <div>📞 {personalInfo.phone}</div>}
-          {personalInfo.address && <div>📍 {personalInfo.address}</div>}
-          {personalInfo.linkedin && <div>🔗 {personalInfo.linkedin}</div>}
+        <div className="flex items-start space-x-4">
+          {/* Photo de profil */}
+          {personalInfo.photo && (
+            <img
+              src={personalInfo.photo}
+              alt="Photo de profil"
+              className="w-20 h-20 rounded-full object-cover border-2 border-gray-200 flex-shrink-0"
+            />
+          )}
+          
+          {/* Informations principales */}
+          <div className="flex-1">
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              {personalInfo.firstName} {personalInfo.lastName}
+            </h1>
+            <div className="space-y-1 text-sm text-gray-600">
+              {personalInfo.email && <div>📧 {personalInfo.email}</div>}
+              {personalInfo.phone && <div>📞 {personalInfo.phone}</div>}
+              {personalInfo.address && <div>📍 {personalInfo.address}</div>}
+              {personalInfo.linkedin && <div>🔗 {personalInfo.linkedin}</div>}
+            </div>
+          </div>
         </div>
       </div>
 
