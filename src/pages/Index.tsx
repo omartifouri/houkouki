@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -34,7 +33,7 @@ const Index = () => {
             Accompagnement Professionnel Personnalisé
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Votre carrière mérite le meilleur
+            Orientation et reconversion professionnelle : Votre carrière mérite le meilleur
             <span className="text-red-600"> accompagnement</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
