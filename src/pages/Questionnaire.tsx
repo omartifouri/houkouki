@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { useToast } from "@/hooks/use-toast";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Send } from "lucide-react";
 
@@ -93,7 +92,7 @@ const Questionnaire = () => {
     questionDetails: ''
   });
 
-  const { toast } = useToast();
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
 
   const handleInputChange = (field: keyof QuestionnaireData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -114,10 +113,7 @@ const Questionnaire = () => {
     e.preventDefault();
     console.log("Questionnaire soumis:", formData);
     
-    toast({
-      title: "Questionnaire envoyé",
-      description: "Merci d'avoir complété ce questionnaire ! Nos experts analyseront vos réponses et vous proposeront un accompagnement adapté.",
-    });
+    setShowSuccessDialog(true);
   };
 
   const qualitesOptions = [
@@ -806,17 +802,29 @@ const Questionnaire = () => {
               <Send className="mr-2 h-5 w-5" />
               Envoyer le questionnaire
             </Button>
-            <div className="mt-4 text-center">
-              <p className="text-lg font-semibold text-gray-900 mb-2">
-                📩 Merci d'avoir complété ce questionnaire !
-              </p>
-              <p className="text-gray-600">
-                Nos experts analyseront vos réponses et vous proposeront un accompagnement adapté à votre situation et vos objectifs. Vous serez contacté(e) prochainement pour la suite.
-              </p>
-            </div>
           </div>
         </form>
       </div>
+
+      {/* Success Dialog */}
+      <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-center">Questionnaire envoyé</DialogTitle>
+            <DialogDescription className="text-center pt-4">
+              Merci d'avoir complété ce questionnaire ! Nos experts analyseront vos réponses et vous proposeront un accompagnement adapté.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-center pt-4">
+            <Button 
+              onClick={() => setShowSuccessDialog(false)}
+              className="bg-red-600 hover:bg-red-700"
+            >
+              Fermer
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
