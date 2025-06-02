@@ -43,7 +43,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <ContactForm>
               <Button size="lg" className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-lg px-8 py-4">
-                Commencer mon accompagnement
+                C'est parti !
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </ContactForm>
@@ -309,7 +309,7 @@ const Index = () => {
           </p>
           <ContactForm>
             <Button size="lg" className="bg-white text-[#C0997A] hover:bg-gray-100 text-lg px-8 py-4">
-              Commencer mon accompagnement
+              C'est parti !
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </ContactForm>

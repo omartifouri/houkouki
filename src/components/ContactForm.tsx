@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -63,7 +64,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
       <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center mb-4">
-            {isSubmitted ? "Demande envoyée !" : "Commencer mon accompagnement"}
+            {isSubmitted ? "Demande envoyée !" : "C'est parti !"}
           </DialogTitle>
         </DialogHeader>
         
