@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -61,7 +62,7 @@ const Index = () => {
               <Button size="lg" asChild className="bg-gradient-to-r from-[#C0997A] to-[#B8926F] hover:from-[#B8926F] hover:to-[#A68963] text-lg px-8 py-4">
                 <a href="/create-cv">
                   <FileText className="mr-2 h-5 w-5" />
-                  Créer mon CV
+                  Créez votre CV
                 </a>
               </Button>
             </div>
