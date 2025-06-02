@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -42,9 +43,9 @@ const Index = () => {
           </p>
           <div className="flex flex-col gap-4 justify-center">
             <div>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white">
-                Découvrir nos services
-              </Button>
+              <a href="#prestation" className="text-2xl font-bold text-[#C0997A] hover:text-[#B8926F] transition-colors inline-block border-b-2 border-[#C0997A] hover:border-[#B8926F] pb-2">
+                Notre approche complète
+              </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <ContactForm>
