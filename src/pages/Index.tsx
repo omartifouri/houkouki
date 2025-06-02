@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -45,6 +46,11 @@ const Index = () => {
               <Button size="lg" className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-lg px-8 py-4">
                 C'est parti !
                 <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </ContactForm>
+            <ContactForm>
+              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
+                Parlez-nous de vous
               </Button>
             </ContactForm>
             <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white">
