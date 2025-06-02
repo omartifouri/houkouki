@@ -1,5 +1,3 @@
-
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -33,7 +31,7 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <Badge className="mb-6 bg-red-100 text-red-800 border-red-200 text-lg px-6 py-2">
-            Accompagnement Professionnel Personnalisé
+            Soutien carrière professionnelle personnalisé
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Orientation et reconversion professionnelle : Votre carrière mérite le meilleur
@@ -374,4 +372,3 @@ const Index = () => {
 };
 
 export default Index;
-
