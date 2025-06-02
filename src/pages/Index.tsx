@@ -26,7 +26,7 @@ const Index = () => {
           </nav>
         </div>
       </header>
-
+      
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -53,11 +53,11 @@ const Index = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </ContactForm>
-              <ContactForm>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
+                <Link to="/questionnaire">
                   Parlez-nous de vous
-                </Button>
-              </ContactForm>
+                </Link>
+              </Button>
               <Button size="lg" asChild className="bg-gradient-to-r from-[#C0997A] to-[#B8926F] hover:from-[#B8926F] hover:to-[#A68963] text-lg px-8 py-4">
                 <a href="/create-cv">
                   <FileText className="mr-2 h-5 w-5" />
@@ -316,12 +316,12 @@ const Index = () => {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Rejoignez les centaines de professionnels qui ont fait confiance à Houkouki pour réussir leur projet professionnel.
           </p>
-          <ContactForm>
-            <Button size="lg" className="bg-white text-[#C0997A] hover:bg-gray-100 text-lg px-8 py-4">
+          <Button size="lg" className="bg-white text-[#C0997A] hover:bg-gray-100 text-lg px-8 py-4" asChild>
+            <Link to="/questionnaire">
               C'est parti !
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </ContactForm>
+            </Link>
+          </Button>
         </div>
       </section>
 

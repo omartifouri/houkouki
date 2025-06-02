@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import CreateCV from "./pages/CreateCV";
 import Booking from "./pages/Booking";
+import Questionnaire from "./pages/Questionnaire";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/create-cv" element={<CreateCV />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/questionnaire" element={<Questionnaire />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
