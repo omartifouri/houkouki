@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -41,27 +40,31 @@ const Index = () => {
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Houkouki combine coaching psychologique, stratégie de recherche d'emploi et mise en réseau avec des recruteurs pour maximiser vos chances de réussite professionnelle.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ContactForm>
-              <Button size="lg" className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-lg px-8 py-4">
-                C'est parti !
-                <ArrowRight className="ml-2 h-5 w-5" />
+          <div className="flex flex-col gap-4 justify-center">
+            <div>
+              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white">
+                Découvrir nos services
               </Button>
-            </ContactForm>
-            <ContactForm>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
-                Parlez-nous de vous
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ContactForm>
+                <Button size="lg" className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-lg px-8 py-4">
+                  C'est parti !
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </ContactForm>
+              <ContactForm>
+                <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
+                  Parlez-nous de vous
+                </Button>
+              </ContactForm>
+              <Button size="lg" asChild className="bg-gradient-to-r from-[#C0997A] to-[#B8926F] hover:from-[#B8926F] hover:to-[#A68963] text-lg px-8 py-4">
+                <a href="/create-cv">
+                  <FileText className="mr-2 h-5 w-5" />
+                  Créer mon CV
+                </a>
               </Button>
-            </ContactForm>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white">
-              Découvrir nos services
-            </Button>
-            <Button size="lg" asChild className="bg-gradient-to-r from-[#C0997A] to-[#B8926F] hover:from-[#B8926F] hover:to-[#A68963] text-lg px-8 py-4">
-              <a href="/create-cv">
-                <FileText className="mr-2 h-5 w-5" />
-                Créer mon CV
-              </a>
-            </Button>
+            </div>
           </div>
         </div>
       </section>
