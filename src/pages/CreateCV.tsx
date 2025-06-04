@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,7 +6,8 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CVPreview } from "@/components/CVPreview";
 import { ArrowLeft, Download, Upload, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from '@/hooks/useAuth';
 import jsPDF from 'jspdf';
 
 export interface CVData {
@@ -44,6 +45,33 @@ export interface CVData {
 }
 
 const CreateCV = () => {
+  const { user, loading } = useAuth();
+  const navigate = useNavigate();
+
+  // Rediriger vers l'accueil si non authentifié
+  useEffect(() => {
+    if (!loading && !user) {
+      navigate('/');
+    }
+  }, [user, loading, navigate]);
+
+  // Afficher un loader pendant la vérification de l'authentification
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-red-50 to-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-red-600"></div>
+          <p className="mt-4 text-gray-600">Chargement...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Ne pas afficher le contenu si l'utilisateur n'est pas authentifié
+  if (!user) {
+    return null;
+  }
+
   const [cvData, setCvData] = useState<CVData>({
     personalInfo: {
       firstName: '',

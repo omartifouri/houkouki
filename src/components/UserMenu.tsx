@@ -4,11 +4,21 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSepara
 import { useAuth } from '@/hooks/useAuth'
 import { User, LogOut, FileText, Calendar } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import AuthModal from '@/components/AuthModal'
 
 export default function UserMenu() {
   const { user, signOut } = useAuth()
 
-  if (!user) return null
+  if (!user) {
+    return (
+      <AuthModal>
+        <Button variant="outline" className="flex items-center gap-2">
+          <User className="h-4 w-4" />
+          Se connecter
+        </Button>
+      </AuthModal>
+    )
+  }
 
   return (
     <DropdownMenu>
