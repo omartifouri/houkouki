@@ -9,6 +9,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface ContactFormData {
   nom: string;
@@ -26,6 +27,7 @@ interface ContactFormProps {
 const ContactForm = ({ children }: ContactFormProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   
   const form = useForm<ContactFormData>({
@@ -39,21 +41,60 @@ const ContactForm = ({ children }: ContactFormProps) => {
     }
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log("Formulaire soumis:", data);
-    setIsSubmitted(true);
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
     
-    toast({
-      title: "Demande envoyée",
-      description: "Nous avons bien reçu votre demande, vous serez contacté dans les plus brefs délais.",
-    });
+    try {
+      console.log("Envoi du formulaire contact:", data);
+      
+      // Si l'utilisateur est étudiant, envoyer l'email de bienvenue
+      if (data.profil === "etudiant") {
+        console.log("Envoi de l'email de bienvenue pour étudiant depuis le formulaire contact");
+        
+        const welcomeData = {
+          nom: data.nom,
+          prenom: data.prenom,
+          email: data.email,
+          occupationActuelle: "etudiant"
+        };
+        
+        const { data: emailResponse, error } = await supabase.functions.invoke('send-questionnaire', {
+          body: welcomeData,
+        });
+        
+        if (error) {
+          console.error('Erreur envoi email de bienvenue:', error);
+          throw error;
+        }
+        
+        console.log("Email de bienvenue envoyé avec succès:", emailResponse);
+      }
+      
+      setIsSubmitted(true);
+      toast({
+        title: "Demande envoyée",
+        description: data.profil === "etudiant" 
+          ? "Nous avons bien reçu votre demande et vous avez reçu un email de bienvenue !"
+          : "Nous avons bien reçu votre demande, vous serez contacté dans les plus brefs délais.",
+      });
 
-    // Réinitialiser après 30 secondes
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setIsOpen(false);
-      form.reset();
-    }, 30000);
+      // Réinitialiser après 30 secondes
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setIsOpen(false);
+        form.reset();
+      }, 30000);
+      
+    } catch (error) {
+      console.error('Erreur:', error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de l'envoi.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -79,7 +120,10 @@ const ContactForm = ({ children }: ContactFormProps) => {
               Nous avons bien reçu votre demande
             </h3>
             <p className="text-gray-600">
-              Vous serez contacté dans les plus brefs délais.
+              {form.getValues("profil") === "etudiant" 
+                ? "Vous avez également reçu un email de bienvenue avec toutes les informations nécessaires."
+                : "Vous serez contacté dans les plus brefs délais."
+              }
             </p>
           </div>
         ) : (
@@ -203,9 +247,10 @@ const ContactForm = ({ children }: ContactFormProps) => {
 
                 <Button 
                   type="submit" 
+                  disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
                 >
-                  Envoyer
+                  {isSubmitting ? "Envoi en cours..." : "Envoyer"}
                 </Button>
               </form>
             </Form>
