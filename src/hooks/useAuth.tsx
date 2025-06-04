@@ -45,11 +45,26 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   const signUp = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-    })
-    return { error }
+    try {
+      // Utiliser la fonction edge pour l'inscription sans confirmation
+      const { data, error } = await supabase.functions.invoke('signup-without-confirmation', {
+        body: { email, password }
+      })
+
+      if (error) {
+        return { error }
+      }
+
+      // Connecter automatiquement l'utilisateur après inscription
+      const { error: signInError } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      })
+
+      return { error: signInError }
+    } catch (error: any) {
+      return { error }
+    }
   }
 
   const signOut = async () => {
