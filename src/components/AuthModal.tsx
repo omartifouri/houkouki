@@ -127,7 +127,7 @@ export default function AuthModal({ children }: AuthModalProps) {
                 <Button 
                   onClick={handleSignIn} 
                   disabled={loading || !email || !password}
-                  className="w-full"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                 >
                   {loading ? "Connexion..." : "Se connecter"}
                 </Button>
