@@ -122,7 +122,7 @@ const Booking = () => {
               Réserver un rendez-vous
             </h1>
             <p className="text-xl text-gray-600">
-              Choisissez votre service et sélectionnez un créneau disponible de 45 minutes
+              Choisissez votre service et sélectionnez un créneau disponible de 60 minutes
             </p>
             {user && (
               <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg inline-block">
@@ -202,7 +202,7 @@ const Booking = () => {
                       </div>
                       <span>Choisissez un créneau</span>
                     </CardTitle>
-                    <CardDescription>Créneaux de 45 minutes disponibles</CardDescription>
+                    <CardDescription>Créneaux de 60 minutes disponibles</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -316,7 +316,7 @@ const Booking = () => {
                       <Clock className="h-5 w-5 text-purple-600 mt-0.5" />
                       <div>
                         <p className="font-medium">Heure</p>
-                        <p className="text-sm text-gray-600">{selectedTime} (45 minutes)</p>
+                        <p className="text-sm text-gray-600">{selectedTime} (60 minutes)</p>
                       </div>
                     </div>
                   )}
