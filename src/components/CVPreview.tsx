@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { CVData } from '@/pages/CreateCV';
+import { CVData } from '@/types/cvTypes';
 
 interface CVPreviewProps {
   cvData: CVData;
