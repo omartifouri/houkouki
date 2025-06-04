@@ -1,7 +1,7 @@
 
 import { useState, useEffect, createContext, useContext } from 'react'
 import { User } from '@supabase/supabase-js'
-import { supabase, isSupabaseConfigured } from '@/lib/supabase'
+import { supabase } from '@/integrations/supabase/client'
 
 interface AuthContextType {
   user: User | null
@@ -17,14 +17,8 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined)
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
-  const configured = isSupabaseConfigured()
 
   useEffect(() => {
-    if (!configured) {
-      setLoading(false)
-      return
-    }
-
     // Get initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null)
@@ -40,13 +34,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     )
 
     return () => subscription.unsubscribe()
-  }, [configured])
+  }, [])
 
   const signIn = async (email: string, password: string) => {
-    if (!configured) {
-      return { error: { message: 'Supabase n\'est pas configuré' } }
-    }
-    
     const { error } = await supabase.auth.signInWithPassword({
       email,
       password,
@@ -55,21 +45,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   const signUp = async (email: string, password: string) => {
-    if (!configured) {
-      return { error: { message: 'Supabase n\'est pas configuré' } }
-    }
-    
     const { error } = await supabase.auth.signUp({
       email,
       password,
+      options: {
+        emailRedirectTo: `${window.location.origin}/`
+      }
     })
     return { error }
   }
 
   const signOut = async () => {
-    if (configured) {
-      await supabase.auth.signOut()
-    }
+    await supabase.auth.signOut()
   }
 
   const value = {
@@ -78,7 +65,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     signIn,
     signUp,
     signOut,
-    isConfigured: configured,
+    isConfigured: true,
   }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
