@@ -19,30 +19,7 @@ const CreateCV = () => {
   const { user, loading } = useAuth();
   const navigate = useNavigate();
 
-  // Rediriger vers l'accueil si non authentifié
-  useEffect(() => {
-    if (!loading && !user) {
-      navigate('/');
-    }
-  }, [user, loading, navigate]);
-
-  // Afficher un loader pendant la vérification de l'authentification
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-red-50 to-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-red-600"></div>
-          <p className="mt-4 text-gray-600">Chargement...</p>
-        </div>
-      </div>
-    );
-  }
-
-  // Ne pas afficher le contenu si l'utilisateur n'est pas authentifié
-  if (!user) {
-    return null;
-  }
-
+  // ALL useState hooks must be called before any conditional logic
   const [cvData, setCvData] = useState<CVData>({
     personalInfo: {
       firstName: '',
@@ -60,6 +37,14 @@ const CreateCV = () => {
     languages: []
   });
 
+  // Rediriger vers l'accueil si non authentifié
+  useEffect(() => {
+    if (!loading && !user) {
+      navigate('/');
+    }
+  }, [user, loading, navigate]);
+
+  // Handler functions
   const updatePersonalInfo = (field: keyof CVData['personalInfo'], value: string) => {
     setCvData(prev => ({
       ...prev,
@@ -188,6 +173,22 @@ const CreateCV = () => {
   const handleExportToPDF = () => {
     exportToPDF(cvData);
   };
+
+  // Conditional rendering AFTER all hooks
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-red-50 to-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-red-600"></div>
+          <p className="mt-4 text-gray-600">Chargement...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return null;
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
