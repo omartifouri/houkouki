@@ -53,11 +53,12 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    console.log("Début de la fonction send-questionnaire");
+    console.log("=== DÉBUT DE LA FONCTION SEND-QUESTIONNAIRE ===");
     
     // Vérifier que la clé API est présente
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
     console.log("Clé API Resend présente:", !!resendApiKey);
+    console.log("Longueur de la clé:", resendApiKey ? resendApiKey.length : 0);
     
     if (!resendApiKey) {
       throw new Error("RESEND_API_KEY non configurée");
@@ -66,7 +67,12 @@ const handler = async (req: Request): Promise<Response> => {
     const resend = new Resend(resendApiKey);
 
     const data: QuestionnaireData = await req.json();
-    console.log("Données reçues:", { nom: data.nom, prenom: data.prenom, email: data.email, occupationActuelle: data.occupationActuelle });
+    console.log("Données reçues:", { 
+      nom: data.nom, 
+      prenom: data.prenom, 
+      email: data.email, 
+      occupationActuelle: data.occupationActuelle 
+    });
 
     // Email avec les données du questionnaire pour l'équipe
     const htmlContent = `
@@ -117,7 +123,10 @@ const handler = async (req: Request): Promise<Response> => {
       ${data.questionDetails ? `<p><strong>Détails :</strong> ${data.questionDetails}</p>` : ''}
     `;
 
-    console.log("Envoi de l'email avec les données du questionnaire");
+    console.log("=== ENVOI EMAIL ÉQUIPE ===");
+    console.log("Destinataire:", ["o.tifouri@geoso.fr"]);
+    console.log("Sujet:", `Nouveau questionnaire de ${data.prenom} ${data.nom}`);
+    
     const teamEmailResponse = await resend.emails.send({
       from: "Houkouki <onboarding@resend.dev>",
       to: ["o.tifouri@geoso.fr"],
@@ -125,12 +134,20 @@ const handler = async (req: Request): Promise<Response> => {
       html: htmlContent,
     });
 
-    console.log("Email équipe envoyé avec succès:", teamEmailResponse);
+    console.log("=== RÉPONSE EMAIL ÉQUIPE ===");
+    console.log("Succès:", !!teamEmailResponse.id);
+    console.log("ID email:", teamEmailResponse.id);
+    console.log("Erreur éventuelle:", teamEmailResponse.error);
+    
+    if (teamEmailResponse.error) {
+      console.error("Erreur détaillée email équipe:", teamEmailResponse.error);
+    }
 
     // Si le client est étudiant, envoyer l'email de bienvenue
     let welcomeEmailResponse = null;
     if (data.occupationActuelle === "etudiant") {
-      console.log("Envoi de l'email de bienvenue pour étudiant");
+      console.log("=== ENVOI EMAIL BIENVENUE ÉTUDIANT ===");
+      console.log("Email client:", data.email);
       
       const welcomeHtmlContent = `
         <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -165,9 +182,17 @@ const handler = async (req: Request): Promise<Response> => {
         html: welcomeHtmlContent,
       });
 
-      console.log("Email de bienvenue envoyé avec succès:", welcomeEmailResponse);
+      console.log("=== RÉPONSE EMAIL BIENVENUE ===");
+      console.log("Succès:", !!welcomeEmailResponse.id);
+      console.log("ID email:", welcomeEmailResponse.id);
+      console.log("Erreur éventuelle:", welcomeEmailResponse.error);
+      
+      if (welcomeEmailResponse.error) {
+        console.error("Erreur détaillée email bienvenue:", welcomeEmailResponse.error);
+      }
     }
 
+    console.log("=== FIN FONCTION - SUCCÈS ===");
     return new Response(JSON.stringify({ 
       success: true, 
       teamEmailResponse,
@@ -180,12 +205,15 @@ const handler = async (req: Request): Promise<Response> => {
       },
     });
   } catch (error: any) {
-    console.error("Erreur dans send-questionnaire:", error);
+    console.error("=== ERREUR DANS SEND-QUESTIONNAIRE ===");
+    console.error("Message d'erreur:", error.message);
     console.error("Stack trace:", error.stack);
+    console.error("Type d'erreur:", error.constructor.name);
     return new Response(
       JSON.stringify({ 
         error: error.message,
-        details: error.stack
+        details: error.stack,
+        type: error.constructor.name
       }),
       {
         status: 500,
