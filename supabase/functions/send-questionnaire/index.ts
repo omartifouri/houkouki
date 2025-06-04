@@ -2,8 +2,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
@@ -55,7 +53,20 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
+    console.log("Début de la fonction send-questionnaire");
+    
+    // Vérifier que la clé API est présente
+    const resendApiKey = Deno.env.get("RESEND_API_KEY");
+    console.log("Clé API Resend présente:", !!resendApiKey);
+    
+    if (!resendApiKey) {
+      throw new Error("RESEND_API_KEY non configurée");
+    }
+
+    const resend = new Resend(resendApiKey);
+
     const data: QuestionnaireData = await req.json();
+    console.log("Données reçues:", { nom: data.nom, prenom: data.prenom, email: data.email });
 
     const htmlContent = `
       <h1>Nouveau Questionnaire d'Orientation Professionnelle</h1>
@@ -105,6 +116,7 @@ const handler = async (req: Request): Promise<Response> => {
       ${data.questionDetails ? `<p><strong>Détails :</strong> ${data.questionDetails}</p>` : ''}
     `;
 
+    console.log("Envoi de l'email avec Resend");
     const emailResponse = await resend.emails.send({
       from: "Houkouki <onboarding@resend.dev>",
       to: ["o.tifouri@geoso.fr"],
@@ -112,9 +124,9 @@ const handler = async (req: Request): Promise<Response> => {
       html: htmlContent,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Email envoyé avec succès:", emailResponse);
 
-    return new Response(JSON.stringify({ success: true }), {
+    return new Response(JSON.stringify({ success: true, emailResponse }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
@@ -122,9 +134,13 @@ const handler = async (req: Request): Promise<Response> => {
       },
     });
   } catch (error: any) {
-    console.error("Error sending questionnaire email:", error);
+    console.error("Erreur dans send-questionnaire:", error);
+    console.error("Stack trace:", error.stack);
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ 
+        error: error.message,
+        details: error.stack
+      }),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
