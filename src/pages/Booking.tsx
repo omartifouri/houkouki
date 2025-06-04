@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,12 +28,29 @@ const Booking = () => {
   // Pré-remplir les informations si l'utilisateur est connecté
   useEffect(() => {
     if (user) {
+      console.log("User data:", user);
+      console.log("User metadata:", user.user_metadata);
+      
+      // Toujours remplir l'email
       setEmail(user.email || "");
+      
       // Récupérer les métadonnées utilisateur si disponibles
       const metadata = user.user_metadata;
       if (metadata) {
-        setName(`${metadata.firstName || ''} ${metadata.lastName || ''}`.trim());
-        setPhone(metadata.phone || "");
+        // Essayer différentes clés possibles pour le nom
+        const firstName = metadata.firstName || metadata.first_name || '';
+        const lastName = metadata.lastName || metadata.last_name || '';
+        const fullName = `${firstName} ${lastName}`.trim();
+        
+        if (fullName) {
+          setName(fullName);
+        }
+        
+        // Récupérer le téléphone
+        const userPhone = metadata.phone || '';
+        if (userPhone) {
+          setPhone(userPhone);
+        }
       }
     }
   }, [user]);
@@ -111,7 +127,8 @@ const Booking = () => {
             {user && (
               <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg inline-block">
                 <p className="text-blue-800 text-sm">
-                  ✓ Connecté en tant que {user.email} - Vos informations sont automatiquement pré-remplies
+                  ✓ Connecté en tant que {user.email}
+                  {(name || phone) && " - Certaines informations sont pré-remplies"}
                 </p>
               </div>
             )}
@@ -219,7 +236,7 @@ const Booking = () => {
                     </CardTitle>
                     {user && (
                       <CardDescription>
-                        Informations pré-remplies depuis votre compte
+                        {(name || phone) ? "Informations pré-remplies depuis votre compte" : "Veuillez compléter vos informations"}
                       </CardDescription>
                     )}
                   </CardHeader>
@@ -231,7 +248,7 @@ const Booking = () => {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Votre nom complet"
-                        className={user ? "bg-blue-50" : ""}
+                        className={user && name ? "bg-blue-50" : ""}
                       />
                     </div>
                     <div>
