@@ -17,6 +17,9 @@ interface AuthModalProps {
 export default function AuthModal({ children }: AuthModalProps) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [phone, setPhone] = useState('')
   const [loading, setLoading] = useState(false)
   const [open, setOpen] = useState(false)
   
@@ -39,15 +42,18 @@ export default function AuthModal({ children }: AuthModalProps) {
         description: "Vous êtes maintenant connecté"
       })
       setOpen(false)
-      setEmail('')
-      setPassword('')
+      resetForm()
     }
     setLoading(false)
   }
 
   const handleSignUp = async () => {
     setLoading(true)
-    const { error } = await signUp(email, password)
+    const { error } = await signUp(email, password, {
+      firstName,
+      lastName,
+      phone
+    })
     
     if (error) {
       toast({
@@ -61,10 +67,17 @@ export default function AuthModal({ children }: AuthModalProps) {
         description: "Vérifiez votre email pour confirmer votre compte"
       })
       setOpen(false)
-      setEmail('')
-      setPassword('')
+      resetForm()
     }
     setLoading(false)
+  }
+
+  const resetForm = () => {
+    setEmail('')
+    setPassword('')
+    setFirstName('')
+    setLastName('')
+    setPhone('')
   }
 
   return (
@@ -134,6 +147,38 @@ export default function AuthModal({ children }: AuthModalProps) {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="signup-firstname">Prénom</Label>
+                    <Input
+                      id="signup-firstname"
+                      type="text"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      placeholder="Votre prénom"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="signup-lastname">Nom</Label>
+                    <Input
+                      id="signup-lastname"
+                      type="text"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      placeholder="Votre nom"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <Label htmlFor="signup-phone">Téléphone</Label>
+                  <Input
+                    id="signup-phone"
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder="+33 6 12 34 56 78"
+                  />
+                </div>
                 <div>
                   <Label htmlFor="signup-email">Email</Label>
                   <Input
@@ -156,7 +201,7 @@ export default function AuthModal({ children }: AuthModalProps) {
                 </div>
                 <Button 
                   onClick={handleSignUp} 
-                  disabled={loading || !email || !password}
+                  disabled={loading || !email || !password || !firstName || !lastName}
                   className="w-full"
                 >
                   {loading ? "Inscription..." : "S'inscrire"}

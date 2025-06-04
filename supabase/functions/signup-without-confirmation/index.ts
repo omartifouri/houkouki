@@ -24,13 +24,14 @@ serve(async (req) => {
       }
     )
 
-    const { email, password } = await req.json()
+    const { email, password, metadata } = await req.json()
 
     // Créer l'utilisateur avec confirmation automatique
     const { data, error } = await supabaseAdmin.auth.admin.createUser({
       email,
       password,
-      email_confirm: true // Confirme automatiquement l'email
+      email_confirm: true, // Confirme automatiquement l'email
+      user_metadata: metadata || {} // Ajouter les métadonnées utilisateur
     })
 
     if (error) {

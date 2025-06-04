@@ -7,7 +7,7 @@ interface AuthContextType {
   user: User | null
   loading: boolean
   signIn: (email: string, password: string) => Promise<{ error: any }>
-  signUp: (email: string, password: string) => Promise<{ error: any }>
+  signUp: (email: string, password: string, metadata?: { firstName: string, lastName: string, phone: string }) => Promise<{ error: any }>
   signOut: () => Promise<void>
   isConfigured: boolean
 }
@@ -44,11 +44,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return { error }
   }
 
-  const signUp = async (email: string, password: string) => {
+  const signUp = async (email: string, password: string, metadata?: { firstName: string, lastName: string, phone: string }) => {
     try {
       // Utiliser la fonction edge pour l'inscription sans confirmation
       const { data, error } = await supabase.functions.invoke('signup-without-confirmation', {
-        body: { email, password }
+        body: { 
+          email, 
+          password,
+          metadata: metadata ? {
+            first_name: metadata.firstName,
+            last_name: metadata.lastName,
+            phone: metadata.phone
+          } : undefined
+        }
       })
 
       if (error) {
