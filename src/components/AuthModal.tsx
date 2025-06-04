@@ -176,7 +176,7 @@ export default function AuthModal({ children }: AuthModalProps) {
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    placeholder="+33 6 12 34 56 78"
+                    placeholder="06 12 34 56 78"
                   />
                 </div>
                 <div>
