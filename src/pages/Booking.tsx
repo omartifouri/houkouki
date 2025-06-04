@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -237,12 +238,12 @@ const Booking = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
-                      <Label htmlFor="name">Nom complet *</Label>
+                      <Label htmlFor="name">pseudoname*</Label>
                       <Input
                         id="name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="Votre nom complet"
+                        placeholder="Votre pseudoname"
                         className={user && email ? "bg-blue-50" : ""}
                       />
                     </div>
@@ -353,3 +354,4 @@ const Booking = () => {
 };
 
 export default Booking;
+
