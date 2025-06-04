@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Send } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface QuestionnaireData {
   // Section I - Informations Générales
@@ -93,6 +94,7 @@ const Questionnaire = () => {
   });
 
   const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+  const { toast } = useToast();
 
   const handleInputChange = (field: keyof QuestionnaireData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -109,11 +111,38 @@ const Questionnaire = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Questionnaire soumis:", formData);
     
-    setShowSuccessDialog(true);
+    try {
+      console.log("Envoi du questionnaire:", formData);
+      
+      // Appel à la fonction edge pour envoyer l'email
+      const response = await fetch('/functions/v1/send-questionnaire', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setShowSuccessDialog(true);
+        toast({
+          title: "Questionnaire envoyé",
+          description: "Votre questionnaire a été envoyé avec succès !",
+        });
+      } else {
+        throw new Error('Erreur lors de l\'envoi');
+      }
+    } catch (error) {
+      console.error('Erreur:', error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de l'envoi du questionnaire.",
+        variant: "destructive",
+      });
+    }
   };
 
   const qualitesOptions = [
@@ -812,7 +841,7 @@ const Questionnaire = () => {
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-center">Questionnaire envoyé</DialogTitle>
             <DialogDescription className="text-center pt-4">
-              Merci d'avoir complété ce questionnaire ! Nos experts analyseront vos réponses et vous proposeront un accompagnement adapté.
+              Merci d'avoir complété ce questionnaire ! Nos experts analyseront vos réponses et vous proposeront un accompagnement adapté. Une copie a été envoyée à notre équipe.
             </DialogDescription>
           </DialogHeader>
           <div className="flex justify-center pt-4">
