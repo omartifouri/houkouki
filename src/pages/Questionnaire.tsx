@@ -10,6 +10,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { Link } from "react-router-dom";
 import { ArrowLeft, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface QuestionnaireData {
   // Section I - Informations Générales
@@ -117,24 +118,20 @@ const Questionnaire = () => {
     try {
       console.log("Envoi du questionnaire:", formData);
       
-      // Appel à la fonction edge pour envoyer l'email
-      const response = await fetch('/functions/v1/send-questionnaire', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      // Appel à la fonction edge via le client Supabase
+      const { data, error } = await supabase.functions.invoke('send-questionnaire', {
+        body: formData,
       });
 
-      if (response.ok) {
-        setShowSuccessDialog(true);
-        toast({
-          title: "Questionnaire envoyé",
-          description: "Votre questionnaire a été envoyé avec succès !",
-        });
-      } else {
-        throw new Error('Erreur lors de l\'envoi');
+      if (error) {
+        throw error;
       }
+
+      setShowSuccessDialog(true);
+      toast({
+        title: "Questionnaire envoyé",
+        description: "Votre questionnaire a été envoyé avec succès !",
+      });
     } catch (error) {
       console.error('Erreur:', error);
       toast({
