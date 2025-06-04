@@ -66,8 +66,9 @@ const handler = async (req: Request): Promise<Response> => {
     const resend = new Resend(resendApiKey);
 
     const data: QuestionnaireData = await req.json();
-    console.log("Données reçues:", { nom: data.nom, prenom: data.prenom, email: data.email });
+    console.log("Données reçues:", { nom: data.nom, prenom: data.prenom, email: data.email, occupationActuelle: data.occupationActuelle });
 
+    // Email avec les données du questionnaire pour l'équipe
     const htmlContent = `
       <h1>Nouveau Questionnaire d'Orientation Professionnelle</h1>
       
@@ -116,17 +117,62 @@ const handler = async (req: Request): Promise<Response> => {
       ${data.questionDetails ? `<p><strong>Détails :</strong> ${data.questionDetails}</p>` : ''}
     `;
 
-    console.log("Envoi de l'email avec Resend");
-    const emailResponse = await resend.emails.send({
+    console.log("Envoi de l'email avec les données du questionnaire");
+    const teamEmailResponse = await resend.emails.send({
       from: "Houkouki <onboarding@resend.dev>",
       to: ["o.tifouri@geoso.fr"],
       subject: `Nouveau questionnaire de ${data.prenom} ${data.nom}`,
       html: htmlContent,
     });
 
-    console.log("Email envoyé avec succès:", emailResponse);
+    console.log("Email équipe envoyé avec succès:", teamEmailResponse);
 
-    return new Response(JSON.stringify({ success: true, emailResponse }), {
+    // Si le client est étudiant, envoyer l'email de bienvenue
+    let welcomeEmailResponse = null;
+    if (data.occupationActuelle === "etudiant") {
+      console.log("Envoi de l'email de bienvenue pour étudiant");
+      
+      const welcomeHtmlContent = `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+          <h2 style="color: #d73527;">Bienvenue sur Houkouki – il ne vous reste qu'un pas pour activer votre accompagnement</h2>
+          
+          <p>Bonjour ${data.prenom} ${data.nom},</p>
+          
+          <p>Merci pour votre inscription !</p>
+          <p>Vous êtes à un clic de bénéficier d'un accompagnement complet et personnalisé pour vous aider à trouver un stage, un emploi ou repenser votre orientation professionnelle.</p>
+          
+          <p><strong>Houkouki orientation, c'est :</strong></p>
+          <ul>
+            <li>Une équipe de juristes et de psychologues à votre écoute</li>
+            <li>Un accompagnement à 360° : projet, CV, entretiens, réseau</li>
+            <li>Un pilotage simple via votre espace personnel ou WhatsApp</li>
+          </ul>
+          
+          <p>Pour activer votre accompagnement, il vous suffit de <a href="https://houkouki.com/nos-prestations/10?type=particulier" target="_blank" style="color: #d73527; text-decoration: none; font-weight: bold;">choisir votre formule d'abonnement ici</a>.</p>
+          
+          <p>Et si vous avez la moindre question, nous sommes là pour vous répondre.</p>
+          
+          <p>Au plaisir de vous accompagner,</p>
+          
+          <p><strong>L'équipe Houkouki</strong></p>
+        </div>
+      `;
+
+      welcomeEmailResponse = await resend.emails.send({
+        from: "Houkouki <onboarding@resend.dev>",
+        to: [data.email],
+        subject: "Bienvenue sur Houkouki – il ne vous reste qu'un pas pour activer votre accompagnement",
+        html: welcomeHtmlContent,
+      });
+
+      console.log("Email de bienvenue envoyé avec succès:", welcomeEmailResponse);
+    }
+
+    return new Response(JSON.stringify({ 
+      success: true, 
+      teamEmailResponse,
+      welcomeEmailResponse: welcomeEmailResponse || "Non envoyé (client non étudiant)"
+    }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
