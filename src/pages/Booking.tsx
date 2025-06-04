@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -128,7 +129,6 @@ const Booking = () => {
               <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg inline-block">
                 <p className="text-blue-800 text-sm">
                   ✓ Connecté en tant que {user.email}
-                  {(name || phone) && " - Certaines informations sont pré-remplies"}
                 </p>
               </div>
             )}
@@ -234,11 +234,6 @@ const Booking = () => {
                       </div>
                       <span>Vos informations</span>
                     </CardTitle>
-                    {user && (
-                      <CardDescription>
-                        {(name || phone) ? "Informations pré-remplies depuis votre compte" : "Veuillez compléter vos informations"}
-                      </CardDescription>
-                    )}
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
@@ -248,7 +243,7 @@ const Booking = () => {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Votre nom complet"
-                        className={user && name ? "bg-blue-50" : ""}
+                        className={user && email ? "bg-blue-50" : ""}
                       />
                     </div>
                     <div>
@@ -262,6 +257,11 @@ const Booking = () => {
                         className={user ? "bg-blue-50" : ""}
                         disabled={!!user}
                       />
+                      {user && (
+                        <p className="text-xs text-blue-600 mt-1">
+                          ✓ Email récupéré depuis votre compte
+                        </p>
+                      )}
                     </div>
                     <div>
                       <Label htmlFor="phone">Téléphone (optionnel)</Label>
@@ -270,7 +270,6 @@ const Booking = () => {
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder="06 12 34 56 78"
-                        className={user && phone ? "bg-blue-50" : ""}
                       />
                     </div>
                   </CardContent>
