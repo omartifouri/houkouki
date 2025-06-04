@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar as CalendarIcon, Clock, User, Mail, Phone, ArrowLeft } from "lucide-react";
 import { useBookings } from "@/hooks/useBookings";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
 import { Link } from "react-router-dom";
 
 const Booking = () => {
@@ -23,6 +24,20 @@ const Booking = () => {
 
   const { services, generateTimeSlots, addBooking } = useBookings();
   const { toast } = useToast();
+  const { user } = useAuth();
+
+  // Pré-remplir les informations si l'utilisateur est connecté
+  useEffect(() => {
+    if (user) {
+      setEmail(user.email || "");
+      // Récupérer les métadonnées utilisateur si disponibles
+      const metadata = user.user_metadata;
+      if (metadata) {
+        setName(`${metadata.firstName || ''} ${metadata.lastName || ''}`.trim());
+        setPhone(metadata.phone || "");
+      }
+    }
+  }, [user]);
 
   const formatDate = (date: Date) => {
     return date.toISOString().split('T')[0];
@@ -58,9 +73,12 @@ const Booking = () => {
     setSelectedService("");
     setSelectedDate(undefined);
     setSelectedTime("");
-    setName("");
-    setEmail("");
-    setPhone("");
+    // Ne pas réinitialiser les informations utilisateur si connecté
+    if (!user) {
+      setName("");
+      setEmail("");
+      setPhone("");
+    }
     setStep(1);
   };
 
@@ -90,6 +108,13 @@ const Booking = () => {
             <p className="text-xl text-gray-600">
               Choisissez votre service et sélectionnez un créneau disponible de 45 minutes
             </p>
+            {user && (
+              <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg inline-block">
+                <p className="text-blue-800 text-sm">
+                  ✓ Connecté en tant que {user.email} - Vos informations sont automatiquement pré-remplies
+                </p>
+              </div>
+            )}
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
@@ -192,6 +217,11 @@ const Booking = () => {
                       </div>
                       <span>Vos informations</span>
                     </CardTitle>
+                    {user && (
+                      <CardDescription>
+                        Informations pré-remplies depuis votre compte
+                      </CardDescription>
+                    )}
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
@@ -201,6 +231,7 @@ const Booking = () => {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Votre nom complet"
+                        className={user ? "bg-blue-50" : ""}
                       />
                     </div>
                     <div>
@@ -211,6 +242,8 @@ const Booking = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="votre.email@exemple.com"
+                        className={user ? "bg-blue-50" : ""}
+                        disabled={!!user}
                       />
                     </div>
                     <div>
@@ -220,6 +253,7 @@ const Booking = () => {
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder="06 12 34 56 78"
+                        className={user && phone ? "bg-blue-50" : ""}
                       />
                     </div>
                   </CardContent>
