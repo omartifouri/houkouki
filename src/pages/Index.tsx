@@ -5,8 +5,13 @@ import { Badge } from "@/components/ui/badge";
 import { Users, Brain, FileText, Calendar, Shield, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactForm from "@/components/ContactForm";
+import AuthModal from "@/components/AuthModal";
+import UserMenu from "@/components/UserMenu";
+import { useAuth } from "@/hooks/useAuth";
 
 const Index = () => {
+  const { user, loading } = useAuth();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       {/* Header/Navbar */}
@@ -19,11 +24,22 @@ const Index = () => {
               className="h-10 w-auto"
             />
           </div>
-          <nav className="hidden md:flex space-x-6">
+          <nav className="hidden md:flex items-center space-x-6">
             <a href="#services" className="text-gray-600 hover:text-red-600 transition-colors">Services</a>
             <a href="#prestation" className="text-gray-600 hover:text-red-600 transition-colors">Prestations</a>
             <a href="/create-cv" className="text-gray-600 hover:text-red-600 transition-colors">Créer un CV</a>
             <a href="#contact" className="text-gray-600 hover:text-red-600 transition-colors">Contact</a>
+            {!loading && (
+              user ? (
+                <UserMenu />
+              ) : (
+                <AuthModal>
+                  <Button variant="outline">
+                    Se connecter
+                  </Button>
+                </AuthModal>
+              )
+            )}
           </nav>
         </div>
       </header>
