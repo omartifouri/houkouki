@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Calendar } from "@/components/ui/calendar";
-import { Badge } from "@/components/ui/badge";
 import { Calendar as CalendarIcon, Clock, User, Mail, Phone, ArrowLeft } from "lucide-react";
 import { useBookings } from "@/hooks/useBookings";
 import { useToast } from "@/hooks/use-toast";
@@ -57,6 +56,21 @@ const Booking = () => {
 
   const formatDate = (date: Date) => {
     return date.toISOString().split('T')[0];
+  };
+
+  // Fonction pour calculer l'heure de fin d'un créneau
+  const getEndTime = (startTime: string): string => {
+    const [hours, minutes] = startTime.split(':').map(Number);
+    const startDate = new Date();
+    startDate.setHours(hours, minutes, 0, 0);
+    
+    // Ajouter 60 minutes
+    const endDate = new Date(startDate.getTime() + 60 * 60 * 1000);
+    
+    const endHours = endDate.getHours().toString().padStart(2, '0');
+    const endMinutes = endDate.getMinutes().toString().padStart(2, '0');
+    
+    return `${endHours}:${endMinutes}`;
   };
 
   const timeSlots = selectedDate ? generateTimeSlots(formatDate(selectedDate)) : [];
@@ -205,7 +219,7 @@ const Booking = () => {
                     <CardDescription>Créneaux de 60 minutes disponibles</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {timeSlots.map((slot) => (
                         <Button
                           key={slot.time}
@@ -215,7 +229,7 @@ const Booking = () => {
                           className="justify-start"
                         >
                           <Clock className="h-4 w-4 mr-2" />
-                          {slot.time}
+                          {slot.time} - {getEndTime(slot.time)}
                         </Button>
                       ))}
                     </div>
@@ -316,7 +330,7 @@ const Booking = () => {
                       <Clock className="h-5 w-5 text-purple-600 mt-0.5" />
                       <div>
                         <p className="font-medium">Heure</p>
-                        <p className="text-sm text-gray-600">{selectedTime} (60 minutes)</p>
+                        <p className="text-sm text-gray-600">{selectedTime} - {getEndTime(selectedTime)} (60 minutes)</p>
                       </div>
                     </div>
                   )}
