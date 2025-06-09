@@ -1,4 +1,5 @@
 
+
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
 const corsHeaders = {
@@ -34,7 +35,7 @@ const sendEmailWithBrevo = async (to: string, subject: string, htmlContent: stri
     body: JSON.stringify({
       sender: { 
         name: "Houkouki", 
-        email: "contact@houkouki.fr" 
+        email: "clients@houkouki.com" 
       },
       to: [{ email: to }],
       subject: subject,
@@ -135,3 +136,4 @@ const handler = async (req: Request): Promise<Response> => {
 };
 
 serve(handler);
+
