@@ -1,6 +1,5 @@
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { sendEmailWithBrevo } from "../send-questionnaire/email-service.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -15,6 +14,42 @@ interface ClientAccessRequest {
   login: string;
   password: string;
 }
+
+const sendEmailWithBrevo = async (to: string, subject: string, htmlContent: string) => {
+  const brevoApiKey = Deno.env.get('BREVO_API_KEY');
+  
+  if (!brevoApiKey) {
+    throw new Error('BREVO_API_KEY non configurée');
+  }
+
+  console.log('Envoi email via Brevo vers:', to);
+
+  const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'api-key': brevoApiKey,
+    },
+    body: JSON.stringify({
+      sender: { 
+        name: "Houkouki", 
+        email: "contact@houkouki.fr" 
+      },
+      to: [{ email: to }],
+      subject: subject,
+      htmlContent: htmlContent,
+    }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    console.error('Erreur Brevo:', response.status, errorText);
+    throw new Error(`Erreur Brevo: ${response.status} - ${errorText}`);
+  }
+
+  return await response.json();
+};
 
 const generateClientAccessEmail = (data: ClientAccessRequest) => {
   return `
