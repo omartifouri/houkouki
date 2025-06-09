@@ -48,6 +48,17 @@ export interface AdminBooking {
   updated_at: string;
 }
 
+export interface ClientAccount {
+  id: string;
+  nom: string;
+  prenom: string;
+  email: string;
+  login: string;
+  temporary_password: string;
+  password_changed: boolean;
+  created_at: string;
+}
+
 export const useAdmin = () => {
   const { user } = useAuth();
   // TEMPORAIRE : Forcer isAdmin à true pour les tests
@@ -55,6 +66,7 @@ export const useAdmin = () => {
   const [contactSubmissions, setContactSubmissions] = useState<ContactSubmission[]>([]);
   const [questionnaireSubmissions, setQuestionnaireSubmissions] = useState<QuestionnaireSubmission[]>([]);
   const [bookings, setBookings] = useState<AdminBooking[]>([]);
+  const [clients, setClients] = useState<ClientAccount[]>([]);
   const [loading, setLoading] = useState(false);
 
   // TEMPORAIRE : Désactiver la vérification admin pour les tests
@@ -109,6 +121,21 @@ export const useAdmin = () => {
     }
   };
 
+  // Charger les clients
+  const loadClients = async () => {
+    try {
+      const { data, error } = await supabaseTyped
+        .from('clients')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+      setClients(data || []);
+    } catch (error) {
+      console.error('Erreur chargement clients:', error);
+    }
+  };
+
   // Mettre à jour le statut d'un rendez-vous
   const updateBookingStatus = async (id: string, status: AdminBooking['status'], notes?: string) => {
     try {
@@ -135,6 +162,7 @@ export const useAdmin = () => {
     loadContactSubmissions();
     loadQuestionnaireSubmissions();
     loadBookings();
+    loadClients();
   }, []);
 
   return {
@@ -143,9 +171,11 @@ export const useAdmin = () => {
     contactSubmissions,
     questionnaireSubmissions,
     bookings,
+    clients,
     loadContactSubmissions,
     loadQuestionnaireSubmissions,
     loadBookings,
+    loadClients,
     updateBookingStatus
   };
 };

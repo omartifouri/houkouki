@@ -196,6 +196,44 @@ export interface Database {
           updated_at?: string;
         };
       };
+      clients: {
+        Row: {
+          id: string;
+          nom: string;
+          prenom: string;
+          email: string;
+          login: string;
+          password_hash: string;
+          temporary_password: string;
+          password_changed: boolean;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          nom: string;
+          prenom: string;
+          email: string;
+          login: string;
+          password_hash: string;
+          temporary_password: string;
+          password_changed?: boolean;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          nom?: string;
+          prenom?: string;
+          email?: string;
+          login?: string;
+          password_hash?: string;
+          temporary_password?: string;
+          password_changed?: boolean;
+          created_at?: string;
+          updated_at?: string;
+        };
+      };
     };
   };
 }

@@ -72,6 +72,45 @@ export type Database = {
         }
         Relationships: []
       }
+      clients: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          login: string
+          nom: string
+          password_changed: boolean
+          password_hash: string
+          prenom: string
+          temporary_password: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          login: string
+          nom: string
+          password_changed?: boolean
+          password_hash: string
+          prenom: string
+          temporary_password: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          login?: string
+          nom?: string
+          password_changed?: boolean
+          password_hash?: string
+          prenom?: string
+          temporary_password?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       contact_submissions: {
         Row: {
           created_at: string | null

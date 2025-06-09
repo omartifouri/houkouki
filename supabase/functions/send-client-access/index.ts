@@ -1,0 +1,102 @@
+
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { sendEmailWithBrevo } from "../send-questionnaire/email-service.ts";
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type",
+};
+
+interface ClientAccessRequest {
+  nom: string;
+  prenom: string;
+  email: string;
+  login: string;
+  password: string;
+}
+
+const generateClientAccessEmail = (data: ClientAccessRequest) => {
+  return `
+    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto;">
+      <h2 style="color: #d73527;">Votre accompagnement Houkouki est activé – bienvenue !</h2>
+      
+      <p>Bonjour ${data.prenom} ${data.nom},</p>
+      
+      <p>Merci pour votre inscription !</p>
+      <p>Votre abonnement Houkouki vous donne accès à un accompagnement complet, pensé pour vous aider à chaque étape de votre projet professionnel.</p>
+      
+      <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <h3 style="color: #d73527; margin-top: 0;">Vos identifiants de connexion :</h3>
+        <p><strong>Login :</strong> ${data.login}</p>
+        <p><strong>Mot de passe temporaire :</strong> <code style="background-color: #e9ecef; padding: 2px 6px; border-radius: 4px;">${data.password}</code></p>
+        <p style="color: #dc3545; font-weight: bold; margin-top: 15px;">⚠️ Important : Vous devrez changer ce mot de passe lors de votre première connexion.</p>
+      </div>
+      
+      <p><strong>En tant que client abonné, vous pouvez dès maintenant :</strong></p>
+      <ul>
+        <li>compléter votre profil via le questionnaire « Parlez-nous de vous »</li>
+        <li>bénéficier d'un accompagnement personnalisé, incluant coaching psychologique, optimisation de votre CV, préparation aux entretiens, et mise en réseau avec des recruteurs.</li>
+      </ul>
+      
+      <p>Vous pouvez piloter votre accompagnement depuis votre espace privé ou échanger avec notre équipe par tel ou sur WhatsApp au <strong>05 29 04 59 99</strong> selon ce qui vous convient le mieux.</p>
+      
+      <p>Nous sommes ravis de vous accompagner dans cette étape !</p>
+      
+      <p>À bientôt,</p>
+      <p><strong>L'équipe Houkouki</strong></p>
+    </div>
+  `;
+};
+
+const handler = async (req: Request): Promise<Response> => {
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders });
+  }
+
+  try {
+    const requestData: ClientAccessRequest = await req.json();
+    
+    console.log("Envoi des accès client à:", requestData.email);
+
+    // Générer le contenu de l'email
+    const emailContent = generateClientAccessEmail(requestData);
+
+    // Envoyer l'email via Brevo
+    await sendEmailWithBrevo(
+      requestData.email,
+      "Votre accompagnement Houkouki est activé – bienvenue !",
+      emailContent
+    );
+
+    console.log("Email d'accès client envoyé avec succès");
+
+    return new Response(
+      JSON.stringify({ success: true, message: "Email d'accès envoyé avec succès" }),
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          ...corsHeaders,
+        },
+      }
+    );
+
+  } catch (error: any) {
+    console.error("Erreur lors de l'envoi des accès client:", error);
+    return new Response(
+      JSON.stringify({ 
+        error: error.message || "Erreur lors de l'envoi de l'email d'accès"
+      }),
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+          ...corsHeaders,
+        },
+      }
+    );
+  }
+};
+
+serve(handler);
