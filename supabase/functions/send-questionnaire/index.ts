@@ -40,6 +40,9 @@ interface QuestionnaireData {
   autreCritere?: string;
   questionSpecifique?: string;
   questionDetails?: string;
+  // Contact form fields
+  profil?: string;
+  message?: string;
 }
 
 const formatArrayToString = (arr?: string[]) => {
@@ -111,7 +114,8 @@ const handler = async (req: Request): Promise<Response> => {
       nom: data.nom, 
       prenom: data.prenom, 
       email: data.email, 
-      occupationActuelle: data.occupationActuelle 
+      occupationActuelle: data.occupationActuelle,
+      profil: data.profil 
     });
 
     // Vérifier si c'est un questionnaire complet ou juste le formulaire de contact
@@ -219,11 +223,11 @@ const handler = async (req: Request): Promise<Response> => {
       `;
 
       console.log("=== ENVOI EMAIL ÉQUIPE ===");
-      console.log("Destinataire:", "o.tifouri@geoso.fr");
+      console.log("Destinataire:", "clients@houkouki.com");
       console.log("Sujet:", `Nouveau questionnaire de ${data.prenom} ${data.nom}`);
       
       const teamEmailResponse = await sendEmailWithBrevo(
-        "o.tifouri@geoso.fr",
+        "clients@houkouki.com",
         `Nouveau questionnaire de ${data.prenom} ${data.nom}`,
         htmlContent
       );
@@ -233,9 +237,11 @@ const handler = async (req: Request): Promise<Response> => {
       console.log("ID message:", teamEmailResponse.messageId);
     }
 
-    // Si le client est étudiant, envoyer l'email de bienvenue
+    // Gestion des emails selon le profil pour le formulaire de contact
     let welcomeEmailResponse = null;
-    if (data.occupationActuelle === "etudiant") {
+    const profil = data.profil || data.occupationActuelle;
+
+    if (profil === "etudiant") {
       console.log("=== ENVOI EMAIL BIENVENUE ÉTUDIANT ===");
       console.log("Email client:", data.email);
       
@@ -271,16 +277,90 @@ const handler = async (req: Request): Promise<Response> => {
         welcomeHtmlContent
       );
 
-      console.log("=== RÉPONSE EMAIL BIENVENUE ===");
+      console.log("=== RÉPONSE EMAIL BIENVENUE ÉTUDIANT ===");
       console.log("Succès:", !!welcomeEmailResponse.messageId);
       console.log("ID message:", welcomeEmailResponse.messageId);
+    } else if (profil === "client-banque") {
+      console.log("=== ENVOI EMAIL CLIENT BANQUE ===");
+      console.log("Email client:", data.email);
+      
+      const bankClientHtmlContent = `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+          <h2 style="color: #d73527;">Confirmez votre accès Houkouki en quelques secondes</h2>
+          
+          <p>Bonjour ${data.prenom} ${data.nom},</p>
+          
+          <p>Merci pour votre inscription sur Houkouki !</p>
+          
+          <p>Vous indiquez bénéficier de notre accompagnement via la Banque Populaire.<br>
+          Afin de valider votre accès, nous devons simplement vérifier que vous faites bien partie des bénéficiaires déclarés par votre établissement.</p>
+          
+          <p><strong>👉 Pour cela, merci de nous transmettre votre numéro de CIN (Carte d'Identité Nationale), en toute confidentialité.</strong></p>
+          
+          <p>Vous pouvez choisir le moyen qui vous convient :</p>
+          <ul>
+            <li>le saisir directement dans votre espace sécurisé : [lien vers l'espace privé]</li>
+            <li>nous l'envoyer par WhatsApp au numéro <strong>0526035858</strong></li>
+            <li>ou nous appeler directement au numéro <strong>0529009477</strong></li>
+          </ul>
+          
+          <p>Dès réception et validation, vous pourrez :</p>
+          <ul>
+            <li>remplir votre questionnaire d'orientation (« Parlez-nous de vous »)</li>
+            <li>accéder à l'ensemble des services Houkouki : coaching psy, CV, entretiens, réseau</li>
+          </ul>
+          
+          <p>Nous restons à votre écoute pour toute question.</p>
+          
+          <p>À très vite,</p>
+          
+          <p><strong>L'équipe Houkouki</strong></p>
+        </div>
+      `;
+
+      welcomeEmailResponse = await sendEmailWithBrevo(
+        data.email,
+        "Confirmez votre accès Houkouki en quelques secondes",
+        bankClientHtmlContent
+      );
+
+      console.log("=== RÉPONSE EMAIL CLIENT BANQUE ===");
+      console.log("Succès:", !!welcomeEmailResponse.messageId);
+      console.log("ID message:", welcomeEmailResponse.messageId);
+    }
+
+    // Envoyer email d'information à l'équipe pour tous les formulaires de contact
+    if (!isFullQuestionnaire) {
+      console.log("=== ENVOI EMAIL ÉQUIPE POUR FORMULAIRE CONTACT ===");
+      
+      const contactEmailContent = `
+        <h1>Nouveau Formulaire de Contact</h1>
+        
+        <h2>Informations du Contact</h2>
+        <p><strong>Nom :</strong> ${data.nom}</p>
+        <p><strong>Prénom :</strong> ${data.prenom}</p>
+        <p><strong>Email :</strong> ${data.email}</p>
+        <p><strong>Téléphone :</strong> ${data.telephone || 'Non renseigné'}</p>
+        <p><strong>Profil :</strong> ${profil}</p>
+        <p><strong>Message :</strong> ${data.message || 'Aucun message'}</p>
+      `;
+
+      const teamContactResponse = await sendEmailWithBrevo(
+        "clients@houkouki.com",
+        `Nouveau contact de ${data.prenom} ${data.nom} (${profil})`,
+        contactEmailContent
+      );
+
+      console.log("=== RÉPONSE EMAIL ÉQUIPE CONTACT ===");
+      console.log("Succès:", !!teamContactResponse.messageId);
+      console.log("ID message:", teamContactResponse.messageId);
     }
 
     console.log("=== FIN FONCTION - SUCCÈS ===");
     return new Response(JSON.stringify({ 
       success: true, 
-      teamEmailResponse: isFullQuestionnaire ? "Email équipe envoyé" : "Email équipe non envoyé (formulaire de contact)",
-      welcomeEmailResponse: welcomeEmailResponse || "Non envoyé (client non étudiant)",
+      teamEmailResponse: isFullQuestionnaire ? "Email équipe envoyé (questionnaire)" : "Email équipe envoyé (contact)",
+      welcomeEmailResponse: welcomeEmailResponse ? `Email ${profil} envoyé` : `Non envoyé (profil: ${profil})`,
       databaseSaved: isFullQuestionnaire ? "Questionnaire enregistré en base" : "Non enregistré (formulaire de contact)"
     }), {
       status: 200,
