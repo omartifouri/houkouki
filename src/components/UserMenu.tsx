@@ -2,12 +2,14 @@
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { useAuth } from '@/hooks/useAuth'
-import { User, LogOut, FileText, Calendar } from 'lucide-react'
+import { useAdmin } from '@/hooks/useAdmin'
+import { User, LogOut, FileText, Calendar, Shield } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import AuthModal from '@/components/AuthModal'
 
 export default function UserMenu() {
   const { user, signOut } = useAuth()
+  const { isAdmin } = useAdmin()
 
   if (!user) {
     return (
@@ -41,6 +43,17 @@ export default function UserMenu() {
             Réserver
           </Link>
         </DropdownMenuItem>
+        {isAdmin && (
+          <>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem asChild>
+              <Link to="/admin" className="flex items-center gap-2">
+                <Shield className="h-4 w-4" />
+                Administration
+              </Link>
+            </DropdownMenuItem>
+          </>
+        )}
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={signOut} className="flex items-center gap-2 text-red-600">
           <LogOut className="h-4 w-4" />

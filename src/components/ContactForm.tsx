@@ -47,6 +47,23 @@ const ContactForm = ({ children }: ContactFormProps) => {
     try {
       console.log("Envoi du formulaire contact:", data);
       
+      // Enregistrer dans la base de données
+      const { error: dbError } = await supabase
+        .from('contact_submissions')
+        .insert([{
+          nom: data.nom,
+          prenom: data.prenom,
+          telephone: data.telephone,
+          email: data.email,
+          profil: data.profil,
+          message: data.message
+        }]);
+
+      if (dbError) {
+        console.error('Erreur base de données:', dbError);
+        throw dbError;
+      }
+
       // Si l'utilisateur est étudiant, envoyer l'email de bienvenue
       if (data.profil === "etudiant") {
         console.log("Envoi de l'email de bienvenue pour étudiant depuis le formulaire contact");

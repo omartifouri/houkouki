@@ -1,5 +1,6 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
 
 export interface TimeSlot {
   time: string;
@@ -25,6 +26,24 @@ export const useBookings = () => {
     "Préparation mentale aux entretiens"
   ];
 
+  // Charger les réservations depuis la base de données
+  useEffect(() => {
+    const loadBookings = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('bookings')
+          .select('*');
+
+        if (error) throw error;
+        setBookings(data || []);
+      } catch (error) {
+        console.error('Erreur chargement réservations:', error);
+      }
+    };
+
+    loadBookings();
+  }, []);
+
   // Générer les créneaux de 60 minutes avec 10 minutes d'écart de 9h à 17h (sans pause déjeuner 12h-14h)
   const generateTimeSlots = (date: string): TimeSlot[] => {
     const slots: TimeSlot[] = [];
@@ -47,13 +66,40 @@ export const useBookings = () => {
     return slots;
   };
 
-  const addBooking = (booking: Omit<Booking, 'id'>) => {
-    const newBooking: Booking = {
-      ...booking,
-      id: Date.now().toString()
-    };
-    setBookings(prev => [...prev, newBooking]);
-    return newBooking;
+  const addBooking = async (booking: Omit<Booking, 'id'>) => {
+    try {
+      const { data, error } = await supabase
+        .from('bookings')
+        .insert([{
+          service: booking.service,
+          date: booking.date,
+          time: booking.time,
+          name: booking.name,
+          email: booking.email,
+          phone: booking.phone,
+          status: 'pending'
+        }])
+        .select()
+        .single();
+
+      if (error) throw error;
+
+      const newBooking: Booking = {
+        id: data.id,
+        service: data.service,
+        date: data.date,
+        time: data.time,
+        name: data.name,
+        email: data.email,
+        phone: data.phone
+      };
+
+      setBookings(prev => [...prev, newBooking]);
+      return newBooking;
+    } catch (error) {
+      console.error('Erreur ajout réservation:', error);
+      throw error;
+    }
   };
 
   return {
