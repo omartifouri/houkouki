@@ -14,7 +14,7 @@ interface BookingRowProps {
 
 const BookingRow = ({ booking, onStatusUpdate }: BookingRowProps) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [newStatus, setNewStatus] = useState(booking.status);
+  const [newStatus, setNewStatus] = useState<AdminBooking['status']>(booking.status);
   const [notes, setNotes] = useState(booking.notes || '');
 
   const getStatusBadge = (status: string) => {
@@ -40,6 +40,10 @@ const BookingRow = ({ booking, onStatusUpdate }: BookingRowProps) => {
     setNotes(booking.notes || '');
   };
 
+  const handleStatusChange = (value: string) => {
+    setNewStatus(value as AdminBooking['status']);
+  };
+
   return (
     <TableRow>
       <TableCell>{booking.date} à {booking.time}</TableCell>
@@ -56,7 +60,7 @@ const BookingRow = ({ booking, onStatusUpdate }: BookingRowProps) => {
       <TableCell>
         {isEditing ? (
           <div className="space-y-2">
-            <Select value={newStatus} onValueChange={setNewStatus}>
+            <Select value={newStatus} onValueChange={handleStatusChange}>
               <SelectTrigger className="w-32">
                 <SelectValue placeholder="Statut" />
               </SelectTrigger>
