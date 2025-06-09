@@ -67,7 +67,7 @@ export const useAdmin = () => {
 
       try {
         const { data, error } = await supabase
-          .from('admin_users' as any)
+          .from('admin_users')
           .select('*')
           .eq('user_id', user.id)
           .single();
@@ -90,7 +90,7 @@ export const useAdmin = () => {
 
     try {
       const { data, error } = await supabase
-        .from('contact_submissions' as any)
+        .from('contact_submissions')
         .select('*')
         .order('created_at', { ascending: false });
 
@@ -107,7 +107,7 @@ export const useAdmin = () => {
 
     try {
       const { data, error } = await supabase
-        .from('questionnaire_submissions' as any)
+        .from('questionnaire_submissions')
         .select('*')
         .order('created_at', { ascending: false });
 
@@ -124,7 +124,7 @@ export const useAdmin = () => {
 
     try {
       const { data, error } = await supabase
-        .from('bookings' as any)
+        .from('bookings')
         .select('*')
         .order('created_at', { ascending: false });
 
@@ -141,7 +141,7 @@ export const useAdmin = () => {
 
     try {
       const { error } = await supabase
-        .from('bookings' as any)
+        .from('bookings')
         .update({ 
           status, 
           notes,

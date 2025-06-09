@@ -31,7 +31,7 @@ export const useBookings = () => {
     const loadBookings = async () => {
       try {
         const { data, error } = await supabase
-          .from('bookings' as any)
+          .from('bookings')
           .select('*');
 
         if (error) throw error;
@@ -69,7 +69,7 @@ export const useBookings = () => {
   const addBooking = async (booking: Omit<Booking, 'id'>) => {
     try {
       const { data, error } = await supabase
-        .from('bookings' as any)
+        .from('bookings')
         .insert([{
           service: booking.service,
           date: booking.date,
