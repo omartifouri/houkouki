@@ -1,6 +1,5 @@
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm:resend@2.0.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -47,6 +46,44 @@ const formatArrayToString = (arr?: string[]) => {
   return arr && arr.length > 0 ? arr.join(', ') : 'Aucune réponse';
 };
 
+const sendEmailWithBrevo = async (to: string, subject: string, htmlContent: string) => {
+  const brevoApiKey = Deno.env.get("BREVO_API_KEY");
+  
+  if (!brevoApiKey) {
+    throw new Error("BREVO_API_KEY non configurée");
+  }
+
+  const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+    method: "POST",
+    headers: {
+      "accept": "application/json",
+      "api-key": brevoApiKey,
+      "content-type": "application/json"
+    },
+    body: JSON.stringify({
+      sender: {
+        name: "Houkouki",
+        email: "o.tifouri@geoso.fr"
+      },
+      to: [
+        {
+          email: to,
+          name: to.split('@')[0]
+        }
+      ],
+      subject: subject,
+      htmlContent: htmlContent
+    })
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Erreur Brevo: ${response.status} - ${errorText}`);
+  }
+
+  return await response.json();
+};
+
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -56,15 +93,13 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("=== DÉBUT DE LA FONCTION SEND-QUESTIONNAIRE ===");
     
     // Vérifier que la clé API est présente
-    const resendApiKey = Deno.env.get("RESEND_API_KEY");
-    console.log("Clé API Resend présente:", !!resendApiKey);
-    console.log("Longueur de la clé:", resendApiKey ? resendApiKey.length : 0);
+    const brevoApiKey = Deno.env.get("BREVO_API_KEY");
+    console.log("Clé API Brevo présente:", !!brevoApiKey);
+    console.log("Longueur de la clé:", brevoApiKey ? brevoApiKey.length : 0);
     
-    if (!resendApiKey) {
-      throw new Error("RESEND_API_KEY non configurée");
+    if (!brevoApiKey) {
+      throw new Error("BREVO_API_KEY non configurée");
     }
-
-    const resend = new Resend(resendApiKey);
 
     const data: QuestionnaireData = await req.json();
     console.log("Données reçues:", { 
@@ -128,24 +163,18 @@ const handler = async (req: Request): Promise<Response> => {
       `;
 
       console.log("=== ENVOI EMAIL ÉQUIPE ===");
-      console.log("Destinataire:", ["o.tifouri@geoso.fr"]);
+      console.log("Destinataire:", "o.tifouri@geoso.fr");
       console.log("Sujet:", `Nouveau questionnaire de ${data.prenom} ${data.nom}`);
       
-      const teamEmailResponse = await resend.emails.send({
-        from: "Houkouki <onboarding@resend.dev>",
-        to: ["o.tifouri@geoso.fr"],
-        subject: `Nouveau questionnaire de ${data.prenom} ${data.nom}`,
-        html: htmlContent,
-      });
+      const teamEmailResponse = await sendEmailWithBrevo(
+        "o.tifouri@geoso.fr",
+        `Nouveau questionnaire de ${data.prenom} ${data.nom}`,
+        htmlContent
+      );
 
       console.log("=== RÉPONSE EMAIL ÉQUIPE ===");
-      console.log("Succès:", !!teamEmailResponse.id);
-      console.log("ID email:", teamEmailResponse.id);
-      console.log("Erreur éventuelle:", teamEmailResponse.error);
-      
-      if (teamEmailResponse.error) {
-        console.error("Erreur détaillée email équipe:", teamEmailResponse.error);
-      }
+      console.log("Succès:", !!teamEmailResponse.messageId);
+      console.log("ID message:", teamEmailResponse.messageId);
     }
 
     // Si le client est étudiant, envoyer l'email de bienvenue
@@ -180,21 +209,15 @@ const handler = async (req: Request): Promise<Response> => {
         </div>
       `;
 
-      welcomeEmailResponse = await resend.emails.send({
-        from: "Houkouki <onboarding@resend.dev>",
-        to: [data.email],
-        subject: "Bienvenue sur Houkouki – il ne vous reste qu'un pas pour activer votre accompagnement",
-        html: welcomeHtmlContent,
-      });
+      welcomeEmailResponse = await sendEmailWithBrevo(
+        data.email,
+        "Bienvenue sur Houkouki – il ne vous reste qu'un pas pour activer votre accompagnement",
+        welcomeHtmlContent
+      );
 
       console.log("=== RÉPONSE EMAIL BIENVENUE ===");
-      console.log("Succès:", !!welcomeEmailResponse.id);
-      console.log("ID email:", welcomeEmailResponse.id);
-      console.log("Erreur éventuelle:", welcomeEmailResponse.error);
-      
-      if (welcomeEmailResponse.error) {
-        console.error("Erreur détaillée email bienvenue:", welcomeEmailResponse.error);
-      }
+      console.log("Succès:", !!welcomeEmailResponse.messageId);
+      console.log("ID message:", welcomeEmailResponse.messageId);
     }
 
     console.log("=== FIN FONCTION - SUCCÈS ===");
