@@ -40,7 +40,21 @@ export const useUserBookings = () => {
 
         if (error) throw error;
 
-        setBookings(data || []);
+        const mappedBookings: UserBooking[] = (data || []).map(booking => ({
+          id: booking.id,
+          service: booking.service,
+          date: booking.date,
+          time: booking.time,
+          name: booking.name,
+          email: booking.email,
+          phone: booking.phone || undefined,
+          status: (booking.status as 'pending' | 'confirmed' | 'cancelled' | 'completed') || 'pending',
+          notes: booking.notes || undefined,
+          created_at: booking.created_at || '',
+          updated_at: booking.updated_at || ''
+        }));
+
+        setBookings(mappedBookings);
       } catch (err) {
         console.error('Erreur lors du chargement des réservations:', err);
         setError('Impossible de charger vos rendez-vous');

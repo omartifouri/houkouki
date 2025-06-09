@@ -72,13 +72,13 @@ export const CVManagerTab = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {userCV.personal_info && (
+              {userCV.personalInfo && (
                 <div>
                   <h4 className="font-semibold mb-2">Informations personnelles</h4>
                   <p className="text-sm text-gray-600">
-                    {userCV.personal_info.firstName} {userCV.personal_info.lastName}
+                    {userCV.personalInfo.firstName} {userCV.personalInfo.lastName}
                   </p>
-                  <p className="text-sm text-gray-600">{userCV.personal_info.email}</p>
+                  <p className="text-sm text-gray-600">{userCV.personalInfo.email}</p>
                 </div>
               )}
 

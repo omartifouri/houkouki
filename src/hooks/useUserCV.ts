@@ -40,7 +40,7 @@ export const useUserCV = () => {
             title: data.title,
             created_at: data.created_at,
             updated_at: data.updated_at,
-            personalInfo: data.personal_info || {
+            personalInfo: (data.personal_info as any) || {
               firstName: '',
               lastName: '',
               email: '',
@@ -50,10 +50,10 @@ export const useUserCV = () => {
               photo: undefined
             },
             summary: data.summary || '',
-            experience: data.experience || [],
-            education: data.education || [],
-            skills: data.skills || [],
-            languages: data.languages || []
+            experience: (data.experience as any) || [],
+            education: (data.education as any) || [],
+            skills: (data.skills as any) || [],
+            languages: (data.languages as any) || []
           });
         }
       } catch (err) {
