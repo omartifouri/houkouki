@@ -22,7 +22,7 @@ const ContactSubmissionsTab = ({ submissions }: ContactSubmissionsTabProps) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Soumissions du formulaire "C'est parti !"</CardTitle>
+        <CardTitle>Formulaire c'est parti</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>

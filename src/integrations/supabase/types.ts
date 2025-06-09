@@ -9,7 +9,159 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      admin_users: {
+        Row: {
+          created_at: string | null
+          id: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      bookings: {
+        Row: {
+          created_at: string | null
+          date: string
+          email: string
+          id: string
+          name: string
+          notes: string | null
+          phone: string | null
+          service: string
+          status: string | null
+          time: string
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          date: string
+          email: string
+          id?: string
+          name: string
+          notes?: string | null
+          phone?: string | null
+          service: string
+          status?: string | null
+          time: string
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          date?: string
+          email?: string
+          id?: string
+          name?: string
+          notes?: string | null
+          phone?: string | null
+          service?: string
+          status?: string | null
+          time?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      contact_submissions: {
+        Row: {
+          created_at: string | null
+          email: string
+          id: string
+          message: string
+          nom: string
+          prenom: string
+          profil: string
+          telephone: string
+        }
+        Insert: {
+          created_at?: string | null
+          email: string
+          id?: string
+          message: string
+          nom: string
+          prenom: string
+          profil: string
+          telephone: string
+        }
+        Update: {
+          created_at?: string | null
+          email?: string
+          id?: string
+          message?: string
+          nom?: string
+          prenom?: string
+          profil?: string
+          telephone?: string
+        }
+        Relationships: []
+      }
+      questionnaire_submissions: {
+        Row: {
+          autres_informations: string | null
+          budget_coaching: string | null
+          competences_cles: string | null
+          created_at: string | null
+          disponibilite_coaching: string | null
+          domaine_etudes: string | null
+          email: string
+          experience_professionnelle: string | null
+          id: string
+          langues_parlees: string | null
+          niveau_etudes: string | null
+          nom: string
+          objectifs_carriere: string | null
+          occupation_actuelle: string
+          prenom: string
+          secteur_activite: string | null
+          situation_geographique: string | null
+        }
+        Insert: {
+          autres_informations?: string | null
+          budget_coaching?: string | null
+          competences_cles?: string | null
+          created_at?: string | null
+          disponibilite_coaching?: string | null
+          domaine_etudes?: string | null
+          email: string
+          experience_professionnelle?: string | null
+          id?: string
+          langues_parlees?: string | null
+          niveau_etudes?: string | null
+          nom: string
+          objectifs_carriere?: string | null
+          occupation_actuelle: string
+          prenom: string
+          secteur_activite?: string | null
+          situation_geographique?: string | null
+        }
+        Update: {
+          autres_informations?: string | null
+          budget_coaching?: string | null
+          competences_cles?: string | null
+          created_at?: string | null
+          disponibilite_coaching?: string | null
+          domaine_etudes?: string | null
+          email?: string
+          experience_professionnelle?: string | null
+          id?: string
+          langues_parlees?: string | null
+          niveau_etudes?: string | null
+          nom?: string
+          objectifs_carriere?: string | null
+          occupation_actuelle?: string
+          prenom?: string
+          secteur_activite?: string | null
+          situation_geographique?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

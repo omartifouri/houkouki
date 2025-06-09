@@ -39,7 +39,7 @@ const AdminContent = () => {
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="contact" className="flex items-center gap-2">
             <FileText className="h-4 w-4" />
-            Formulaires Contact
+            Formulaire c'est parti
           </TabsTrigger>
           <TabsTrigger value="questionnaire" className="flex items-center gap-2">
             <Users className="h-4 w-4" />
