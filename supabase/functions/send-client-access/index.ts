@@ -1,5 +1,4 @@
 
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
 const corsHeaders = {
@@ -64,9 +63,10 @@ const generateClientAccessEmail = (data: ClientAccessRequest) => {
       
       <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
         <h3 style="color: #d73527; margin-top: 0;">Vos identifiants de connexion :</h3>
-        <p><strong>Login :</strong> ${data.login}</p>
+        <p><strong>Email (identifiant) :</strong> ${data.email}</p>
         <p><strong>Mot de passe temporaire :</strong> <code style="background-color: #e9ecef; padding: 2px 6px; border-radius: 4px;">${data.password}</code></p>
         <p style="color: #dc3545; font-weight: bold; margin-top: 15px;">⚠️ Important : Vous devrez changer ce mot de passe lors de votre première connexion.</p>
+        <p style="color: #6c757d; font-size: 14px; margin-top: 10px;">Note : Utilisez votre adresse email comme identifiant de connexion.</p>
       </div>
       
       <p><strong>En tant que client abonné, vous pouvez dès maintenant :</strong></p>
@@ -136,4 +136,3 @@ const handler = async (req: Request): Promise<Response> => {
 };
 
 serve(handler);
-
