@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { supabaseTyped } from "@/lib/supabaseTyped";
 import { useAuth } from '@/hooks/useAuth';
@@ -23,12 +22,10 @@ export const useBookings = () => {
   const [bookings, setBookings] = useState<Booking[]>([]);
 
   const services = [
-    "Identification des débouchés selon mon profil",
-    "Renforcement de la confiance en soi",
-    "Préparation mentale aux entretiens"
+    "Rendez-vous avec un psychologue clinicien (clarification du projet professionnel, gestion du stress, confiance en soi, préparation aux entretiens)",
+    "Rendez-vous avec un chargé de recrutement (optimisation du CV, conseils sur la stratégie de recherche, mise en relation avec des recruteurs)"
   ];
 
-  // Charger les réservations depuis la base de données
   useEffect(() => {
     const loadBookings = async () => {
       try {
