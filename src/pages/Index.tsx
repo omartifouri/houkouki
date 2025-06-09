@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import ContactForm from "@/components/ContactForm";
 import AuthModal from "@/components/AuthModal";
 import UserMenu from "@/components/UserMenu";
-import TestEmailButton from "@/components/TestEmailButton";
+import RecommendToFriend from "@/components/RecommendToFriend";
 import { useAuth } from "@/hooks/useAuth";
 
 const Index = () => {
@@ -86,11 +86,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Test Email Section - TEMPORAIRE */}
+      {/* Recommandation Section - TEMPORAIRE */}
       <section className="py-8 px-4 bg-yellow-50 border-y border-yellow-200">
         <div className="container mx-auto">
           <div className="max-w-2xl mx-auto">
-            <TestEmailButton />
+            <RecommendToFriend />
           </div>
         </div>
       </section>
