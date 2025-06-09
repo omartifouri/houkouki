@@ -1,5 +1,6 @@
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1'
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -101,6 +102,11 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("BREVO_API_KEY non configurée");
     }
 
+    // Initialiser le client Supabase
+    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
+    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
     const data: QuestionnaireData = await req.json();
     console.log("Données reçues:", { 
       nom: data.nom, 
@@ -112,8 +118,59 @@ const handler = async (req: Request): Promise<Response> => {
     // Vérifier si c'est un questionnaire complet ou juste le formulaire de contact
     const isFullQuestionnaire = data.age && data.telephone && data.niveauEtudes;
 
-    // Email avec les données du questionnaire pour l'équipe (seulement si questionnaire complet)
+    // Si c'est un questionnaire complet, l'enregistrer dans la base de données
     if (isFullQuestionnaire) {
+      console.log("=== ENREGISTREMENT QUESTIONNAIRE COMPLET ===");
+      
+      // Créer l'objet pour l'insertion dans questionnaire_submissions
+      const questionnaireSubmission = {
+        nom: data.nom,
+        prenom: data.prenom,
+        email: data.email,
+        occupation_actuelle: data.occupationActuelle,
+        niveau_etudes: data.niveauEtudes || null,
+        domaine_etudes: data.domaineEtudes || null,
+        experience_professionnelle: data.experiencesPro || null,
+        situation_geographique: null, // Pas collecté dans le formulaire actuel
+        secteur_activite: null, // Pas collecté dans le formulaire actuel
+        objectifs_carriere: [
+          ...(data.objectifCourtTerme || []),
+          ...(data.objectifLongTerme || []),
+          data.autreObjectifCourt ? `Autre court terme: ${data.autreObjectifCourt}` : '',
+          data.autreObjectifLong ? `Autre long terme: ${data.autreObjectifLong}` : ''
+        ].filter(Boolean).join('; ') || null,
+        competences_cles: [
+          ...(data.competences || []),
+          data.autreCompetence ? `Autre: ${data.autreCompetence}` : ''
+        ].filter(Boolean).join('; ') || null,
+        langues_parlees: null, // Pas collecté dans le formulaire actuel
+        disponibilite_coaching: formatArrayToString(data.typeAccompagnement),
+        budget_coaching: null, // Pas collecté dans le formulaire actuel
+        autres_informations: [
+          data.qualites ? `Qualités: ${formatArrayToString(data.qualites)}${data.autreQualite ? `, ${data.autreQualite}` : ''}` : '',
+          data.tachesPreferees ? `Tâches préférées: ${formatArrayToString(data.tachesPreferees)}${data.autreTache ? `, ${data.autreTache}` : ''}` : '',
+          data.creativite ? `Créativité: ${data.creativite}` : '',
+          data.activiteArtistique ? `Activité artistique: ${data.activiteArtistique}${data.activiteArtistiqueDetails ? ` - ${data.activiteArtistiqueDetails}` : ''}` : '',
+          data.canauxRecherche ? `Canaux de recherche: ${formatArrayToString(data.canauxRecherche)}${data.autreCanalRecherche ? `, ${data.autreCanalRecherche}` : ''}` : '',
+          data.obstacles ? `Obstacles: ${formatArrayToString(data.obstacles)}${data.autreObstacle ? `, ${data.autreObstacle}` : ''}` : '',
+          data.criteresPrincipaux ? `Critères principaux: ${formatArrayToString(data.criteresPrincipaux)}${data.autreCritere ? `, ${data.autreCritere}` : ''}` : '',
+          data.questionSpecifique === 'oui' && data.questionDetails ? `Question spécifique: ${data.questionDetails}` : ''
+        ].filter(Boolean).join('\n\n') || null
+      };
+
+      // Insérer dans la base de données
+      const { error: insertError } = await supabase
+        .from('questionnaire_submissions')
+        .insert(questionnaireSubmission);
+
+      if (insertError) {
+        console.error("Erreur insertion questionnaire:", insertError);
+        throw new Error(`Erreur insertion questionnaire: ${insertError.message}`);
+      }
+
+      console.log("Questionnaire enregistré avec succès");
+
+      // Email avec les données du questionnaire pour l'équipe
       const htmlContent = `
         <h1>Nouveau Questionnaire d'Orientation Professionnelle</h1>
         
@@ -224,7 +281,8 @@ const handler = async (req: Request): Promise<Response> => {
     return new Response(JSON.stringify({ 
       success: true, 
       teamEmailResponse: isFullQuestionnaire ? "Email équipe envoyé" : "Email équipe non envoyé (formulaire de contact)",
-      welcomeEmailResponse: welcomeEmailResponse || "Non envoyé (client non étudiant)"
+      welcomeEmailResponse: welcomeEmailResponse || "Non envoyé (client non étudiant)",
+      databaseSaved: isFullQuestionnaire ? "Questionnaire enregistré en base" : "Non enregistré (formulaire de contact)"
     }), {
       status: 200,
       headers: {
