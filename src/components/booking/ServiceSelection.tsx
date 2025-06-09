@@ -9,6 +9,26 @@ interface ServiceSelectionProps {
 }
 
 const ServiceSelection = ({ services, selectedService, onServiceChange }: ServiceSelectionProps) => {
+  const serviceStructure = [
+    {
+      title: "Rendez-vous avec un psychologue clinicien",
+      subServices: [
+        "Clarification du projet professionnel",
+        "Gestion du stress", 
+        "Confiance en soi",
+        "Préparation aux entretiens"
+      ]
+    },
+    {
+      title: "Rendez-vous avec un chargé de recrutement",
+      subServices: [
+        "Optimisation du CV",
+        "Conseils sur la stratégie de recherche",
+        "Mise en relation avec des recruteurs"
+      ]
+    }
+  ];
+
   return (
     <Card>
       <CardHeader>
@@ -24,11 +44,25 @@ const ServiceSelection = ({ services, selectedService, onServiceChange }: Servic
           <SelectTrigger>
             <SelectValue placeholder="Sélectionnez un service" />
           </SelectTrigger>
-          <SelectContent>
-            {services.map((service, index) => (
-              <SelectItem key={index} value={service}>
-                {service}
-              </SelectItem>
+          <SelectContent className="max-h-80">
+            {serviceStructure.map((mainService, index) => (
+              <div key={index}>
+                <SelectItem 
+                  value={mainService.title}
+                  className="font-semibold text-gray-900 bg-gray-50"
+                >
+                  • {mainService.title}
+                </SelectItem>
+                {mainService.subServices.map((subService, subIndex) => (
+                  <SelectItem 
+                    key={`${index}-${subIndex}`}
+                    value={`${mainService.title} - ${subService}`}
+                    className="pl-8 text-gray-700"
+                  >
+                    - {subService}
+                  </SelectItem>
+                ))}
+              </div>
             ))}
           </SelectContent>
         </Select>
