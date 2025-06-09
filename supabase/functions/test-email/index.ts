@@ -24,7 +24,7 @@ const sendEmailWithBrevo = async (to: string, subject: string, htmlContent: stri
     body: JSON.stringify({
       sender: {
         name: "Houkouki Test",
-        email: "o.tifouri@geoso.fr"
+        email: "clients@houkouki.com"
       },
       to: [
         {
