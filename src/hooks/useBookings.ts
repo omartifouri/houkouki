@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import { supabase } from "@/integrations/supabase/client";
 
 export interface TimeSlot {
   time: string;
@@ -31,7 +31,7 @@ export const useBookings = () => {
     const loadBookings = async () => {
       try {
         const { data, error } = await supabase
-          .from('bookings')
+          .from('bookings' as any)
           .select('*');
 
         if (error) throw error;
@@ -69,7 +69,7 @@ export const useBookings = () => {
   const addBooking = async (booking: Omit<Booking, 'id'>) => {
     try {
       const { data, error } = await supabase
-        .from('bookings')
+        .from('bookings' as any)
         .insert([{
           service: booking.service,
           date: booking.date,
@@ -84,18 +84,20 @@ export const useBookings = () => {
 
       if (error) throw error;
 
-      const newBooking: Booking = {
-        id: data.id,
-        service: data.service,
-        date: data.date,
-        time: data.time,
-        name: data.name,
-        email: data.email,
-        phone: data.phone
-      };
+      if (data) {
+        const newBooking: Booking = {
+          id: data.id,
+          service: data.service,
+          date: data.date,
+          time: data.time,
+          name: data.name,
+          email: data.email,
+          phone: data.phone
+        };
 
-      setBookings(prev => [...prev, newBooking]);
-      return newBooking;
+        setBookings(prev => [...prev, newBooking]);
+        return newBooking;
+      }
     } catch (error) {
       console.error('Erreur ajout réservation:', error);
       throw error;

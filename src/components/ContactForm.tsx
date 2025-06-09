@@ -47,21 +47,27 @@ const ContactForm = ({ children }: ContactFormProps) => {
     try {
       console.log("Envoi du formulaire contact:", data);
       
-      // Enregistrer dans la base de données
-      const { error: dbError } = await supabase
-        .from('contact_submissions')
-        .insert([{
-          nom: data.nom,
-          prenom: data.prenom,
-          telephone: data.telephone,
-          email: data.email,
-          profil: data.profil,
-          message: data.message
-        }]);
+      // Enregistrer dans la base de données avec une requête SQL brute
+      const { error: dbError } = await supabase.rpc('exec_sql', {
+        sql: `
+          INSERT INTO contact_submissions (nom, prenom, telephone, email, profil, message)
+          VALUES ($1, $2, $3, $4, $5, $6)
+        `,
+        params: [data.nom, data.prenom, data.telephone, data.email, data.profil, data.message]
+      });
 
       if (dbError) {
         console.error('Erreur base de données:', dbError);
-        throw dbError;
+        // Fallback: utiliser une approche alternative
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        
+        if (!response.ok) {
+          throw new Error('Erreur réseau');
+        }
       }
 
       // Si l'utilisateur est étudiant, envoyer l'email de bienvenue
