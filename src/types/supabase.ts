@@ -124,6 +124,7 @@ export interface Database {
           notes?: string;
           created_at: string;
           updated_at: string;
+          user_id?: string;
         };
         Insert: {
           id?: string;
@@ -137,6 +138,7 @@ export interface Database {
           notes?: string;
           created_at?: string;
           updated_at?: string;
+          user_id?: string;
         };
         Update: {
           id?: string;
@@ -148,6 +150,48 @@ export interface Database {
           phone?: string;
           status?: 'pending' | 'confirmed' | 'cancelled' | 'completed';
           notes?: string;
+          created_at?: string;
+          updated_at?: string;
+          user_id?: string;
+        };
+      };
+      user_cvs: {
+        Row: {
+          id: string;
+          user_id: string;
+          title: string;
+          personal_info: any;
+          summary: string;
+          experience: any;
+          education: any;
+          skills: any;
+          languages: any;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          title?: string;
+          personal_info?: any;
+          summary?: string;
+          experience?: any;
+          education?: any;
+          skills?: any;
+          languages?: any;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          title?: string;
+          personal_info?: any;
+          summary?: string;
+          experience?: any;
+          education?: any;
+          skills?: any;
+          languages?: any;
           created_at?: string;
           updated_at?: string;
         };

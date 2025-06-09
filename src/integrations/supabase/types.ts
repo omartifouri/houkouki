@@ -40,6 +40,7 @@ export type Database = {
           status: string | null
           time: string
           updated_at: string | null
+          user_id: string | null
         }
         Insert: {
           created_at?: string | null
@@ -53,6 +54,7 @@ export type Database = {
           status?: string | null
           time: string
           updated_at?: string | null
+          user_id?: string | null
         }
         Update: {
           created_at?: string | null
@@ -66,6 +68,7 @@ export type Database = {
           status?: string | null
           time?: string
           updated_at?: string | null
+          user_id?: string | null
         }
         Relationships: []
       }
@@ -159,6 +162,48 @@ export type Database = {
           prenom?: string
           secteur_activite?: string | null
           situation_geographique?: string | null
+        }
+        Relationships: []
+      }
+      user_cvs: {
+        Row: {
+          created_at: string
+          education: Json | null
+          experience: Json | null
+          id: string
+          languages: Json | null
+          personal_info: Json | null
+          skills: Json | null
+          summary: string | null
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          education?: Json | null
+          experience?: Json | null
+          id?: string
+          languages?: Json | null
+          personal_info?: Json | null
+          skills?: Json | null
+          summary?: string | null
+          title?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          education?: Json | null
+          experience?: Json | null
+          id?: string
+          languages?: Json | null
+          personal_info?: Json | null
+          skills?: Json | null
+          summary?: string | null
+          title?: string
+          updated_at?: string
+          user_id?: string
         }
         Relationships: []
       }

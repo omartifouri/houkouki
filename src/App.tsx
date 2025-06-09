@@ -10,6 +10,7 @@ import CreateCV from "./pages/CreateCV";
 import Booking from "./pages/Booking";
 import Questionnaire from "./pages/Questionnaire";
 import Admin from "./pages/Admin";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/booking" element={<Booking />} />
             <Route path="/questionnaire" element={<Questionnaire />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

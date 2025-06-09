@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { useAuth } from '@/hooks/useAuth'
 import { useAdmin } from '@/hooks/useAdmin'
-import { User, LogOut, FileText, Calendar, Shield } from 'lucide-react'
+import { User, LogOut, FileText, Calendar, Shield, Home } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import AuthModal from '@/components/AuthModal'
 
@@ -31,6 +31,13 @@ export default function UserMenu() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
+        <DropdownMenuItem asChild>
+          <Link to="/dashboard" className="flex items-center gap-2">
+            <Home className="h-4 w-4" />
+            Mon espace
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
           <Link to="/create-cv" className="flex items-center gap-2">
             <FileText className="h-4 w-4" />

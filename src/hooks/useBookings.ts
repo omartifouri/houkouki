@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { supabaseTyped } from "@/lib/supabaseTyped";
+import { useAuth } from '@/hooks/useAuth';
 
 export interface TimeSlot {
   time: string;
@@ -18,6 +19,7 @@ export interface Booking {
 }
 
 export const useBookings = () => {
+  const { user } = useAuth();
   const [bookings, setBookings] = useState<Booking[]>([]);
 
   const services = [
@@ -77,7 +79,8 @@ export const useBookings = () => {
           name: booking.name,
           email: booking.email,
           phone: booking.phone,
-          status: 'pending'
+          status: 'pending',
+          user_id: user?.id || null // Associer la réservation à l'utilisateur connecté
         }])
         .select()
         .single();

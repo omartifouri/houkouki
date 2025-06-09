@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { CVPreview } from "@/components/CVPreview";
-import { ArrowLeft, Download, Lock } from "lucide-react";
+import { ArrowLeft, Download, Lock, Save } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from '@/hooks/useAuth';
+import { useUserCV } from '@/hooks/useUserCV';
 import { CVData } from '@/types/cvTypes';
 import { exportToPDF } from '@/utils/pdfExport';
 import { PersonalInfoSection } from '@/components/cv-form/PersonalInfoSection';
@@ -15,9 +16,12 @@ import { EducationSection } from '@/components/cv-form/EducationSection';
 import { SkillsSection } from '@/components/cv-form/SkillsSection';
 import { LanguagesSection } from '@/components/cv-form/LanguagesSection';
 import AuthModal from '@/components/AuthModal';
+import { useToast } from '@/hooks/use-toast';
 
 const CreateCV = () => {
   const { user, loading } = useAuth();
+  const { userCV, saveCV } = useUserCV();
+  const { toast } = useToast();
   const navigate = useNavigate();
 
   // ALL useState hooks must be called before any conditional logic
@@ -39,6 +43,21 @@ const CreateCV = () => {
   });
 
   const [showAuthAlert, setShowAuthAlert] = useState(false);
+  const [saving, setSaving] = useState(false);
+
+  // Charger les données du CV utilisateur si elles existent
+  useEffect(() => {
+    if (userCV) {
+      setCvData({
+        personalInfo: userCV.personalInfo,
+        summary: userCV.summary,
+        experience: userCV.experience,
+        education: userCV.education,
+        skills: userCV.skills,
+        languages: userCV.languages
+      });
+    }
+  }, [userCV]);
 
   // Vérifier l'authentification et afficher le pop-up si nécessaire
   useEffect(() => {
@@ -173,6 +192,27 @@ const CreateCV = () => {
     }));
   };
 
+  const handleSaveCV = async () => {
+    if (!user) return;
+
+    try {
+      setSaving(true);
+      await saveCV(cvData);
+      toast({
+        title: "CV sauvegardé",
+        description: "Votre CV a été sauvegardé avec succès.",
+      });
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: "Impossible de sauvegarder votre CV.",
+        variant: "destructive",
+      });
+    } finally {
+      setSaving(false);
+    }
+  };
+
   const handleExportToPDF = async () => {
     await exportToPDF(cvData);
   };
@@ -220,9 +260,9 @@ const CreateCV = () => {
       {/* Header */}
       <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/dashboard" className="flex items-center space-x-2">
             <ArrowLeft className="h-5 w-5" />
-            <span>Retour à l'accueil</span>
+            <span>Retour à mon espace</span>
           </Link>
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-red-600 to-red-800 rounded-lg flex items-center justify-center">
@@ -235,7 +275,9 @@ const CreateCV = () => {
 
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Créateur de CV</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            {userCV ? 'Modifier mon CV' : 'Créateur de CV'}
+          </h1>
           <p className="text-xl text-gray-600">Créez votre CV professionnel et téléchargez-le en PDF</p>
         </div>
 
@@ -243,6 +285,7 @@ const CreateCV = () => {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Formulaire */}
             <div className="space-y-6">
+              
               <PersonalInfoSection
                 personalInfo={cvData.personalInfo}
                 onUpdate={updatePersonalInfo}
@@ -287,10 +330,20 @@ const CreateCV = () => {
                 <CardHeader>
                   <div className="flex justify-between items-center">
                     <CardTitle>Aperçu du CV</CardTitle>
-                    <Button onClick={handleExportToPDF} className="bg-red-600 hover:bg-red-700">
-                      <Download className="h-4 w-4 mr-2" />
-                      Télécharger PDF
-                    </Button>
+                    <div className="flex gap-2">
+                      <Button 
+                        onClick={handleSaveCV} 
+                        disabled={saving}
+                        variant="outline"
+                      >
+                        <Save className="h-4 w-4 mr-2" />
+                        {saving ? 'Sauvegarde...' : 'Sauvegarder'}
+                      </Button>
+                      <Button onClick={handleExportToPDF} className="bg-red-600 hover:bg-red-700">
+                        <Download className="h-4 w-4 mr-2" />
+                        Télécharger PDF
+                      </Button>
+                    </div>
                   </div>
                 </CardHeader>
                 <CardContent>
