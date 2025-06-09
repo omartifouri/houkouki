@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,6 +6,7 @@ import { Link } from "react-router-dom";
 import ContactForm from "@/components/ContactForm";
 import AuthModal from "@/components/AuthModal";
 import UserMenu from "@/components/UserMenu";
+import TestEmailButton from "@/components/TestEmailButton";
 import { useAuth } from "@/hooks/useAuth";
 
 const Index = () => {
@@ -43,7 +43,7 @@ const Index = () => {
           </nav>
         </div>
       </header>
-      
+
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -82,6 +82,15 @@ const Index = () => {
                 </a>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Test Email Section - TEMPORAIRE */}
+      <section className="py-8 px-4 bg-yellow-50 border-y border-yellow-200">
+        <div className="container mx-auto">
+          <div className="max-w-2xl mx-auto">
+            <TestEmailButton />
           </div>
         </div>
       </section>
