@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { supabase } from "@/integrations/supabase/client";
+import { supabaseTyped } from "@/lib/supabaseTyped";
 
 export interface TimeSlot {
   time: string;
@@ -30,7 +30,7 @@ export const useBookings = () => {
   useEffect(() => {
     const loadBookings = async () => {
       try {
-        const { data, error } = await (supabase as any)
+        const { data, error } = await supabaseTyped
           .from('bookings')
           .select('*');
 
@@ -68,7 +68,7 @@ export const useBookings = () => {
 
   const addBooking = async (booking: Omit<Booking, 'id'>) => {
     try {
-      const { data, error } = await (supabase as any)
+      const { data, error } = await supabaseTyped
         .from('bookings')
         .insert([{
           service: booking.service,

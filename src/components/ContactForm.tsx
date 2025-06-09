@@ -8,7 +8,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import { supabaseTyped } from "@/lib/supabaseTyped";
 
 interface ContactFormData {
   nom: string;
@@ -47,7 +47,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
       console.log("Envoi du formulaire contact:", data);
       
       // Enregistrer dans la base de données
-      const { error: dbError } = await (supabase as any)
+      const { error: dbError } = await supabaseTyped
         .from('contact_submissions')
         .insert([{
           nom: data.nom,
@@ -74,7 +74,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
           occupationActuelle: "etudiant"
         };
         
-        const { data: emailResponse, error } = await supabase.functions.invoke('send-questionnaire', {
+        const { data: emailResponse, error } = await supabaseTyped.functions.invoke('send-questionnaire', {
           body: welcomeData,
         });
         
