@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1'
 
@@ -64,7 +63,7 @@ const sendEmailWithBrevo = async (to: string, subject: string, htmlContent: stri
     body: JSON.stringify({
       sender: {
         name: "Houkouki",
-        email: "o.tifouri@geoso.fr"
+        email: "clients@houkouki.com"
       },
       to: [
         {
