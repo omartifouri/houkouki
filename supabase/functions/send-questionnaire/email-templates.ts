@@ -1,4 +1,3 @@
-
 export const formatArrayToString = (arr?: string[]) => {
   return arr && arr.length > 0 ? arr.join(', ') : 'Aucune réponse';
 };
@@ -111,7 +110,6 @@ export const generateBankClientWelcomeEmail = (data: any) => {
       
       <p>Vous pouvez choisir le moyen qui vous convient :</p>
       <ul>
-        <li>le saisir directement dans votre espace sécurisé : [lien vers l'espace privé]</li>
         <li>nous l'envoyer par WhatsApp au numéro <strong>0526035858</strong></li>
         <li>ou nous appeler directement au numéro <strong>0529009477</strong></li>
       </ul>
