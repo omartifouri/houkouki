@@ -30,7 +30,7 @@ export const useBookings = () => {
   useEffect(() => {
     const loadBookings = async () => {
       try {
-        const { data, error } = await supabase
+        const { data, error } = await (supabase as any)
           .from('bookings')
           .select('*');
 
@@ -68,7 +68,7 @@ export const useBookings = () => {
 
   const addBooking = async (booking: Omit<Booking, 'id'>) => {
     try {
-      const { data, error } = await supabase
+      const { data, error } = await (supabase as any)
         .from('bookings')
         .insert([{
           service: booking.service,

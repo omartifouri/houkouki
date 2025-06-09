@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -48,7 +47,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
       console.log("Envoi du formulaire contact:", data);
       
       // Enregistrer dans la base de données
-      const { error: dbError } = await supabase
+      const { error: dbError } = await (supabase as any)
         .from('contact_submissions')
         .insert([{
           nom: data.nom,

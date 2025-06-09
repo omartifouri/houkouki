@@ -66,7 +66,7 @@ export const useAdmin = () => {
       }
 
       try {
-        const { data, error } = await supabase
+        const { data, error } = await (supabase as any)
           .from('admin_users')
           .select('*')
           .eq('user_id', user.id)
@@ -89,7 +89,7 @@ export const useAdmin = () => {
     if (!isAdmin) return;
 
     try {
-      const { data, error } = await supabase
+      const { data, error } = await (supabase as any)
         .from('contact_submissions')
         .select('*')
         .order('created_at', { ascending: false });
@@ -106,7 +106,7 @@ export const useAdmin = () => {
     if (!isAdmin) return;
 
     try {
-      const { data, error } = await supabase
+      const { data, error } = await (supabase as any)
         .from('questionnaire_submissions')
         .select('*')
         .order('created_at', { ascending: false });
@@ -123,7 +123,7 @@ export const useAdmin = () => {
     if (!isAdmin) return;
 
     try {
-      const { data, error } = await supabase
+      const { data, error } = await (supabase as any)
         .from('bookings')
         .select('*')
         .order('created_at', { ascending: false });
@@ -140,7 +140,7 @@ export const useAdmin = () => {
     if (!isAdmin) return false;
 
     try {
-      const { error } = await supabase
+      const { error } = await (supabase as any)
         .from('bookings')
         .update({ 
           status, 
