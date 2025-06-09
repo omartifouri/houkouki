@@ -49,7 +49,8 @@ const ServiceSelection = ({ services, selectedService, onServiceChange }: Servic
               <div key={index}>
                 <SelectItem 
                   value={mainService.title}
-                  className="font-semibold text-gray-900 bg-gray-50"
+                  disabled
+                  className="font-semibold text-gray-900 bg-gray-50 cursor-default"
                 >
                   • {mainService.title}
                 </SelectItem>
