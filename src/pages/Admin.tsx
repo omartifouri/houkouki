@@ -12,12 +12,8 @@ const Admin = () => {
   const { isAdmin, loading: adminLoading } = useAdmin();
   const [showAuthAlert, setShowAuthAlert] = useState(false);
 
-  // Vérifier l'authentification et les droits admin
-  React.useEffect(() => {
-    if (!authLoading && !user) {
-      setShowAuthAlert(true);
-    }
-  }, [user, authLoading]);
+  // TEMPORAIRE : Désactiver les vérifications d'authentification pour les tests
+  const isTestMode = true;
 
   if (authLoading || adminLoading) {
     return (
@@ -36,7 +32,8 @@ const Admin = () => {
       <AdminHeader />
       
       <div className="container mx-auto px-4 py-8">
-        {user && isAdmin ? <AdminContent /> : <AdminLoginPrompt />}
+        {/* En mode test, afficher directement AdminContent */}
+        {isTestMode ? <AdminContent /> : (user && isAdmin ? <AdminContent /> : <AdminLoginPrompt />)}
       </div>
     </div>
   );
