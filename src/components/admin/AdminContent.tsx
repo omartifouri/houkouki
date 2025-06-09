@@ -37,6 +37,7 @@ const AdminContent = () => {
   };
 
   const handleClientCreated = () => {
+    console.log('Rafraîchissement de la liste des clients...');
     loadClients();
   };
 
@@ -68,7 +69,7 @@ const AdminContent = () => {
         </TabsList>
 
         <TabsContent value="contact" className="mt-6">
-          <ContactSubmissionsTab submissions={contactSubmissions} />
+          <ContactSubmissionsTab submissions={contactSubmissions} onClientCreated={handleClientCreated} />
         </TabsContent>
 
         <TabsContent value="questionnaire" className="mt-6">

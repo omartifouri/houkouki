@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -13,9 +12,10 @@ import { ContactSubmission } from '@/hooks/useAdmin';
 
 interface ContactSubmissionsTabProps {
   submissions: ContactSubmission[];
+  onClientCreated?: () => void;
 }
 
-const ContactSubmissionsTab = ({ submissions }: ContactSubmissionsTabProps) => {
+const ContactSubmissionsTab = ({ submissions, onClientCreated }: ContactSubmissionsTabProps) => {
   const [isTransferDialogOpen, setIsTransferDialogOpen] = useState(false);
   const [selectedLead, setSelectedLead] = useState<ContactSubmission | null>(null);
   const [transferFormData, setTransferFormData] = useState({
@@ -68,6 +68,13 @@ const ContactSubmissionsTab = ({ submissions }: ContactSubmissionsTabProps) => {
       const temporaryPassword = generatePassword();
       const passwordHash = await hashPassword(temporaryPassword);
 
+      console.log('Tentative de création du client:', {
+        nom: selectedLead.nom,
+        prenom: selectedLead.prenom,
+        email: selectedLead.email,
+        login: transferFormData.login
+      });
+
       // Créer le client
       const { data: client, error: clientError } = await supabaseTyped
         .from('clients')
@@ -82,7 +89,12 @@ const ContactSubmissionsTab = ({ submissions }: ContactSubmissionsTabProps) => {
         .select()
         .single();
 
-      if (clientError) throw clientError;
+      if (clientError) {
+        console.error('Erreur création client:', clientError);
+        throw clientError;
+      }
+
+      console.log('Client créé avec succès:', client);
 
       // Envoyer l'email d'accès
       const { error: emailError } = await supabaseTyped.functions.invoke('send-client-access', {
@@ -108,6 +120,11 @@ const ContactSubmissionsTab = ({ submissions }: ContactSubmissionsTabProps) => {
       setIsTransferDialogOpen(false);
       setSelectedLead(null);
       setTransferFormData({ login: '' });
+
+      // Rafraîchir la liste des clients
+      if (onClientCreated) {
+        onClientCreated();
+      }
     } catch (error: any) {
       console.error('Erreur transfert:', error);
       toast({
