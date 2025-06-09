@@ -173,8 +173,8 @@ const CreateCV = () => {
     }));
   };
 
-  const handleExportToPDF = () => {
-    exportToPDF(cvData);
+  const handleExportToPDF = async () => {
+    await exportToPDF(cvData);
   };
 
   // Conditional rendering AFTER all hooks

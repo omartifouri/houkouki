@@ -2,7 +2,7 @@
 import jsPDF from 'jspdf';
 import { CVData } from '@/types/cvTypes';
 
-export const exportToPDF = (cvData: CVData) => {
+export const exportToPDF = async (cvData: CVData) => {
   const pdf = new jsPDF();
   const { personalInfo, summary, experience, education, skills, languages } = cvData;
   
@@ -12,7 +12,22 @@ export const exportToPDF = (cvData: CVData) => {
   const lineHeight = 7;
   const sectionSpacing = 10;
   
-  // Titre
+  // Si une photo est présente, on la place en haut à droite
+  if (personalInfo.photo) {
+    try {
+      // Dimensions et position de la photo
+      const photoSize = 40; // taille de la photo
+      const photoX = pdf.internal.pageSize.getWidth() - margin - photoSize;
+      const photoY = margin;
+      
+      // Ajouter la photo
+      pdf.addImage(personalInfo.photo, 'JPEG', photoX, photoY, photoSize, photoSize);
+    } catch (error) {
+      console.warn('Erreur lors de l\'ajout de la photo:', error);
+    }
+  }
+  
+  // Titre (avec espace pour la photo si présente)
   pdf.setFontSize(20);
   pdf.setFont('helvetica', 'bold');
   pdf.text(`${personalInfo.firstName} ${personalInfo.lastName}`, margin, yPosition);
@@ -30,6 +45,11 @@ export const exportToPDF = (cvData: CVData) => {
   if (personalInfo.linkedin) {
     pdf.text(`LinkedIn: ${personalInfo.linkedin}`, margin, yPosition);
     yPosition += lineHeight;
+  }
+  
+  // Ajouter de l'espace supplémentaire si il y a une photo
+  if (personalInfo.photo) {
+    yPosition = Math.max(yPosition, margin + 40 + 5); // s'assurer qu'on ne chevauche pas la photo
   }
   yPosition += sectionSpacing;
   
