@@ -62,7 +62,7 @@ const sendEmailWithBrevo = async (to: string, subject: string, htmlContent: stri
   return result;
 };
 
-const createSupabaseUser = async (email: string, password: string, nom: string, prenom: string) => {
+const createOrUpdateSupabaseUser = async (email: string, password: string, nom: string, prenom: string) => {
   const supabaseUrl = Deno.env.get('SUPABASE_URL');
   const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
   
@@ -72,26 +72,62 @@ const createSupabaseUser = async (email: string, password: string, nom: string, 
 
   const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-  console.log('Création du compte utilisateur Supabase pour:', email);
+  console.log('Vérification/création du compte utilisateur Supabase pour:', email);
 
-  // Créer l'utilisateur dans Supabase Auth
-  const { data: authUser, error: authError } = await supabase.auth.admin.createUser({
-    email: email,
-    password: password,
-    email_confirm: true, // Confirmer automatiquement l'email
-    user_metadata: {
-      first_name: prenom,
-      last_name: nom,
-    }
-  });
-
-  if (authError) {
-    console.error('Erreur création utilisateur Auth:', authError);
-    throw new Error(`Erreur création utilisateur: ${authError.message}`);
+  // D'abord vérifier si l'utilisateur existe déjà
+  const { data: existingUsers, error: listError } = await supabase.auth.admin.listUsers();
+  
+  if (listError) {
+    console.error('Erreur lors de la vérification des utilisateurs:', listError);
+    throw new Error(`Erreur vérification utilisateurs: ${listError.message}`);
   }
 
-  console.log('Utilisateur Auth créé avec succès:', authUser.user?.id);
-  return authUser;
+  const existingUser = existingUsers.users.find(user => user.email === email);
+
+  if (existingUser) {
+    console.log('Utilisateur existant trouvé:', existingUser.id);
+    
+    // Mettre à jour le mot de passe de l'utilisateur existant
+    const { data: updatedUser, error: updateError } = await supabase.auth.admin.updateUserById(
+      existingUser.id,
+      {
+        password: password,
+        user_metadata: {
+          first_name: prenom,
+          last_name: nom,
+        }
+      }
+    );
+
+    if (updateError) {
+      console.error('Erreur mise à jour utilisateur:', updateError);
+      throw new Error(`Erreur mise à jour utilisateur: ${updateError.message}`);
+    }
+
+    console.log('Mot de passe utilisateur mis à jour avec succès');
+    return { user: updatedUser.user };
+  } else {
+    console.log('Création d\'un nouvel utilisateur');
+    
+    // Créer l'utilisateur dans Supabase Auth
+    const { data: authUser, error: authError } = await supabase.auth.admin.createUser({
+      email: email,
+      password: password,
+      email_confirm: true, // Confirmer automatiquement l'email
+      user_metadata: {
+        first_name: prenom,
+        last_name: nom,
+      }
+    });
+
+    if (authError) {
+      console.error('Erreur création utilisateur Auth:', authError);
+      throw new Error(`Erreur création utilisateur: ${authError.message}`);
+    }
+
+    console.log('Nouvel utilisateur Auth créé avec succès:', authUser.user?.id);
+    return authUser;
+  }
 };
 
 const generateClientAccessEmail = (data: ClientAccessRequest) => {
@@ -140,8 +176,8 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Destinataire:", requestData.email);
     console.log("Nom complet:", requestData.prenom, requestData.nom);
 
-    // 1. Créer le compte utilisateur dans Supabase Auth
-    const authUser = await createSupabaseUser(
+    // 1. Créer ou mettre à jour le compte utilisateur dans Supabase Auth
+    const authUser = await createOrUpdateSupabaseUser(
       requestData.email, 
       requestData.password, 
       requestData.nom, 
