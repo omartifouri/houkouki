@@ -17,11 +17,13 @@ export const sendEmailWithBrevo = async (to: string, subject: string, htmlConten
   const emailPayload = {
     sender: { 
       name: "Houkouki", 
-      email: "noreply@houkouki.com"
+      email: "clients@houkouki.com" // Changement d'expéditeur
     },
     to: [{ email: to }],
     subject: subject,
     htmlContent: htmlContent,
+    // Ajout de tags pour identifier les emails d'accès
+    tags: ["client-access", "onboarding"]
   };
 
   console.log('=== PAYLOAD EMAIL BREVO ===');
