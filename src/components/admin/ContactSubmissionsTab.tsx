@@ -54,7 +54,7 @@ const ContactSubmissionsTab = ({ submissions, onClientCreated }: ContactSubmissi
   const handleTransferToClient = (lead: ContactSubmission) => {
     setSelectedLead(lead);
     setTransferFormData({
-      login: `${lead.prenom.toLowerCase()}.${lead.nom.toLowerCase()}`
+      login: lead.email // Utiliser l'email comme login par défaut
     });
     setIsTransferDialogOpen(true);
   };
@@ -205,7 +205,7 @@ const ContactSubmissionsTab = ({ submissions, onClientCreated }: ContactSubmissi
                 id="login"
                 value={transferFormData.login}
                 onChange={(e) => setTransferFormData({ ...transferFormData, login: e.target.value })}
-                placeholder="login.utilisateur"
+                placeholder="email@example.com"
                 required
               />
             </div>
