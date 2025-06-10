@@ -11,46 +11,69 @@ const corsHeaders = {
 };
 
 const handler = async (req: Request): Promise<Response> => {
+  console.log("=== DÉBUT TRAITEMENT SEND-CLIENT-ACCESS ===");
+  console.log("Méthode:", req.method);
+  console.log("URL:", req.url);
+
   if (req.method === "OPTIONS") {
+    console.log("Requête OPTIONS reçue, retour CORS");
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
+    console.log("Lecture du body de la requête...");
     const requestData: ClientAccessRequest = await req.json();
     
-    console.log("=== DÉBUT CRÉATION CLIENT COMPLET ===");
-    console.log("Destinataire:", requestData.email);
+    console.log("=== DONNÉES REÇUES ===");
+    console.log("Email destinataire:", requestData.email);
     console.log("Nom complet:", requestData.prenom, requestData.nom);
+    console.log("Login:", requestData.login);
+    console.log("Mot de passe fourni:", requestData.password ? "Oui" : "Non");
 
-    // 1. Créer ou mettre à jour le compte utilisateur dans Supabase Auth
+    // Vérifier que toutes les données requises sont présentes
+    if (!requestData.email || !requestData.nom || !requestData.prenom || !requestData.login || !requestData.password) {
+      console.error("Données manquantes:", { 
+        email: !!requestData.email, 
+        nom: !!requestData.nom, 
+        prenom: !!requestData.prenom, 
+        login: !!requestData.login, 
+        password: !!requestData.password 
+      });
+      throw new Error("Données requises manquantes");
+    }
+
+    console.log("=== ÉTAPE 1: CRÉATION/MAJ UTILISATEUR SUPABASE ===");
     const authUser = await createOrUpdateSupabaseUser(
       requestData.email, 
       requestData.password, 
       requestData.nom, 
       requestData.prenom
     );
+    console.log("Utilisateur Supabase traité avec succès, ID:", authUser.user?.id);
 
-    // 2. Générer le contenu de l'email
+    console.log("=== ÉTAPE 2: GÉNÉRATION TEMPLATE EMAIL ===");
     const emailContent = generateClientAccessEmail(requestData);
+    console.log("Template email généré, longueur:", emailContent.length, "caractères");
 
-    // 3. Envoyer l'email via Brevo
+    console.log("=== ÉTAPE 3: ENVOI EMAIL BREVO ===");
     const brevoResponse = await sendEmailWithBrevo(
       requestData.email,
       "Votre accompagnement Houkouki est activé – bienvenue !",
       emailContent
     );
+    console.log("Email Brevo envoyé avec succès, ID:", brevoResponse.messageId);
 
-    console.log("=== CLIENT CRÉÉ ET EMAIL ENVOYÉ ===");
-    console.log("ID Utilisateur Auth:", authUser.user?.id);
-    console.log("ID Message Brevo:", brevoResponse.messageId);
+    console.log("=== SUCCÈS COMPLET ===");
+    const successResponse = {
+      success: true, 
+      message: "Compte créé et email d'accès envoyé avec succès",
+      userId: authUser.user?.id,
+      messageId: brevoResponse.messageId
+    };
+    console.log("Réponse de succès:", successResponse);
 
     return new Response(
-      JSON.stringify({ 
-        success: true, 
-        message: "Compte créé et email d'accès envoyé avec succès",
-        userId: authUser.user?.id,
-        messageId: brevoResponse.messageId 
-      }),
+      JSON.stringify(successResponse),
       {
         status: 200,
         headers: {
@@ -61,16 +84,28 @@ const handler = async (req: Request): Promise<Response> => {
     );
 
   } catch (error: any) {
-    console.error("=== ERREUR CRÉATION CLIENT ===");
+    console.error("=== ERREUR COMPLÈTE ===");
     console.error("Type d'erreur:", error.constructor.name);
     console.error("Message d'erreur:", error.message);
-    console.error("Stack trace:", error.stack);
+    console.error("Stack trace complet:", error.stack);
+    
+    // Logs additionnels pour diagnostic
+    if (error.message.includes('Brevo')) {
+      console.error("Erreur liée à Brevo détectée");
+    }
+    if (error.message.includes('Supabase')) {
+      console.error("Erreur liée à Supabase détectée");
+    }
+    
+    const errorResponse = {
+      error: error.message || "Erreur lors de la création du client",
+      details: error.stack,
+      timestamp: new Date().toISOString()
+    };
+    console.error("Réponse d'erreur:", errorResponse);
     
     return new Response(
-      JSON.stringify({ 
-        error: error.message || "Erreur lors de la création du client",
-        details: error.stack
-      }),
+      JSON.stringify(errorResponse),
       {
         status: 500,
         headers: {
@@ -82,4 +117,5 @@ const handler = async (req: Request): Promise<Response> => {
   }
 };
 
+console.log("=== DÉMARRAGE FONCTION SEND-CLIENT-ACCESS ===");
 serve(handler);
