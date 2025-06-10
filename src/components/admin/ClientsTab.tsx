@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,6 +8,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { useToast } from "@/hooks/use-toast";
 import { supabaseTyped } from '@/lib/supabaseTyped';
 import { Plus, Send, Eye, EyeOff } from 'lucide-react';
+import ValidationDialog from './ValidationDialog';
 
 interface Client {
   id: string;
@@ -37,6 +37,8 @@ const ClientsTab = ({ clients, onClientCreated }: ClientsTabProps) => {
   const [isCreating, setIsCreating] = useState(false);
   const [isSendingEmail, setIsSendingEmail] = useState(false);
   const [showPasswords, setShowPasswords] = useState<Record<string, boolean>>({});
+  const [validationDialogOpen, setValidationDialogOpen] = useState(false);
+  const [selectedClientForValidation, setSelectedClientForValidation] = useState<Client | null>(null);
   const { toast } = useToast();
 
   const generatePassword = () => {
@@ -98,17 +100,24 @@ const ClientsTab = ({ clients, onClientCreated }: ClientsTabProps) => {
     }
   };
 
-  const handleSendAccess = async (client: Client) => {
+  const handleSendAccessRequest = (client: Client) => {
+    setSelectedClientForValidation(client);
+    setValidationDialogOpen(true);
+  };
+
+  const handleConfirmSendAccess = async () => {
+    if (!selectedClientForValidation) return;
+    
     setIsSendingEmail(true);
 
     try {
       const { error } = await supabaseTyped.functions.invoke('send-client-access', {
         body: {
-          nom: client.nom,
-          prenom: client.prenom,
-          email: client.email,
-          login: client.login,
-          password: client.temporary_password
+          nom: selectedClientForValidation.nom,
+          prenom: selectedClientForValidation.prenom,
+          email: selectedClientForValidation.email,
+          login: selectedClientForValidation.login,
+          password: selectedClientForValidation.temporary_password
         }
       });
 
@@ -116,8 +125,11 @@ const ClientsTab = ({ clients, onClientCreated }: ClientsTabProps) => {
 
       toast({
         title: "Email envoyé",
-        description: `Les accès ont été envoyés à ${client.email}`,
+        description: `Les accès ont été envoyés à ${selectedClientForValidation.email}`,
       });
+
+      setValidationDialogOpen(false);
+      setSelectedClientForValidation(null);
     } catch (error: any) {
       toast({
         title: "Erreur",
@@ -138,6 +150,14 @@ const ClientsTab = ({ clients, onClientCreated }: ClientsTabProps) => {
 
   return (
     <div className="space-y-6">
+      <ValidationDialog
+        open={validationDialogOpen}
+        onOpenChange={setValidationDialogOpen}
+        client={selectedClientForValidation}
+        onConfirm={handleConfirmSendAccess}
+        isSending={isSendingEmail}
+      />
+
       <Card>
         <CardHeader>
           <div className="flex justify-between items-center">
@@ -258,7 +278,7 @@ const ClientsTab = ({ clients, onClientCreated }: ClientsTabProps) => {
                     <Button
                       variant="outline"
                       size="sm"
-                      onClick={() => handleSendAccess(client)}
+                      onClick={() => handleSendAccessRequest(client)}
                       disabled={isSendingEmail}
                       className="flex items-center gap-2"
                     >
