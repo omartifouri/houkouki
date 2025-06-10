@@ -23,6 +23,19 @@ const sendEmailWithBrevo = async (to: string, subject: string, htmlContent: stri
   }
 
   console.log('Envoi email via Brevo vers:', to);
+  console.log('Clé API Brevo présente:', !!brevoApiKey);
+
+  const emailPayload = {
+    sender: { 
+      name: "Houkouki", 
+      email: "noreply@houkouki.com" // Utiliser noreply au lieu de clients
+    },
+    to: [{ email: to }],
+    subject: subject,
+    htmlContent: htmlContent,
+  };
+
+  console.log('Payload email:', JSON.stringify(emailPayload, null, 2));
 
   const response = await fetch('https://api.brevo.com/v3/smtp/email', {
     method: 'POST',
@@ -31,16 +44,11 @@ const sendEmailWithBrevo = async (to: string, subject: string, htmlContent: stri
       'Content-Type': 'application/json',
       'api-key': brevoApiKey,
     },
-    body: JSON.stringify({
-      sender: { 
-        name: "Houkouki", 
-        email: "clients@houkouki.com" 
-      },
-      to: [{ email: to }],
-      subject: subject,
-      htmlContent: htmlContent,
-    }),
+    body: JSON.stringify(emailPayload),
   });
+
+  console.log('Statut réponse Brevo:', response.status);
+  console.log('Headers réponse:', Object.fromEntries(response.headers.entries()));
 
   if (!response.ok) {
     const errorText = await response.text();
@@ -48,7 +56,9 @@ const sendEmailWithBrevo = async (to: string, subject: string, htmlContent: stri
     throw new Error(`Erreur Brevo: ${response.status} - ${errorText}`);
   }
 
-  return await response.json();
+  const result = await response.json();
+  console.log('Réponse Brevo complète:', result);
+  return result;
 };
 
 const generateClientAccessEmail = (data: ClientAccessRequest) => {
@@ -93,22 +103,29 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const requestData: ClientAccessRequest = await req.json();
     
-    console.log("Envoi des accès client à:", requestData.email);
+    console.log("=== DÉBUT ENVOI EMAIL CLIENT ===");
+    console.log("Destinataire:", requestData.email);
+    console.log("Nom complet:", requestData.prenom, requestData.nom);
 
     // Générer le contenu de l'email
     const emailContent = generateClientAccessEmail(requestData);
 
     // Envoyer l'email via Brevo
-    await sendEmailWithBrevo(
+    const brevoResponse = await sendEmailWithBrevo(
       requestData.email,
       "Votre accompagnement Houkouki est activé – bienvenue !",
       emailContent
     );
 
-    console.log("Email d'accès client envoyé avec succès");
+    console.log("=== EMAIL ENVOYÉ AVEC SUCCÈS ===");
+    console.log("ID Message Brevo:", brevoResponse.messageId);
 
     return new Response(
-      JSON.stringify({ success: true, message: "Email d'accès envoyé avec succès" }),
+      JSON.stringify({ 
+        success: true, 
+        message: "Email d'accès envoyé avec succès",
+        messageId: brevoResponse.messageId 
+      }),
       {
         status: 200,
         headers: {
@@ -119,10 +136,15 @@ const handler = async (req: Request): Promise<Response> => {
     );
 
   } catch (error: any) {
-    console.error("Erreur lors de l'envoi des accès client:", error);
+    console.error("=== ERREUR ENVOI EMAIL ===");
+    console.error("Type d'erreur:", error.constructor.name);
+    console.error("Message d'erreur:", error.message);
+    console.error("Stack trace:", error.stack);
+    
     return new Response(
       JSON.stringify({ 
-        error: error.message || "Erreur lors de l'envoi de l'email d'accès"
+        error: error.message || "Erreur lors de l'envoi de l'email d'accès",
+        details: error.stack
       }),
       {
         status: 500,
