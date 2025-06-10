@@ -1,5 +1,6 @@
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.3';
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -28,7 +29,7 @@ const sendEmailWithBrevo = async (to: string, subject: string, htmlContent: stri
   const emailPayload = {
     sender: { 
       name: "Houkouki", 
-      email: "noreply@houkouki.com" // Utiliser noreply au lieu de clients
+      email: "noreply@houkouki.com"
     },
     to: [{ email: to }],
     subject: subject,
@@ -59,6 +60,38 @@ const sendEmailWithBrevo = async (to: string, subject: string, htmlContent: stri
   const result = await response.json();
   console.log('Réponse Brevo complète:', result);
   return result;
+};
+
+const createSupabaseUser = async (email: string, password: string, nom: string, prenom: string) => {
+  const supabaseUrl = Deno.env.get('SUPABASE_URL');
+  const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+  
+  if (!supabaseUrl || !supabaseServiceKey) {
+    throw new Error('Variables Supabase manquantes');
+  }
+
+  const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+  console.log('Création du compte utilisateur Supabase pour:', email);
+
+  // Créer l'utilisateur dans Supabase Auth
+  const { data: authUser, error: authError } = await supabase.auth.admin.createUser({
+    email: email,
+    password: password,
+    email_confirm: true, // Confirmer automatiquement l'email
+    user_metadata: {
+      first_name: prenom,
+      last_name: nom,
+    }
+  });
+
+  if (authError) {
+    console.error('Erreur création utilisateur Auth:', authError);
+    throw new Error(`Erreur création utilisateur: ${authError.message}`);
+  }
+
+  console.log('Utilisateur Auth créé avec succès:', authUser.user?.id);
+  return authUser;
 };
 
 const generateClientAccessEmail = (data: ClientAccessRequest) => {
@@ -103,27 +136,37 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const requestData: ClientAccessRequest = await req.json();
     
-    console.log("=== DÉBUT ENVOI EMAIL CLIENT ===");
+    console.log("=== DÉBUT CRÉATION CLIENT COMPLET ===");
     console.log("Destinataire:", requestData.email);
     console.log("Nom complet:", requestData.prenom, requestData.nom);
 
-    // Générer le contenu de l'email
+    // 1. Créer le compte utilisateur dans Supabase Auth
+    const authUser = await createSupabaseUser(
+      requestData.email, 
+      requestData.password, 
+      requestData.nom, 
+      requestData.prenom
+    );
+
+    // 2. Générer le contenu de l'email
     const emailContent = generateClientAccessEmail(requestData);
 
-    // Envoyer l'email via Brevo
+    // 3. Envoyer l'email via Brevo
     const brevoResponse = await sendEmailWithBrevo(
       requestData.email,
       "Votre accompagnement Houkouki est activé – bienvenue !",
       emailContent
     );
 
-    console.log("=== EMAIL ENVOYÉ AVEC SUCCÈS ===");
+    console.log("=== CLIENT CRÉÉ ET EMAIL ENVOYÉ ===");
+    console.log("ID Utilisateur Auth:", authUser.user?.id);
     console.log("ID Message Brevo:", brevoResponse.messageId);
 
     return new Response(
       JSON.stringify({ 
         success: true, 
-        message: "Email d'accès envoyé avec succès",
+        message: "Compte créé et email d'accès envoyé avec succès",
+        userId: authUser.user?.id,
         messageId: brevoResponse.messageId 
       }),
       {
@@ -136,14 +179,14 @@ const handler = async (req: Request): Promise<Response> => {
     );
 
   } catch (error: any) {
-    console.error("=== ERREUR ENVOI EMAIL ===");
+    console.error("=== ERREUR CRÉATION CLIENT ===");
     console.error("Type d'erreur:", error.constructor.name);
     console.error("Message d'erreur:", error.message);
     console.error("Stack trace:", error.stack);
     
     return new Response(
       JSON.stringify({ 
-        error: error.message || "Erreur lors de l'envoi de l'email d'accès",
+        error: error.message || "Erreur lors de la création du client",
         details: error.stack
       }),
       {
