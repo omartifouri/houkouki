@@ -85,7 +85,7 @@ const Index = () => {
             </div>
             <div className="flex justify-center mt-2">
               <RecommendModal>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
+                <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-[#42a8b0] text-[#42a8b0] hover:bg-[#42a8b0] hover:text-white">
                   <Send className="mr-2 h-5 w-5" />
                   Recommander à un(e) ami(e)
                 </Button>
