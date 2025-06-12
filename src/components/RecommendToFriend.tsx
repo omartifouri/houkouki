@@ -68,12 +68,7 @@ const RecommendToFriend = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-6 border rounded-lg bg-gradient-to-br from-red-50 to-white">
-      <div className="flex items-center gap-2 mb-2">
-        <Send className="h-5 w-5 text-red-600" />
-        <h3 className="font-semibold text-lg text-red-800">Recommander Houkouki à un(e) ami(e)</h3>
-      </div>
-      
+    <div className="flex flex-col gap-4">
       <div className="grid gap-3">
         <div>
           <Label htmlFor="yourName">Votre nom</Label>

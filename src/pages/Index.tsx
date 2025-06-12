@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Brain, FileText, Calendar, Shield, CheckCircle, Star, ArrowRight } from "lucide-react";
+import { Users, Brain, FileText, Calendar, Shield, CheckCircle, Star, ArrowRight, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactForm from "@/components/ContactForm";
 import AuthModal from "@/components/AuthModal";
 import UserMenu from "@/components/UserMenu";
-import RecommendToFriend from "@/components/RecommendToFriend";
+import RecommendModal from "@/components/RecommendModal";
 import { useAuth } from "@/hooks/useAuth";
 
 const Index = () => {
@@ -81,16 +81,13 @@ const Index = () => {
                   Créez votre CV
                 </a>
               </Button>
+              <RecommendModal>
+                <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
+                  <Send className="mr-2 h-5 w-5" />
+                  Recommander à un(e) ami(e)
+                </Button>
+              </RecommendModal>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Recommandation Section - TEMPORAIRE */}
-      <section className="py-8 px-4 bg-yellow-50 border-y border-yellow-200">
-        <div className="container mx-auto">
-          <div className="max-w-2xl mx-auto">
-            <RecommendToFriend />
           </div>
         </div>
       </section>
