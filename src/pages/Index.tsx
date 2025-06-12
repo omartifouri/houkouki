@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -81,6 +82,8 @@ const Index = () => {
                   Créez votre CV
                 </a>
               </Button>
+            </div>
+            <div className="flex justify-center mt-2">
               <RecommendModal>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
                   <Send className="mr-2 h-5 w-5" />
