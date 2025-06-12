@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -35,12 +34,12 @@ const PersonalInfoForm = ({
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
-          <Label htmlFor="name">Pseudonyme *</Label>
+          <Label htmlFor="name">Nom et prénom ou pseudonyme *</Label>
           <Input
             id="name"
             value={name}
             onChange={(e) => onNameChange(e.target.value)}
-            placeholder="Votre pseudonyme"
+            placeholder="Votre nom et prénom ou pseudonyme"
             className={user && email ? "bg-blue-50" : ""}
           />
         </div>
