@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CheckCircle } from "lucide-react";
 
 interface ServiceSelectionProps {
   services: string[];
@@ -109,6 +110,19 @@ const ServiceSelection = ({ services, selectedService, onServiceChange }: Servic
                 ))}
               </SelectContent>
             </Select>
+          </div>
+        )}
+
+        {/* Affichage du service sélectionné complet */}
+        {selectedService && (
+          <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <div className="flex items-start space-x-2">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <h4 className="font-medium text-green-800 mb-1">Service sélectionné :</h4>
+                <p className="text-sm text-green-700">{selectedService}</p>
+              </div>
+            </div>
           </div>
         )}
       </CardContent>
