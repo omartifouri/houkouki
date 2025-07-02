@@ -11,32 +11,20 @@ interface ServiceSelectionProps {
 const ServiceSelection = ({ services, selectedService, onServiceChange }: ServiceSelectionProps) => {
   const serviceStructure = [
     {
-      title: "Consultation avec un juriste spécialisé",
+      title: "Rendez-vous avec un psychologue clinicien",
       subServices: [
-        "Droit de la famille (divorce, succession, garde)",
-        "Droit du travail (contrat, licenciement)", 
-        "Droit foncier et immobilier",
-        "Droit commercial et des sociétés",
-        "Droit des assurances",
-        "Droit administratif"
+        "Clarification du projet professionnel",
+        "Gestion du stress", 
+        "Confiance en soi",
+        "Préparation aux entretiens"
       ]
     },
     {
-      title: "Rédaction et audit de documents",
+      title: "Rendez-vous avec un chargé de recrutement",
       subServices: [
-        "Contrats (travail, location, vente)",
-        "Conditions générales de vente",
-        "Statuts de société",
-        "Lettres officielles et mises en demeure"
-      ]
-    },
-    {
-      title: "Accompagnement administratif",
-      subServices: [
-        "Démarches d'état civil",
-        "Procédures de succession", 
-        "Autorisations et permis",
-        "Recours administratifs"
+        "Optimisation du CV",
+        "Conseils sur la stratégie de recherche",
+        "Mise en relation avec des recruteurs"
       ]
     }
   ];
@@ -45,16 +33,16 @@ const ServiceSelection = ({ services, selectedService, onServiceChange }: Servic
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-            <span className="text-blue-600 font-bold text-sm">1</span>
+          <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+            <span className="text-red-600 font-bold text-sm">1</span>
           </div>
-          <span>Choisissez votre consultation juridique</span>
+          <span>Choisissez votre service</span>
         </CardTitle>
       </CardHeader>
       <CardContent>
         <Select value={selectedService} onValueChange={onServiceChange}>
           <SelectTrigger>
-            <SelectValue placeholder="Sélectionnez un service juridique" />
+            <SelectValue placeholder="Sélectionnez un service" />
           </SelectTrigger>
           <SelectContent className="max-h-80">
             {serviceStructure.map((mainService, index) => (
