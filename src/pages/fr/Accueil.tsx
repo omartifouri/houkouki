@@ -1,8 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Scale, FileText, Calendar, Shield, CheckCircle, Star, ArrowRight, Phone, Video, MessageCircle } from "lucide-react";
+import { Users, Scale, FileText, Calendar, Shield, CheckCircle, Star, ArrowRight, Phone, Video, MessageCircle, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const FrAccueil = () => {
   return (
@@ -18,16 +26,132 @@ const FrAccueil = () => {
                 className="h-10 w-auto"
               />
             </div>
-            <div className="hidden md:flex items-center space-x-6">
-              <Link to="/fr" className="text-gray-600 hover:text-red-600 transition-colors">Accueil</Link>
-              <Link to="/fr/esprit" className="text-gray-600 hover:text-red-600 transition-colors">L'esprit Houkouki</Link>
-              <Link to="/fr/qui-sommes-nous" className="text-gray-600 hover:text-red-600 transition-colors">Qui sommes-nous ?</Link>
-              <Link to="/fr/approche" className="text-gray-600 hover:text-red-600 transition-colors">Notre approche</Link>
-              <Link to="/fr/offre" className="text-gray-600 hover:text-red-600 transition-colors">Notre offre</Link>
-              <Link to="/fr/prestations" className="text-gray-600 hover:text-red-600 transition-colors">Nos prestations</Link>
-              <Link to="/fr/tarifs" className="text-gray-600 hover:text-red-600 transition-colors">Nos tarifs</Link>
-              <Link to="/fr/contact" className="text-gray-600 hover:text-red-600 transition-colors">Contact</Link>
-            </div>
+            <NavigationMenu className="hidden md:flex">
+              <NavigationMenuList className="space-x-2">
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link to="/fr" className="text-gray-600 hover:text-red-600 transition-colors px-3 py-2">
+                      Accueil
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-gray-600 hover:text-red-600 transition-colors">
+                    L'esprit Houkouki
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[300px] gap-2 p-4">
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/fr/qui-sommes-nous"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">Qui sommes-nous ?</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Découvrez notre équipe et notre mission
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/fr/approche"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">Notre approche</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Notre méthode d'accompagnement juridique
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-gray-600 hover:text-red-600 transition-colors">
+                    Notre offre
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[350px] gap-2 p-4">
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/fr/profils"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">Profils accompagnés</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Particuliers, entreprises et MRE
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/fr/prestations"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">Nos prestations</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Conseil, rédaction, démarches administratives
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/fr/domaines"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">Nos domaines de droit</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Famille, travail, immobilier, commercial
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link to="/fr/tarifs" className="text-gray-600 hover:text-red-600 transition-colors px-3 py-2">
+                      Nos tarifs
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link to="/fr/impact" className="text-gray-600 hover:text-red-600 transition-colors px-3 py-2">
+                      Notre impact
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link to="/fr/blog" className="text-gray-600 hover:text-red-600 transition-colors px-3 py-2">
+                      Blog & Conseils
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link to="/fr/devis" className="text-gray-600 hover:text-red-600 transition-colors px-3 py-2">
+                      Devis
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link to="/fr/contact" className="text-gray-600 hover:text-red-600 transition-colors px-3 py-2">
+                      Contact
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </nav>
         </div>
       </header>
