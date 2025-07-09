@@ -31,7 +31,7 @@ const FrAccueil = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-brand-beige text-brand-beige hover:bg-brand-beige hover:text-white">
               <Link to="/fr/devis">
                 Demander un devis
               </Link>
@@ -52,7 +52,7 @@ const FrAccueil = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-brand-beige to-brand-beige rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-red-800">Conseil à distance</CardTitle>
@@ -66,7 +66,7 @@ const FrAccueil = () => {
 
             <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-brand-beige to-brand-beige rounded-full flex items-center justify-center mx-auto mb-4">
                   <Scale className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-red-800">Services personnalisés</CardTitle>
@@ -80,7 +80,7 @@ const FrAccueil = () => {
 
             <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-brand-beige to-brand-beige rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-red-800">Sécurité garantie</CardTitle>
