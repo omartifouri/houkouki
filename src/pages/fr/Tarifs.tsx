@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Clock, Users, Building2, Heart, Check, Calculator, FileText, Phone } from "lucide-react";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
@@ -477,6 +478,190 @@ const FrTarifs = () => {
                   </div>
                 ))}
               </div>
+            </CardContent>
+          </Card>
+
+          {/* Section détail des prestations */}
+          <Card className="mb-16">
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                Détail des prestations
+              </CardTitle>
+              <p className="text-gray-600">
+                Découvrez en détail toutes nos prestations et services inclus dans nos formules
+              </p>
+            </CardHeader>
+            
+            <CardContent>
+              <Accordion type="multiple" className="w-full space-y-4">
+                <AccordionItem value="consultations" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">📞</span>
+                      <span className="font-semibold text-gray-900">Consultations juridiques illimitées</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Posez toutes vos questions juridiques par téléphone ou visioconférence, sans limite de volume, dans le respect de votre vie privée.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="lecture" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">📄</span>
+                      <span className="font-semibold text-gray-900">Lecture et analyse de documents juridiques</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Nous relisons et analysons vos contrats, courriers, notifications ou décisions pour vous alerter sur les points sensibles.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="redaction" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">✍️</span>
+                      <span className="font-semibold text-gray-900">Assistance à la rédaction</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Lettre de contestation, mise en demeure, courrier officiel, réponse à l'administration… Rédigé par nos juristes, selon votre cas.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="litige" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">⚖️</span>
+                      <span className="font-semibold text-gray-900">Conseil en cas de litige ou précontentieux</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Nous vous accompagnons pour évaluer vos options avant d'aller en justice, ou pour résoudre un conflit à l'amiable.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="appli" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">📲</span>
+                      <span className="font-semibold text-gray-900">Application mobile & guides</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Accès illimité à vos documents, vos consultations passées, et une bibliothèque de fiches juridiques pratiques.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="suivi" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">🧾</span>
+                      <span className="font-semibold text-gray-900">Suivi par un conseiller référent</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Vous bénéficiez d'un interlocuteur privilégié qui suit votre dossier dans la durée.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="audit-contrats" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">📋</span>
+                      <span className="font-semibold text-gray-900">Audit de contrats et documents RH</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Analyse de vos contrats de travail, conventions, politiques internes, pour sécuriser vos pratiques.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="rh" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">🧑‍⚖️</span>
+                      <span className="font-semibold text-gray-900">Sécurisation des procédures RH</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Assistance sur les licenciements, avertissements, sanctions, ruptures conventionnelles, etc.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="cgv" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">📂</span>
+                      <span className="font-semibold text-gray-900">Rédaction de CGV ou d'actes juridiques</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Conditions générales, pactes d'associés, statuts, contrats types… Rédigés à vos couleurs, selon votre activité.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="controle" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">📞</span>
+                      <span className="font-semibold text-gray-900">Accompagnement en cas de contrôle</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Conseil stratégique et formalisation de vos réponses en cas de litige avec l'administration ou inspection.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="priorite" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">🧩</span>
+                      <span className="font-semibold text-gray-900">Suivi prioritaire</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Vos demandes sont traitées en priorité, avec une disponibilité élargie.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="cadrage" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">👥</span>
+                      <span className="font-semibold text-gray-900">Réunions de cadrage juridiques</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Sessions régulières ou ponctuelles pour identifier les risques, valider vos pratiques ou répondre aux questions de vos équipes.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="risques" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">🔐</span>
+                      <span className="font-semibold text-gray-900">Politique de gestion des risques</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Construction d'un plan de couverture juridique adapté à votre structure.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="formation" className="border border-gray-200 rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="flex items-center gap-3">
+                      <span className="text-xl">📝</span>
+                      <span className="font-semibold text-gray-900">Formations internes</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 pb-4">
+                    Sensibilisation juridique, obligations RH, cybersécurité juridique… Organisé sur demande dans votre entreprise.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </CardContent>
           </Card>
 
