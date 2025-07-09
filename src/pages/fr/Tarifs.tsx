@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Clock, Users, Building2, Heart, Check, Calculator, FileText, Phone } from "lucide-react";
+import { Clock, Users, Building2, Heart, Check, Calculator, FileText, Phone, Shield, Smartphone, CheckCircle, ArrowRight, Download, User } from "lucide-react";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
 import { useState } from "react";
@@ -664,6 +664,323 @@ const FrTarifs = () => {
               </Accordion>
             </CardContent>
           </Card>
+
+          {/* Besoin d'un conseil pour choisir */}
+          <div className="mt-24 max-w-6xl mx-auto">
+            <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500 text-white flex items-center justify-center">
+                  <User className="w-8 h-8" />
+                </div>
+                <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                  Besoin d'un conseil pour choisir ?
+                </CardTitle>
+                <p className="text-gray-600">
+                  Nos équipes sont à votre disposition pour :
+                </p>
+              </CardHeader>
+              
+              <CardContent>
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <div className="text-center">
+                    <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-blue-100 flex items-center justify-center">
+                      <ArrowRight className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <p className="text-sm text-gray-700">vous orienter vers la formule la plus adaptée</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-blue-100 flex items-center justify-center">
+                      <Phone className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <p className="text-sm text-gray-700">répondre à vos questions sur le fonctionnement ou la facturation</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-blue-100 flex items-center justify-center">
+                      <FileText className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <p className="text-sm text-gray-700">établir un devis si nécessaire</p>
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-4 mb-8">
+                  <Button className="bg-blue-500 hover:bg-blue-600 text-white">
+                    Nous contacter
+                  </Button>
+                  <Button variant="outline" className="border-blue-500 text-blue-500 hover:bg-blue-50">
+                    Prendre rendez-vous avec un conseiller
+                  </Button>
+                </div>
+
+                <div className="bg-white rounded-lg p-6 border border-blue-200">
+                  <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
+                    <Shield className="w-5 h-5 text-blue-500 mr-2" />
+                    Transparence & sécurité
+                  </h4>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <span className="text-sm text-gray-700">Aucun frais caché</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <span className="text-sm text-gray-700">Devis systématique pour les prestations à la carte</span>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <span className="text-sm text-gray-700">Paiement sécurisé</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <span className="text-sm text-gray-700">Possibilité de passage à l'abonnement si plusieurs demandes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Fonctionnement */}
+          <div className="mt-24 max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Comment ça marche ?</h2>
+              <p className="text-xl text-gray-600 mb-2">En 3 étapes simples</p>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Avec Houkouki, bénéficier d'un conseil juridique ne prend que quelques minutes.
+                Notre fonctionnement a été pensé pour être simple, rapide et sécurisé, depuis n'importe où.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Étape 1 */}
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500 text-white flex items-center justify-center text-2xl font-bold">
+                    1
+                  </div>
+                  <CardTitle className="text-xl font-bold text-gray-900">
+                    Choisissez votre formule
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-2">
+                      <Check className="w-4 h-4 text-red-500" />
+                      <span className="text-sm text-gray-700">Soit un abonnement annuel, pour un accompagnement continu</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Check className="w-4 h-4 text-red-500" />
+                      <span className="text-sm text-gray-700">Soit une prestation à la carte, selon votre besoin ponctuel (tarif à l'heure)</span>
+                    </div>
+                  </div>
+                  <Button variant="outline" className="mt-4 border-red-500 text-red-500 hover:bg-red-50">
+                    Voir nos tarifs
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Étape 2 */}
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500 text-white flex items-center justify-center text-2xl font-bold">
+                    2
+                  </div>
+                  <CardTitle className="text-xl font-bold text-gray-900">
+                    Prenez contact avec nos juristes
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Dès la validation de votre formule :
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-2">
+                      <Check className="w-4 h-4 text-red-500" />
+                      <span className="text-sm text-gray-700">Vous avez accès directement à un juriste en ligne ou par téléphone</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Check className="w-4 h-4 text-red-500" />
+                      <span className="text-sm text-gray-700">Si un juriste spécialisé est nécessaire, il vous est affecté selon la nature de votre demande</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Check className="w-4 h-4 text-red-500" />
+                      <span className="text-sm text-gray-700">L'échange se fait par téléphone, visioconférence ou WhatsApp</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Étape 3 */}
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500 text-white flex items-center justify-center text-2xl font-bold">
+                    3
+                  </div>
+                  <CardTitle className="text-xl font-bold text-gray-900">
+                    Suivez votre dossier en toute sérénité
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Après l'échange :
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-2">
+                      <Check className="w-4 h-4 text-red-500" />
+                      <span className="text-sm text-gray-700">Vous recevez un compte-rendu clair de votre consultation</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Check className="w-4 h-4 text-red-500" />
+                      <span className="text-sm text-gray-700">Nous vous accompagnons dans vos démarches, rédactions ou procédures</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Check className="w-4 h-4 text-red-500" />
+                      <span className="text-sm text-gray-700">Vous accédez à tous vos documents et échanges dans votre espace personnel sécurisé</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Modalités de prise en charge */}
+          <div className="mt-24 max-w-6xl mx-auto">
+            <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500 text-white flex items-center justify-center">
+                  <Shield className="w-8 h-8" />
+                </div>
+                <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                  Modalités de prise en charge
+                </CardTitle>
+                <p className="text-gray-600">
+                  Quel que soit votre besoin, nous vous garantissons :
+                </p>
+              </CardHeader>
+              
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                      <span className="text-gray-700">Une analyse sur mesure par un juriste expert du droit marocain</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                      <span className="text-gray-700">Un délai de prise en charge rapide (au plus tard 24 heures)</span>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                      <span className="text-gray-700">Un accompagnement pas-à-pas jusqu'à la finalisation de votre démarche</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                      <span className="text-gray-700">Si nécessaire, une mise en relation avec des professionnels extérieurs (avocat, notaire, huissier)</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-6 text-center bg-white rounded-lg p-4 border border-green-200">
+                  <p className="text-gray-700 font-medium">
+                    Toutes vos demandes sont traitées en toute confidentialité et avec la rigueur que vous êtes en droit d'attendre.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Un service fluide */}
+          <div className="mt-24 max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Un service fluide, depuis votre téléphone ou votre ordinateur</h2>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Avec Houkouki, vous bénéficiez d'un outil simple pour centraliser vos besoins juridiques :
+              </p>
+            </div>
+
+            <Card className="bg-gradient-to-br from-purple-50 to-indigo-50 border-2 border-purple-200">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-500 text-white flex items-center justify-center">
+                  <Smartphone className="w-8 h-8" />
+                </div>
+                <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                  Application mobile & Espace client
+                </CardTitle>
+              </CardHeader>
+              
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mt-0.5" />
+                      <span className="text-gray-700">Accès à un juriste en ligne</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mt-0.5" />
+                      <span className="text-gray-700">Accès aux documents échangés</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mt-0.5" />
+                      <span className="text-gray-700">Historique de vos démarches</span>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mt-0.5" />
+                      <span className="text-gray-700">Bibliothèque juridique / Jurisprudence</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mt-0.5" />
+                      <span className="text-gray-700">Suivi de votre dossier en temps réel</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-4 mt-8">
+                  <Button className="bg-purple-500 hover:bg-purple-600 text-white">
+                    <Download className="w-4 h-4 mr-2" />
+                    Télécharger l'application Houkouki
+                  </Button>
+                  <Button variant="outline" className="border-purple-500 text-purple-500 hover:bg-purple-50">
+                    Accéder à mon espace
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Besoin d'un accompagnement */}
+          <div className="mt-24 max-w-6xl mx-auto">
+            <Card className="bg-gradient-to-br from-orange-50 to-red-50 border-2 border-orange-200">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-orange-500 text-white flex items-center justify-center">
+                  <Heart className="w-8 h-8" />
+                </div>
+                <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                  Besoin d'un accompagnement ?
+                </CardTitle>
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  Notre équipe vous accompagne avant, pendant et après chaque consultation.
+                  Nous restons à votre disposition pour toute précision sur le déroulé de nos prestations.
+                </p>
+              </CardHeader>
+              
+              <CardContent className="text-center">
+                <div className="grid md:grid-cols-2 gap-4 max-w-md mx-auto">
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+                    Prendre un premier rendez-vous
+                  </Button>
+                  <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50">
+                    Contacter notre service client
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
 
           {/* Section contact final */}
           <div className="mt-16 text-center bg-gradient-to-r from-gray-50 to-red-50 rounded-lg p-8">
