@@ -666,81 +666,99 @@ const FrTarifs = () => {
           </Card>
 
           {/* Besoin d'un conseil pour choisir */}
-          <div className="mt-24 max-w-6xl mx-auto">
-            <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500 text-white flex items-center justify-center">
-                  <User className="w-8 h-8" />
+          <div className="mt-24 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-50/80 to-blue-100/50 rounded-3xl p-8 md:p-12 border border-blue-200/50 shadow-lg backdrop-blur-sm">
+              {/* Header avec icône */}
+              <div className="text-center mb-10">
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-blue-500 text-white flex items-center justify-center shadow-lg">
+                  <User className="w-10 h-10" />
                 </div>
-                <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
                   Besoin d'un conseil pour choisir ?
-                </CardTitle>
-                <p className="text-gray-600">
+                </h2>
+                <p className="text-gray-700 text-lg">
                   Nos équipes sont à votre disposition pour :
                 </p>
-              </CardHeader>
+              </div>
               
-              <CardContent>
-                <div className="grid md:grid-cols-3 gap-6 mb-8">
-                  <div className="text-center">
-                    <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-blue-100 flex items-center justify-center">
-                      <ArrowRight className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <p className="text-sm text-gray-700">vous orienter vers la formule la plus adaptée</p>
+              {/* Trois colonnes avec icônes */}
+              <div className="grid md:grid-cols-3 gap-8 mb-10">
+                <div className="text-center group">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
+                    <ArrowRight className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-blue-100 flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <p className="text-sm text-gray-700">répondre à vos questions sur le fonctionnement ou la facturation</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-blue-100 flex items-center justify-center">
-                      <FileText className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <p className="text-sm text-gray-700">établir un devis si nécessaire</p>
-                  </div>
+                  <p className="text-gray-700 font-medium leading-relaxed">
+                    vous orienter vers la formule la plus adaptée
+                  </p>
                 </div>
-                
-                <div className="grid md:grid-cols-2 gap-4 mb-8">
-                  <Button className="bg-blue-500 hover:bg-blue-600 text-white">
-                    Nous contacter
-                  </Button>
-                  <Button variant="outline" className="border-blue-500 text-blue-500 hover:bg-blue-50">
-                    Prendre rendez-vous avec un conseiller
-                  </Button>
+                <div className="text-center group">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
+                    <Phone className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <p className="text-gray-700 font-medium leading-relaxed">
+                    répondre à vos questions sur le fonctionnement ou la facturation
+                  </p>
                 </div>
+                <div className="text-center group">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
+                    <FileText className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <p className="text-gray-700 font-medium leading-relaxed">
+                    établir un devis si nécessaire
+                  </p>
+                </div>
+              </div>
+              
+              {/* Boutons */}
+              <div className="grid md:grid-cols-2 gap-4 mb-10 max-w-2xl mx-auto">
+                <Button className="bg-blue-500 hover:bg-blue-600 text-white py-4 px-8 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  Nous contacter
+                </Button>
+                <Button variant="outline" className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 py-4 px-8 text-lg font-semibold rounded-xl transition-all duration-300">
+                  Prendre rendez-vous avec un conseiller
+                </Button>
+              </div>
 
-                <div className="bg-white rounded-lg p-6 border border-blue-200">
-                  <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
-                    <Shield className="w-5 h-5 text-blue-500 mr-2" />
+              {/* Section Transparence & sécurité */}
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-white/50 shadow-sm">
+                <div className="flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-blue-500 mr-3" />
+                  <h3 className="text-xl font-bold text-gray-900">
                     Transparence & sécurité
-                  </h4>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-sm text-gray-700">Aucun frais caché</span>
+                  </h3>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                        <CheckCircle className="w-4 h-4 text-green-600" />
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-sm text-gray-700">Devis systématique pour les prestations à la carte</span>
-                      </div>
+                      <span className="text-gray-700 font-medium">Aucun frais caché</span>
                     </div>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-sm text-gray-700">Paiement sécurisé</span>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                        <CheckCircle className="w-4 h-4 text-green-600" />
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-sm text-gray-700">Possibilité de passage à l'abonnement si plusieurs demandes</span>
+                      <span className="text-gray-700 font-medium">Devis systématique pour les prestations à la carte</span>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                        <CheckCircle className="w-4 h-4 text-green-600" />
                       </div>
+                      <span className="text-gray-700 font-medium">Paiement sécurisé</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                        <CheckCircle className="w-4 h-4 text-green-600" />
+                      </div>
+                      <span className="text-gray-700 font-medium">Possibilité de passage à l'abonnement si plusieurs demandes</span>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
 
           {/* Fonctionnement */}
