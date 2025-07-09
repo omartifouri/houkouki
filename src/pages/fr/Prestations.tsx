@@ -304,6 +304,33 @@ const FrPrestations = () => {
                     </div>
                   </div>
 
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Pour qui ?</h4>
+                    <p className="text-gray-700 mb-4">
+                      Cette offre s'adresse principalement aux PME et TPE, tous secteurs confondus, souhaitant bénéficier d'un accompagnement structuré pour :
+                    </p>
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
+                        <span className="text-gray-700">Optimiser leurs chances d'accès au financement ;</span>
+                      </div>
+                      <div className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
+                        <span className="text-gray-700">Booster leur développement ;</span>
+                      </div>
+                      <div className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
+                        <span className="text-gray-700">S'appuyer sur une expertise pluridisciplinaire portée par un groupe solide.</span>
+                      </div>
+                    </div>
+                    <p className="text-gray-700">
+                      Le conseil en financement est également étendu aux prestations accordées aux salariés des entreprises adhérentes, pour leurs besoins personnels en financement (achat d'un logement ou d'un bien, santé, dettes, etc...) 
+                      <Link to="/fr/profils" className="text-red-600 hover:text-red-700 underline ml-1">
+                        (voir la section salariés)
+                      </Link>
+                    </p>
+                  </div>
+
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
                     <Link to="/fr/contact">Demander un conseil en financement</Link>
                   </Button>
