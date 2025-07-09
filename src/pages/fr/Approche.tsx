@@ -217,6 +217,13 @@ const FrApproche = () => {
                     </div>
                   </div>
                 </div>
+                
+                <div className="text-center mt-8">
+                  <p className="text-gray-600 mb-4">En savoir plus ?</p>
+                  <Button className="bg-red-600 hover:bg-red-700" asChild>
+                    <Link to="/fr/prestations">Découvrir nos services</Link>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </section>
