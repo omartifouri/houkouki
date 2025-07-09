@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const FrApproche = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       {/* Header avec navigation */}
       <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -33,7 +33,7 @@ const FrApproche = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Un accompagnement moderne et fluide */}
           <section>
-            <h2 className="text-3xl font-bold text-blue-800 mb-6">Un accompagnement moderne et fluide</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6">Un accompagnement moderne et fluide</h2>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-6">
@@ -42,28 +42,28 @@ const FrApproche = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <span className="text-blue-600 font-bold">📞</span>
+                      <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                        <span className="text-red-600 font-bold">📞</span>
                       </div>
                       <span className="text-gray-700">un service téléphonique</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <span className="text-blue-600 font-bold">💻</span>
+                      <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                        <span className="text-red-600 font-bold">💻</span>
                       </div>
                       <span className="text-gray-700">des rendez-vous en visioconférence</span>
                     </div>
                   </div>
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <span className="text-blue-600 font-bold">👤</span>
+                      <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                        <span className="text-red-600 font-bold">👤</span>
                       </div>
                       <span className="text-gray-700">un espace client dédié</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <Smartphone className="h-5 w-5 text-blue-600" />
+                      <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                        <Smartphone className="h-5 w-5 text-red-600" />
                       </div>
                       <span className="text-gray-700">une application mobile complète</span>
                     </div>
@@ -75,12 +75,12 @@ const FrApproche = () => {
 
           {/* Un service digital, humain et marocain */}
           <section>
-            <h2 className="text-3xl font-bold text-blue-800 mb-6">Un service digital, humain et marocain</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6">Un service digital, humain et marocain</h2>
             <div className="space-y-6">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
-                    <Smartphone className="h-6 w-6 text-blue-600" />
+                    <Smartphone className="h-6 w-6 text-red-600" />
                     <span>100% Digital</span>
                   </CardTitle>
                 </CardHeader>
@@ -96,7 +96,7 @@ const FrApproche = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
-                    <Users className="h-6 w-6 text-blue-600" />
+                    <Users className="h-6 w-6 text-red-600" />
                     <span>Humain</span>
                   </CardTitle>
                 </CardHeader>
@@ -112,7 +112,7 @@ const FrApproche = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
-                    <MapPin className="h-6 w-6 text-blue-600" />
+                    <MapPin className="h-6 w-6 text-red-600" />
                     <span>Marocain</span>
                   </CardTitle>
                 </CardHeader>
@@ -130,7 +130,7 @@ const FrApproche = () => {
 
           {/* Nos valeurs */}
           <section>
-            <h2 className="text-3xl font-bold text-blue-800 mb-6">Nos valeurs</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6">Nos valeurs</h2>
             <Card className="mb-6">
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-6">
@@ -146,7 +146,7 @@ const FrApproche = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-2 text-blue-800">
+                  <CardTitle className="flex items-center space-x-2 text-red-800">
                     <Users className="h-6 w-6" />
                     <span>Proximité</span>
                   </CardTitle>
@@ -161,7 +161,7 @@ const FrApproche = () => {
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-2 text-blue-800">
+                  <CardTitle className="flex items-center space-x-2 text-red-800">
                     <Shield className="h-6 w-6" />
                     <span>Rigueur</span>
                   </CardTitle>
@@ -176,7 +176,7 @@ const FrApproche = () => {
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-2 text-blue-800">
+                  <CardTitle className="flex items-center space-x-2 text-red-800">
                     <Smartphone className="h-6 w-6" />
                     <span>Accessibilité</span>
                   </CardTitle>
@@ -191,7 +191,7 @@ const FrApproche = () => {
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-2 text-blue-800">
+                  <CardTitle className="flex items-center space-x-2 text-red-800">
                     <Shield className="h-6 w-6" />
                     <span>Confidentialité</span>
                   </CardTitle>
@@ -208,27 +208,27 @@ const FrApproche = () => {
 
           {/* Nos engagements */}
           <section>
-            <h2 className="text-3xl font-bold text-blue-800 mb-6">Nos engagements</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6">Nos engagements</h2>
             <Card>
               <CardContent className="pt-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                       <span className="text-gray-700">Confidentialité garantie</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                       <span className="text-gray-700">Réponse rapide et personnalisée</span>
                     </div>
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                       <span className="text-gray-700">Transparence tarifaire</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                       <span className="text-gray-700">Expertise 100 % marocaine</span>
                     </div>
                   </div>
@@ -238,7 +238,7 @@ const FrApproche = () => {
           </section>
 
           <div className="text-center">
-            <Button className="bg-blue-600 hover:bg-blue-700" asChild>
+            <Button className="bg-red-600 hover:bg-red-700" asChild>
               <Link to="/fr/prestations">Découvrir nos services</Link>
             </Button>
           </div>

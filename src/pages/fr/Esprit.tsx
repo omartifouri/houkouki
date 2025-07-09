@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const FrEsprit = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       {/* Header avec navigation */}
       <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -33,7 +33,7 @@ const FrEsprit = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl text-blue-800">Notre conviction</CardTitle>
+              <CardTitle className="text-2xl text-red-800">Notre conviction</CardTitle>
             </CardHeader>
             <CardContent className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed">
@@ -51,7 +51,7 @@ const FrEsprit = () => {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl text-blue-800">Notre engagement</CardTitle>
+              <CardTitle className="text-2xl text-red-800">Notre engagement</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 leading-relaxed text-lg">

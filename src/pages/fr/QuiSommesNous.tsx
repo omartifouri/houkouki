@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const FrQuiSommesNous = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       {/* Header avec navigation */}
       <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -33,7 +33,7 @@ const FrQuiSommesNous = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Une plateforme juridique née d'un constat simple */}
           <section>
-            <h2 className="text-3xl font-bold text-blue-800 mb-6">Une plateforme juridique née d'un constat simple</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6">Une plateforme juridique née d'un constat simple</h2>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -51,7 +51,7 @@ const FrQuiSommesNous = () => {
 
           {/* Une expertise juridique au service de chacun */}
           <section>
-            <h2 className="text-3xl font-bold text-blue-800 mb-6">Une expertise juridique au service de chacun</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6">Une expertise juridique au service de chacun</h2>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -77,48 +77,48 @@ const FrQuiSommesNous = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Nos domaines d'intervention</h3>
             <p className="text-gray-700 mb-6">Nos juristes interviennent dans le droit civil en général dont :</p>
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <Scale className="h-5 w-5 text-blue-600" />
-                  <span className="text-gray-700">Le droit de la famille</span>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Scale className="h-5 w-5 text-red-600" />
+                    <span className="text-gray-700">Le droit de la famille</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Scale className="h-5 w-5 text-red-600" />
+                    <span className="text-gray-700">Le droit du travail</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Scale className="h-5 w-5 text-red-600" />
+                    <span className="text-gray-700">Le droit foncier</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Scale className="h-5 w-5 text-red-600" />
+                    <span className="text-gray-700">Le droit des assurances</span>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Scale className="h-5 w-5 text-blue-600" />
-                  <span className="text-gray-700">Le droit du travail</span>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Scale className="h-5 w-5 text-red-600" />
+                    <span className="text-gray-700">Le droit commercial et des sociétés</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Scale className="h-5 w-5 text-red-600" />
+                    <span className="text-gray-700">Le droit du consommateur</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Scale className="h-5 w-5 text-red-600" />
+                    <span className="text-gray-700">Le droit administratif</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Scale className="h-5 w-5 text-red-600" />
+                    <span className="text-gray-700">La protection des données</span>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Scale className="h-5 w-5 text-blue-600" />
-                  <span className="text-gray-700">Le droit foncier</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Scale className="h-5 w-5 text-blue-600" />
-                  <span className="text-gray-700">Le droit des assurances</span>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <Scale className="h-5 w-5 text-blue-600" />
-                  <span className="text-gray-700">Le droit commercial et des sociétés</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Scale className="h-5 w-5 text-blue-600" />
-                  <span className="text-gray-700">Le droit du consommateur</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Scale className="h-5 w-5 text-blue-600" />
-                  <span className="text-gray-700">Le droit administratif</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Scale className="h-5 w-5 text-blue-600" />
-                  <span className="text-gray-700">La protection des données</span>
-                </div>
-              </div>
             </div>
           </section>
 
           {/* Notre vision et notre mission */}
           <section>
-            <h2 className="text-3xl font-bold text-blue-800 mb-6">Notre vision et notre mission</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6">Notre vision et notre mission</h2>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -134,15 +134,15 @@ const FrQuiSommesNous = () => {
                     <h4 className="text-xl font-semibold text-gray-900 mb-4">C'est pourquoi nous proposons :</h4>
                     <ul className="space-y-2">
                       <li className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                         <span className="text-gray-700">des formules d'abonnement simples et adaptées</span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                         <span className="text-gray-700">des prestations à la carte sans engagement</span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                         <span className="text-gray-700">un service de proximité, sans jargon, ni distance</span>
                       </li>
                     </ul>
@@ -152,15 +152,15 @@ const FrQuiSommesNous = () => {
                     <h4 className="text-xl font-semibold text-gray-900 mb-4">Nous œuvrons pour :</h4>
                     <ul className="space-y-2">
                       <li className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                         <span className="text-gray-700">Réduire les inégalités d'accès au droit</span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                         <span className="text-gray-700">Simplifier les démarches juridiques</span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                         <span className="text-gray-700">Créer un nouveau rapport au droit, plus fluide, plus humain</span>
                       </li>
                     </ul>
@@ -177,21 +177,21 @@ const FrQuiSommesNous = () => {
 
           {/* Un service pensé pour tous les publics */}
           <section>
-            <h2 className="text-3xl font-bold text-blue-800 mb-6">Un service pensé pour tous les publics</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6">Un service pensé pour tous les publics</h2>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-4">Que vous soyez :</p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
-                      <Users className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                      <Users className="h-6 w-6 text-red-600 mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-semibold text-gray-900">Particulier</p>
                         <p className="text-gray-700">confronté à une situation complexe</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <Target className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                      <Target className="h-6 w-6 text-red-600 mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-semibold text-gray-900">Entreprise</p>
                         <p className="text-gray-700">soucieuse de sécuriser ses décisions</p>
@@ -200,14 +200,14 @@ const FrQuiSommesNous = () => {
                   </div>
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
-                      <Shield className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                      <Shield className="h-6 w-6 text-red-600 mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-semibold text-gray-900">Marocain résident à l'étranger</p>
                         <p className="text-gray-700">ayant besoin d'un relais juridique fiable dans le pays</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <Scale className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                      <Scale className="h-6 w-6 text-red-600 mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-semibold text-gray-900">Étranger résident au Maroc</p>
                         <p className="text-gray-700">concerné par le droit local et soucieux de s'y conformer</p>

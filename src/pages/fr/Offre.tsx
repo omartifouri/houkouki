@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const FrOffre = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       {/* Header avec navigation */}
       <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -39,12 +39,12 @@ const FrOffre = () => {
 
           {/* Nos trois principales offres */}
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-2 border-blue-100 hover:border-blue-300 transition-all duration-300">
+            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-blue-800">Particuliers</CardTitle>
+                <CardTitle className="text-red-800">Particuliers</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600 mb-4">
@@ -56,12 +56,12 @@ const FrOffre = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-blue-100 hover:border-blue-300 transition-all duration-300">
+            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Building className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-blue-800">Entreprises</CardTitle>
+                <CardTitle className="text-red-800">Entreprises</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600 mb-4">
@@ -73,12 +73,12 @@ const FrOffre = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-blue-100 hover:border-blue-300 transition-all duration-300">
+            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Globe className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-blue-800">MRE</CardTitle>
+                <CardTitle className="text-red-800">MRE</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600 mb-4">
@@ -93,11 +93,11 @@ const FrOffre = () => {
 
           {/* Types de formules */}
           <section>
-            <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Nos formules</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-8 text-center">Nos formules</h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="bg-white border-2 border-blue-200">
+              <Card className="bg-white border-2 border-red-200">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-blue-800 text-center">Abonnement annuel</CardTitle>
+                  <CardTitle className="text-2xl text-red-800 text-center">Abonnement annuel</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-gray-600 mb-6">
@@ -106,15 +106,15 @@ const FrOffre = () => {
                   <p className="text-gray-600 mb-6">
                     Idéal pour les particuliers ou entreprises qui souhaitent un service de proximité continu.
                   </p>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
+                  <Button className="w-full bg-red-600 hover:bg-red-700" asChild>
                     <Link to="/fr/tarifs">Choisir l'abonnement</Link>
                   </Button>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white border-2 border-blue-200">
+              <Card className="bg-white border-2 border-red-200">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-blue-800 text-center">À la carte</CardTitle>
+                  <CardTitle className="text-2xl text-red-800 text-center">À la carte</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-gray-600 mb-6">
@@ -123,7 +123,7 @@ const FrOffre = () => {
                   <p className="text-gray-600 mb-6">
                     Payez uniquement ce dont vous avez besoin.
                   </p>
-                  <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" asChild>
+                  <Button variant="outline" className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
                     <Link to="/fr/tarifs">Choisir une prestation à la carte</Link>
                   </Button>
                 </CardContent>
@@ -133,7 +133,7 @@ const FrOffre = () => {
 
           {/* Nos prestations principales */}
           <section>
-            <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Nos prestations principales</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-8 text-center">Nos prestations principales</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="bg-white">
                 <CardHeader>
@@ -204,7 +204,7 @@ const FrOffre = () => {
           </section>
 
           <div className="text-center">
-            <Button className="bg-blue-600 hover:bg-blue-700" asChild>
+            <Button className="bg-red-600 hover:bg-red-700" asChild>
               <Link to="/fr/prestations">Découvrir toutes nos prestations</Link>
             </Button>
           </div>
