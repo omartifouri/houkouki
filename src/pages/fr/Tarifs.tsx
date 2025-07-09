@@ -667,10 +667,10 @@ const FrTarifs = () => {
 
           {/* Besoin d'un conseil pour choisir */}
           <div className="mt-24 max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-50/80 to-blue-100/50 rounded-3xl p-8 md:p-12 border border-blue-200/50 shadow-lg backdrop-blur-sm">
+            <div className="bg-gradient-to-br from-gray-50/80 to-gray-100/50 rounded-3xl p-8 md:p-12 border border-gray-200/50 shadow-lg backdrop-blur-sm">
               {/* Header avec icône */}
               <div className="text-center mb-10">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-blue-500 text-white flex items-center justify-center shadow-lg">
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-red-500 text-white flex items-center justify-center shadow-lg">
                   <User className="w-10 h-10" />
                 </div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -684,24 +684,24 @@ const FrTarifs = () => {
               {/* Trois colonnes avec icônes */}
               <div className="grid md:grid-cols-3 gap-8 mb-10">
                 <div className="text-center group">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
-                    <ArrowRight className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500/20 flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
+                    <ArrowRight className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
                   </div>
                   <p className="text-gray-700 font-medium leading-relaxed">
                     vous orienter vers la formule la plus adaptée
                   </p>
                 </div>
                 <div className="text-center group">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
-                    <Phone className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500/20 flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
+                    <Phone className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
                   </div>
                   <p className="text-gray-700 font-medium leading-relaxed">
                     répondre à vos questions sur le fonctionnement ou la facturation
                   </p>
                 </div>
                 <div className="text-center group">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
-                    <FileText className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500/20 flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
+                    <FileText className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
                   </div>
                   <p className="text-gray-700 font-medium leading-relaxed">
                     établir un devis si nécessaire
@@ -711,10 +711,10 @@ const FrTarifs = () => {
               
               {/* Boutons */}
               <div className="grid md:grid-cols-2 gap-4 mb-10 max-w-2xl mx-auto">
-                <Button className="bg-blue-500 hover:bg-blue-600 text-white py-4 px-8 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button className="bg-red-500 hover:bg-red-600 text-white py-4 px-8 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                   Nous contacter
                 </Button>
-                <Button variant="outline" className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 py-4 px-8 text-lg font-semibold rounded-xl transition-all duration-300">
+                <Button variant="outline" className="border-2 border-red-500 text-red-600 hover:bg-red-50 py-4 px-8 text-lg font-semibold rounded-xl transition-all duration-300">
                   Prendre rendez-vous avec un conseiller
                 </Button>
               </div>
@@ -722,7 +722,7 @@ const FrTarifs = () => {
               {/* Section Transparence & sécurité */}
               <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-white/50 shadow-sm">
                 <div className="flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-blue-500 mr-3" />
+                  <Shield className="w-6 h-6 text-red-500 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">
                     Transparence & sécurité
                   </h3>
