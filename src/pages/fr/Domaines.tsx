@@ -219,6 +219,10 @@ const FrDomaines = () => {
                     <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                     <span className="text-gray-700">Conditions générales de vente</span>
                   </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                    <span className="text-gray-700">Litiges commerciaux et impayés</span>
+                  </div>
                 </div>
               </div>
               <div className="mt-6">
