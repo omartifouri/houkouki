@@ -245,34 +245,61 @@ const FrPrestations = () => {
                   
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">Nos services :</h4>
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
-                        <span className="text-gray-700">Montage et instruction des dossiers de crédits entreprises</span>
+                    <div className="space-y-6">
+                      <div>
+                        <div className="flex items-start space-x-2 mb-2">
+                          <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
+                          <span className="text-gray-700 font-medium">Montage et instruction des dossiers de crédits entreprises :</span>
+                        </div>
+                        <p className="text-gray-600 ml-4">nous vous guidons dans la constitution de vos dossiers pour maximiser vos chances d'obtention d'accord.</p>
                       </div>
-                      <div className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
-                        <span className="text-gray-700">Analyse de la liasse fiscale et recommandations de corrections</span>
+                      
+                      <div>
+                        <div className="flex items-start space-x-2 mb-2">
+                          <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
+                          <span className="text-gray-700 font-medium">Analyse de la liasse fiscale et recommandations de corrections :</span>
+                        </div>
+                        <p className="text-gray-600 ml-4">notre expertise permet d'identifier les points de blocage potentiels et de proposer des ajustements pertinents pour une meilleure présentation financière.</p>
                       </div>
-                      <div className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
-                        <span className="text-gray-700">Réalisation de business plans pour crédits d'investissement</span>
+                      
+                      <div>
+                        <div className="flex items-start space-x-2 mb-2">
+                          <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
+                          <span className="text-gray-700 font-medium">Réalisation de business plans pour crédits d'investissement :</span>
+                        </div>
+                        <p className="text-gray-600 ml-4">nous vous aidons à construire un business plan solide, adapté aux exigences des institutions financières et surtout réaliste.</p>
                       </div>
-                      <div className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
-                        <span className="text-gray-700">Renouvellement et extension des autorisations</span>
+                      
+                      <div>
+                        <div className="flex items-start space-x-2 mb-2">
+                          <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
+                          <span className="text-gray-700 font-medium">Renouvellement et extension des autorisations :</span>
+                        </div>
+                        <p className="text-gray-600 ml-4">un accompagnement complet pour éviter tout blocage lors du renouvellement voire extension des lignes.</p>
                       </div>
-                      <div className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
-                        <span className="text-gray-700">Montage des dossiers de financement en promotion immobilière</span>
+                      
+                      <div>
+                        <div className="flex items-start space-x-2 mb-2">
+                          <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
+                          <span className="text-gray-700 font-medium">Montage des dossiers de financement dans le secteur de la promotion immobilière :</span>
+                        </div>
+                        <p className="text-gray-600 ml-4">une expertise spécifique dédiée aux opérateurs de ce secteur particulier et exigeant.</p>
                       </div>
-                      <div className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
-                        <span className="text-gray-700">Identification de solutions de cofinancement</span>
+                      
+                      <div>
+                        <div className="flex items-start space-x-2 mb-2">
+                          <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
+                          <span className="text-gray-700 font-medium">Identification de solutions de cofinancement :</span>
+                        </div>
+                        <p className="text-gray-600 ml-4">nous vous orientons vers les options les plus pertinentes selon votre profil et vos garanties.</p>
                       </div>
-                      <div className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
-                        <span className="text-gray-700">Assistance aux réunions bancaires</span>
+                      
+                      <div>
+                        <div className="flex items-start space-x-2 mb-2">
+                          <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-2"></div>
+                          <span className="text-gray-700 font-medium">Assistance aux réunions bancaires :</span>
+                        </div>
+                        <p className="text-gray-600 ml-4">nous vous accompagnons lors de vos échanges avec les banques pour défendre vos intérêts et sécuriser vos négociations.</p>
                       </div>
                     </div>
                   </div>
