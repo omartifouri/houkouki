@@ -42,21 +42,21 @@ const FrProfils = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-red-600 mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Rédiger ou vérifier un contrat (location, vente, travail…)</span>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-red-600 mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Anticiper ou gérer une séparation, un divorce, une succession</span>
                       </div>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-red-600 mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Réagir à un licenciement, un litige de voisinage ou une escroquerie</span>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-red-600 mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Réaliser des démarches administratives en toute sécurité</span>
                       </div>
                     </div>

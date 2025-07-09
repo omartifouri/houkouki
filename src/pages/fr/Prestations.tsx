@@ -28,9 +28,9 @@ const FrPrestations = () => {
             
             <div className="space-y-12">
               {/* 1. Conseil juridique à distance */}
-              <Card className="border-2 border-blue-200">
+              <Card className="border-2 border-red-200">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-3 text-2xl text-blue-800">
+                  <CardTitle className="flex items-center space-x-3 text-2xl text-red-800">
                     <Phone className="h-7 w-7" />
                     <span>1. Conseil juridique à distance</span>
                   </CardTitle>
@@ -46,21 +46,21 @@ const FrPrestations = () => {
                     <div className="grid md:grid-cols-2 gap-3">
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                           <span className="text-gray-700">Ai-je le droit de… ?</span>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                           <span className="text-gray-700">Mon contrat est-il valable ?</span>
                         </div>
                       </div>
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                           <span className="text-gray-700">Quels sont mes recours ?</span>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                           <span className="text-gray-700">Que dois-je faire en cas de litige ?</span>
                         </div>
                       </div>
