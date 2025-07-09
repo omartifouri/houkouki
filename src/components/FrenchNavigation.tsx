@@ -37,7 +37,7 @@ const FrenchNavigation = () => {
                 <NavigationMenuTrigger className="text-gray-600 hover:text-brand-beige transition-colors">
                   L'esprit Houkouki
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent className="bg-gradient-to-br from-brand-beige/20 to-brand-beige/10">
                   <div className="grid w-[300px] gap-2 p-4">
                     <NavigationMenuLink asChild>
                       <Link
@@ -69,7 +69,7 @@ const FrenchNavigation = () => {
                 <NavigationMenuTrigger className="text-gray-600 hover:text-brand-beige transition-colors">
                   Notre offre
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent className="bg-gradient-to-br from-brand-beige/20 to-brand-beige/10">
                   <div className="grid w-[350px] gap-2 p-4">
                     <NavigationMenuLink asChild>
                       <Link
