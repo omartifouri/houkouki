@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import FrenchNavigation from "@/components/FrenchNavigation";
+import CareerSupportPopup from "@/components/CareerSupportPopup";
 
 const FrTarifs = () => {
   return (
@@ -14,6 +15,8 @@ const FrTarifs = () => {
           Une tarification simple, claire et adaptée à vos besoins. Abonnement ou prestations à la carte.
         </p>
       </div>
+      
+      <CareerSupportPopup />
     </div>
   );
 };

@@ -1,29 +1,13 @@
 import { Button } from "@/components/ui/button";
+import FrenchNavigation from "@/components/FrenchNavigation";
+import CareerSupportPopup from "@/components/CareerSupportPopup";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const FrContact = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
-      <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex justify-between items-center">
-            <Link to="/fr" className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/5d7e7c1c-ebd4-4271-a028-9798957bf332.png" 
-                alt="Houkouki Logo" 
-                className="h-10 w-auto"
-              />
-            </Link>
-            <Button variant="ghost" asChild>
-              <Link to="/fr">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Retour à l'accueil
-              </Link>
-            </Button>
-          </nav>
-        </div>
-      </header>
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
+      <FrenchNavigation />
 
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">Contactez-nous</h1>
@@ -31,6 +15,8 @@ const FrContact = () => {
           Une question ? Un besoin juridique ? L'équipe Houkouki est à votre disposition.
         </p>
       </div>
+      
+      <CareerSupportPopup />
     </div>
   );
 };

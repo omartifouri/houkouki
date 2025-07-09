@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Users, Scale, FileText, Calendar, Shield, CheckCircle, Star, ArrowRight, Phone, Video, MessageCircle, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import FrenchNavigation from "@/components/FrenchNavigation";
+import CareerSupportPopup from "@/components/CareerSupportPopup";
 
 const FrAccueil = () => {
   return (
@@ -436,6 +437,8 @@ const FrAccueil = () => {
           </div>
         </div>
       </footer>
+      
+      <CareerSupportPopup />
     </div>
   );
 };
