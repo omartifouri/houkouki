@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const FrAccueil = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       {/* Header/Navbar */}
       <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -19,14 +19,14 @@ const FrAccueil = () => {
               />
             </div>
             <div className="hidden md:flex items-center space-x-6">
-              <Link to="/fr" className="text-gray-600 hover:text-blue-600 transition-colors">Accueil</Link>
-              <Link to="/fr/esprit" className="text-gray-600 hover:text-blue-600 transition-colors">L'esprit Houkouki</Link>
-              <Link to="/fr/qui-sommes-nous" className="text-gray-600 hover:text-blue-600 transition-colors">Qui sommes-nous ?</Link>
-              <Link to="/fr/approche" className="text-gray-600 hover:text-blue-600 transition-colors">Notre approche</Link>
-              <Link to="/fr/offre" className="text-gray-600 hover:text-blue-600 transition-colors">Notre offre</Link>
-              <Link to="/fr/prestations" className="text-gray-600 hover:text-blue-600 transition-colors">Nos prestations</Link>
-              <Link to="/fr/tarifs" className="text-gray-600 hover:text-blue-600 transition-colors">Nos tarifs</Link>
-              <Link to="/fr/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
+              <Link to="/fr" className="text-gray-600 hover:text-red-600 transition-colors">Accueil</Link>
+              <Link to="/fr/esprit" className="text-gray-600 hover:text-red-600 transition-colors">L'esprit Houkouki</Link>
+              <Link to="/fr/qui-sommes-nous" className="text-gray-600 hover:text-red-600 transition-colors">Qui sommes-nous ?</Link>
+              <Link to="/fr/approche" className="text-gray-600 hover:text-red-600 transition-colors">Notre approche</Link>
+              <Link to="/fr/offre" className="text-gray-600 hover:text-red-600 transition-colors">Notre offre</Link>
+              <Link to="/fr/prestations" className="text-gray-600 hover:text-red-600 transition-colors">Nos prestations</Link>
+              <Link to="/fr/tarifs" className="text-gray-600 hover:text-red-600 transition-colors">Nos tarifs</Link>
+              <Link to="/fr/contact" className="text-gray-600 hover:text-red-600 transition-colors">Contact</Link>
             </div>
           </nav>
         </div>
@@ -35,24 +35,24 @@ const FrAccueil = () => {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <Badge className="mb-6 bg-blue-100 text-blue-800 border-blue-200 text-xl px-8 py-3">
+          <Badge className="mb-6 bg-red-100 text-red-800 border-red-200 text-xl px-8 py-3">
             Vos droits, notre mission.
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Un accompagnement juridique 
-            <span className="text-blue-600"> simple, rapide et humain</span>
+            <span className="text-red-600"> simple, rapide et humain</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Où que vous soyez, bénéficiez de l'expertise de nos juristes pour vous conseiller, vous orienter, et protéger vos intérêts.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg px-8 py-4">
+            <Button size="lg" className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-lg px-8 py-4">
               <Link to="/fr/contact">
                 Commencer maintenant
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
               <Link to="/fr/devis">
                 Demander un devis
               </Link>
@@ -71,12 +71,12 @@ const FrAccueil = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-2 border-blue-100 hover:border-blue-300 transition-all duration-300">
+            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-blue-800">Conseil à distance</CardTitle>
+                <CardTitle className="text-red-800">Conseil à distance</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
@@ -85,12 +85,12 @@ const FrAccueil = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-blue-100 hover:border-blue-300 transition-all duration-300">
+            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Scale className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-blue-800">Services personnalisés</CardTitle>
+                <CardTitle className="text-red-800">Services personnalisés</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
@@ -99,12 +99,12 @@ const FrAccueil = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-blue-100 hover:border-blue-300 transition-all duration-300">
+            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-blue-800">Sécurité garantie</CardTitle>
+                <CardTitle className="text-red-800">Sécurité garantie</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
@@ -123,7 +123,7 @@ const FrAccueil = () => {
       </section>
 
       {/* Nos offres selon vos besoins */}
-      <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-gray-50">
+      <section className="py-16 px-4 bg-gradient-to-br from-[#C0997A]/10 to-gray-50">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -134,8 +134,8 @@ const FrAccueil = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-blue-600" />
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-red-600" />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Vous êtes un particulier ?</CardTitle>
               </CardHeader>
@@ -152,8 +152,8 @@ const FrAccueil = () => {
 
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <FileText className="h-6 w-6 text-blue-600" />
+                <div className="w-12 h-12 bg-[#C0997A]/20 rounded-lg flex items-center justify-center mb-4">
+                  <FileText className="h-6 w-6 text-[#C0997A]" />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Vous êtes une entreprise ?</CardTitle>
               </CardHeader>
@@ -170,8 +170,8 @@ const FrAccueil = () => {
 
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <Star className="h-6 w-6 text-blue-600" />
+                <div style={{ backgroundColor: '#1A96A0' }} className="w-12 h-12 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                  <Star className="h-6 w-6" style={{ color: '#1A96A0' }} />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Vous vivez à l'étranger ?</CardTitle>
               </CardHeader>
@@ -201,52 +201,52 @@ const FrAccueil = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
                 <span className="text-gray-700">Création de société et suivi de la vie juridique</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
                 <span className="text-gray-700">Audit conformité sociale</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
                 <span className="text-gray-700">Rédaction de contrats et conventions</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
                 <span className="text-gray-700">Conseil en droit social</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
                 <span className="text-gray-700">Conseil en droit de la famille</span>
               </div>
             </div>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
                 <span className="text-gray-700">Conseil en droit immobilier</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
                 <span className="text-gray-700">Recours amiables et accompagnement litiges</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
                 <span className="text-gray-700">Procédures administratives</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
                 <span className="text-gray-700">Audit juridique de documents</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
                 <span className="text-gray-700">Conseil en financement</span>
               </div>
             </div>
           </div>
 
           <div className="text-center mt-8">
-            <Button className="bg-blue-600 hover:bg-blue-700" asChild>
+            <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
               <Link to="/fr/prestations">Voir toutes nos prestations</Link>
             </Button>
           </div>
@@ -265,14 +265,14 @@ const FrAccueil = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="bg-white p-6">
               <CardHeader>
-                <CardTitle className="text-2xl text-blue-800">Abonnement annuel</CardTitle>
+                <CardTitle className="text-2xl text-[#C0997A]">Abonnement annuel</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
                   Un accès illimité à nos juristes + un accompagnement personnalisé tout au long de l'année.
                   Idéal pour les particuliers ou entreprises qui souhaitent un service de proximité continu.
                 </p>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
+                <Button className="w-full bg-[#C0997A] hover:bg-[#B8926F]" asChild>
                   <Link to="/fr/tarifs">Choisir l'abonnement</Link>
                 </Button>
               </CardContent>
@@ -280,14 +280,14 @@ const FrAccueil = () => {
 
             <Card className="bg-white p-6">
               <CardHeader>
-                <CardTitle className="text-2xl text-blue-800">À la carte</CardTitle>
+                <CardTitle className="text-2xl text-red-800">À la carte</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
                   Une question, un besoin ponctuel, un document à rédiger ou une procédure à lancer ? 
                   Payez uniquement ce dont vous avez besoin.
                 </p>
-                <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" asChild>
+                <Button variant="outline" className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
                   <Link to="/fr/tarifs">Choisir une prestation à la carte</Link>
                 </Button>
               </CardContent>
@@ -307,24 +307,24 @@ const FrAccueil = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-600 font-bold text-xl">1</span>
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-red-600 font-bold text-xl">1</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Vous choisissez votre formule</h3>
               <p className="text-gray-600">Abonnement ou prestation à la carte selon vos besoins</p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-600 font-bold text-xl">2</span>
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-red-600 font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Vous accédez à nos juristes</h3>
               <p className="text-gray-600">Par téléphone ou visioconférence, rapidement et facilement</p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-600 font-bold text-xl">3</span>
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-red-600 font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Nous vous accompagnons</h3>
               <p className="text-gray-600">Jusqu'à résolution complète de votre situation</p>
@@ -335,7 +335,7 @@ const FrAccueil = () => {
             <p className="text-xl text-gray-700 mb-6">
               <strong>Rapide. Sécurisé. Efficace.</strong>
             </p>
-            <Button className="bg-blue-600 hover:bg-blue-700" asChild>
+            <Button className="bg-gradient-to-r from-[#C0997A] to-red-600 hover:from-[#B8926F] hover:to-red-700" asChild>
               <Link to="/fr/contact">En savoir plus sur notre fonctionnement</Link>
             </Button>
           </div>
