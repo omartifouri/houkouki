@@ -13,7 +13,7 @@ const FrProfils = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Profils accompagnés</h1>
-          <h2 className="text-2xl text-blue-600 mb-8">Vous êtes… Particulier, entreprise ou MRE ?</h2>
+          <h2 className="text-2xl text-red-600 mb-8">Vous êtes… Particulier, entreprise ou MRE ?</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Chez Houkouki, nous savons que chaque situation est unique. Que vous soyez particulier, entreprise ou 
             Marocain résidant à l'étranger, nous avons conçu des services adaptés à vos besoins juridiques spécifiques.
@@ -23,9 +23,9 @@ const FrProfils = () => {
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Un particulier */}
           <section>
-            <Card className="border-2 border-blue-200">
+            <Card className="border-2 border-red-200">
               <CardHeader>
-                <CardTitle className="flex items-center space-x-3 text-3xl text-blue-800">
+                <CardTitle className="flex items-center space-x-3 text-3xl text-red-800">
                   <Users className="h-8 w-8" />
                   <span>Un particulier</span>
                 </CardTitle>
@@ -63,7 +63,7 @@ const FrProfils = () => {
                   </div>
                 </div>
 
-                <Button className="bg-blue-600 hover:bg-blue-700" asChild>
+                <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
                   <Link to="/fr/prestations">Découvrir nos services pour particuliers</Link>
                 </Button>
               </CardContent>
@@ -72,9 +72,9 @@ const FrProfils = () => {
 
           {/* Une entreprise */}
           <section>
-            <Card className="border-2 border-blue-200">
+            <Card className="border-2 border-red-200">
               <CardHeader>
-                <CardTitle className="flex items-center space-x-3 text-3xl text-blue-800">
+                <CardTitle className="flex items-center space-x-3 text-3xl text-red-800">
                   <Building className="h-8 w-8" />
                   <span>Une entreprise</span>
                 </CardTitle>
@@ -91,25 +91,25 @@ const FrProfils = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-[#C0997A] mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Droit du travail : contrats, ruptures, conformité RH</span>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-[#C0997A] mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Relations commerciales : CGV, recouvrement, clauses contractuelles</span>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-[#C0997A] mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Statuts juridiques : création ou évolution d'entreprise</span>
                       </div>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-[#C0997A] mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Audit de documents et accompagnement dans vos démarches</span>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-[#C0997A] mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Conseil en financement : montage de dossiers de crédit, analyse fiscale, business plans</span>
                       </div>
                     </div>
@@ -117,9 +117,9 @@ const FrProfils = () => {
                 </div>
 
                 {/* Section spéciale pour les collaborateurs */}
-                <Card className="bg-blue-50 border-blue-200 mb-6">
+                <Card className="bg-red-50 border-red-200 mb-6">
                   <CardHeader>
-                    <CardTitle className="text-xl text-blue-800">Protéger et soutenir vos collaborateurs</CardTitle>
+                    <CardTitle className="text-xl text-red-800">Protéger et soutenir vos collaborateurs</CardTitle>
                     <p className="text-gray-600">
                       Offrez à vos salariés un accès confidentiel à des conseils juridiques et un accompagnement social
                     </p>
@@ -177,13 +177,13 @@ const FrProfils = () => {
                       </div>
                     </div>
 
-                    <Button variant="outline" className="mt-4 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" asChild>
+                    <Button variant="outline" className="mt-4 border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white" asChild>
                       <Link to="/fr/devis">Demander mon devis personnalisé</Link>
                     </Button>
                   </CardContent>
                 </Card>
 
-                <Button className="bg-blue-600 hover:bg-blue-700" asChild>
+                <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
                   <Link to="/fr/prestations">Consulter nos prestations pour entreprises</Link>
                 </Button>
               </CardContent>
@@ -192,9 +192,9 @@ const FrProfils = () => {
 
           {/* Un Marocain résidant à l'étranger (MRE) */}
           <section>
-            <Card className="border-2 border-blue-200">
+            <Card className="border-2 border-red-200">
               <CardHeader>
-                <CardTitle className="flex items-center space-x-3 text-3xl text-blue-800">
+                <CardTitle className="flex items-center space-x-3 text-3xl text-red-800">
                   <Globe className="h-8 w-8" />
                   <span>Un Marocain résidant à l'étranger (MRE)</span>
                 </CardTitle>
@@ -210,28 +210,28 @@ const FrProfils = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-[#C0997A] mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Gérer une succession ou un acte notarié sans revenir au Maroc</span>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-[#C0997A] mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Confier vos démarches administratives à un interlocuteur unique</span>
                       </div>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-[#C0997A] mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Résoudre un litige (foncier, familial, bancaire, locatif)</span>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-[#C0997A] mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Obtenir des conseils clairs sur le droit marocain</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <Button className="bg-blue-600 hover:bg-blue-700" asChild>
+                <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
                   <Link to="/fr/prestations">Découvrir notre accompagnement MRE</Link>
                 </Button>
               </CardContent>
@@ -240,9 +240,9 @@ const FrProfils = () => {
 
           {/* Des réponses adaptées à votre profil */}
           <section>
-            <Card className="bg-blue-50 border-blue-200">
+            <Card className="bg-red-50 border-red-200">
               <CardHeader>
-                <CardTitle className="text-2xl text-blue-800 text-center">Des réponses adaptées à votre profil</CardTitle>
+                <CardTitle className="text-2xl text-red-800 text-center">Des réponses adaptées à votre profil</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 text-lg mb-6 text-center">
@@ -251,26 +251,26 @@ const FrProfils = () => {
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="text-center">
                     <div className="flex items-center justify-center space-x-2 mb-2">
-                      <CheckCircle className="h-5 w-5 text-blue-600" />
+                      <CheckCircle className="h-5 w-5 text-[#C0997A]" />
                       <span className="text-gray-700">Des formules sur abonnement ou à la carte</span>
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="flex items-center justify-center space-x-2 mb-2">
-                      <CheckCircle className="h-5 w-5 text-blue-600" />
+                      <CheckCircle className="h-5 w-5 text-[#C0997A]" />
                       <span className="text-gray-700">Un accompagnement confidentiel et sécurisé</span>
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="flex items-center justify-center space-x-2 mb-2">
-                      <CheckCircle className="h-5 w-5 text-blue-600" />
+                      <CheckCircle className="h-5 w-5 text-[#C0997A]" />
                       <span className="text-gray-700">Une prise en charge rapide et personnalisée</span>
                     </div>
                   </div>
                 </div>
                 
                 <div className="text-center mt-8">
-                  <Button className="bg-blue-600 hover:bg-blue-700 mr-4" asChild>
+                  <Button className="bg-[#C0997A] hover:bg-[#B8926F] mr-4" asChild>
                     <Link to="/fr/tarifs">Voir toutes nos offres</Link>
                   </Button>
                 </div>
