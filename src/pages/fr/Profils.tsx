@@ -109,10 +109,10 @@ const FrProfils = () => {
                         <CheckCircle className="h-5 w-5 text-[#C0997A] mt-1 flex-shrink-0" />
                         <span className="text-gray-700">Audit de documents et accompagnement dans vos démarches</span>
                       </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-[#C0997A] mt-1 flex-shrink-0" />
-                        <span className="text-gray-700">Conseil en financement : montage de dossiers de crédit, analyse fiscale, business plans</span>
-                      </div>
+                       <div className="flex items-start space-x-3">
+                         <CheckCircle className="h-5 w-5 text-[#C0997A] mt-1 flex-shrink-0" />
+                         <span className="text-gray-700">Conseil en financement : montage de dossiers de crédit, analyse fiscale, business plans, assistance aux réunions bancaires et recherche de cofinancements</span>
+                       </div>
                     </div>
                   </div>
                 </div>
