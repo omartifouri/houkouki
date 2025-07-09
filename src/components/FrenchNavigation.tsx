@@ -27,14 +27,14 @@ const FrenchNavigation = () => {
             <NavigationMenuList className="space-x-2">
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/fr" className="text-gray-600 hover:text-red-600 transition-colors px-3 py-2">
-                    Accueil
-                  </Link>
+                   <Link to="/fr" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
+                     Accueil
+                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-gray-600 hover:text-red-600 transition-colors">
+                <NavigationMenuTrigger className="text-gray-600 hover:text-brand-beige transition-colors">
                   L'esprit Houkouki
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -66,7 +66,7 @@ const FrenchNavigation = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-gray-600 hover:text-red-600 transition-colors">
+                <NavigationMenuTrigger className="text-gray-600 hover:text-brand-beige transition-colors">
                   Notre offre
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -110,7 +110,7 @@ const FrenchNavigation = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/fr/tarifs" className="text-gray-600 hover:text-red-600 transition-colors px-3 py-2">
+                  <Link to="/fr/tarifs" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
                     Nos tarifs
                   </Link>
                 </NavigationMenuLink>
@@ -118,7 +118,7 @@ const FrenchNavigation = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/fr/impact" className="text-gray-600 hover:text-red-600 transition-colors px-3 py-2">
+                  <Link to="/fr/impact" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
                     Notre impact
                   </Link>
                 </NavigationMenuLink>
@@ -126,7 +126,7 @@ const FrenchNavigation = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/fr/blog" className="text-gray-600 hover:text-red-600 transition-colors px-3 py-2">
+                  <Link to="/fr/blog" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
                     Blog & Conseils
                   </Link>
                 </NavigationMenuLink>
@@ -134,7 +134,7 @@ const FrenchNavigation = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/fr/devis" className="text-gray-600 hover:text-red-600 transition-colors px-3 py-2">
+                  <Link to="/fr/devis" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
                     Devis
                   </Link>
                 </NavigationMenuLink>
@@ -142,9 +142,9 @@ const FrenchNavigation = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/fr/contact" className="text-gray-600 hover:text-red-600 transition-colors px-3 py-2">
-                    Contact
-                  </Link>
+                   <Link to="/fr/contact" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
+                     Contact
+                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
