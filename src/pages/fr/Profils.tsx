@@ -153,8 +153,12 @@ const FrProfils = () => {
                           <li>• Conseil en financement pour leurs besoins personnels</li>
                           <li>• Soutien en cas de précarité, isolement, ou déséquilibre familial</li>
                         </ul>
-                      </div>
-                    </div>
+                       </div>
+                     </div>
+                     
+                     <p className="text-gray-700 mb-6 font-medium text-center">
+                       Le tout en toute confidentialité, via une plateforme ou ligne dédiée.
+                     </p>
 
                     <div className="bg-white p-4 rounded-lg">
                       <h5 className="font-semibold text-gray-900 mb-3">Les bénéfices pour votre entreprise :</h5>
