@@ -125,11 +125,15 @@ const FrProfils = () => {
                       Offrez à vos salariés un accès confidentiel à des conseils juridiques et un accompagnement social
                     </p>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-700 mb-4">
-                      Le quotidien de vos collaborateurs est parfois marqué par des difficultés juridiques ou sociales 
-                      qui pèsent sur leur engagement et leur bien-être au travail.
-                    </p>
+                   <CardContent>
+                     <p className="text-gray-700 mb-4">
+                       Le quotidien de vos collaborateurs est parfois marqué par des difficultés juridiques ou sociales 
+                       qui pèsent sur leur engagement et leur bien-être au travail.
+                     </p>
+                     
+                     <p className="text-gray-700 mb-6 font-semibold">
+                       Houkouki vous propose un dispositif d'accompagnement individuel pour vos salariés, incluant :
+                     </p>
                     
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
                       <div>
