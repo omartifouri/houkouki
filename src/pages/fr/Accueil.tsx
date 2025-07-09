@@ -101,6 +101,68 @@ const FrAccueil = () => {
         </div>
       </section>
 
+      {/* Présentation des services */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Présentation des services
+            </h2>
+            <p className="text-lg text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Houkouki est une plateforme marocaine de conseil juridique à distance, dédiée à tous ceux qui souhaitent anticiper, comprendre, défendre et exercer leurs droits sans stress ni perte de temps.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
+                Nous vous accompagnons à travers :
+              </h3>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">Des consultations juridiques sur mesure délivrées par des juristes spécialisés</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">La rédaction et l'audit de vos documents juridiques</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">La prise en charge de vos démarches administratives</span>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">La gestion amiable ou la coordination judiciaire de vos litiges, si nécessaire</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">Un accès sécurisé à nos services via notre application mobile</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">Conseil & accompagnement stratégique en financement</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <p className="text-xl font-semibold text-gray-900 mb-4">
+                Notre engagement : vous rendre le droit plus simple, plus rapide, plus humain.
+              </p>
+              <p className="text-lg text-[#C0997A] font-medium">
+                Vous cherchez un partenaire de confiance ?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Nos offres selon vos besoins */}
       <section className="py-16 px-4 bg-gradient-to-br from-[#C0997A]/10 to-gray-50">
         <div className="container mx-auto">
