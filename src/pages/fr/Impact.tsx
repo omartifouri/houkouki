@@ -240,8 +240,8 @@ const FrImpact = () => {
             
             <CardContent className="text-center">
               <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-                <Button variant="secondary" size="lg">
-                  Contactez notre équipe pour construire un partenariat
+                <Button variant="secondary" size="lg" className="whitespace-pre-line leading-tight">
+                  {"Contactez notre équipe pour\nconstruire un partenariat"}
                 </Button>
                 <Button variant="outline" size="lg">
                   En savoir plus sur nos actions
