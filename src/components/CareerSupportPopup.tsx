@@ -76,12 +76,13 @@ const CareerSupportPopup = () => {
           
           <Button 
             className="w-full bg-[#C0997A] hover:bg-[#B8926F] text-white" 
-            asChild
+            onClick={() => {
+              window.open('/create-cv', '_blank', 'noopener,noreferrer');
+              handleClose();
+            }}
           >
-            <Link to="/" onClick={handleClose}>
-              <Briefcase className="mr-2 h-4 w-4" />
-              Découvrir nos services
-            </Link>
+            <Briefcase className="mr-2 h-4 w-4" />
+            Découvrir nos services
           </Button>
         </CardContent>
       </Card>
