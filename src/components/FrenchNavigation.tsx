@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Phone, Mail, Clock, Globe } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,8 +11,48 @@ import {
 
 const FrenchNavigation = () => {
   return (
-    <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
+    <>
+      {/* Top Info Bar */}
+      <div className="bg-slate-900 text-white py-2 text-sm">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+            {/* Left side - Hours and Email */}
+            <div className="flex flex-col md:flex-row items-center space-y-1 md:space-y-0 md:space-x-6">
+              <div className="flex items-center space-x-2">
+                <Clock className="h-4 w-4" />
+                <span>Du lundi au vendredi de 9h00 à 19h et samedi de 9h à 13h</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="h-4 w-4" />
+                <a href="mailto:contact@houkouki.com" className="hover:text-orange-400 transition-colors">
+                  contact@houkouki.com
+                </a>
+              </div>
+            </div>
+            
+            {/* Right side - Services and Phone */}
+            <div className="flex flex-col md:flex-row items-center space-y-1 md:space-y-0 md:space-x-4">
+              <Link to="/dashboard" className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-sm transition-colors">
+                Espace abonnés
+              </Link>
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4" />
+                <a href="tel:0529045999" className="hover:text-orange-400 transition-colors font-medium">
+                  0529 045 999
+                </a>
+              </div>
+              <button className="flex items-center space-x-1 hover:text-orange-400 transition-colors">
+                <Globe className="h-4 w-4" />
+                <span>English</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Main Navigation */}
+      <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <Link to="/fr">
@@ -150,8 +191,9 @@ const FrenchNavigation = () => {
             </NavigationMenuList>
           </NavigationMenu>
         </nav>
-      </div>
-    </header>
+        </div>
+      </header>
+    </>
   );
 };
 
