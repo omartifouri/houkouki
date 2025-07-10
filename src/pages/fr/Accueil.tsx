@@ -30,7 +30,6 @@ const FrAccueil = () => {
             <Button size="lg" className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-lg px-8 py-4">
               <Link to="/fr/contact">
                 Commencer maintenant
-                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-brand-beige text-brand-beige hover:bg-brand-beige hover:text-white">
