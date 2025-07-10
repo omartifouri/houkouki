@@ -69,6 +69,9 @@ const Footer = () => {
               <Link to="/fr/contact" className="block text-gray-300 hover:text-orange-400 transition-colors">
                 Contact
               </Link>
+              <Link to="/create-cv" className="block text-gray-300 hover:text-orange-400 transition-colors">
+                Soutien carrière
+              </Link>
             </div>
           </div>
 
