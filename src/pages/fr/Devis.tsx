@@ -389,11 +389,11 @@ const FrDevis = () => {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="moins-500">Moins de 500€</SelectItem>
-                            <SelectItem value="500-1000">500€ - 1 000€</SelectItem>
-                            <SelectItem value="1000-2500">1 000€ - 2 500€</SelectItem>
-                            <SelectItem value="2500-5000">2 500€ - 5 000€</SelectItem>
-                            <SelectItem value="plus-5000">Plus de 5 000€</SelectItem>
+                            <SelectItem value="moins-5000">Moins de 5 000 MAD</SelectItem>
+                            <SelectItem value="5000-10000">5 000 - 10 000 MAD</SelectItem>
+                            <SelectItem value="10000-25000">10 000 - 25 000 MAD</SelectItem>
+                            <SelectItem value="25000-50000">25 000 - 50 000 MAD</SelectItem>
+                            <SelectItem value="plus-50000">Plus de 50 000 MAD</SelectItem>
                             <SelectItem value="a-discuter">À discuter</SelectItem>
                           </SelectContent>
                         </Select>
