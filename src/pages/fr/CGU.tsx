@@ -15,103 +15,159 @@ const FrCGU = () => {
           
           <div className="prose prose-lg max-w-none">
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">1. Objet</h2>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Préambule</h2>
               <p className="text-gray-600 leading-relaxed">
-                Les présentes Conditions Générales d'Utilisation (CGU) ont pour objet de définir les modalités 
-                et conditions d'utilisation du site internet Houkouki.com, ainsi que les services proposés sur ce site.
+                Les conditions générales d'utilisation suivantes régissent l'ensemble des transactions établies sur le
+                site web de <strong>Houkouki</strong>. Toute transaction sur le site suppose du client son acceptation
+                inconditionnelle et irrévocable de ces conditions.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                <strong>Houkouki</strong> est votre plateforme de conseil juridique illimité et sur-mesure qui répond à toutes vos
+                questions dans toutes les branches de droit sauf le pénal.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                Nos juristes vous offrent des conseils et de l'accompagnement juridique et fiscal par un simple appel
+                téléphonique, visioconférence ou par CRM.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">2. Acceptation des conditions</h2>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Objet</h2>
               <p className="text-gray-600 leading-relaxed">
-                L'utilisation du site Houkouki.com implique l'acceptation pleine et entière des présentes CGU. 
-                Si vous n'acceptez pas ces conditions, vous devez vous abstenir d'utiliser ce site.
+                Les présentes C.G.U ont pour objet de définir les conditions dans lesquelles les Utilisateurs peuvent
+                accéder aux services et les utiliser. Tout utilisateur qui accède aux services proposés par <strong>Houkouki</strong>
+                s'engage à respecter, sans réserve, les présentes C.G.U.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                <strong>Houkouki</strong> permet aux utilisateurs de bénéficier du conseil juridique et fiscal par téléphone,
+                visioconférence, ou par CRM. Vos informations sont sécurisées.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                <strong>Houkouki</strong> donne accès à ses utilisateurs aux actualités juridiques et fiscales marocaines et aux
+                modèles types de documents juridiques.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                <strong>Houkouki</strong> offre la possibilité aux utilisateurs d'enregistrer leurs appels et les placer vers leurs
+                espaces privés afin de les réécouter depuis la rubrique "vos consultations" afin de les relire ou les
+                réécouter à tout moment.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                Les juristes répondent aux besoins des utilisateurs en se basant sur les informations fournies.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">3. Définitions</h2>
-              <ul className="text-gray-600 space-y-2">
-                <li><strong>Site :</strong> Le site internet Houkouki.com</li>
-                <li><strong>Utilisateur :</strong> Toute personne qui utilise le site ou l'un des services proposés sur le site</li>
-                <li><strong>Contenu :</strong> Toutes les informations, textes, images, vidéos présentes sur le site</li>
-                <li><strong>Services :</strong> Toutes les fonctionnalités proposées par le site</li>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Accès aux Services</h2>
+              <p className="text-gray-600 leading-relaxed">
+                Pour pouvoir accéder aux services, l'Utilisateur devra s'inscrire. L'identifiant et le code confidentiel
+                sont strictement personnels à chaque utilisateur du service. Leur utilisation est placée sous la seule
+                responsabilité de l'utilisateur. Il lui appartient de mettre en œuvre toutes les mesures de sécurité
+                nécessaires à la protection de son mot de passe et de son identifiant de connexion. L'utilisation des
+                services de <strong>Houkouki</strong> nécessite de la part des utilisateurs un consentement à l'acceptation des
+                présentes CGU au moment de l'inscription.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                Si l'utilisateur a le moindre problème dans l'utilisation ou à l'accès à son espace privé, il doit envoyer
+                un e-mail à contact@houkouki.com.
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Confidentialité et sécurité</h2>
+              <p className="text-gray-600 leading-relaxed">
+                Les informations personnelles concernant les Utilisateurs sont confidentielles. Les questions posées
+                par les Utilisateurs, ainsi que les réponses faites par les juristes dans le cadre des Services sont
+                absolument confidentielles, et protégées.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                Les questions et les réponses se font sur l'espace personnel sécurisé mis à la disposition des
+                Utilisateurs et des juristes.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                Si vous nous donnez votre accord pour enregistrer vos consultations, nous pouvons archiver votre
+                appel et le placer dans votre espace privé, nous vous rassurons que nous respectons l'obligation de
+                confidentialité, seul les personnes autorisées ont accès aux données personnelles et ce conformément
+                à la loi 09-08 et aux obligations de la CNDP.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                La préservation de la sécurité des données à caractère personnel de l'Utilisateur engage chaque
+                Utilisateur à :
+              </p>
+              <ul className="text-gray-600 space-y-2 mt-4">
+                <li>• Garder strictement confidentiels ses éléments d'authentification et ne pas les dévoiler à un tiers</li>
+                <li>• Avertir <strong>Houkouki</strong> de tout dysfonctionnement technique ou intrusions constatées</li>
+                <li>• L'Utilisateur s'engage à prendre toutes les mesures appropriées de façon à protéger ses données et
+                matériels de la contamination par des virus ou autres formes d'attaques circulant éventuellement sur
+                internet</li>
               </ul>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">4. Accès au site</h2>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Propriété Intellectuelle</h2>
               <p className="text-gray-600 leading-relaxed">
-                Le site est accessible gratuitement à tout utilisateur disposant d'un accès à internet. 
-                Houkouki se réserve le droit de suspendre, limiter ou interrompre l'accès au site pour des opérations 
-                de maintenance ou pour toute autre raison, sans préavis.
+                La société est titulaire exclusive des droits de propriété intellectuelle :
               </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">5. Utilisation du site</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                L'utilisateur s'engage à utiliser le site conformément aux présentes CGU et à respecter la législation en vigueur. 
-                Il est notamment interdit de :
-              </p>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Utiliser le site à des fins illégales ou non autorisées</li>
-                <li>• Reproduire, copier ou distribuer le contenu du site sans autorisation</li>
-                <li>• Tenter d'accéder de manière non autorisée aux systèmes informatiques</li>
-                <li>• Transmettre des virus ou tout autre code malveillant</li>
+              <ul className="text-gray-600 space-y-2 mt-4">
+                <li>• Sur la plateforme : arborescence, organisation et titrage de ses rubriques, identité visuelle et
+                graphique, design, ergonomie, fonctionnalités, logiciels, images animées ou fixes, sons, savoir-faire,
+                dessins, graphismes et tout autre élément la composant</li>
+                <li>• Sur les bases de données techniques et sur leurs structures conçues et gérées par la Société pour les
+                besoins de l'édition de la plateforme</li>
+                <li>• Sur tous les éléments de conception de la plateforme, qu'ils soient graphiques ou techniques</li>
+                <li>• Sur la marque, les noms, sigles, logos, couleurs, graphismes ou autres signes qui pourraient être
+                utilisés, réalisés ou mis en œuvre par la société</li>
               </ul>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">6. Propriété intellectuelle</h2>
-              <p className="text-gray-600 leading-relaxed">
-                Le contenu du site (textes, images, vidéos, logos, etc.) est protégé par le droit d'auteur et appartient à Houkouki 
-                ou à ses partenaires. Toute reproduction ou utilisation non autorisée est interdite.
+              <p className="text-gray-600 leading-relaxed mt-4">
+                Il est donc interdit de reproduire sous quelque forme que ce soit, de manière directe ou indirecte, les
+                éléments visés à l'alinéa précédent, ainsi que d'altérer les marques, brevets, noms, sigles, logos,
+                couleurs, graphismes ou autres signes figurant sur les éléments mis à disposition au sein de la
+                plateforme, et plus généralement d'utiliser ou exploiter ces éléments autrement que dans le cadre
+                de l'exécution des présentes Conditions Générales d'Utilisation.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">7. Protection des données personnelles</h2>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Données à caractère personnel</h2>
               <p className="text-gray-600 leading-relaxed">
-                Houkouki s'engage à protéger les données personnelles de ses utilisateurs conformément au RGPD et à la loi 09-08 
-                relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel.
+                Les données collectées sont strictement confidentielles et couvertes. En validant ces conditions
+                générales d'utilisation (C.G.U), l'utilisateur reconnaît que <strong>Houkouki</strong> ainsi que les personnes habilitées
+                de l'hébergeur agréé peuvent avoir accès aux données à caractère personnel.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                Aucune de ces données n'est communiquée à des tierces personnes.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                Ces données ont pour finalité la gestion du compte de l'Utilisateur et la fourniture des Services. Ces
+                données pourront également être utilisées par le groupe GeoAgility qui se compose de plusieurs
+                sociétés (<strong>Houkouki</strong>, Psyphone, geoso, Assurwi) pour adresser à l'Utilisateur des newsletters, sauf opposition de sa part. Elles seront susceptibles de faire l'objet d'analyses et d'études statistiques,
+                dans le respect de l'anonymat de l'Utilisateur.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                Dans le cadre des Services délivrés via notre site <strong>Houkouki</strong>, l'Utilisateur pourra recevoir des
+                notifications, des SMS, des courriels, des MMS, des alertes ou autres types de messages qui font
+                partie des Services en particulier du Service d'information.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">8. Responsabilité</h2>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Modifications des Conditions Générales d'Utilisation</h2>
               <p className="text-gray-600 leading-relaxed">
-                Houkouki met tout en œuvre pour fournir des informations exactes et à jour, mais ne peut garantir l'exactitude, 
-                la complétude ou l'actualité des informations diffusées sur le site. L'utilisateur utilise ces informations sous sa propre responsabilité.
+                <strong>Houkouki</strong> se réserve le droit de modifier les termes, conditions et mentions des présentes CGU à tout
+                moment et s'engage à en informer l'Utilisateur et les lui faire accepter.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">9. Modification des CGU</h2>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact</h2>
               <p className="text-gray-600 leading-relaxed">
-                Houkouki se réserve le droit de modifier les présentes CGU à tout moment. Les modifications entrent en vigueur 
-                dès leur publication sur le site. Il est conseillé de consulter régulièrement cette page.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">10. Droit applicable et juridiction</h2>
-              <p className="text-gray-600 leading-relaxed">
-                Les présentes CGU sont soumises au droit marocain. En cas de litige, les tribunaux de Casablanca seront seuls compétents.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">11. Contact</h2>
-              <p className="text-gray-600 leading-relaxed">
-                Pour toute question concernant ces CGU, vous pouvez nous contacter à l'adresse : contact@houkouki.com
+                Pour tout renseignement, demande d'information ou réclamation, l'Utilisateur peut contacter
+                <strong>Houkouki</strong> en lui adressant un message à l'adresse électronique suivante : contact@houkouki.com
               </p>
             </section>
 
             <div className="bg-gray-100 p-6 rounded-lg mt-8">
               <p className="text-sm text-gray-600">
-                <strong>Dernière mise à jour :</strong> Janvier 2024
+                <strong>Dernière mise à jour :</strong> 2024
               </p>
             </div>
           </div>
