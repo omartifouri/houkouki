@@ -1,0 +1,101 @@
+import { Link } from "react-router-dom";
+import { Phone, Mail, MapPin } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-slate-900 text-white py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Contact Section */}
+          <div>
+            <h3 className="text-xl font-semibold mb-6">
+              Contact
+              <div className="w-12 h-0.5 bg-orange-500 mt-2"></div>
+            </h3>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="bg-blue-600 p-2 rounded-full">
+                  <Phone className="h-4 w-4" />
+                </div>
+                <span>0529 045 999</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="bg-blue-600 p-2 rounded-full">
+                  <Mail className="h-4 w-4" />
+                </div>
+                <span>contact@houkouki.com</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-blue-600 p-2 rounded-full mt-1">
+                  <MapPin className="h-4 w-4" />
+                </div>
+                <div>
+                  <div>27, Rue Ain Asserdoune</div>
+                  <div>Quartier C.I.L</div>
+                  <div>CASABLANCA</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Navigation Links */}
+          <div>
+            <h3 className="text-xl font-semibold mb-6">
+              Nos liens
+              <div className="w-12 h-0.5 bg-orange-500 mt-2"></div>
+            </h3>
+            <div className="space-y-3">
+              <Link to="/fr" className="block text-gray-300 hover:text-orange-400 transition-colors">
+                Qui sommes-nous ?
+              </Link>
+              <Link to="/fr/profils" className="block text-gray-300 hover:text-orange-400 transition-colors">
+                Vous êtes particulier ?
+              </Link>
+              <Link to="/fr/prestations" className="block text-gray-300 hover:text-orange-400 transition-colors">
+                Vous êtes entreprise ?
+              </Link>
+              <Link to="/fr/tarifs" className="block text-gray-300 hover:text-orange-400 transition-colors">
+                Abonnement annuel
+              </Link>
+              <Link to="/fr/offre" className="block text-gray-300 hover:text-orange-400 transition-colors">
+                Prestations à la carte (particulier)
+              </Link>
+              <Link to="/fr/prestations" className="block text-gray-300 hover:text-orange-400 transition-colors">
+                Prestations à la carte (entreprise)
+              </Link>
+              <Link to="/fr/blog" className="block text-gray-300 hover:text-orange-400 transition-colors">
+                Blog
+              </Link>
+              <Link to="/fr/contact" className="block text-gray-300 hover:text-orange-400 transition-colors">
+                Contact
+              </Link>
+            </div>
+          </div>
+
+          {/* Legal Links */}
+          <div>
+            <h3 className="text-xl font-semibold mb-6">
+              Mentions légales
+              <div className="w-12 h-0.5 bg-orange-500 mt-2"></div>
+            </h3>
+            <div className="space-y-3">
+              <Link to="/fr/cgu" className="block text-gray-300 hover:text-orange-400 transition-colors">
+                Conditions générales d'utilisation
+              </Link>
+              <Link to="/fr/cgv" className="block text-gray-300 hover:text-orange-400 transition-colors">
+                Conditions générales de vente
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2024 Houkouki. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
