@@ -179,7 +179,7 @@ const FrDevis = () => {
                       <FormItem>
                         <FormLabel>Téléphone *</FormLabel>
                         <FormControl>
-                          <Input placeholder="+33 1 23 45 67 89" {...field} />
+                          <Input placeholder="+212 6 12 02 30 XX" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
