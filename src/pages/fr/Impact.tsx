@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import FrenchNavigation from "@/components/FrenchNavigation";
+import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
 import { 
   Heart, 
@@ -253,6 +254,7 @@ const FrImpact = () => {
         </div>
       </div>
       
+      <Footer />
       <CareerSupportPopup />
     </div>
   );

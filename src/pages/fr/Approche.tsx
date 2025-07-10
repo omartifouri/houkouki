@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Smartphone, Users, MapPin, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import FrenchNavigation from "@/components/FrenchNavigation";
+import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
 
 const FrApproche = () => {
@@ -236,6 +237,7 @@ const FrApproche = () => {
         </div>
       </div>
       
+      <Footer />
       <CareerSupportPopup />
     </div>
   );

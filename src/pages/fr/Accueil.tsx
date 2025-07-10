@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Users, Scale, FileText, Calendar, Shield, CheckCircle, Star, ArrowRight, Phone, Video, MessageCircle, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import FrenchNavigation from "@/components/FrenchNavigation";
+import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
 
 const FrAccueil = () => {
@@ -384,60 +385,7 @@ const FrAccueil = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <img 
-                  src="/lovable-uploads/5d7e7c1c-ebd4-4271-a028-9798957bf332.png" 
-                  alt="Houkouki Logo" 
-                  className="h-8 w-auto filter brightness-0 invert"
-                />
-              </div>
-              <p className="text-gray-400">
-                Votre partenaire de confiance pour un accompagnement juridique personnalisé et efficace.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Services</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><Link to="/fr/prestations" className="hover:text-white transition-colors">Conseil juridique</Link></li>
-                <li><Link to="/fr/prestations" className="hover:text-white transition-colors">Rédaction d'actes</Link></li>
-                <li><Link to="/fr/prestations" className="hover:text-white transition-colors">Démarches administratives</Link></li>
-                <li><Link to="/fr/prestations" className="hover:text-white transition-colors">Recours amiables</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Domaines</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><Link to="/fr/domaines" className="hover:text-white transition-colors">Droit de la famille</Link></li>
-                <li><Link to="/fr/domaines" className="hover:text-white transition-colors">Droit du travail</Link></li>
-                <li><Link to="/fr/domaines" className="hover:text-white transition-colors">Droit immobilier</Link></li>
-                <li><Link to="/fr/domaines" className="hover:text-white transition-colors">Droit commercial</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contact</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>contact@houkouki.com</li>
-                <li>+212 529.04.59.99</li>
-                <li>27, Rue Ain Asserdoune</li>
-                <li>Quartier C.I.L - Casablanca</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Houkouki. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
-      
+      <Footer />
       <CareerSupportPopup />
     </div>
   );

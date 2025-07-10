@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Clock, Users, Building2, Heart, Check, Calculator, FileText, Phone, Shield, Smartphone, CheckCircle, ArrowRight, Download, User } from "lucide-react";
 import FrenchNavigation from "@/components/FrenchNavigation";
+import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
 import { useState } from "react";
 
@@ -1021,6 +1022,7 @@ const FrTarifs = () => {
         </div>
       </div>
       
+      <Footer />
       <CareerSupportPopup />
     </div>
   );
