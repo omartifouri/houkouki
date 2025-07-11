@@ -22,7 +22,7 @@ const FrApproche = () => {
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Nous avons conçu une plateforme 100 % digitale, accessible à travers :
+                  Nous avons conçu une plateforme digitale, accessible à travers :
                 </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
@@ -66,12 +66,12 @@ const FrApproche = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <Smartphone className="h-6 w-6 text-red-600" />
-                    <span>100% Digital</span>
+                    <span>Digital</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 leading-relaxed">
-                    Houkouki est une plateforme 100 % pensée pour les usages modernes. Nous proposons un accompagnement 
+                    Houkouki est une plateforme pensée pour les usages modernes. Nous proposons un accompagnement 
                     à distance, par téléphone, visioconférence ou via notre application mobile, pour que chacun puisse 
                     accéder à son conseiller juridique où qu'il soit, au Maroc ou à l'étranger.
                   </p>
@@ -214,7 +214,7 @@ const FrApproche = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                      <span className="text-gray-700">Expertise 100 % marocaine</span>
+                      <span className="text-gray-700">Expertise marocaine</span>
                     </div>
                   </div>
                 </div>
