@@ -219,7 +219,7 @@ const FrPrestations = () => {
                   </p>
                   
                   <p className="text-gray-700 mb-6">
-                    <strong>Nous ne plaidons pas, mais nous préparons, encadrons et suivons la procédure à vos côtés.</strong>
+                    <strong>Nous ne plaidons pas, mais nous sommes à vos côtés pour préparer et suivre la procédure avec votre avocat.</strong>
                   </p>
 
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
