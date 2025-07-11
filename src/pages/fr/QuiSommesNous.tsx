@@ -18,7 +18,7 @@ const FrQuiSommesNous = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Une plateforme juridique née d'un constat simple */}
           <section>
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Une plateforme juridique née d'un constat simple</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Une plateforme juridique née d'un constat simple</h2>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -36,7 +36,7 @@ const FrQuiSommesNous = () => {
 
           {/* Une expertise juridique au service de chacun */}
           <section>
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Une expertise juridique au service de chacun</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Une expertise juridique au service de chacun</h2>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -59,7 +59,7 @@ const FrQuiSommesNous = () => {
 
           {/* Nos domaines d'intervention */}
           <section>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Nos domaines d'intervention</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Nos domaines d'intervention</h3>
             <p className="text-gray-700 mb-6">Nos juristes interviennent dans le droit civil en général dont :</p>
             <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
@@ -103,7 +103,7 @@ const FrQuiSommesNous = () => {
 
           {/* Notre vision et notre mission */}
           <section>
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Notre vision et notre mission</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Notre vision et notre mission</h2>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -162,7 +162,7 @@ const FrQuiSommesNous = () => {
 
           {/* Un service pensé pour tous les publics */}
           <section>
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Un service pensé pour tous les publics</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Un service pensé pour tous les publics</h2>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-4">Que vous soyez :</p>
