@@ -87,7 +87,7 @@ const FrApproche = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 leading-relaxed">
-                    Mais digital ne veut pas dire impersonnel : nous mettons l'humain au cœur de notre service. 
+                    Digital ne veut pas dire impersonnel : nous mettons l'humain au cœur de notre service. 
                     Chaque client est suivi avec attention, dans le respect de ses besoins et de la confidentialité 
                     de ses échanges.
                   </p>
@@ -103,7 +103,7 @@ const FrApproche = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 leading-relaxed">
-                    Enfin, Houkouki est profondément enracinée dans le contexte marocain : nos juristes connaissent 
+                    Houkouki est profondément enracinée dans le contexte marocain : nos juristes connaissent 
                     les réalités locales, les procédures administratives, les rapports de force, et les subtilités 
                     de terrain. Nous sommes à la fois proches de nos clients, et ancrés dans le droit marocain tel 
                     qu'il s'applique concrètement.
