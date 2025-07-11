@@ -22,7 +22,7 @@ import FrProfils from "./pages/fr/Profils";
 import FrPrestations from "./pages/fr/Prestations";
 import FrDomaines from "./pages/fr/Domaines";
 import FrTarifs from "./pages/fr/Tarifs";
-import FrImpact from "./pages/fr/Impact";
+
 import FrBlog from "./pages/fr/Blog";
 import FrDevis from "./pages/fr/Devis";
 import FrContact from "./pages/fr/Contact";
@@ -55,7 +55,7 @@ const App = () => (
             <Route path="/fr/prestations" element={<FrPrestations />} />
             <Route path="/fr/domaines" element={<FrDomaines />} />
             <Route path="/fr/tarifs" element={<FrTarifs />} />
-            <Route path="/fr/impact" element={<FrImpact />} />
+            
             <Route path="/fr/blog" element={<FrBlog />} />
             <Route path="/fr/devis" element={<FrDevis />} />
             <Route path="/fr/contact" element={<FrContact />} />

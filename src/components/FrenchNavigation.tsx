@@ -157,13 +157,6 @@ const FrenchNavigation = () => {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link to="/fr/impact" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
-                    Notre impact
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
