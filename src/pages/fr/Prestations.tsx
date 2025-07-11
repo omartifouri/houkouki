@@ -240,7 +240,7 @@ const FrPrestations = () => {
                   <p className="text-gray-700 text-lg mb-6">
                     Chez Houkouki, nous accompagnons les entreprises dans toutes les étapes clés de leur croissance, en mettant 
                     à leur disposition une expertise pointue en matière de montage financier, d'analyse bilancielle et de 
-                    stratégie de financement. Cette prestation s'adresse aux PME et TPE souhaitant structurer efficacement 
+                    stratégie de financement. Cette prestation s'adresse aux TPE et PME souhaitant structurer efficacement 
                     leurs démarches auprès des établissements bancaires et des organismes de financement.
                   </p>
                   
@@ -308,7 +308,7 @@ const FrPrestations = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">Pour qui ?</h4>
                     <p className="text-gray-700 mb-4">
-                      Cette offre s'adresse principalement aux PME et TPE, tous secteurs confondus, souhaitant bénéficier d'un accompagnement structuré pour :
+                      Cette offre s'adresse principalement aux TPE et PME, tous secteurs confondus, souhaitant bénéficier d'un accompagnement structuré pour :
                     </p>
                     <div className="space-y-2 mb-4">
                       <div className="flex items-start space-x-2">
