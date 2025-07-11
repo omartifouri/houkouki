@@ -14,8 +14,7 @@ const FrProfils = () => {
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Profils accompagnés</h1>
-          <h2 className="text-2xl text-red-600 mb-8">Vous êtes… Particulier, entreprise ou MRE ?</h2>
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Vous êtes… Particulier, entreprise ou MRE ?</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Chez Houkouki, nous savons que chaque situation est unique. Que vous soyez particulier, entreprise ou 
             Marocain résidant à l'étranger, nous avons conçu des services adaptés à vos besoins juridiques spécifiques.
