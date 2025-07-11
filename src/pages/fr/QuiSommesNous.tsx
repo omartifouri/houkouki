@@ -59,7 +59,7 @@ const FrQuiSommesNous = () => {
 
           {/* Nos domaines d'intervention */}
           <section>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Nos domaines d'intervention</h3>
+            <h3 className="text-2xl font-bold text-red-800 mb-6 text-center">Nos domaines d'intervention</h3>
             <p className="text-gray-700 mb-6">Nos juristes interviennent dans le droit civil en général dont :</p>
             <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
