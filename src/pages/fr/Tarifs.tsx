@@ -146,7 +146,7 @@ const FrTarifs = () => {
               L'option idéale pour les particuliers, professionnels ou entreprises qui souhaitent un suivi juridique complet tout au long de l'année.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
               {pricingPlans.map((plan, index) => {
                 const Icon = plan.icon;
                 return (
@@ -203,6 +203,21 @@ const FrTarifs = () => {
                 );
               })}
             </div>
+
+            {/* Information sur les prestations supplémentaires */}
+            <Card className="border-2 border-green-200 bg-green-50 mb-16">
+              <CardContent className="pt-6">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-green-800 mb-2">Avantage exclusif abonnés</p>
+                    <p className="text-green-700">
+                      Des prestations supplémentaires à un tarif préférentiel de <strong>325 DH / HT</strong> réservé aux abonnés
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </section>
 
           {/* Formule Entreprise + Social */}
