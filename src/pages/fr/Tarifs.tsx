@@ -55,7 +55,8 @@ const FrTarifs = () => {
         "Audit de contrats et documents RH",
         "Sécurisation des procédures RH",
         "Rédaction de CGV ou d'actes juridiques",
-        "Accompagnement en cas de contrôle ou litige"
+        "Accompagnement en cas de contrôle ou litige",
+        "Des prestations supplémentaires à un tarif préférentiel de 325 DH / HT réservé aux abonnés"
       ],
       price: "6500",
       currency: "MAD TTC", 
@@ -204,20 +205,6 @@ const FrTarifs = () => {
               })}
             </div>
 
-            {/* Information sur les prestations supplémentaires */}
-            <Card className="border-2 border-green-200 bg-green-50 mb-16">
-              <CardContent className="pt-6">
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-green-800 mb-2">Avantage exclusif abonnés</p>
-                    <p className="text-green-700">
-                      Des prestations supplémentaires à un tarif préférentiel de <strong>325 DH / HT</strong> réservé aux abonnés
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </section>
 
           {/* Formule Entreprise + Social */}
