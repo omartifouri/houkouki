@@ -91,7 +91,7 @@ const FrTarifs = () => {
   const calculatePrice = () => {
     const hours = parseFloat(estimatedHours);
     if (hours && hours > 0) {
-      const price = hours * 325;
+      const price = hours * 400;
       setCalculatedPrice(price);
     } else {
       setCalculatedPrice(0);
@@ -282,7 +282,7 @@ const FrTarifs = () => {
             <p className="text-xl text-gray-600 mb-2 text-center">Payez uniquement ce dont vous avez besoin</p>
             <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-center">
               Une solution flexible pour celles et ceux qui ont un besoin ponctuel, sans engagement.
-              Nos prestations à la carte sont tarifées en fonction du nombre d'heures nécessaires au tarif de <strong>325 DH HT / heure</strong>.
+              Nos prestations à la carte sont tarifées en fonction du nombre d'heures nécessaires au tarif de <strong>400 DH HT / heure</strong>.
             </p>
 
             {/* Tableau des prestations */}
