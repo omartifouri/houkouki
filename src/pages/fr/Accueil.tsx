@@ -20,8 +20,8 @@ const FrAccueil = () => {
             Vos droits, notre mission.
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Un accompagnement juridique 
-            <span className="text-red-600"> simple, rapide et humain</span>
+            Un accompagnement juridique<br />
+            <span className="text-red-600">simple, rapide et humain</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Où que vous soyez, bénéficiez de l'expertise de nos juristes pour vous conseiller, vous orienter, et protéger vos intérêts.
