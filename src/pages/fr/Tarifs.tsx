@@ -71,7 +71,7 @@ const FrTarifs = () => {
         "Sécurisation des procédures RH",
         "Rédaction de CGV ou d'actes juridiques",
         "Accompagnement en cas de contrôle ou litige",
-        "Des prestations supplémentaires à un tarif préférentiel de 325 DH / HT réservé aux abonnés"
+        "Des prestations supplémentaires à un tarif préférentiel de 325 DH / HT / heure réservé aux abonnés"
       ],
       price: "6500",
       currency: "MAD TTC", 
