@@ -174,55 +174,55 @@ const FrAccueil = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               <CardHeader>
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-red-600" />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Vous êtes un particulier ?</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
+              <CardContent className="flex-1 flex flex-col">
+                <p className="text-gray-600 mb-4 flex-1">
                   Un litige, une question de succession, un divorce, un contrat à vérifier ? 
                   Nos juristes vous conseillent en toute confidentialité.
                 </p>
-                <Button variant="outline" className="w-full" asChild>
+                <Button variant="outline" className="w-full mt-auto" asChild>
                   <Link to="/fr/profils">Voir nos prestations pour particuliers</Link>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               <CardHeader>
                 <div className="w-12 h-12 bg-[#C0997A]/20 rounded-lg flex items-center justify-center mb-4">
                   <FileText className="h-6 w-6 text-[#C0997A]" />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Vous êtes une entreprise ?</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
+              <CardContent className="flex-1 flex flex-col">
+                <p className="text-gray-600 mb-4 flex-1">
                   Vous cherchez à sécuriser vos pratiques RH, commerciales ou administratives ? 
                   Nos experts vous aident à anticiper les risques.
                 </p>
-                <Button variant="outline" className="w-full" asChild>
+                <Button variant="outline" className="w-full mt-auto" asChild>
                   <Link to="/fr/profils">Découvrir notre offre entreprise</Link>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               <CardHeader>
                 <div style={{ backgroundColor: '#1A96A0' }} className="w-12 h-12 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
                   <Star className="h-6 w-6" style={{ color: '#1A96A0' }} />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Vous vivez à l'étranger ?</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
+              <CardContent className="flex-1 flex flex-col">
+                <p className="text-gray-600 mb-4 flex-1">
                   Protégez vos droits au Maroc, à distance. Houkouki vous permet de tout gérer 
                   de façon fluide et fiable.
                 </p>
-                <Button variant="outline" className="w-full" asChild>
+                <Button variant="outline" className="w-full mt-auto" asChild>
                   <Link to="/fr/profils">En savoir plus pour les MRE</Link>
                 </Button>
               </CardContent>
