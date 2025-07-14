@@ -1,19 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { Clock, Users, Building2, Heart, Calculator, CheckCircle, Info } from "lucide-react";
+import { Clock, Users, Building2, Heart, CheckCircle, Info } from "lucide-react";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
-import { useState } from "react";
-
 const FrTarifs = () => {
-  const [selectedService, setSelectedService] = useState("");
-  const [estimatedHours, setEstimatedHours] = useState("");
-  const [calculatedPrice, setCalculatedPrice] = useState(0);
 
   // Définition des tooltips pour les fonctionnalités
   const featureTooltips: { [key: string]: string } = {
@@ -103,15 +95,6 @@ const FrTarifs = () => {
     }
   ];
 
-  const calculatePrice = () => {
-    const hours = parseFloat(estimatedHours);
-    if (hours && hours > 0) {
-      const price = hours * 400;
-      setCalculatedPrice(price);
-    } else {
-      setCalculatedPrice(0);
-    }
-  };
 
   return (
     <TooltipProvider>
@@ -350,72 +333,6 @@ const FrTarifs = () => {
               </CardContent>
             </Card>
 
-            {/* Simulateur de tarif */}
-            <Card className="border-2 border-red-200 bg-red-50">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-600 text-white flex items-center justify-center">
-                  <Calculator className="w-8 h-8" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-red-800 mb-2">
-                  Simuler mon besoin
-                </CardTitle>
-                <p className="text-gray-700">
-                  Estimez le coût de votre prestation en fonction du nombre d'heures nécessaires
-                </p>
-              </CardHeader>
-              
-              <CardContent className="max-w-2xl mx-auto">
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <Label htmlFor="service-select" className="text-gray-700 font-medium">
-                      Type de prestation
-                    </Label>
-                    <Select value={selectedService} onValueChange={setSelectedService}>
-                      <SelectTrigger className="mt-2">
-                        <SelectValue placeholder="Choisissez une prestation" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {services.map((service, index) => (
-                          <SelectItem key={index} value={service.name}>
-                            {service.name}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="hours-input" className="text-gray-700 font-medium">
-                      Nombre d'heures estimées
-                    </Label>
-                    <Input
-                      id="hours-input"
-                      type="number"
-                      placeholder="Ex: 3"
-                      value={estimatedHours}
-                      onChange={(e) => setEstimatedHours(e.target.value)}
-                      className="mt-2"
-                      min="0"
-                      step="0.5"
-                    />
-                  </div>
-                </div>
-                
-                <div className="text-center">
-                  <Button onClick={calculatePrice} className="bg-[#C0997A] hover:bg-[#B8926F] text-white px-8 py-3 mb-6">
-                    Calculer le prix
-                  </Button>
-                  
-                  {calculatedPrice > 0 && (
-                    <div className="bg-white p-6 rounded-lg border border-red-200">
-                      <p className="text-gray-700 mb-2">Prix estimé :</p>
-                      <p className="text-4xl font-bold text-red-600 mb-2">{calculatedPrice} DH</p>
-                      <p className="text-gray-600 text-sm">HT • TVA 20% en sus</p>
-                    </div>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
           </section>
 
           {/* Note importante */}
