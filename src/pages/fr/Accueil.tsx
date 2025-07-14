@@ -243,45 +243,45 @@ const FrAccueil = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
                 <span className="text-gray-700">Création de société et suivi de la vie juridique</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
                 <span className="text-gray-700">Audit conformité sociale</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
                 <span className="text-gray-700">Rédaction de contrats et conventions</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
                 <span className="text-gray-700">Conseil en droit social</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
                 <span className="text-gray-700">Conseil en droit de la famille</span>
               </div>
             </div>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
                 <span className="text-gray-700">Conseil en droit immobilier</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
                 <span className="text-gray-700">Recours amiables et accompagnement litiges</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
                 <span className="text-gray-700">Procédures administratives</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
                 <span className="text-gray-700">Audit juridique de documents</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
                 <span className="text-gray-700">Conseil en financement</span>
               </div>
             </div>
