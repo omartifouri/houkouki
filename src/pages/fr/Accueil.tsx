@@ -26,12 +26,7 @@ const FrAccueil = () => {
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Où que vous soyez, bénéficiez de l'expertise de nos juristes pour vous conseiller, vous orienter, et protéger vos intérêts.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg">
-              <Link to="/fr/contact">
-                Vous avez une question
-              </Link>
-            </Button>
+          <div className="flex justify-center">
             <Button size="lg" variant="outline">
               <Link to="/fr/devis">
                 Demander un devis
