@@ -62,7 +62,7 @@ const DevisSuccessModal = ({ isOpen, onClose }: DevisSuccessModalProps) => {
             <div className="flex flex-col gap-2 text-sm">
               <div className="flex items-center gap-2 text-gray-700">
                 <Phone className="w-4 h-4 text-red-600" />
-                <span>+212 5 22 XX XX XX</span>
+                <span>05 29 045 999</span>
               </div>
               <div className="flex items-center gap-2 text-gray-700">
                 <Mail className="w-4 h-4 text-red-600" />
