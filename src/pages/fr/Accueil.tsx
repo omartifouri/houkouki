@@ -212,8 +212,8 @@ const FrAccueil = () => {
 
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               <CardHeader>
-                <div style={{ backgroundColor: '#1A96A0' }} className="w-12 h-12 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
-                  <Star className="h-6 w-6" style={{ color: '#1A96A0' }} />
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <Star className="h-6 w-6 text-red-600" />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Vous vivez à l'étranger ?</CardTitle>
               </CardHeader>
