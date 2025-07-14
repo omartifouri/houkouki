@@ -3,7 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Clock, Users, Building2, Heart, Calculator, CheckCircle } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Clock, Users, Building2, Heart, Calculator, CheckCircle, Info } from "lucide-react";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
@@ -13,6 +14,20 @@ const FrTarifs = () => {
   const [selectedService, setSelectedService] = useState("");
   const [estimatedHours, setEstimatedHours] = useState("");
   const [calculatedPrice, setCalculatedPrice] = useState(0);
+
+  // Définition des tooltips pour les fonctionnalités
+  const featureTooltips: { [key: string]: string } = {
+    "Consultations juridiques illimitées*": "Posez toutes vos questions juridiques par téléphone ou visioconférence, sans limite de volume, dans le respect de votre vie privée.",
+    "Lecture et analyse de documents juridiques": "Nos juristes analysent vos contrats, courriers officiels, actes notariés et vous expliquent les enjeux en termes simples.",
+    "Assistance à la rédaction de courriers": "Aide à la rédaction de lettres de réclamation, mises en demeure, réponses administratives et correspondances officielles.", 
+    "Conseil en cas de litige ou précontentieux": "Orientation stratégique et juridique avant d'engager une procédure, pour résoudre vos conflits à l'amiable.",
+    "Accès à l'application mobile et guides juridiques": "Interface dédiée avec guides pratiques, modèles de documents et suivi de vos dossiers en temps réel.",
+    "Suivi par un conseiller référent": "Un juriste dédié qui connaît votre dossier et vous accompagne dans la durée pour une relation de confiance.",
+    "Audit de contrats et documents RH": "Vérification et optimisation de vos contrats de travail, règlements intérieurs et procédures RH.",
+    "Sécurisation des procédures RH": "Mise en conformité de vos processus de recrutement, sanctions disciplinaires et ruptures de contrat.",
+    "Rédaction de CGV ou d'actes juridiques": "Création sur-mesure de vos conditions générales de vente, contrats commerciaux et documents juridiques.",
+    "Accompagnement en cas de contrôle ou litige": "Assistance lors des contrôles administratifs (URSSAF, inspection du travail) et gestion des contentieux."
+  };
 
   const services = [
     { name: "Consultation juridique simple", hours: "1-2h", description: "Conseil juridique ponctuel par téléphone ou visioconférence" },
@@ -99,8 +114,9 @@ const FrTarifs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
-      <FrenchNavigation />
+    <TooltipProvider>
+      <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
+        <FrenchNavigation />
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -178,9 +194,23 @@ const FrTarifs = () => {
                         {plan.features.map((feature, featureIndex) => (
                           <div key={featureIndex} className="flex items-start space-x-3">
                             <CheckCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-gray-700 leading-relaxed">
-                              {feature}
-                            </span>
+                            {featureTooltips[feature] ? (
+                              <Tooltip>
+                                <TooltipTrigger asChild>
+                                  <span className="text-sm text-gray-700 leading-relaxed cursor-help flex items-center gap-1 hover:text-red-600 transition-colors">
+                                    {feature}
+                                    <Info className="w-3 h-3 text-gray-400" />
+                                  </span>
+                                </TooltipTrigger>
+                                <TooltipContent className="max-w-xs">
+                                  <p>{featureTooltips[feature]}</p>
+                                </TooltipContent>
+                              </Tooltip>
+                            ) : (
+                              <span className="text-sm text-gray-700 leading-relaxed">
+                                {feature}
+                              </span>
+                            )}
                           </div>
                         ))}
                       </div>
@@ -402,7 +432,8 @@ const FrTarifs = () => {
       
       <Footer />
       <CareerSupportPopup />
-    </div>
+      </div>
+    </TooltipProvider>
   );
 };
 
