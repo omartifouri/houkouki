@@ -222,7 +222,7 @@ const FrAccueil = () => {
                   Protégez vos droits au Maroc, à distance. Houkouki vous permet de tout gérer 
                   de façon fluide et fiable.
                 </p>
-                <Button variant="outline" className="w-full" asChild>
+                <Button className="w-full bg-red-600 hover:bg-red-700 text-white" asChild>
                   <Link to="/fr/profils">En savoir plus pour les MRE</Link>
                 </Button>
               </CardContent>
