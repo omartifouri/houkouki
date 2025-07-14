@@ -10,6 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
+import DevisSuccessModal from "@/components/DevisSuccessModal";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -35,6 +36,7 @@ type FormData = z.infer<typeof formSchema>;
 
 const FrDevis = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -60,7 +62,9 @@ const FrDevis = () => {
       // Simulation d'envoi
       await new Promise(resolve => setTimeout(resolve, 2000));
       console.log("Données du devis:", data);
-      alert("Votre demande de devis a été envoyée avec succès ! Nous vous contacterons sous 24h.");
+      
+      // Afficher le modal de succès
+      setShowSuccessModal(true);
       form.reset();
     } catch (error) {
       alert("Une erreur s'est produite. Veuillez réessayer.");
@@ -376,6 +380,10 @@ const FrDevis = () => {
       
       <Footer />
       <CareerSupportPopup />
+      <DevisSuccessModal 
+        isOpen={showSuccessModal} 
+        onClose={() => setShowSuccessModal(false)} 
+      />
     </div>
   );
 };
