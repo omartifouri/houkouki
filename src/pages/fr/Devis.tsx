@@ -26,12 +26,8 @@ const formSchema = z.object({
   type_prestation: z.string().min(1, "Veuillez sélectionner un type de prestation"),
   domaine_juridique: z.string().min(1, "Veuillez sélectionner un domaine juridique"),
   description_besoin: z.string().min(20, "Veuillez décrire votre besoin (minimum 20 caractères)"),
-  urgence: z.string().min(1, "Veuillez sélectionner un niveau d'urgence"),
-  budget_estime: z.string().optional(),
   pieces_jointes: z.boolean().default(false),
   accompagnement_souhaite: z.array(z.string()).default([]),
-  communication_preference: z.string().min(1, "Veuillez sélectionner votre préférence de communication"),
-  disponibilite: z.string().optional(),
   rgpd_accepte: z.boolean().refine(val => val === true, "Vous devez accepter le traitement de vos données"),
 });
 
@@ -53,12 +49,8 @@ const FrDevis = () => {
       type_prestation: "",
       domaine_juridique: "",
       description_besoin: "",
-      urgence: "",
-      budget_estime: "",
       pieces_jointes: false,
       accompagnement_souhaite: [],
-      communication_preference: "",
-      disponibilite: "",
       rgpd_accepte: false,
     },
   });
@@ -343,111 +335,7 @@ const FrDevis = () => {
               </CardContent>
             </Card>
 
-            {/* Section 3: Modalités */}
-            <Card className="border-l-4 border-l-orange-500">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-orange-700">
-                  <Clock className="h-5 w-5" />
-                  Modalités et timing
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="urgence"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Niveau d'urgence *</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Sélectionnez l'urgence" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="tres-urgent">Très urgent (sous 48h)</SelectItem>
-                            <SelectItem value="urgent">Urgent (sous 1 semaine)</SelectItem>
-                            <SelectItem value="normal">Normal (sous 2 semaines)</SelectItem>
-                            <SelectItem value="planifie">Planifié (dans le mois)</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="budget_estime"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Budget estimé</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Fourchette budgétaire" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="moins-5000">Moins de 5 000 MAD</SelectItem>
-                            <SelectItem value="5000-10000">5 000 - 10 000 MAD</SelectItem>
-                            <SelectItem value="10000-25000">10 000 - 25 000 MAD</SelectItem>
-                            <SelectItem value="25000-50000">25 000 - 50 000 MAD</SelectItem>
-                            <SelectItem value="plus-50000">Plus de 50 000 MAD</SelectItem>
-                            <SelectItem value="a-discuter">À discuter</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <FormField
-                  control={form.control}
-                  name="communication_preference"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Mode de communication préféré *</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Comment souhaitez-vous être contacté ?" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="email">Email</SelectItem>
-                          <SelectItem value="telephone">Téléphone</SelectItem>
-                          <SelectItem value="visio">Visioconférence</SelectItem>
-                          <SelectItem value="presentiel">Rendez-vous en présentiel</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="disponibilite"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Vos disponibilités</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          placeholder="Précisez vos créneaux de disponibilité (jours, heures...)"
-                          {...field} 
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </CardContent>
-            </Card>
-
-            {/* Section 4: Validation */}
+            {/* Section 3: Validation */}
             <Card className="border-l-4 border-l-purple-500">
               <CardContent className="pt-6">
                 <FormField
