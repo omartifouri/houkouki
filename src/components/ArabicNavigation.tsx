@@ -10,18 +10,18 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-const FrenchNavigation = () => {
+const ArabicNavigation = () => {
   return (
     <>
       {/* Top Info Bar */}
-      <div className="bg-slate-900 text-white py-2 text-sm">
+      <div className="bg-slate-900 text-white py-2 text-sm" dir="rtl">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-            {/* Left side - Hours and Email */}
+            {/* Right side - Hours and Email (RTL) */}
             <div className="flex flex-col md:flex-row items-center space-y-1 md:space-y-0 md:space-x-6">
               <div className="flex items-center space-x-2">
                 <Clock className="h-4 w-4" />
-                <span>Du lundi au vendredi de 9h00 à 19h et samedi de 9h à 13h</span>
+                <span>من الاثنين إلى الجمعة من 9 صباحاً إلى 7 مساءً والسبت من 9 صباحاً إلى 1 ظهراً</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
@@ -31,10 +31,10 @@ const FrenchNavigation = () => {
               </div>
             </div>
             
-            {/* Right side - Services and Phone */}
+            {/* Left side - Services and Phone (RTL) */}
             <div className="flex flex-col md:flex-row items-center space-y-1 md:space-y-0 md:space-x-4">
               <a href="https://crm.hokouki.com/" target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-sm transition-colors">
-                Espace abonnés
+                منطقة المشتركين
               </a>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
@@ -49,14 +49,14 @@ const FrenchNavigation = () => {
       </div>
       
       {/* Main Navigation */}
-      <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
+      <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50" dir="rtl">
         <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <Link to="/fr">
+            <Link to="/ar">
               <img 
                 src="/lovable-uploads/5d7e7c1c-ebd4-4271-a028-9798957bf332.png" 
-                alt="Houkouki Logo" 
+                alt="شعار حقوقي" 
                 className="h-10 w-auto"
               />
             </Link>
@@ -66,37 +66,37 @@ const FrenchNavigation = () => {
             <NavigationMenuList className="space-x-2">
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                   <Link to="/fr" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
-                     Accueil
+                   <Link to="/ar" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
+                     الرئيسية
                    </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-gray-600 hover:text-brand-beige transition-colors">
-                  L'esprit Houkouki
+                  روح حقوقي
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-gradient-to-br from-brand-beige/20 to-brand-beige/10">
-                  <div className="grid w-[300px] gap-2 p-4">
+                  <div className="grid w-[300px] gap-2 p-4" dir="rtl">
                     <NavigationMenuLink asChild>
                       <Link
-                        to="/fr/qui-sommes-nous"
+                        to="/ar/about-us"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                       >
-                        <div className="text-sm font-medium leading-none">Qui sommes-nous ?</div>
+                        <div className="text-sm font-medium leading-none">من نحن؟</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Découvrez notre équipe et notre mission
+                          اكتشف فريقنا ومهمتنا
                         </p>
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link
-                        to="/fr/approche"
+                        to="/ar/approach"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                       >
-                        <div className="text-sm font-medium leading-none">Notre approche</div>
+                        <div className="text-sm font-medium leading-none">منهجيتنا</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Notre méthode d'accompagnement juridique
+                          طريقة الدعم القانوني لدينا
                         </p>
                       </Link>
                     </NavigationMenuLink>
@@ -106,40 +106,40 @@ const FrenchNavigation = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-gray-600 hover:text-brand-beige transition-colors">
-                  Notre offre
+                  خدماتنا
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-gradient-to-br from-brand-beige/20 to-brand-beige/10">
-                  <div className="grid w-[350px] gap-2 p-4">
+                  <div className="grid w-[350px] gap-2 p-4" dir="rtl">
                     <NavigationMenuLink asChild>
                       <Link
-                        to="/fr/profils"
+                        to="/ar/profiles"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                       >
-                        <div className="text-sm font-medium leading-none">Vous êtes ?</div>
+                        <div className="text-sm font-medium leading-none">من أنت؟</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Particuliers, entreprises et MRE
+                          أفراد، شركات ومغاربة العالم
                         </p>
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link
-                        to="/fr/prestations"
+                        to="/ar/services"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                       >
-                        <div className="text-sm font-medium leading-none">Nos prestations</div>
+                        <div className="text-sm font-medium leading-none">خدماتنا</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Conseil, rédaction, démarches administratives
+                          استشارة، صياغة، إجراءات إدارية
                         </p>
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link
-                        to="/fr/domaines"
+                        to="/ar/legal-domains"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                       >
-                        <div className="text-sm font-medium leading-none">Nos domaines de droit</div>
+                        <div className="text-sm font-medium leading-none">مجالات القانون</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Famille, travail, immobilier, commercial
+                          أسرة، عمل، عقار، تجاري
                         </p>
                       </Link>
                     </NavigationMenuLink>
@@ -149,33 +149,32 @@ const FrenchNavigation = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/fr/tarifs" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
-                    Nos tarifs
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-
-
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link to="/fr/blog" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
-                    Blog & Conseils
+                  <Link to="/ar/pricing" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
+                    أسعارنا
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/fr/devis" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
-                    Devis
+                  <Link to="/ar/blog" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
+                    المدونة والنصائح
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                   <Link to="/fr/contact" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
-                     Contact
+                  <Link to="/ar/quote" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
+                    عرض سعر
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                   <Link to="/ar/contact" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
+                     اتصل بنا
                    </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -188,4 +187,4 @@ const FrenchNavigation = () => {
   );
 };
 
-export default FrenchNavigation;
+export default ArabicNavigation;

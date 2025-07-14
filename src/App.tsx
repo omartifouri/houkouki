@@ -28,6 +28,14 @@ import FrDevis from "./pages/fr/Devis";
 import FrContact from "./pages/fr/Contact";
 import FrCGU from "./pages/fr/CGU";
 import FrCGV from "./pages/fr/CGV";
+// English pages
+import EnHome from "./pages/en/Home";
+import EnContact from "./pages/en/Contact";
+import EnPricing from "./pages/en/Pricing";
+// Arabic pages  
+import ArHome from "./pages/ar/Home";
+import ArContact from "./pages/ar/Contact";
+import ArPricing from "./pages/ar/Pricing";
 
 const queryClient = new QueryClient();
 
@@ -61,6 +69,14 @@ const App = () => (
             <Route path="/fr/contact" element={<FrContact />} />
             <Route path="/fr/cgu" element={<FrCGU />} />
             <Route path="/fr/cgv" element={<FrCGV />} />
+            {/* English routes */}
+            <Route path="/en" element={<EnHome />} />
+            <Route path="/en/contact" element={<EnContact />} />
+            <Route path="/en/pricing" element={<EnPricing />} />
+            {/* Arabic routes */}
+            <Route path="/ar" element={<ArHome />} />
+            <Route path="/ar/contact" element={<ArContact />} />
+            <Route path="/ar/pricing" element={<ArPricing />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
