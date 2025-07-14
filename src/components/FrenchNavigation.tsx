@@ -32,9 +32,9 @@ const FrenchNavigation = () => {
             
             {/* Right side - Services and Phone */}
             <div className="flex flex-col md:flex-row items-center space-y-1 md:space-y-0 md:space-x-4">
-              <Link to="/dashboard" className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-sm transition-colors">
+              <a href="https://crm.hokouki.com/" target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-sm transition-colors">
                 Espace abonnés
-              </Link>
+              </a>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
                 <a href="tel:0529045999" className="hover:text-orange-400 transition-colors font-medium">
