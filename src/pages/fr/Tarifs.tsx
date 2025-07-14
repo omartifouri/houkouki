@@ -327,8 +327,8 @@ const FrTarifs = () => {
               </CardHeader>
               <CardContent>
                 <div className="overflow-x-auto">
-                  <p className="text-sm text-gray-600 mb-4 text-center italic animate-pulse hover:animate-none hover:text-red-600 transition-colors duration-300 cursor-default">
-                    ✨ La durée par heures est estimée par l'équipe de nos juristes ✨
+                  <p className="text-sm text-gray-600 mb-4 text-center italic">
+                    La durée par heures est estimée par l'équipe de nos juristes
                   </p>
                   <table className="w-full border-collapse">
                     <thead>
