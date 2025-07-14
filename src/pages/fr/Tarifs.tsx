@@ -327,11 +327,13 @@ const FrTarifs = () => {
               </CardHeader>
               <CardContent>
                 <div className="overflow-x-auto">
+                  <p className="text-sm text-gray-600 mb-4 text-center italic">
+                    La durée par heures est estimée par l'équipe de nos juristes
+                  </p>
                   <table className="w-full border-collapse">
                     <thead>
                       <tr className="border-b-2 border-gray-200">
                         <th className="text-left py-4 px-4 font-semibold text-gray-900">Prestation</th>
-                        <th className="text-center py-4 px-4 font-semibold text-gray-900">Durée estimée</th>
                         <th className="text-left py-4 px-4 font-semibold text-gray-900">Description</th>
                       </tr>
                     </thead>
@@ -339,7 +341,6 @@ const FrTarifs = () => {
                       {services.map((service, index) => (
                         <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
                           <td className="py-4 px-4 font-medium text-gray-900">{service.name}</td>
-                          <td className="py-4 px-4 text-center text-red-600 font-medium">{service.hours}</td>
                           <td className="py-4 px-4 text-gray-600">{service.description}</td>
                         </tr>
                       ))}
