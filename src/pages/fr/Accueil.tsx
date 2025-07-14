@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Scale, FileText, Calendar, Shield, CheckCircle, Plane, ArrowRight, Phone, Video, MessageCircle, ChevronDown } from "lucide-react";
+import { Users, Scale, Building, Calendar, Shield, CheckCircle, Plane, ArrowRight, Phone, Video, MessageCircle, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
@@ -195,7 +195,7 @@ const FrAccueil = () => {
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               <CardHeader>
                 <div className="w-12 h-12 bg-[#C0997A]/20 rounded-lg flex items-center justify-center mb-4">
-                  <FileText className="h-6 w-6 text-[#C0997A]" />
+                  <Building className="h-6 w-6 text-[#C0997A]" />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Vous êtes une entreprise ?</CardTitle>
               </CardHeader>
