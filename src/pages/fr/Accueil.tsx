@@ -29,7 +29,7 @@ const FrAccueil = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg">
               <Link to="/fr/contact">
-                Commencer maintenant
+                Vous avez une question
               </Link>
             </Button>
             <Button size="lg" variant="outline">
