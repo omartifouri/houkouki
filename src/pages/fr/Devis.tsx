@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
@@ -69,15 +70,20 @@ const FrDevis = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       <FrenchNavigation />
 
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Demander un devis personnalisé</h1>
+          <Badge className="mb-6 bg-red-600 text-white border-red-600 text-xl px-8 py-3">
+            Devis personnalisé
+          </Badge>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Demander un <span className="text-red-600">devis personnalisé</span>
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Remplissez ce formulaire détaillé pour recevoir une proposition adaptée à vos besoins juridiques.
+            Remplissez ce formulaire pour recevoir une proposition adaptée à vos besoins juridiques.
             Notre équipe vous contactera sous 24 heures.
           </p>
         </div>
@@ -86,9 +92,9 @@ const FrDevis = () => {
           <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-4xl mx-auto space-y-8">
             
             {/* Section 1: Profil Client */}
-            <Card className="border-l-4 border-l-blue-500">
+            <Card className="border-l-4 border-l-red-500 shadow-lg">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-blue-700">
+                <CardTitle className="flex items-center gap-2 text-red-700">
                   <User className="h-5 w-5" />
                   Votre profil
                 </CardTitle>
@@ -225,9 +231,9 @@ const FrDevis = () => {
             </Card>
 
             {/* Section 2: Besoin Juridique */}
-            <Card className="border-l-4 border-l-green-500">
+            <Card className="border-l-4 border-l-red-500 shadow-lg">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-green-700">
+                <CardTitle className="flex items-center gap-2 text-red-700">
                   <FileText className="h-5 w-5" />
                   Votre besoin juridique
                 </CardTitle>
@@ -312,7 +318,7 @@ const FrDevis = () => {
             </Card>
 
             {/* Section 3: Validation */}
-            <Card className="border-l-4 border-l-purple-500">
+            <Card className="border-l-4 border-l-red-500 shadow-lg">
               <CardContent className="pt-6">
                 <FormField
                   control={form.control}
@@ -346,7 +352,7 @@ const FrDevis = () => {
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold rounded-lg shadow-lg"
+                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-3 text-lg font-semibold rounded-lg shadow-lg"
               >
                 {isSubmitting ? "Envoi en cours..." : "Envoyer ma demande de devis"}
               </Button>
@@ -356,9 +362,9 @@ const FrDevis = () => {
 
         {/* Footer informatif */}
         <div className="mt-12 text-center">
-          <div className="bg-blue-50 rounded-lg p-6 max-w-2xl mx-auto">
-            <h3 className="font-semibold text-blue-900 mb-2">Que se passe-t-il après l'envoi ?</h3>
-            <div className="text-sm text-blue-700 space-y-1">
+          <div className="bg-red-50 rounded-lg p-6 max-w-2xl mx-auto border border-red-200">
+            <h3 className="font-semibold text-red-900 mb-2">Que se passe-t-il après l'envoi ?</h3>
+            <div className="text-sm text-red-700 space-y-1">
               <p>✓ Accusé de réception immédiat par email</p>
               <p>✓ Analyse de votre demande par notre équipe juridique</p>
               <p>✓ Proposition personnalisée sous 24h ouvrées</p>
