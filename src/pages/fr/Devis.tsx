@@ -26,7 +26,6 @@ const formSchema = z.object({
   type_prestation: z.string().min(1, "Veuillez sélectionner un type de prestation"),
   domaine_juridique: z.string().min(1, "Veuillez sélectionner un domaine juridique"),
   description_besoin: z.string().min(20, "Veuillez décrire votre besoin (minimum 20 caractères)"),
-  pieces_jointes: z.boolean().default(false),
   accompagnement_souhaite: z.array(z.string()).default([]),
   rgpd_accepte: z.boolean().refine(val => val === true, "Vous devez accepter le traitement de vos données"),
 });
@@ -49,7 +48,6 @@ const FrDevis = () => {
       type_prestation: "",
       domaine_juridique: "",
       description_besoin: "",
-      pieces_jointes: false,
       accompagnement_souhaite: [],
       rgpd_accepte: false,
     },
@@ -310,28 +308,6 @@ const FrDevis = () => {
                   )}
                 />
 
-                <FormField
-                  control={form.control}
-                  name="pieces_jointes"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                      <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormLabel>
-                          J'ai des documents à joindre à ma demande
-                        </FormLabel>
-                        <p className="text-sm text-muted-foreground">
-                          Contrats, correspondances, décisions administratives...
-                        </p>
-                      </div>
-                    </FormItem>
-                  )}
-                />
               </CardContent>
             </Card>
 
