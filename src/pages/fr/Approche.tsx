@@ -18,7 +18,7 @@ const FrApproche = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Un accompagnement moderne et fluide */}
           <section>
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Un accompagnement moderne et fluide</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Un accompagnement moderne et fluide</h2>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-6">
@@ -60,7 +60,7 @@ const FrApproche = () => {
 
           {/* Un service digital, humain et marocain */}
           <section>
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Un service digital, humain et marocain</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Un service digital, humain et marocain</h2>
             <div className="space-y-6">
               <Card>
                 <CardHeader>
