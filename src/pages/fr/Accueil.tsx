@@ -16,7 +16,7 @@ const FrAccueil = () => {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <Badge className="mb-6 bg-red-600 text-white border-red-600 text-xl px-8 py-3">
+          <Badge className="mb-6 bg-[#991B1B] text-white border-[#991B1B] text-xl px-8 py-3">
             Vos droits, notre mission.
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -27,7 +27,7 @@ const FrAccueil = () => {
             Où que vous soyez, bénéficiez de l'expertise de nos juristes pour vous conseiller, vous orienter, et protéger vos intérêts.
           </p>
           <div className="flex justify-center">
-            <Button size="lg" className="bg-[#991B1B] hover:bg-[#7F1D1D] text-white">
+            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
               <Link to="/fr/devis">
                 Demander un devis
               </Link>
