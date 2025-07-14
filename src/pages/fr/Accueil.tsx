@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Scale, FileText, Calendar, Shield, CheckCircle, Star, ArrowRight, Phone, Video, MessageCircle, ChevronDown } from "lucide-react";
+import { Users, Scale, FileText, Calendar, Shield, CheckCircle, Plane, ArrowRight, Phone, Video, MessageCircle, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
@@ -213,7 +213,7 @@ const FrAccueil = () => {
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               <CardHeader>
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                  <Star className="h-6 w-6 text-red-600" />
+                  <Plane className="h-6 w-6 text-red-600" />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Vous vivez à l'étranger ?</CardTitle>
               </CardHeader>
