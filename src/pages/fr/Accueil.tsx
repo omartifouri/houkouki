@@ -326,7 +326,7 @@ const FrAccueil = () => {
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
                 <p className="text-gray-600 mb-4 flex-1">
-                  Une question, un besoin ponctuel, un document à rédiger ou une procédure à lancer ? 
+                  Une question, un besoin ponctuel, un document à rédiger ou une procédure à lancer&nbsp;? 
                   Payez uniquement ce dont vous avez besoin.
                 </p>
                 <Button variant="outline" className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white mt-auto" asChild>
