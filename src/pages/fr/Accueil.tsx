@@ -16,7 +16,7 @@ const FrAccueil = () => {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <Badge className="mb-6 bg-red-100 text-red-800 border-red-200 text-xl px-8 py-3">
+          <Badge className="mb-6 bg-red-600 text-white border-red-600 text-xl px-8 py-3">
             Vos droits, notre mission.
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
