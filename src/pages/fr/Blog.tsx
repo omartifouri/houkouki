@@ -175,8 +175,8 @@ const FrBlog = () => {
                     </div>
                     
                     <div className="text-center">
-                      <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
-                        <CheckCircle className="w-4 h-4 mr-2" />
+                      <Button className={`${colors.button} text-white px-8 py-3`}>
+                        <ArrowRight className="w-4 h-4 mr-2" />
                         {category.buttonText}
                       </Button>
                     </div>
@@ -204,8 +204,8 @@ const FrBlog = () => {
             </CardHeader>
             
             <CardContent className="text-center">
-              <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
-                <CheckCircle className="w-4 h-4 mr-2" />
+              <Button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3">
+                <Edit3 className="w-4 h-4 mr-2" />
                 Soumettre une question ou un témoignage
               </Button>
             </CardContent>
@@ -249,8 +249,7 @@ const FrBlog = () => {
                     placeholder="Votre adresse email" 
                     className="flex-1"
                   />
-                  <Button className="bg-green-500 hover:bg-green-600 text-white">
-                    <CheckCircle className="w-4 h-4 mr-2" />
+                  <Button className="bg-rose-500 hover:bg-rose-600 text-white">
                     M'inscrire
                   </Button>
                 </div>
