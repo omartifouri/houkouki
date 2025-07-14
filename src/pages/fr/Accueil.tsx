@@ -305,31 +305,31 @@ const FrAccueil = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="bg-white p-6">
+            <Card className="bg-white p-6 flex flex-col h-full">
               <CardHeader>
                 <CardTitle className="text-2xl text-[#C0997A]">Abonnement annuel</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
+              <CardContent className="flex-1 flex flex-col">
+                <p className="text-gray-600 mb-4 flex-1">
                   Un accès illimité à nos juristes + un accompagnement personnalisé tout au long de l'année.
                   Idéal pour les particuliers ou entreprises qui souhaitent un service de proximité continu.
                 </p>
-                <Button className="w-full bg-[#C0997A] hover:bg-[#B8926F]" asChild>
+                <Button className="w-full bg-[#C0997A] hover:bg-[#B8926F] mt-auto" asChild>
                   <Link to="/fr/tarifs">Choisir l'abonnement</Link>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="bg-white p-6">
+            <Card className="bg-white p-6 flex flex-col h-full">
               <CardHeader>
                 <CardTitle className="text-2xl text-red-800">À la carte</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
+              <CardContent className="flex-1 flex flex-col">
+                <p className="text-gray-600 mb-4 flex-1">
                   Une question, un besoin ponctuel, un document à rédiger ou une procédure à lancer ? 
                   Payez uniquement ce dont vous avez besoin.
                 </p>
-                <Button variant="outline" className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
+                <Button variant="outline" className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white mt-auto" asChild>
                   <Link to="/fr/tarifs">Choisir une prestation à la carte</Link>
                 </Button>
               </CardContent>
