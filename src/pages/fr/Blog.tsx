@@ -33,7 +33,7 @@ const FrBlog = () => {
         "Divorce au Maroc : les étapes clés"
       ],
       buttonText: "Voir tous les articles pratiques",
-      color: "blue"
+      color: "red"
     },
     {
       title: "Actualités réglementaires",
@@ -45,7 +45,7 @@ const FrBlog = () => {
         "Réformes en cours sur les droits de succession"
       ],
       buttonText: "Lire les dernières actualités",
-      color: "green"
+      color: "orange"
     },
     {
       title: "Témoignages & cas concrets",
@@ -57,43 +57,43 @@ const FrBlog = () => {
         "Quand une lettre bien rédigée évite une procédure – Cas réel d'intervention Houkouki"
       ],
       buttonText: "Découvrir nos récits de cas",
-      color: "purple"
+      color: "rose"
     }
   ];
 
   const getColorClasses = (color: string) => {
     switch (color) {
-      case "blue":
+      case "red":
         return {
-          bg: "from-blue-50 to-indigo-50",
-          border: "border-blue-200",
-          icon: "bg-blue-500",
-          button: "bg-blue-500 hover:bg-blue-600",
-          buttonOutline: "border-blue-500 text-blue-600 hover:bg-blue-50"
+          bg: "from-red-50 to-rose-50",
+          border: "border-red-200",
+          icon: "bg-red-500",
+          button: "bg-red-500 hover:bg-red-600",
+          buttonOutline: "border-red-500 text-red-600 hover:bg-red-50"
         };
-      case "green":
+      case "orange":
         return {
-          bg: "from-green-50 to-emerald-50",
-          border: "border-green-200",
-          icon: "bg-green-500",
-          button: "bg-green-500 hover:bg-green-600",
-          buttonOutline: "border-green-500 text-green-600 hover:bg-green-50"
+          bg: "from-orange-50 to-red-50",
+          border: "border-orange-200",
+          icon: "bg-orange-500",
+          button: "bg-orange-500 hover:bg-orange-600",
+          buttonOutline: "border-orange-500 text-orange-600 hover:bg-orange-50"
         };
-      case "purple":
+      case "rose":
         return {
-          bg: "from-purple-50 to-indigo-50",
-          border: "border-purple-200",
-          icon: "bg-purple-500",
-          button: "bg-purple-500 hover:bg-purple-600",
-          buttonOutline: "border-purple-500 text-purple-600 hover:bg-purple-50"
+          bg: "from-rose-50 to-pink-50",
+          border: "border-rose-200",
+          icon: "bg-rose-500",
+          button: "bg-rose-500 hover:bg-rose-600",
+          buttonOutline: "border-rose-500 text-rose-600 hover:bg-rose-50"
         };
       default:
         return {
-          bg: "from-gray-50 to-gray-100",
-          border: "border-gray-200",
-          icon: "bg-gray-500",
-          button: "bg-gray-500 hover:bg-gray-600",
-          buttonOutline: "border-gray-500 text-gray-600 hover:bg-gray-50"
+          bg: "from-red-50 to-rose-50",
+          border: "border-red-200",
+          icon: "bg-red-500",
+          button: "bg-red-500 hover:bg-red-600",
+          buttonOutline: "border-red-500 text-red-600 hover:bg-red-50"
         };
     }
   };
@@ -189,9 +189,9 @@ const FrBlog = () => {
 
         {/* Proposer un sujet */}
         <div className="max-w-6xl mx-auto mb-20">
-          <Card className="bg-gradient-to-br from-orange-50 to-red-50 border-2 border-orange-200">
+          <Card className="bg-gradient-to-br from-red-50 to-rose-50 border-2 border-red-200">
             <CardHeader className="text-center">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-orange-500 text-white flex items-center justify-center shadow-lg">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-red-500 text-white flex items-center justify-center shadow-lg">
                 <MessageCircle className="w-10 h-10" />
               </div>
               <CardTitle className="text-2xl font-bold text-gray-900 mb-4">
@@ -204,7 +204,7 @@ const FrBlog = () => {
             </CardHeader>
             
             <CardContent className="text-center">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3">
+              <Button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3">
                 <Edit3 className="w-4 h-4 mr-2" />
                 Soumettre une question ou un témoignage
               </Button>
@@ -214,9 +214,9 @@ const FrBlog = () => {
 
         {/* Newsletter */}
         <div className="max-w-6xl mx-auto">
-          <Card className="bg-gradient-to-br from-indigo-50 to-purple-50 border-2 border-indigo-200">
+          <Card className="bg-gradient-to-br from-rose-50 to-red-50 border-2 border-rose-200">
             <CardHeader className="text-center">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-indigo-500 text-white flex items-center justify-center shadow-lg">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-rose-500 text-white flex items-center justify-center shadow-lg">
                 <Mail className="w-10 h-10" />
               </div>
               <CardTitle className="text-2xl font-bold text-gray-900 mb-4">
@@ -249,7 +249,7 @@ const FrBlog = () => {
                     placeholder="Votre adresse email" 
                     className="flex-1"
                   />
-                  <Button className="bg-indigo-500 hover:bg-indigo-600 text-white">
+                  <Button className="bg-rose-500 hover:bg-rose-600 text-white">
                     M'inscrire
                   </Button>
                 </div>
