@@ -30,7 +30,7 @@ const FrTarifs = () => {
     { name: "Transfert du siège social", description: "Démarches administratives et juridiques pour le changement d'adresse du siège", category: "Droit des sociétés" },
     { name: "Dissolution / liquidation", description: "Procédure de dissolution et liquidation amiable ou judiciaire d'une société", category: "Droit des sociétés" },
     { name: "Rédaction d'un contrat de partenariat avec des clauses particulières", description: "Conception sur-mesure de contrats de partenariat commercial ou stratégique", category: "Droit des sociétés" },
-    { name: "Conseil juridique en droit des sociétés", description: "Consultation spécialisée sur toutes questions relatives au droit des sociétés", category: "Droit des sociétés" },
+    
     { name: "Audit des statuts", description: "Analyse et vérification de la conformité des statuts d'une société", category: "Droit des sociétés" },
     { name: "Audit de contrat", description: "Examen approfondi d'un contrat pour identifier les risques et opportunités", category: "Droit des sociétés" },
     { name: "Rédaction d'une convention ou d'un contrat de partenariat", description: "Élaboration de conventions de partenariat adaptées aux besoins spécifiques", category: "Droit des sociétés" },
