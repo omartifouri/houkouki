@@ -22,12 +22,62 @@ const FrTarifs = () => {
   };
 
   const services = [
-    { name: "Consultation juridique simple", hours: "1-2h", description: "Conseil juridique ponctuel par téléphone ou visioconférence" },
-    { name: "Lecture et analyse d'un document juridique", hours: "2-4h", description: "Analyse complète d'un contrat, courrier ou acte" },
-    { name: "Rédaction de courrier ou contrat", hours: "3-6h", description: "Rédaction personnalisée selon votre situation" },
-    { name: "Démarche administrative accompagnée", hours: "2-5h", description: "Assistance pour vos démarches officielles" },
-    { name: "Mise en demeure ou recours amiable", hours: "4-8h", description: "Procédure de recouvrement ou résolution amiable" },
-    { name: "Préparation d'un recours judiciaire", hours: "8-15h", description: "Constitution et préparation de votre dossier" }
+    // Droit des sociétés
+    { name: "Conseil + procédure carte entrepreneur", description: "Accompagnement complet pour l'obtention et les démarches liées à la carte d'entrepreneur", category: "Droit des sociétés" },
+    { name: "Création de société", description: "Assistance juridique pour la constitution d'une société selon le statut approprié", category: "Droit des sociétés" },
+    { name: "Augmentation de capital", description: "Procédure d'augmentation du capital social avec rédaction des actes nécessaires", category: "Droit des sociétés" },
+    { name: "Cession des parts", description: "Accompagnement juridique pour la cession de parts sociales ou d'actions", category: "Droit des sociétés" },
+    { name: "Transfert du siège social", description: "Démarches administratives et juridiques pour le changement d'adresse du siège", category: "Droit des sociétés" },
+    { name: "Dissolution / liquidation", description: "Procédure de dissolution et liquidation amiable ou judiciaire d'une société", category: "Droit des sociétés" },
+    { name: "Rédaction d'un contrat de partenariat avec des clauses particulières", description: "Conception sur-mesure de contrats de partenariat commercial ou stratégique", category: "Droit des sociétés" },
+    { name: "Conseil juridique en droit des sociétés", description: "Consultation spécialisée sur toutes questions relatives au droit des sociétés", category: "Droit des sociétés" },
+    { name: "Audit des statuts", description: "Analyse et vérification de la conformité des statuts d'une société", category: "Droit des sociétés" },
+    { name: "Audit de contrat", description: "Examen approfondi d'un contrat pour identifier les risques et opportunités", category: "Droit des sociétés" },
+    { name: "Rédaction d'une convention ou d'un contrat de partenariat", description: "Élaboration de conventions de partenariat adaptées aux besoins spécifiques", category: "Droit des sociétés" },
+    { name: "Rédaction d'une procuration générale", description: "Rédaction de procurations pour représentation dans les actes juridiques", category: "Droit des sociétés" },
+
+    // Droit public
+    { name: "Conseil juridique en code de la route", description: "Assistance pour les infractions routières et procédures administratives", category: "Droit public" },
+    { name: "Conseil juridique en droit douanier", description: "Accompagnement sur les réglementations douanières et contentieux", category: "Droit public" },
+    { name: "Conseil et démarche en droit fiscal", description: "Assistance pour les questions fiscales et relations avec l'administration", category: "Droit public" },
+    { name: "Conseil juridique en administration et collectivités locales", description: "Accompagnement dans les relations avec les administrations publiques", category: "Droit public" },
+
+    // Droit foncier
+    { name: "Audit contrat de bail commercial", description: "Analyse complète des clauses d'un bail commercial existant", category: "Droit foncier" },
+    { name: "Rédaction de contrat de bail commercial", description: "Élaboration sur-mesure de contrats de bail commercial", category: "Droit foncier" },
+    { name: "Rédaction de contrat de bail commercial avec des clauses particulières", description: "Conception de baux commerciaux avec clauses spécifiques selon les besoins", category: "Droit foncier" },
+    { name: "Conseil et démarche en cas de recours contre un syndic de copropriété", description: "Assistance pour les litiges avec les syndics de copropriété", category: "Droit foncier" },
+
+    // Droit du travail
+    { name: "Conseil juridique en contrat de travail", description: "Assistance sur toutes questions relatives aux contrats de travail", category: "Droit du travail" },
+    { name: "Conseil juridique et procédure licenciement", description: "Accompagnement dans les procédures de licenciement et leurs conséquences", category: "Droit du travail" },
+    { name: "Rédaction contrat de travail", description: "Élaboration de contrats de travail conformes à la législation", category: "Droit du travail" },
+    { name: "Établir un solde de tout compte", description: "Calcul et rédaction du solde de tout compte lors de la rupture", category: "Droit du travail" },
+    { name: "Conseil et procédure salaires impayés", description: "Recouvrement des salaires impayés et procédures associées", category: "Droit du travail" },
+    { name: "Audit d'un contrat de travail", description: "Vérification de la conformité et optimisation des contrats existants", category: "Droit du travail" },
+    { name: "Conseil juridique et procédure de la contestation de sanctions", description: "Défense contre les sanctions disciplinaires abusives", category: "Droit du travail" },
+    { name: "Conseil juridique et procédure de harcèlement et discriminations", description: "Accompagnement dans les situations de harcèlement ou discrimination", category: "Droit du travail" },
+    { name: "Procédure d'inscription des travailleurs de l'étranger", description: "Démarches pour l'emploi légal de travailleurs étrangers", category: "Droit du travail" },
+
+    // Droit du consommateur
+    { name: "Conseil + Audit contrat de service ou d'achat de produit", description: "Analyse des contrats de consommation et protection des droits", category: "Droit du consommateur" },
+    { name: "Recours amiable en vue de la réparation du dommage causé à l'acheteur", description: "Médiation pour obtenir réparation des préjudices subis", category: "Droit du consommateur" },
+    { name: "Conseil et démarche à suivre en cas d'une difficulté financière face aux crédits", description: "Assistance pour les problèmes de surendettement et négociation", category: "Droit du consommateur" },
+    { name: "Conseil et démarche à suivre en cas d'un chèque impayé", description: "Procédures à suivre en cas de chèque sans provision", category: "Droit du consommateur" },
+
+    // Droit des assurances
+    { name: "Conseil juridique en cas d'un litige avec l'assureur", description: "Défense des droits face aux compagnies d'assurance", category: "Droit des assurances" },
+    { name: "Accompagnement recours amiable pour obtenir les indemnités en cas de sinistre", description: "Négociation amiable pour l'indemnisation des sinistres", category: "Droit des assurances" },
+
+    // Droit de la protection des données
+    { name: "Suivi des dossiers auprès de la CNDP", description: "Accompagnement dans les relations avec la Commission Nationale de contrôle de la protection des Données Personnelles", category: "Protection des données" },
+    { name: "Conseil juridique en droits d'auteurs et droits voisins", description: "Protection et défense des droits de propriété intellectuelle", category: "Protection des données" },
+    { name: "Conseil juridique en droit de la propriété industrielle", description: "Assistance pour les brevets, marques et dessins industriels", category: "Protection des données" },
+    { name: "Conseil juridique en droit de la Liberté des Prix et de la Concurrence", description: "Conformité aux règles de concurrence et pratiques commerciales", category: "Protection des données" },
+
+    // Services transversaux
+    { name: "Coordination d'un recours judiciaire", description: "Organisation et suivi des procédures judiciaires avec les avocats", category: "Services transversaux" },
+    { name: "Recours amiable - Rédaction d'une mise en demeure", description: "Rédaction de courriers de mise en demeure pour résolution amiable", category: "Services transversaux" }
   ];
 
   const pricingPlans = [
@@ -313,22 +363,40 @@ const FrTarifs = () => {
                   <p className="text-sm text-gray-600 mb-4 text-center italic">
                     La durée par heures est estimée par l'équipe de nos juristes
                   </p>
-                  <table className="w-full border-collapse">
-                    <thead>
-                      <tr className="border-b-2 border-gray-200">
-                        <th className="text-left py-4 px-4 font-semibold text-gray-900">Prestation</th>
-                        <th className="text-left py-4 px-4 font-semibold text-gray-900">Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {services.map((service, index) => (
-                        <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
-                          <td className="py-4 px-4 font-medium text-gray-900">{service.name}</td>
-                          <td className="py-4 px-4 text-gray-600">{service.description}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                   <div className="space-y-8">
+                     {/* Grouper les services par catégorie */}
+                     {Object.entries(
+                       services.reduce((acc, service) => {
+                         if (!acc[service.category]) {
+                           acc[service.category] = [];
+                         }
+                         acc[service.category].push(service);
+                         return acc;
+                       }, {} as Record<string, typeof services>)
+                     ).map(([category, categoryServices]) => (
+                       <div key={category}>
+                         <h3 className="text-lg font-semibold text-red-800 mb-4 border-b border-red-200 pb-2">
+                           {category}
+                         </h3>
+                         <table className="w-full border-collapse mb-6">
+                           <thead>
+                             <tr className="border-b border-gray-200">
+                               <th className="text-left py-3 px-4 font-medium text-gray-900 w-2/5">Prestation</th>
+                               <th className="text-left py-3 px-4 font-medium text-gray-900">Description</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             {categoryServices.map((service, index) => (
+                               <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
+                                 <td className="py-3 px-4 font-medium text-gray-900 text-sm">{service.name}</td>
+                                 <td className="py-3 px-4 text-gray-600 text-sm">{service.description}</td>
+                               </tr>
+                             ))}
+                           </tbody>
+                         </table>
+                       </div>
+                     ))}
+                   </div>
                 </div>
               </CardContent>
             </Card>
