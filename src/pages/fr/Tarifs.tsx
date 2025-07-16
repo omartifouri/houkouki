@@ -36,11 +36,6 @@ const FrTarifs = () => {
     { name: "Rédaction d'une convention ou d'un contrat de partenariat", description: "Élaboration de conventions de partenariat adaptées aux besoins spécifiques", category: "Droit des sociétés" },
     { name: "Rédaction d'une procuration générale", description: "Rédaction de procurations pour représentation dans les actes juridiques", category: "Droit des sociétés" },
 
-    // Droit public
-    { name: "Conseil juridique en code de la route", description: "Assistance pour les infractions routières et procédures administratives", category: "Droit public" },
-    { name: "Conseil juridique en droit douanier", description: "Accompagnement sur les réglementations douanières et contentieux", category: "Droit public" },
-    { name: "Conseil et démarche en droit fiscal", description: "Assistance pour les questions fiscales et relations avec l'administration", category: "Droit public" },
-    { name: "Conseil juridique en administration et collectivités locales", description: "Accompagnement dans les relations avec les administrations publiques", category: "Droit public" },
 
     // Droit foncier
     { name: "Audit contrat de bail commercial", description: "Analyse complète des clauses d'un bail commercial existant", category: "Droit foncier" },
