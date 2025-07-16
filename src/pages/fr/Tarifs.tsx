@@ -44,14 +44,9 @@ const FrTarifs = () => {
     
 
     // Droit du travail
-    { name: "Conseil juridique en contrat de travail", description: "Assistance sur toutes questions relatives aux contrats de travail", category: "Droit du travail" },
-    { name: "Conseil juridique et procédure licenciement", description: "Accompagnement dans les procédures de licenciement et leurs conséquences", category: "Droit du travail" },
     { name: "Rédaction contrat de travail", description: "Élaboration de contrats de travail conformes à la législation", category: "Droit du travail" },
     { name: "Établir un solde de tout compte", description: "Calcul et rédaction du solde de tout compte lors de la rupture", category: "Droit du travail" },
-    { name: "Conseil et procédure salaires impayés", description: "Recouvrement des salaires impayés et procédures associées", category: "Droit du travail" },
     { name: "Audit d'un contrat de travail", description: "Vérification de la conformité et optimisation des contrats existants", category: "Droit du travail" },
-    { name: "Conseil juridique et procédure de la contestation de sanctions", description: "Défense contre les sanctions disciplinaires abusives", category: "Droit du travail" },
-    { name: "Conseil juridique et procédure de harcèlement et discriminations", description: "Accompagnement dans les situations de harcèlement ou discrimination", category: "Droit du travail" },
     { name: "Procédure d'inscription des travailleurs de l'étranger", description: "Démarches pour l'emploi légal de travailleurs étrangers", category: "Droit du travail" },
 
     // Droit du consommateur
