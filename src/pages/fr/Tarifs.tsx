@@ -65,9 +65,6 @@ const FrTarifs = () => {
 
     // Droit de la protection des données
     { name: "Suivi des dossiers auprès de la CNDP", description: "Accompagnement dans les relations avec la Commission Nationale de contrôle de la protection des Données Personnelles", category: "Protection des données" },
-    { name: "Conseil juridique en droits d'auteurs et droits voisins", description: "Protection et défense des droits de propriété intellectuelle", category: "Protection des données" },
-    { name: "Conseil juridique en droit de la propriété industrielle", description: "Assistance pour les brevets, marques et dessins industriels", category: "Protection des données" },
-    { name: "Conseil juridique en droit de la Liberté des Prix et de la Concurrence", description: "Conformité aux règles de concurrence et pratiques commerciales", category: "Protection des données" },
 
     // Services transversaux
     { name: "Coordination d'un recours judiciaire", description: "Organisation et suivi des procédures judiciaires avec les avocats", category: "Services transversaux" },
