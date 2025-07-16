@@ -41,7 +41,7 @@ const FrTarifs = () => {
     { name: "Audit contrat de bail commercial", description: "Analyse complète des clauses d'un bail commercial existant", category: "Droit foncier" },
     { name: "Rédaction de contrat de bail commercial", description: "Élaboration sur-mesure de contrats de bail commercial", category: "Droit foncier" },
     { name: "Rédaction de contrat de bail commercial avec des clauses particulières", description: "Conception de baux commerciaux avec clauses spécifiques selon les besoins", category: "Droit foncier" },
-    { name: "Conseil et démarche en cas de recours contre un syndic de copropriété", description: "Assistance pour les litiges avec les syndics de copropriété", category: "Droit foncier" },
+    
 
     // Droit du travail
     { name: "Conseil juridique en contrat de travail", description: "Assistance sur toutes questions relatives aux contrats de travail", category: "Droit du travail" },
