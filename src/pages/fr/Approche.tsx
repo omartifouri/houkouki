@@ -191,43 +191,6 @@ const FrApproche = () => {
             </div>
           </section>
 
-          {/* Nos engagements */}
-          <section>
-            <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Nos engagements</h2>
-            <Card>
-              <CardContent className="pt-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                      <span className="text-gray-700">Confidentialité garantie</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                      <span className="text-gray-700">Réponse rapide et personnalisée</span>
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                      <span className="text-gray-700">Transparence tarifaire</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                      <span className="text-gray-700">Expertise marocaine</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="text-center mt-8">
-                  <p className="text-gray-600 mb-4">En savoir plus ?</p>
-                  <Button className="bg-red-600 hover:bg-red-700" asChild>
-                    <Link to="/fr/prestations">Découvrir nos services</Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </section>
 
           <div className="text-center">
             <Button className="bg-red-600 hover:bg-red-700" asChild>
