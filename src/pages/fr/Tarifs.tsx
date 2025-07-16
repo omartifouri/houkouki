@@ -23,7 +23,7 @@ const FrTarifs = () => {
 
   const services = [
     // Droit des sociétés
-    { name: "Conseil + procédure carte entrepreneur", description: "Accompagnement complet pour l'obtention et les démarches liées à la carte d'entrepreneur", category: "Droit des sociétés" },
+    { name: "Conseil + procédure carte auto-entrepreneur", description: "Accompagnement complet pour l'obtention et les démarches liées à la carte d'entrepreneur", category: "Droit des sociétés" },
     { name: "Création de société", description: "Assistance juridique pour la constitution d'une société selon le statut approprié", category: "Droit des sociétés" },
     { name: "Augmentation de capital", description: "Procédure d'augmentation du capital social avec rédaction des actes nécessaires", category: "Droit des sociétés" },
     { name: "Cession des parts", description: "Accompagnement juridique pour la cession de parts sociales ou d'actions", category: "Droit des sociétés" },
