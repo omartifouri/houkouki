@@ -61,7 +61,6 @@ const FrTarifs = () => {
     { name: "Conseil et démarche à suivre en cas d'un chèque impayé", description: "Procédures à suivre en cas de chèque sans provision", category: "Droit du consommateur" },
 
     // Droit des assurances
-    { name: "Conseil juridique en cas d'un litige avec l'assureur", description: "Défense des droits face aux compagnies d'assurance", category: "Droit des assurances" },
     { name: "Accompagnement recours amiable pour obtenir les indemnités en cas de sinistre", description: "Négociation amiable pour l'indemnisation des sinistres", category: "Droit des assurances" },
 
     // Droit de la protection des données
