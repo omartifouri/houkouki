@@ -115,7 +115,7 @@ const FrApproche = () => {
 
           {/* Nos valeurs */}
           <section>
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Nos valeurs</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Nos valeurs</h2>
             <Card className="mb-6">
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-6">
@@ -193,7 +193,7 @@ const FrApproche = () => {
 
           {/* Nos engagements */}
           <section>
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Nos engagements</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Nos engagements</h2>
             <Card>
               <CardContent className="pt-6">
                 <div className="grid md:grid-cols-2 gap-6">
