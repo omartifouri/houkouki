@@ -284,7 +284,7 @@ const FrAccueil = () => {
 
           <div className="text-center mt-8">
             <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-              <Link to="/fr/profils#particuliers">Voir toutes nos prestations</Link>
+              <Link to="/fr/prestations">Voir toutes nos prestations</Link>
             </Button>
           </div>
         </div>
