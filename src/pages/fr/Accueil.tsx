@@ -91,7 +91,7 @@ const FrAccueil = () => {
 
           <div className="mt-12 text-center">
             <p className="text-lg text-gray-700 mb-4">
-              <strong>HOUKOUKI Spécialistes du droit marocain</strong>, au service des particuliers, entreprises et Marocains du monde
+              <strong>HOUKOUKI Spécialistes du droit marocain</strong>, au service des particuliers, entreprises et Marocains du monde.
             </p>
           </div>
         </div>
