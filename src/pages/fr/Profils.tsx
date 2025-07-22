@@ -23,7 +23,7 @@ const FrProfils = () => {
         
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Un particulier */}
-          <section>
+          <section id="particulier">
             <Card className="border-2 border-red-200">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3 text-3xl text-red-800">
@@ -72,7 +72,7 @@ const FrProfils = () => {
           </section>
 
           {/* Une entreprise */}
-          <section>
+          <section id="entreprise">
             <Card className="border-2 border-red-200">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3 text-3xl text-red-800">
