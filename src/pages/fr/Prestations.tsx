@@ -161,7 +161,7 @@ const FrPrestations = () => {
                   </div>
 
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                    <Link to="/fr/contact">Confier une procédure</Link>
+                    <Link to="/fr/contact">Confier une procédure administrative</Link>
                   </Button>
                 </CardContent>
               </Card>
