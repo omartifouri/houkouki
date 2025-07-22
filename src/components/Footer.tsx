@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-white py-12">
+    <footer className="bg-red-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Contact Section */}
@@ -14,19 +14,19 @@ const Footer = () => {
             </h3>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div className="bg-blue-600 p-2 rounded-full">
+                <div className="bg-red-600 p-2 rounded-full">
                   <Phone className="h-4 w-4" />
                 </div>
                 <span>+212 529 045 999</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="bg-blue-600 p-2 rounded-full">
+                <div className="bg-red-600 p-2 rounded-full">
                   <Mail className="h-4 w-4" />
                 </div>
                 <span>contact@houkouki.com</span>
               </div>
               <div className="flex items-start gap-3">
-                <div className="bg-blue-600 p-2 rounded-full mt-1">
+                <div className="bg-red-600 p-2 rounded-full mt-1">
                   <MapPin className="h-4 w-4" />
                 </div>
                 <div>
