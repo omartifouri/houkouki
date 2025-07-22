@@ -189,7 +189,7 @@ const FrContact = () => {
                     <Clock className="h-6 w-6 text-[#C0997A] mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Horaires d'ouverture</h3>
-                      <p className="text-gray-600">Lundi - Vendredi : 9h00 - 18h00</p>
+                      <p className="text-gray-600">Lundi - Vendredi : 9h00 - 19h00</p>
                       <p className="text-gray-600">Samedi : 9h00 - 13h00</p>
                       <p className="text-gray-600">Dimanche : Fermé</p>
                     </div>
