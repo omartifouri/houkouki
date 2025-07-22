@@ -206,10 +206,6 @@ const FrContact = () => {
                   <ul className="space-y-3">
                     <li className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-[#C0997A] rounded-full"></div>
-                      <span className="text-gray-700">Consultation juridique gratuite de 15 minutes</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-[#C0997A] rounded-full"></div>
                       <span className="text-gray-700">Devis personnalisé sous 24h</span>
                     </li>
                     <li className="flex items-center space-x-3">
