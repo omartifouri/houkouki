@@ -378,10 +378,10 @@ const FrPrestations = () => {
                 </p>
                 <div className="space-x-4">
                   <Button size="lg" variant="outline" className="bg-white text-red-600 hover:bg-gray-100" asChild>
-                    <Link to="/fr/tarifs">Voir nos formules</Link>
+                    <Link to="/fr/tarifs#top">Voir nos formules</Link>
                   </Button>
                   <Button size="lg" variant="outline" className="bg-white text-red-600 hover:bg-gray-100" asChild>
-                    <Link to="/fr/contact">Contactez-nous</Link>
+                    <Link to="/fr/contact#top">Contactez-nous</Link>
                   </Button>
                 </div>
               </CardContent>
