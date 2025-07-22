@@ -182,7 +182,7 @@ const FrAccueil = () => {
                   Nos juristes vous conseillent en toute confidentialité.
                 </p>
                 <Button className="w-full mt-auto bg-primary hover:bg-primary/90 text-primary-foreground border-0 hover-scale transition-all duration-300" asChild>
-                  <Link to="/fr/profils#particulier">Découvrir nos offres particuliers</Link>
+                  <Link to="/fr/profils#particulier">Découvrir notre offre particuliers</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -200,7 +200,7 @@ const FrAccueil = () => {
                   Nos experts vous aident à anticiper les risques.
                 </p>
                 <Button className="w-full mt-auto bg-secondary hover:bg-secondary/90 text-secondary-foreground border-0 hover-scale transition-all duration-300" asChild>
-                  <Link to="/fr/profils#entreprise">Découvrir nos offres entreprises</Link>
+                  <Link to="/fr/profils#entreprise">Découvrir notre offre entreprises</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -218,7 +218,7 @@ const FrAccueil = () => {
                   de façon fluide et fiable.
                 </p>
                 <Button className="w-full mt-auto bg-primary hover:bg-primary/90 text-primary-foreground border-0 hover-scale transition-all duration-300" asChild>
-                  <Link to="/fr/profils">Découvrir nos offres MRE</Link>
+                  <Link to="/fr/profils">Découvrir notre offre MRE</Link>
                 </Button>
               </CardContent>
             </Card>
