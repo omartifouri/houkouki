@@ -182,7 +182,7 @@ const FrAccueil = () => {
                   Nos juristes vous conseillent en toute confidentialité.
                 </p>
                 <Button variant="outline" className="w-full mt-auto" asChild>
-                  <Link to="/fr/profils">Voir nos prestations pour particuliers</Link>
+                  <Link to="/fr/profils">Découvrir nos offres particuliers</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -200,7 +200,7 @@ const FrAccueil = () => {
                   Nos experts vous aident à anticiper les risques.
                 </p>
                 <Button variant="outline" className="w-full mt-auto" asChild>
-                  <Link to="/fr/profils">Découvrir notre offre entreprise</Link>
+                  <Link to="/fr/profils">Découvrir nos offres entreprises</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -218,7 +218,7 @@ const FrAccueil = () => {
                   de façon fluide et fiable.
                 </p>
                 <Button variant="outline" className="w-full mt-auto" asChild>
-                  <Link to="/fr/profils">En savoir plus pour les MRE</Link>
+                  <Link to="/fr/profils">Découvrir nos offres MRE</Link>
                 </Button>
               </CardContent>
             </Card>
