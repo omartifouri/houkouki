@@ -440,25 +440,25 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <ol className="space-y-6">
               <li className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-8 h-8 bg-brand-teal text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <p className="text-lg text-gray-700 mt-1">Remplis le formulaire ou contacte-nous</p>
               </li>
               <li className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-8 h-8 bg-brand-teal text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <p className="text-lg text-gray-700 mt-1">Tu bénéficies d'un premier échange gratuit pour cerner ton besoin</p>
               </li>
               <li className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-8 h-8 bg-brand-teal text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
                   3
                 </div>
                 <p className="text-lg text-gray-700 mt-1">On définit ensemble ton parcours d'accompagnement</p>
               </li>
               <li className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-8 h-8 bg-brand-teal text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
                   4
                 </div>
                 <p className="text-lg text-gray-700 mt-1">Tu démarres avec ton coach ou psychologue dédié</p>
