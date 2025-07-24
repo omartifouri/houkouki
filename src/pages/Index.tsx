@@ -329,15 +329,15 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <ul className="space-y-6 mb-8">
               <li className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-3 h-3 bg-brand-teal rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Première consultation gratuite</p>
               </li>
               <li className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-3 h-3 bg-brand-teal rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Séances à partir de 200 DH</p>
               </li>
               <li className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-3 h-3 bg-brand-teal rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Forfaits sur mesure selon ton besoin (coaching, suivi complet...)</p>
               </li>
             </ul>
