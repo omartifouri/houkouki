@@ -338,7 +338,7 @@ const Index = () => {
       <section className="py-20 px-4 bg-gradient-to-r from-[#C0997A] to-red-600">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Prêt à donner un nouvel élan à votre carrière ?
+            Tu veux avancer, mais tu ne sais plus par où commencer ?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Rejoignez les centaines de professionnels qui ont fait confiance à Houkouki pour réussir leur projet professionnel.
