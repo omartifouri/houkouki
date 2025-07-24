@@ -104,7 +104,7 @@ const Index = () => {
               Pour qui ?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Nous accompagnons tous les profils dans leur développement de carrière
+              Que tu sois étudiant, jeune diplômé ou en reconversion, on commence là où tu en es, avec ce que tu as.
             </p>
           </div>
           
