@@ -57,7 +57,7 @@ const Index = () => {
             <span className="text-red-600">Orientation, coaching, recherche d'emploi… et clarté.</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Houkouki combine coaching psychologique, stratégie de recherche d'emploi et mise en réseau avec des recruteurs pour maximiser vos chances de réussite professionnelle.
+            ILAA, c'est un accompagnement personnalisé pour passer à l'action : écoute, coaching pro, réseau recruteur et CV optimisé.
           </p>
           <div className="flex flex-col gap-4 justify-center">
             <div>
