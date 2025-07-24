@@ -341,7 +341,7 @@ const Index = () => {
             Tu veux avancer, mais tu ne sais plus par où commencer ?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Rejoignez les centaines de professionnels qui ont fait confiance à Houkouki pour réussir leur projet professionnel.
+            👉 Parlons-en. On est là pour t'aider.
           </p>
           <Button size="lg" className="bg-white text-[#C0997A] hover:bg-gray-100 text-lg px-8 py-4" asChild>
             <Link to="/questionnaire">
