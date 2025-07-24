@@ -68,13 +68,13 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <ContactForm>
                 <Button size="lg" className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-lg px-8 py-4">
-                  C'est parti !
+                  Je prends RDV
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </ContactForm>
               <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
                 <Link to="/questionnaire">
-                  Parlez-nous de vous
+                  Parle-nous de toi
                 </Link>
               </Button>
               <Button size="lg" asChild className="bg-gradient-to-r from-[#C0997A] to-[#B8926F] hover:from-[#B8926F] hover:to-[#A68963] text-lg px-8 py-4">
