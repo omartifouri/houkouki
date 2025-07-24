@@ -365,7 +365,7 @@ const Index = () => {
                 />
               </div>
               <p className="text-gray-400">
-                Votre partenaire de confiance pour un accompagnement professionnel personnalisé et efficace.
+                ILAA. Trouver sa direction. S'y engager pleinement. Votre partenaire de confiance pour un accompagnement professionnel personnalisé et efficace.
               </p>
             </div>
             
