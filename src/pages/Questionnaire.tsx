@@ -200,7 +200,7 @@ const Questionnaire = () => {
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Questionnaire d'Orientation Professionnelle</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Bienvenue ! Ce questionnaire a pour but de mieux comprendre votre situation et vos besoins afin de vous accompagner efficacement dans l'orientation de votre parcours professionnel.
+            Bienvenue ! Ce questionnaire a pour but de mieux comprendre ta situation et tes besoins afin de t'accompagner efficacement dans l'orientation de ton parcours professionnel.
           </p>
         </div>
 
@@ -213,7 +213,7 @@ const Questionnaire = () => {
             <CardContent className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="nom">Nom *</Label>
+                  <Label htmlFor="nom">Ton nom *</Label>
                   <Input 
                     id="nom" 
                     value={formData.nom}
@@ -222,7 +222,7 @@ const Questionnaire = () => {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="prenom">Prénom *</Label>
+                  <Label htmlFor="prenom">Ton prénom *</Label>
                   <Input 
                     id="prenom" 
                     value={formData.prenom}
@@ -234,7 +234,7 @@ const Questionnaire = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="age">Âge *</Label>
+                  <Label htmlFor="age">Ton âge *</Label>
                   <Input 
                     id="age" 
                     type="number"
@@ -244,7 +244,7 @@ const Questionnaire = () => {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email">Adresse e-mail *</Label>
+                  <Label htmlFor="email">Ton adresse e-mail *</Label>
                   <Input 
                     id="email" 
                     type="email"
@@ -256,7 +256,7 @@ const Questionnaire = () => {
               </div>
 
               <div>
-                <Label htmlFor="telephone">Numéro de téléphone *</Label>
+                <Label htmlFor="telephone">Ton numéro de téléphone *</Label>
                 <Input 
                   id="telephone" 
                   value={formData.telephone}
@@ -266,7 +266,7 @@ const Questionnaire = () => {
               </div>
 
               <div>
-                <Label htmlFor="niveauEtudes">Niveau d'études *</Label>
+                <Label htmlFor="niveauEtudes">Ton niveau d'études *</Label>
                 <Input 
                   id="niveauEtudes" 
                   value={formData.niveauEtudes}
@@ -276,7 +276,7 @@ const Questionnaire = () => {
               </div>
 
               <div>
-                <Label htmlFor="domaineEtudes">Domaine d'études ou de formation *</Label>
+                <Label htmlFor="domaineEtudes">Ton domaine d'études ou de formation *</Label>
                 <Input 
                   id="domaineEtudes" 
                   value={formData.domaineEtudes}
@@ -286,7 +286,7 @@ const Questionnaire = () => {
               </div>
 
               <div>
-                <Label htmlFor="experiencesPro">Expériences professionnelles (si applicable)</Label>
+                <Label htmlFor="experiencesPro">As-tu déjà une ou des expériences professionnelles ? (si oui, précise-les)</Label>
                 <Textarea 
                   id="experiencesPro" 
                   value={formData.experiencesPro}
@@ -296,7 +296,7 @@ const Questionnaire = () => {
               </div>
 
               <div>
-                <Label>Occupation actuelle *</Label>
+                <Label>Tu es actuellement : *</Label>
                 <RadioGroup 
                   value={formData.occupationActuelle} 
                   onValueChange={(value) => handleInputChange('occupationActuelle', value)}
@@ -304,15 +304,15 @@ const Questionnaire = () => {
                 >
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="etudiant" id="etudiant" />
-                    <Label htmlFor="etudiant">Étudiant(e) en recherche de stage</Label>
+                    <Label htmlFor="etudiant">Étudiant·e en recherche de stage</Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="jeune-diplome" id="jeune-diplome" />
-                    <Label htmlFor="jeune-diplome">Jeune diplômé(e) à la recherche d'un premier emploi</Label>
+                    <Label htmlFor="jeune-diplome">Jeune diplômé·e à la recherche d'un premier emploi</Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="reconversion" id="reconversion" />
-                    <Label htmlFor="reconversion">Professionnel(le) en reconversion</Label>
+                    <Label htmlFor="reconversion">Professionnel·le en reconversion</Label>
                   </div>
                 </RadioGroup>
               </div>
@@ -326,8 +326,8 @@ const Questionnaire = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <Label className="text-lg font-semibold">1. Quelles sont vos principales qualités ?</Label>
-                <p className="text-sm text-gray-600 mb-4">Cochez celles qui s'appliquent à vous</p>
+                <Label className="text-lg font-semibold">1. Quelles sont tes principales qualités ?</Label>
+                <p className="text-sm text-gray-600 mb-4">Coche celles qui s'appliquent à toi</p>
                 <div className="space-y-3">
                   {qualitesOptions.map((option) => (
                     <div key={option.value} className="flex items-start space-x-2">
@@ -363,8 +363,8 @@ const Questionnaire = () => {
               </div>
 
               <div>
-                <Label className="text-lg font-semibold">2. Quels types de tâches préférez-vous accomplir ?</Label>
-                <p className="text-sm text-gray-600 mb-4">Cochez celles qui vous correspondent</p>
+                <Label className="text-lg font-semibold">2. Quels types de tâches préfères-tu accomplir ?</Label>
+                <p className="text-sm text-gray-600 mb-4">Coche celles qui te correspondent</p>
                 <div className="space-y-3">
                   {tachesOptions.map((option) => (
                     <div key={option.value} className="flex items-start space-x-2">
@@ -400,7 +400,7 @@ const Questionnaire = () => {
               </div>
 
               <div>
-                <Label className="text-lg font-semibold">3. Quelle place la créativité occupe-t-elle dans votre travail ou vos études ?</Label>
+                <Label className="text-lg font-semibold">3. Quelle place la créativité occupe-t-elle dans ton travail ou tes études ?</Label>
                 <RadioGroup 
                   value={formData.creativite} 
                   onValueChange={(value) => handleInputChange('creativite', value)}
@@ -426,7 +426,7 @@ const Questionnaire = () => {
               </div>
 
               <div>
-                <Label className="text-lg font-semibold">4. Pratiquez-vous une activité artistique ou créative ?</Label>
+                <Label className="text-lg font-semibold">4. Pratiques-tu une activité artistique ou créative ?</Label>
                 <div className="mt-3 space-y-3">
                   <div className="flex items-center space-x-2">
                     <input 
@@ -469,8 +469,8 @@ const Questionnaire = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <Label className="text-lg font-semibold">1. Quelles compétences maîtrisez-vous le mieux ?</Label>
-                <p className="text-sm text-gray-600 mb-4">Cochez celles qui vous concernent</p>
+                <Label className="text-lg font-semibold">1. Quelles compétences maîtrises-tu le mieux ?</Label>
+                <p className="text-sm text-gray-600 mb-4">Coche celles qui te concernent</p>
                 <div className="space-y-3">
                   {competencesOptions.map((option) => (
                     <div key={option.value} className="flex items-start space-x-2">
@@ -506,10 +506,10 @@ const Questionnaire = () => {
               </div>
 
               <div>
-                <Label className="text-lg font-semibold">2. Objectifs Professionnels</Label>
+                <Label className="text-lg font-semibold">2. Quels sont tes objectifs professionnels à court terme (1-2 ans) ?</Label>
                 
                 <div className="mt-4">
-                  <Label className="font-medium">Court terme (1-2 ans) :</Label>
+                  <Label className="font-medium">Et à plus long terme (5 ans et plus), que souhaites-tu accomplir ?</Label>
                   <div className="mt-2 space-y-2">
                     {[
                       { value: "valider-diplome", label: "Valider mon diplôme" },
@@ -606,7 +606,7 @@ const Questionnaire = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <Label className="text-lg font-semibold">1. Quels canaux utilisez-vous pour rechercher un stage ou un emploi ?</Label>
+                <Label className="text-lg font-semibold">1. Quels canaux utilises-tu pour rechercher un stage ou un emploi ?</Label>
                 <div className="mt-3 space-y-2">
                   {[
                     { value: "plateformes", label: "Plateformes en ligne (LinkedIn, Indeed, Apec, etc.)" },
@@ -645,7 +645,7 @@ const Questionnaire = () => {
               </div>
 
               <div>
-                <Label className="text-lg font-semibold">2. Quels sont vos obstacles principaux dans votre recherche ?</Label>
+                <Label className="text-lg font-semibold">2. Quels sont tes obstacles principaux dans ta recherche ?</Label>
                 <div className="mt-3 space-y-2">
                   {[
                     { value: "confiance", label: "Manque de confiance en soi" },
@@ -684,7 +684,7 @@ const Questionnaire = () => {
               </div>
 
               <div>
-                <Label className="text-lg font-semibold">3. Quel type d'accompagnement souhaitez-vous ?</Label>
+                <Label className="text-lg font-semibold">3. Quel type d'accompagnement aimerais-tu recevoir ?</Label>
                 <div className="mt-3 space-y-2">
                   {[
                     { value: "cv", label: "Coaching sur la rédaction de CV et de lettre de motivation" },
@@ -727,11 +727,11 @@ const Questionnaire = () => {
           {/* Section V - Ce qui Vous Motive dans un Emploi */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl text-red-800">V. Ce qui Vous Motive dans un Emploi</CardTitle>
+              <CardTitle className="text-2xl text-red-800">V. Ce qui te motive dans un emploi</CardTitle>
             </CardHeader>
             <CardContent>
               <div>
-                <Label className="text-lg font-semibold">1. Quels sont vos critères principaux dans le choix d'un poste ?</Label>
+                <Label className="text-lg font-semibold">1. Quels sont tes critères les plus importants dans le choix d'un poste ?</Label>
                 <div className="mt-3 space-y-2">
                   {[
                     { value: "evolution", label: "Possibilité d'évoluer et de monter en compétences" },
@@ -781,7 +781,7 @@ const Questionnaire = () => {
             </CardHeader>
             <CardContent>
               <div>
-                <Label className="text-lg font-semibold">Avez-vous une question ou un besoin spécifique concernant votre recherche ?</Label>
+                <Label className="text-lg font-semibold">As-tu une question ou un besoin spécifique concernant ta recherche ?</Label>
                 <div className="mt-3 space-y-3">
                   <div className="flex items-center space-x-2">
                     <input 
@@ -798,7 +798,7 @@ const Questionnaire = () => {
                     <Textarea 
                       value={formData.questionDetails}
                       onChange={(e) => handleInputChange('questionDetails', e.target.value)}
-                      placeholder="Décrivez votre question ou besoin spécifique..."
+                      placeholder="Décris ta question ou ton besoin spécifique..."
                       className="min-h-[100px] mt-2"
                     />
                   )}
