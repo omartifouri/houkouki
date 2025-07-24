@@ -52,8 +52,8 @@ const Index = () => {
             Soutien carrière professionnelle personnalisé
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Du projet à l'emploi, on vous accompagne
-            <span className="text-red-600"> Orientation, coaching et recherche active</span>
+            🎯 Trouver sa direction. S'y engager pleinement.
+            <span className="text-red-600"> Orientation, coaching, recherche d'emploi… et clarté.</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Houkouki combine coaching psychologique, stratégie de recherche d'emploi et mise en réseau avec des recruteurs pour maximiser vos chances de réussite professionnelle.
