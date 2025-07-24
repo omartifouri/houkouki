@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -157,6 +156,38 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Pourquoi ILAA Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-red-50 to-gray-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Pourquoi choisir ILAA ?
+            </h2>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <ul className="space-y-6">
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">Un accompagnement 100% personnalisé, humain et exigeant</p>
+              </li>
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">Pas de méthode automatique : on part de toi</p>
+              </li>
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">Un travail de fond entre psychologues, coachs et recruteurs</p>
+              </li>
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">Tu n'es pas un dossier. Tu es un projet vivant.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="prestation" className="py-16 px-4 bg-gradient-to-br from-[#C0997A]/10 to-gray-50">
         <div className="container mx-auto">
@@ -170,7 +201,6 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Clarification du projet professionnel */}
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
@@ -197,7 +227,6 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            {/* Préparation aux entretiens */}
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div className="w-12 h-12 bg-[#C0997A]/20 rounded-lg flex items-center justify-center mb-4">
@@ -224,7 +253,6 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            {/* Optimisation CV */}
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div style={{ backgroundColor: '#1A96A0' }} className="w-12 h-12 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
@@ -250,6 +278,72 @@ const Index = () => {
                 </ul>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Et après Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Et après ?
+            </h2>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <ul className="space-y-6">
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-[#C0997A] rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">Tu repars avec une vision claire de ton avenir</p>
+              </li>
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-[#C0997A] rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">Un CV professionnel, prêt à diffuser</p>
+              </li>
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-[#C0997A] rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">Une posture solide pour tes entretiens</p>
+              </li>
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-[#C0997A] rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">Un accompagnement qui ne s'arrête pas après la première étape</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Combien ça coûte Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-green-50 to-gray-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Combien ça coûte ?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+              Chez ILAA, chaque parcours est personnalisé. Nous proposons :
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <ul className="space-y-6 mb-8">
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">Première consultation gratuite</p>
+              </li>
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">Séances à partir de 200 DH</p>
+              </li>
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">Forfaits sur mesure selon ton besoin (coaching, suivi complet...)</p>
+              </li>
+            </ul>
+            <p className="text-lg text-gray-600 text-center">
+              Écris-nous pour recevoir un devis personnalisé.
+            </p>
           </div>
         </div>
       </section>
@@ -330,6 +424,122 @@ const Index = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comment ça marche Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-gray-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Comment ça marche ?
+            </h2>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <ol className="space-y-6">
+              <li className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                  1
+                </div>
+                <p className="text-lg text-gray-700 mt-1">Remplis le formulaire ou contacte-nous</p>
+              </li>
+              <li className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                  2
+                </div>
+                <p className="text-lg text-gray-700 mt-1">Tu bénéficies d'un premier échange gratuit pour cerner ton besoin</p>
+              </li>
+              <li className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                  3
+                </div>
+                <p className="text-lg text-gray-700 mt-1">On définit ensemble ton parcours d'accompagnement</p>
+              </li>
+              <li className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                  4
+                </div>
+                <p className="text-lg text-gray-700 mt-1">Tu démarres avec ton coach ou psychologue dédié</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* Témoignages Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Ils nous ont fait confiance
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <blockquote className="bg-gray-50 p-6 rounded-lg border-l-4 border-red-600">
+              <p className="text-lg text-gray-700 mb-4 italic">
+                "J'étais complètement perdue après mon diplôme. ILAA m'a aidée à clarifier mon cap et à décrocher mon premier emploi."
+              </p>
+              <footer className="text-red-600 font-semibold">– Inès, 23 ans</footer>
+            </blockquote>
+            
+            <blockquote className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#C0997A]">
+              <p className="text-lg text-gray-700 mb-4 italic">
+                "J'ai enfin réussi à faire un CV qui me ressemble et j'ai été recontacté par 2 recruteurs !"
+              </p>
+              <footer className="text-[#C0997A] font-semibold">– Samir, 29 ans</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Questions fréquentes
+            </h2>
+          </div>
+          
+          <div className="max-w-4xl mx-auto space-y-4">
+            <details className="bg-white rounded-lg p-6 shadow-sm border">
+              <summary className="text-lg font-semibold text-gray-900 cursor-pointer hover:text-red-600 transition-colors">
+                Est-ce que je peux juste refaire mon CV sans accompagnement complet ?
+              </summary>
+              <p className="text-gray-700 mt-4">
+                Oui, tu peux choisir uniquement l'optimisation CV. Mais un accompagnement global donne souvent de meilleurs résultats.
+              </p>
+            </details>
+            
+            <details className="bg-white rounded-lg p-6 shadow-sm border">
+              <summary className="text-lg font-semibold text-gray-900 cursor-pointer hover:text-red-600 transition-colors">
+                Est-ce que je peux payer en plusieurs fois ?
+              </summary>
+              <p className="text-gray-700 mt-4">
+                Oui. Nous proposons des facilités de paiement sur les forfaits supérieurs à 500 DH.
+              </p>
+            </details>
+            
+            <details className="bg-white rounded-lg p-6 shadow-sm border">
+              <summary className="text-lg font-semibold text-gray-900 cursor-pointer hover:text-red-600 transition-colors">
+                Comment se passent les séances ?
+              </summary>
+              <p className="text-gray-700 mt-4">
+                En visio ou en présentiel selon ta localisation. Tu choisis tes créneaux en ligne.
+              </p>
+            </details>
+            
+            <details className="bg-white rounded-lg p-6 shadow-sm border">
+              <summary className="text-lg font-semibold text-gray-900 cursor-pointer hover:text-red-600 transition-colors">
+                Je ne sais pas ce que je veux faire, c'est grave ?
+              </summary>
+              <p className="text-gray-700 mt-4">
+                Absolument pas. On est justement là pour t'aider à clarifier ton cap, même (et surtout) si tu te sens perdu(e).
+              </p>
+            </details>
           </div>
         </div>
       </section>
