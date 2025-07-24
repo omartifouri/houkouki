@@ -62,7 +62,7 @@ const Index = () => {
           <div className="flex flex-col gap-4 justify-center">
             <div>
               <a href="#prestation" className="text-2xl font-bold text-[#C0997A] hover:text-[#B8926F] transition-colors inline-block border-2 border-[#C0997A] hover:border-[#B8926F] px-6 py-3 rounded-lg bg-white hover:bg-[#C0997A]/10">
-                Notre approche complète
+                Concrètement, comment ça marche ?
               </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
