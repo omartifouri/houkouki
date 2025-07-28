@@ -543,6 +543,9 @@ const Index = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
+          <p className="text-xl text-white/90 mt-6 max-w-2xl mx-auto font-medium">
+            ILAA. Trouver sa direction. S'y engager pleinement.
+          </p>
         </div>
       </section>
 
@@ -559,7 +562,7 @@ const Index = () => {
                 />
               </div>
               <p className="text-gray-400">
-                ILAA. Trouver sa direction. S'y engager pleinement. Votre partenaire de confiance pour un accompagnement professionnel personnalisé et efficace.
+                ILAA. Trouver sa direction. S'y engager pleinement.
               </p>
             </div>
             
