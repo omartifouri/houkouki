@@ -71,11 +71,6 @@ const Index = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </ContactForm>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
-                <Link to="/questionnaire">
-                  Parle-nous de toi
-                </Link>
-              </Button>
               <Button size="lg" asChild className="bg-gradient-to-r from-[#C0997A] to-[#B8926F] hover:from-[#B8926F] hover:to-[#A68963] text-lg px-8 py-4">
                 <a href="/create-cv">
                   <FileText className="mr-2 h-5 w-5" />
@@ -184,6 +179,14 @@ const Index = () => {
                 <p className="text-lg text-gray-700">Tu n'es pas un dossier. Tu es un projet vivant.</p>
               </li>
             </ul>
+            
+            <div className="text-center mt-8">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
+                <Link to="/questionnaire">
+                  Parle-nous de toi
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
