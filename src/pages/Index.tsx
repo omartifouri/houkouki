@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Brain, FileText, FileUser, Calendar, Shield, CheckCircle, Star, ArrowRight, Send } from "lucide-react";
+import { Users, Brain, FileText, FileUser, Calendar, Shield, CheckCircle, ChevronRight, Star, ArrowRight, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactForm from "@/components/ContactForm";
 import AuthModal from "@/components/AuthModal";
@@ -196,11 +196,11 @@ const Index = () => {
               <CardContent>
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-[#C0997A] mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="h-5 w-5 text-[#C0997A] mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-600">2 séances de 2h chacune avec un psychologue clinicien</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-[#C0997A] mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="h-5 w-5 text-[#C0997A] mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-600">Identification des débouchés selon ton profil</span>
                   </li>
                 </ul>
@@ -218,19 +218,19 @@ const Index = () => {
               <CardContent>
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-600">5 séances d'1h chacune avec un psychologue clinicien</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-600">Renforcement de la confiance en soi</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-600">Préparation mentale aux entretiens</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-600">Optimisation de ton CV</span>
                   </li>
                 </ul>
@@ -248,15 +248,15 @@ const Index = () => {
               <CardContent>
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-600">Formulaire de saisie optimisé</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-600">CV téléchargeable attractif</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-600">Diffusion aux recruteurs partenaires</span>
                   </li>
                 </ul>
