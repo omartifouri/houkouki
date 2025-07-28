@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, Clock } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
+import ContactForm from "./ContactForm";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -172,15 +173,23 @@ const FrenchNavigation = () => {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                   <Link to="/fr/contact" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
-                     Contact
-                   </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+               <NavigationMenuItem>
+                 <NavigationMenuLink asChild>
+                    <Link to="/fr/contact" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
+                      Contact
+                    </Link>
+                 </NavigationMenuLink>
+               </NavigationMenuItem>
+
+               <NavigationMenuItem>
+                 <ContactForm>
+                   <span className="text-red-600 hover:text-red-700 transition-colors px-3 py-2 cursor-pointer font-medium">
+                     Je prends RDV
+                   </span>
+                 </ContactForm>
+               </NavigationMenuItem>
+             </NavigationMenuList>
+           </NavigationMenu>
         </nav>
         </div>
       </header>
