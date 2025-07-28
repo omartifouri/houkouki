@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Brain, FileText, Calendar, Shield, CheckCircle, Star, ArrowRight, Send } from "lucide-react";
+import { Users, Brain, FileText, FileUser, Calendar, Shield, CheckCircle, Star, ArrowRight, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactForm from "@/components/ContactForm";
 import AuthModal from "@/components/AuthModal";
@@ -240,7 +240,7 @@ const Index = () => {
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div style={{ backgroundColor: '#1A96A0' }} className="w-12 h-12 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
-                  <FileText className="h-6 w-6" style={{ color: '#1A96A0' }} />
+                  <FileUser className="h-6 w-6" style={{ color: '#1A96A0' }} />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Optimisation CV</CardTitle>
                 <CardDescription>Mise en forme professionnelle</CardDescription>
