@@ -303,7 +303,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Combien ça coûte ?
+               Combien ça coûte ?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
               Chez ILAA, chaque parcours est personnalisé. Nous proposons :
@@ -314,15 +314,11 @@ const Index = () => {
             <ul className="space-y-6 mb-8">
               <li className="flex items-start space-x-4">
                 <div className="w-3 h-3 bg-brand-teal rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-lg text-gray-700">Première consultation gratuite</p>
+                <p className="text-lg text-gray-700">Première consultation de définition de ton besoin gratuite</p>
               </li>
               <li className="flex items-start space-x-4">
                 <div className="w-3 h-3 bg-brand-teal rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-lg text-gray-700">Séances à partir de 200 DH</p>
-              </li>
-              <li className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-brand-teal rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-lg text-gray-700">Forfaits sur mesure selon ton besoin (coaching, suivi complet...)</p>
+                <p className="text-lg text-gray-700">Forfaits sur mesure selon ton besoin (coaching, suivi complet...) à partir de 2800 dh ht</p>
               </li>
             </ul>
             <p className="text-lg text-gray-600 text-center">
