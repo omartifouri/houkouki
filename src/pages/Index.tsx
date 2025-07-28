@@ -58,39 +58,10 @@ const Index = () => {
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             ILAA, c'est un accompagnement personnalisé pour passer à l'action : écoute, coaching pro, réseau recruteur et CV optimisé.
           </p>
-          <div className="flex flex-col gap-4 justify-center">
-            <div>
-              <a href="#prestation" className="text-2xl font-bold text-[#C0997A] hover:text-[#B8926F] transition-colors inline-block border-2 border-[#C0997A] hover:border-[#B8926F] px-6 py-3 rounded-lg bg-white hover:bg-[#C0997A]/10">
-                Concrètement, comment ça marche ?
-              </a>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ContactForm>
-                <Button size="lg" className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-lg px-8 py-4">
-                  Je prends RDV
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </ContactForm>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
-                <Link to="/questionnaire">
-                  Parle-nous de toi
-                </Link>
-              </Button>
-              <Button size="lg" asChild className="bg-gradient-to-r from-[#C0997A] to-[#B8926F] hover:from-[#B8926F] hover:to-[#A68963] text-lg px-8 py-4">
-                <a href="/create-cv">
-                  <FileText className="mr-2 h-5 w-5" />
-                  Créez votre CV
-                </a>
-              </Button>
-            </div>
-            <div className="flex justify-center mt-2">
-              <RecommendModal>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-[#42a8b0] text-[#42a8b0] hover:bg-[#42a8b0] hover:text-white">
-                  <Send className="mr-2 h-5 w-5" />
-                  Recommander à un(e) ami(e)
-                </Button>
-              </RecommendModal>
-            </div>
+          <div className="flex justify-center">
+            <a href="#prestation" className="text-2xl font-bold text-[#C0997A] hover:text-[#B8926F] transition-colors inline-block border-2 border-[#C0997A] hover:border-[#B8926F] px-6 py-3 rounded-lg bg-white hover:bg-[#C0997A]/10">
+              Concrètement, comment ça marche ?
+            </a>
           </div>
         </div>
       </section>
