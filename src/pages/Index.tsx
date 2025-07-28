@@ -64,6 +64,13 @@ const Index = () => {
                 Concrètement, comment ça marche ?
               </a>
             </div>
+            <div className="flex justify-center mt-4">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
+                <Link to="/questionnaire">
+                  Parle-nous de toi
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -157,14 +164,6 @@ const Index = () => {
                 <p className="text-lg text-gray-700">Tu n'es pas un dossier. Tu es un projet vivant.</p>
               </li>
             </ul>
-            
-            <div className="text-center mt-8">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
-                <Link to="/questionnaire">
-                  Parle-nous de toi
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
