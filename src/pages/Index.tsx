@@ -242,14 +242,14 @@ const Index = () => {
                 <div style={{ backgroundColor: '#1A96A0' }} className="w-12 h-12 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
                   <FileUser className="h-6 w-6" style={{ color: '#1A96A0' }} />
                 </div>
-                <CardTitle className="text-xl text-gray-900">Optimisation CV</CardTitle>
+                <CardTitle className="text-xl text-gray-900">Optimisation de ton CV</CardTitle>
                 <CardDescription>Mise en forme professionnelle</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-600">Formulaire de saisie optimisé</span>
+                    <span className="text-sm text-gray-600">Formulaire de saisie optimisé (offert dans le cadre du pack)</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
