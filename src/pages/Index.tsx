@@ -51,7 +51,7 @@ const Index = () => {
             Soutien carrière professionnelle personnalisé
           </Badge>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            🎯 Trouver sa direction. S'y engager pleinement.
+            Trouver sa direction. S'y engager pleinement.
             <br />
             <span className="text-red-600">Orientation, coaching, recherche d'emploi… et clarté.</span>
           </h1>
