@@ -59,9 +59,9 @@ const Index = () => {
             ILAA, c'est un accompagnement personnalisé pour passer à l'action : écoute, coaching pro, réseau recruteur et CV optimisé.
           </p>
           <div className="flex justify-center">
-            <a href="#prestation" className="text-2xl font-bold text-[#C0997A] hover:text-[#B8926F] transition-colors inline-block border-2 border-[#C0997A] hover:border-[#B8926F] px-6 py-3 rounded-lg bg-white hover:bg-[#C0997A]/10">
-              Concrètement, comment ça marche ?
-            </a>
+            <Link to="/questionnaire" className="text-2xl font-bold text-red-600 hover:text-red-700 transition-colors inline-block border-2 border-red-600 hover:border-red-700 px-6 py-3 rounded-lg bg-white hover:bg-red-600/10">
+              Parle-nous de toi
+            </Link>
           </div>
         </div>
       </section>
