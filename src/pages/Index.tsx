@@ -197,15 +197,11 @@ const Index = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-2">
                     <CheckCircle className="h-5 w-5 text-[#C0997A] mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-600">1 séance d'1h par an avec un psychologue clinicien</span>
+                    <span className="text-sm text-gray-600">2 séances de 2h chacune avec un psychologue clinicien</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <CheckCircle className="h-5 w-5 text-[#C0997A] mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-600">Identification des débouchés selon votre profil</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-[#C0997A] mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-600">Séances supplémentaires à 200 DH HT</span>
+                    <span className="text-sm text-gray-600">Identification des débouchés selon ton profil</span>
                   </li>
                 </ul>
               </CardContent>
