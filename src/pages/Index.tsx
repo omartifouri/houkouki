@@ -525,7 +525,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-brand-teal to-brand-beige">
+      <section className="py-20 px-4" style={{backgroundColor: '#C0997A'}}>
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Tu veux avancer, mais tu ne sais plus par où commencer ?
