@@ -69,7 +69,7 @@ Message: ${data.message}`
       setIsSubmitted(true);
       toast({
         title: "Demande de devis envoyée",
-        description: "Nous avons bien reçu votre demande de devis et vous recontacterons rapidement.",
+        description: "Nous avons bien reçu ta demande de devis et vous recontacterons rapidement.",
       });
 
       // Réinitialiser après 5 secondes
@@ -82,7 +82,7 @@ Message: ${data.message}`
       console.error('Erreur:', error);
       toast({
         title: "Erreur",
-        description: "Une erreur est survenue lors de l'envoi de votre demande.",
+        description: "Une erreur est survenue lors de l'envoi de ta demande.",
         variant: "destructive",
       });
     } finally {
@@ -102,7 +102,7 @@ Message: ${data.message}`
               Demande de devis envoyée !
             </h3>
             <p className="text-gray-600 text-lg">
-              Nous analysons votre demande et vous proposerons un devis personnalisé dans les plus brefs délais.
+              Nous analysons ta demande et vous proposerons un devis personnalisé dans les plus brefs délais.
             </p>
           </div>
         </CardContent>
@@ -141,7 +141,7 @@ Message: ${data.message}`
                     <FormItem>
                       <FormLabel>Nom *</FormLabel>
                       <FormControl>
-                        <Input placeholder="Votre nom" {...field} />
+                        <Input placeholder="Ton nom" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -156,7 +156,7 @@ Message: ${data.message}`
                     <FormItem>
                       <FormLabel>Prénom *</FormLabel>
                       <FormControl>
-                        <Input placeholder="Votre prénom" {...field} />
+                        <Input placeholder="Ton prénom" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -182,7 +182,7 @@ Message: ${data.message}`
                         Email *
                       </FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="votre@email.com" {...field} />
+                        <Input type="email" placeholder="ton@email.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -200,7 +200,7 @@ Message: ${data.message}`
                         Téléphone *
                       </FormLabel>
                       <FormControl>
-                        <Input placeholder="Votre numéro" {...field} />
+                        <Input placeholder="Ton numéro" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -224,7 +224,7 @@ Message: ${data.message}`
                     <FormItem>
                       <FormLabel>Entreprise</FormLabel>
                       <FormControl>
-                        <Input placeholder="Nom de votre entreprise" {...field} />
+                        <Input placeholder="Nom de ton entreprise" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -238,7 +238,7 @@ Message: ${data.message}`
                     <FormItem>
                       <FormLabel>Poste actuel</FormLabel>
                       <FormControl>
-                        <Input placeholder="Votre poste" {...field} />
+                        <Input placeholder="Ton poste" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -251,7 +251,7 @@ Message: ${data.message}`
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
                 <FileText className="w-5 h-5 text-[#C0997A]" />
-                Détails de votre projet
+                Détails de ton projet
               </h3>
               
               <FormField
@@ -288,16 +288,16 @@ Message: ${data.message}`
             <FormField
               control={form.control}
               name="message"
-              rules={{ required: "Veuillez décrire vos besoins" }}
+              rules={{ required: "Veuillez décrire tes besoins" }}
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="flex items-center gap-2">
                     <MessageSquare className="w-4 h-4" />
-                    Décrivez vos besoins *
+                    Décrive tes besoins *
                   </FormLabel>
                   <FormControl>
                     <Textarea 
-                      placeholder="Décrivez votre situation actuelle, vos objectifs, et tout ce qui pourrait nous aider à vous proposer le meilleur accompagnement..."
+                      placeholder="Décrive ta situation actuelle, tes objectifs, et tout ce qui pourrait nous aider à te proposer le meilleur accompagnement..."
                       className="min-h-[120px]"
                       {...field}
                     />
