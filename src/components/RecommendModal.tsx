@@ -22,7 +22,7 @@ const RecommendModal = ({ children }: RecommendModalProps) => {
             Recommander Houkouki
           </DialogTitle>
           <DialogDescription>
-            Partagez Houkouki avec vos proches
+            Partagez Houkouki avec tes proches
           </DialogDescription>
         </DialogHeader>
         <RecommendToFriend />

@@ -71,18 +71,18 @@ const RecommendToFriend = () => {
     <div className="flex flex-col gap-4">
       <div className="grid gap-3">
         <div>
-          <Label htmlFor="yourName">Votre nom</Label>
+          <Label htmlFor="yourName">Ton nom</Label>
           <Input
             id="yourName"
             type="text"
-            placeholder="Votre prénom et nom"
+            placeholder="Ton prénom et nom"
             value={yourName}
             onChange={(e) => setYourName(e.target.value)}
           />
         </div>
         
         <div>
-          <Label htmlFor="friendEmail">Email de votre ami(e)</Label>
+          <Label htmlFor="friendEmail">Email de ton ami(e)</Label>
           <Input
             id="friendEmail"
             type="email"
@@ -96,7 +96,7 @@ const RecommendToFriend = () => {
           <Label htmlFor="personalMessage">Message personnel (optionnel)</Label>
           <Textarea
             id="personalMessage"
-            placeholder="Ajoutez un message personnel pour votre ami(e)..."
+            placeholder="Ajoutez un message personnel pour ton ami(e)..."
             value={personalMessage}
             onChange={(e) => setPersonalMessage(e.target.value)}
             className="min-h-[80px]"
@@ -114,7 +114,7 @@ const RecommendToFriend = () => {
       </Button>
       
       <p className="text-sm text-gray-600">
-        Votre ami(e) recevra un email de recommandation personnalisé sur les services Houkouki
+        Ton ami(e) recevra un email de recommandation personnalisé sur les services Houkouki
       </p>
     </div>
   );
