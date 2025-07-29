@@ -159,7 +159,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
                       <FormItem>
                         <FormLabel>Nom *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Votre nom" {...field} />
+                          <Input placeholder="Ton nom" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -174,7 +174,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
                       <FormItem>
                         <FormLabel>Prénom *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Votre prénom" {...field} />
+                          <Input placeholder="Ton prénom" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -224,7 +224,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
                   rules={{ required: "Veuillez sélectionner votre profil" }}
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Vous êtes *</FormLabel>
+                      <FormLabel>Tu es *</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger>
