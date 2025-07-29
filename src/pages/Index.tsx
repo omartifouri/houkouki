@@ -243,7 +243,7 @@ const Index = () => {
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div style={{ backgroundColor: '#1A96A0' }} className="w-12 h-12 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
-                  <FileUser className="h-6 w-6" style={{ color: '#1A96A0' }} />
+                  <FileText className="h-6 w-6" style={{ color: '#1A96A0' }} />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Optimisation de ton CV</CardTitle>
                 <CardDescription>Mise en forme professionnelle</CardDescription>
