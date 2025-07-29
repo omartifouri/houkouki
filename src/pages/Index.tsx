@@ -311,13 +311,13 @@ const Index = () => {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <ul className="space-y-6 mb-8">
-              <li className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-brand-teal rounded-full mt-2 flex-shrink-0"></div>
+            <ul className="space-y-6 mb-8 text-center">
+              <li className="flex flex-col items-center space-y-2">
+                <div className="w-3 h-3 bg-brand-teal rounded-full flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Première consultation de définition de ton besoin gratuite</p>
               </li>
-              <li className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-brand-teal rounded-full mt-2 flex-shrink-0"></div>
+              <li className="flex flex-col items-center space-y-2">
+                <div className="w-3 h-3 bg-brand-teal rounded-full flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Forfaits sur mesure selon ton besoin (coaching, suivi complet...) à partir de 2800 dh ht</p>
               </li>
             </ul>
