@@ -97,7 +97,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
-                  Accompagnement personnalisé pour décrocher le stage de vos rêves et bien vous préparer au monde professionnel.
+                  Accompagnement personnalisé pour décrocher le stage de tes rêves et bien te préparer au monde professionnel.
                 </p>
               </CardContent>
             </Card>
@@ -112,7 +112,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
-                  Stratégie complète pour transformer votre diplôme en opportunité professionnelle concrète.
+                  Stratégie complète pour transformer ton diplôme en opportunité professionnelle concrète.
                 </p>
               </CardContent>
             </Card>
@@ -127,7 +127,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
-                  Accompagnement expert pour réussir votre transition professionnelle et valoriser votre expérience.
+                  Accompagnement expert pour réussir ta transition professionnelle et valoriser ton expérience.
                 </p>
               </CardContent>
             </Card>
@@ -197,7 +197,7 @@ const Index = () => {
                   <Brain className="h-6 w-6 text-red-600" />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Clarification du projet</CardTitle>
-                <CardDescription>Identification de votre voie professionnelle</CardDescription>
+                <CardDescription>Identification de ta voie professionnelle</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
@@ -367,7 +367,7 @@ const Index = () => {
                         Gestion des rendez-vous
                       </Link>
                     </h3>
-                    <p className="text-gray-600">Sélectionnez facilement vos créneaux avec nos psychologues et chargés de recrutement via notre formulaire en ligne.</p>
+                    <p className="text-gray-600">Sélectionnez facilement tes créneaux avec nos psychologues et chargés de recrutement via notre formulaire en ligne.</p>
                   </div>
                 </div>
 
@@ -385,10 +385,10 @@ const Index = () => {
                   <div style={{ backgroundColor: '#1A96A0' }} className="w-10 h-10 bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Shield className="h-5 w-5" style={{ color: '#1A96A0' }} />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Espace sécurisé</h3>
-                    <p className="text-gray-600">Consultez le statut de votre dossier, l'historique de vos rendez-vous et échangez avec nos experts.</p>
-                  </div>
+                   <div>
+                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Espace sécurisé</h3>
+                     <p className="text-gray-600">Consultez le statut de ton dossier, l'historique de tes rendez-vous et échangez avec nos experts.</p>
+                   </div>
                 </div>
               </div>
             </div>
@@ -567,7 +567,7 @@ const Index = () => {
               Contactez-nous
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Vous avez des questions ? Parlons de votre projet professionnel
+              Tu as des questions ? Parlons de ton projet professionnel
             </p>
           </div>
           
