@@ -251,7 +251,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
                       <FormLabel>Message</FormLabel>
                       <FormControl>
                         <Textarea 
-                          placeholder="Décrive-nous ta situation et vos objectifs..."
+                          placeholder="Décrive-nous ta situation et tes objectifs..."
                           className="min-h-[100px]"
                           {...field}
                         />
