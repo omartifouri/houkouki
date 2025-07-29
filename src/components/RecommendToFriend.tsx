@@ -114,7 +114,7 @@ const RecommendToFriend = () => {
       </Button>
       
       <p className="text-sm text-gray-600">
-        Ton ami(e) recevra un email de recommandation personnalisé sur les services Houkouki
+        Ton ami(e) recevra un email de recommandation personnalisé sur les services Ilaa
       </p>
     </div>
   );

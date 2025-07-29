@@ -19,10 +19,10 @@ const RecommendModal = ({ children }: RecommendModalProps) => {
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <Send className="h-5 w-5 text-red-600" />
-            Recommander Houkouki
+            Recommander Ilaa
           </DialogTitle>
           <DialogDescription>
-            Partagez Houkouki avec tes proches
+            Partagez Ilaa avec tes proches
           </DialogDescription>
         </DialogHeader>
         <RecommendToFriend />
