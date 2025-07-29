@@ -587,7 +587,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <h3 className="text-2xl font-bold text-white">Ilaa</h3>
+                <h3 className="text-2xl font-bold text-black">Ilaa</h3>
               </div>
               <p className="text-gray-400">
                 ILAA. Trouver sa direction. S'y engager pleinement.
