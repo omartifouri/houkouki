@@ -14,10 +14,11 @@ const BookingHeader = ({ user }: BookingHeaderProps) => {
         <Link to="/" className="flex items-center space-x-2">
           <ArrowLeft className="h-5 w-5 text-gray-600" />
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-red-600 to-red-800 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">H</span>
-            </div>
-            <span className="text-2xl font-bold text-red-800">Houkouki</span>
+            <img 
+              src="/lovable-uploads/dfdc0f4e-a6f8-4767-9a16-dccbe2acd2af.png" 
+              alt="ILAA Logo" 
+              className="h-8 w-auto"
+            />
           </div>
         </Link>
       </div>

@@ -12,10 +12,12 @@ const AdminHeader = () => {
           <span>Retour à l'accueil</span>
         </Link>
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-r from-red-600 to-red-800 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">H</span>
-          </div>
-          <span className="text-2xl font-bold text-red-800">Houkouki Admin</span>
+          <img 
+            src="/lovable-uploads/dfdc0f4e-a6f8-4767-9a16-dccbe2acd2af.png" 
+            alt="ILAA Logo" 
+            className="h-8 w-auto"
+          />
+          <span className="text-2xl font-bold text-red-800">ILAA Admin</span>
         </div>
       </div>
     </header>
