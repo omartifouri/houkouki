@@ -557,9 +557,9 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
             <ContactForm>
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
+              <Button size="lg" className="bg-[#C0997A] hover:bg-[#A68A6E] text-white">
                 Nous contacter
               </Button>
             </ContactForm>
