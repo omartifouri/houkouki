@@ -276,21 +276,21 @@ const Index = () => {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <ul className="space-y-6">
-              <li className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-[#C0997A] rounded-full mt-2 flex-shrink-0"></div>
+            <ul className="space-y-6 text-center">
+              <li className="flex flex-col items-center space-y-2">
+                <div className="w-3 h-3 bg-[#C0997A] rounded-full flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Tu repars avec une vision claire de ton avenir</p>
               </li>
-              <li className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-[#C0997A] rounded-full mt-2 flex-shrink-0"></div>
+              <li className="flex flex-col items-center space-y-2">
+                <div className="w-3 h-3 bg-[#C0997A] rounded-full flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Un CV professionnel, prêt à diffuser</p>
               </li>
-              <li className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-[#C0997A] rounded-full mt-2 flex-shrink-0"></div>
+              <li className="flex flex-col items-center space-y-2">
+                <div className="w-3 h-3 bg-[#C0997A] rounded-full flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Une posture solide pour tes entretiens</p>
               </li>
-              <li className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-[#C0997A] rounded-full mt-2 flex-shrink-0"></div>
+              <li className="flex flex-col items-center space-y-2">
+                <div className="w-3 h-3 bg-[#C0997A] rounded-full flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Un accompagnement qui ne s'arrête pas après la première étape</p>
               </li>
             </ul>
