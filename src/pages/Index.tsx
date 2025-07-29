@@ -311,10 +311,10 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
                Combien ça coûte ?
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-4">
+            <p className="text-2xl text-gray-600 max-w-2xl mx-auto mb-4">
               Chez ILAA, chaque parcours est personnalisé.
             </p>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+            <p className="text-2xl text-gray-600 max-w-2xl mx-auto mb-8">
               Nous proposons :
             </p>
           </div>
@@ -322,10 +322,10 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <ul className="space-y-6 mb-8 text-center">
               <li className="text-center">
-                <p className="text-lg text-gray-700">Première consultation de définition de ton besoin gratuite</p>
+                <p className="text-xl text-gray-700">Première consultation de définition de ton besoin gratuite</p>
               </li>
               <li className="text-center">
-                <p className="text-lg text-gray-700">Forfaits sur mesure selon ton besoin (coaching, suivi complet...) à partir de 2800 dh ht</p>
+                <p className="text-xl text-gray-700">Forfaits sur mesure selon ton besoin (coaching, suivi complet...) à partir de 2800 dh ht</p>
               </li>
             </ul>
             <div className="text-center">
