@@ -190,7 +190,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
                     <FormItem>
                       <FormLabel>Téléphone *</FormLabel>
                       <FormControl>
-                        <Input placeholder="Votre numéro de téléphone" {...field} />
+                        <Input placeholder="Ton numéro de téléphone" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -211,7 +211,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
                     <FormItem>
                       <FormLabel>Adresse email *</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="votre@email.com" {...field} />
+                        <Input type="email" placeholder="ton@email.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
