@@ -153,21 +153,21 @@ const Index = () => {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <ul className="space-y-6 text-center">
-              <li className="flex flex-col items-center space-y-2">
-                <div className="w-3 h-3 bg-red-600 rounded-full flex-shrink-0"></div>
+            <ul className="space-y-6">
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Un accompagnement 100% personnalisé, humain et exigeant</p>
               </li>
-              <li className="flex flex-col items-center space-y-2">
-                <div className="w-3 h-3 bg-red-600 rounded-full flex-shrink-0"></div>
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Pas de méthode automatique : on part de toi</p>
               </li>
-              <li className="flex flex-col items-center space-y-2">
-                <div className="w-3 h-3 bg-red-600 rounded-full flex-shrink-0"></div>
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Un travail de fond entre psychologues, coachs et recruteurs</p>
               </li>
-              <li className="flex flex-col items-center space-y-2">
-                <div className="w-3 h-3 bg-red-600 rounded-full flex-shrink-0"></div>
+              <li className="flex items-start space-x-4">
+                <div className="w-3 h-3 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Tu n'es pas un dossier. Tu es un projet vivant.</p>
               </li>
             </ul>
