@@ -64,7 +64,7 @@ export default function AuthModal({ children }: AuthModalProps) {
     } else {
       toast({
         title: "Inscription réussie",
-        description: "Vérifiez votre email pour confirmer votre compte"
+        description: "Vérifie ton email pour confirmer ton compte"
       })
       setOpen(false)
       resetForm()
@@ -100,7 +100,7 @@ export default function AuthModal({ children }: AuthModalProps) {
                   Connexion
                 </CardTitle>
                 <CardDescription>
-                  Connectez-vous à votre compte Houkouki
+                  Connecte-toi à ton compte ILAA
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -143,7 +143,7 @@ export default function AuthModal({ children }: AuthModalProps) {
                   Inscription
                 </CardTitle>
                 <CardDescription>
-                  Créez votre compte Houkouki
+                  Crée ton compte ILAA
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -155,7 +155,7 @@ export default function AuthModal({ children }: AuthModalProps) {
                       type="text"
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
-                      placeholder="Votre prénom"
+                      placeholder="Ton prénom"
                     />
                   </div>
                   <div>
@@ -165,7 +165,7 @@ export default function AuthModal({ children }: AuthModalProps) {
                       type="text"
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
-                      placeholder="Votre nom"
+                      placeholder="Ton nom"
                     />
                   </div>
                 </div>
