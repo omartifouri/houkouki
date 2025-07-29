@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Users, Brain, FileText, FileUser, Calendar, Shield, CheckCircle, ChevronRight, Star, ArrowRight, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContactForm from "@/components/ContactForm";
+import DevisModal from "@/components/DevisModal";
 import AuthModal from "@/components/AuthModal";
 import UserMenu from "@/components/UserMenu";
 import RecommendModal from "@/components/RecommendModal";
@@ -323,9 +324,16 @@ const Index = () => {
                 <p className="text-lg text-gray-700">Forfaits sur mesure selon ton besoin (coaching, suivi complet...) à partir de 2800 dh ht</p>
               </li>
             </ul>
-            <p className="text-lg text-gray-600 text-center">
-              Écris-nous pour recevoir un devis personnalisé.
-            </p>
+            <div className="text-center">
+              <DevisModal>
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-[#C0997A] to-[#A68A6E] hover:from-[#A68A6E] hover:to-[#8B7355] text-white text-lg px-8 py-3"
+                >
+                  Écris-nous pour recevoir un devis personnalisé
+                </Button>
+              </DevisModal>
+            </div>
           </div>
         </div>
       </section>
