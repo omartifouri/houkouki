@@ -19,8 +19,6 @@ interface DevisRequestData {
   entreprise?: string;
   poste?: string;
   typeService: string;
-  budget?: string;
-  delai?: string;
   message: string;
 }
 
@@ -38,8 +36,6 @@ const DevisRequestForm = () => {
       entreprise: "",
       poste: "",
       typeService: "",
-      budget: "",
-      delai: "",
       message: ""
     }
   });
@@ -61,7 +57,7 @@ const DevisRequestForm = () => {
           profil: "demande-devis",
           message: `DEMANDE DE DEVIS
 Type de service: ${data.typeService}
-${data.entreprise ? `Entreprise: ${data.entreprise}\n` : ''}${data.poste ? `Poste: ${data.poste}\n` : ''}${data.budget ? `Budget: ${data.budget}\n` : ''}${data.delai ? `Délai souhaité: ${data.delai}\n` : ''}
+${data.entreprise ? `Entreprise: ${data.entreprise}\n` : ''}${data.poste ? `Poste: ${data.poste}\n` : ''}
 Message: ${data.message}`
         }]);
 
@@ -286,58 +282,6 @@ Message: ${data.message}`
                 )}
               />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <FormField
-                  control={form.control}
-                  name="budget"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Budget approximatif</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Sélectionnez votre budget" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="moins-3000">Moins de 3000 DH</SelectItem>
-                          <SelectItem value="3000-5000">3000 - 5000 DH</SelectItem>
-                          <SelectItem value="5000-8000">5000 - 8000 DH</SelectItem>
-                          <SelectItem value="8000-12000">8000 - 12000 DH</SelectItem>
-                          <SelectItem value="plus-12000">Plus de 12000 DH</SelectItem>
-                          <SelectItem value="a-definir">À définir ensemble</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="delai"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Délai souhaité</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Quand souhaitez-vous commencer ?" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="urgent">Urgent (sous 1 semaine)</SelectItem>
-                          <SelectItem value="1-2-semaines">1-2 semaines</SelectItem>
-                          <SelectItem value="1-mois">Dans le mois</SelectItem>
-                          <SelectItem value="2-3-mois">2-3 mois</SelectItem>
-                          <SelectItem value="flexible">Flexible</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
             </div>
 
             {/* Message */}
