@@ -311,8 +311,11 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
                Combien ça coûte ?
             </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-4">
+              Chez ILAA, chaque parcours est personnalisé.
+            </p>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-              Chez ILAA, chaque parcours est personnalisé. Nous proposons :
+              Nous proposons :
             </p>
           </div>
           
