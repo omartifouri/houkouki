@@ -545,8 +545,30 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section id="contact" className="py-16 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Contactez-nous
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Vous avez des questions ? Parlons de votre projet professionnel
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <ContactForm>
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
+                Nous contacter
+              </Button>
+            </ContactForm>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer id="contact" className="bg-brand-red text-white py-12 px-4">
+      <footer className="bg-brand-red text-white py-12 px-4">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
