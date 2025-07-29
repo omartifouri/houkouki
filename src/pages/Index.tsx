@@ -20,8 +20,8 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/5d7e7c1c-ebd4-4271-a028-9798957bf332.png" 
-              alt="Houkouki Logo" 
+              src="/lovable-uploads/4202db25-ce0c-415f-b72b-0766f38e24fb.png" 
+              alt="ILAA Logo" 
               className="h-10 w-auto"
             />
           </div>
