@@ -90,8 +90,8 @@ const ContactForm = ({ children }: ContactFormProps) => {
       toast({
         title: "Demande envoyée",
         description: data.profil === "etudiant" 
-          ? "Nous avons bien reçu votre demande et vous avez reçu un email de bienvenue !"
-          : "Nous avons bien reçu votre demande, vous serez contacté dans les plus brefs délais.",
+          ? "Nous avons bien reçu ta demande et vous avez reçu un email de bienvenue !"
+          : "Nous avons bien reçu ta demande, vous serez contacté dans les plus brefs délais.",
       });
 
       // Réinitialiser après 30 secondes
@@ -133,7 +133,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
               </svg>
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Nous avons bien reçu votre demande
+              Nous avons bien reçu ta demande
             </h3>
             <p className="text-gray-600">
               {form.getValues("profil") === "etudiant" 
@@ -221,7 +221,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
                 <FormField
                   control={form.control}
                   name="profil"
-                  rules={{ required: "Veuillez sélectionner votre profil" }}
+                  rules={{ required: "Veuillez sélectionner ton profil" }}
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Tu es *</FormLabel>
