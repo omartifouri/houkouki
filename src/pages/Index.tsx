@@ -587,11 +587,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img 
-                  src="/lovable-uploads/5d7e7c1c-ebd4-4271-a028-9798957bf332.png" 
-                  alt="Houkouki Logo" 
-                  className="h-8 w-auto filter brightness-0 invert"
-                />
+                <h3 className="text-2xl font-bold text-white">Ilaa</h3>
               </div>
               <p className="text-gray-400">
                 ILAA. Trouver sa direction. S'y engager pleinement.
