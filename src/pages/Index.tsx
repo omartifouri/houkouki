@@ -155,8 +155,8 @@ const Index = () => {
             </h2>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <ul className="space-y-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <ul className="space-y-6 inline-block text-left">
               <li className="flex items-start space-x-4">
                 <div className="w-3 h-3 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-lg text-gray-700">Un accompagnement 100% personnalisé, humain et exigeant</p>
