@@ -127,7 +127,7 @@ export default function AuthModal({ children }: AuthModalProps) {
                 <Button 
                   onClick={handleSignIn} 
                   disabled={loading || !email || !password}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  className="w-full"
                 >
                   {loading ? "Connexion..." : "Se connecter"}
                 </Button>
@@ -202,7 +202,7 @@ export default function AuthModal({ children }: AuthModalProps) {
                 <Button 
                   onClick={handleSignUp} 
                   disabled={loading || !email || !password || !firstName || !lastName}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  className="w-full"
                 >
                   {loading ? "Inscription..." : "S'inscrire"}
                 </Button>
