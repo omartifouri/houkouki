@@ -32,6 +32,9 @@ const Index = () => {
             <ContactForm>
               <a className="text-gray-600 hover:text-red-600 transition-colors cursor-pointer">Contact</a>
             </ContactForm>
+            <RecommendModal>
+              <a className="text-gray-600 hover:text-red-600 transition-colors cursor-pointer">Recommander à un ami</a>
+            </RecommendModal>
             {!loading && (
               user ? (
                 <UserMenu />
