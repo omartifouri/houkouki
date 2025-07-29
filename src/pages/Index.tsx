@@ -28,7 +28,9 @@ const Index = () => {
             <a href="#services" className="text-gray-600 hover:text-red-600 transition-colors">Services</a>
             <a href="#prestation" className="text-gray-600 hover:text-red-600 transition-colors">Prestations</a>
             <a href="/create-cv" className="text-gray-600 hover:text-red-600 transition-colors">Créer un CV</a>
-            <a href="#contact" className="text-gray-600 hover:text-red-600 transition-colors">Contact</a>
+            <ContactForm>
+              <a className="text-gray-600 hover:text-red-600 transition-colors cursor-pointer">Contact</a>
+            </ContactForm>
             {!loading && (
               user ? (
                 <UserMenu />
