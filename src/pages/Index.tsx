@@ -314,13 +314,13 @@ const Index = () => {
             <p className="text-2xl text-gray-600 max-w-2xl mx-auto mb-4">
               Chez ILAA, chaque parcours est personnalisé.
             </p>
-            <p className="text-2xl text-gray-600 max-w-2xl mx-auto mb-8">
+            <p className="text-2xl text-gray-600 max-w-2xl mx-auto mb-4">
               Nous proposons :
             </p>
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <ul className="space-y-6 mb-8 text-center">
+            <ul className="space-y-4 mb-8 text-center">
               <li className="text-center">
                 <p className="text-xl text-gray-700">Première consultation de définition de ton besoin gratuite</p>
               </li>
