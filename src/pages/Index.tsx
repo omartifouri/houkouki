@@ -350,7 +350,7 @@ const Index = () => {
               Un suivi simple, humain et sécurisé
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Accédez à tous nos services via une plateforme intuitive et bénéficiez d'un suivi complet
+              Accède à tous nos services via une plateforme intuitive et bénéficie d'un suivi complet
             </p>
           </div>
 
