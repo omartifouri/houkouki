@@ -68,8 +68,8 @@ const RecommendToFriend = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="grid gap-3">
+    <div className="flex flex-col gap-6 p-2">
+      <div className="grid gap-4">
         <div>
           <Label htmlFor="yourName">Ton nom</Label>
           <Input
