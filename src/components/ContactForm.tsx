@@ -228,7 +228,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Sélectionne votre profil" />
+                            <SelectValue placeholder="Sélectionne ton profil" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
