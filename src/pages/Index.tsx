@@ -119,12 +119,12 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-[#1A96A0]/30 hover:border-[#1A96A0] transition-all duration-300 hover:shadow-lg">
+            <Card className="border-2 border-[#cc4f4f]/30 hover:border-[#cc4f4f] transition-all duration-300 hover:shadow-lg">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-[#1A96A0] to-[#1A96A0]/80 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#cc4f4f] to-[#cc4f4f]/80 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle style={{ color: '#1A96A0' }}>Professionnels</CardTitle>
+                <CardTitle style={{ color: '#cc4f4f' }}>Professionnels</CardTitle>
                 <CardDescription>En reconversion</CardDescription>
               </CardHeader>
               <CardContent>
@@ -247,8 +247,8 @@ const Index = () => {
 
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
-                <div style={{ backgroundColor: '#1A96A0' }} className="w-12 h-12 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
-                  <FileText className="h-6 w-6" style={{ color: '#1A96A0' }} />
+                <div style={{ backgroundColor: '#cc4f4f' }} className="w-12 h-12 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                  <FileText className="h-6 w-6" style={{ color: '#cc4f4f' }} />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Optimisation de ton CV</CardTitle>
                 <CardDescription>Mise en forme professionnelle</CardDescription>
@@ -384,8 +384,8 @@ const Index = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div style={{ backgroundColor: '#1A96A0' }} className="w-10 h-10 bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Shield className="h-5 w-5" style={{ color: '#1A96A0' }} />
+                  <div style={{ backgroundColor: '#cc4f4f' }} className="w-10 h-10 bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Shield className="h-5 w-5" style={{ color: '#cc4f4f' }} />
                   </div>
                    <div>
                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Espace sécurisé</h3>
