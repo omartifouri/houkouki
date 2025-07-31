@@ -436,25 +436,25 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <ol className="space-y-6">
               <li className="flex flex-col items-center text-center space-y-2">
-                <div className="w-8 h-8 bg-brand-teal text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-8 h-8 bg-[#cc4f4f] text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <p className="text-lg text-gray-700">Remplis le formulaire ou contacte-nous</p>
               </li>
               <li className="flex flex-col items-center text-center space-y-2">
-                <div className="w-8 h-8 bg-brand-teal text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-8 h-8 bg-[#cc4f4f] text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <p className="text-lg text-gray-700">Tu bénéficies d'un premier échange gratuit pour cerner ton besoin</p>
               </li>
               <li className="flex flex-col items-center text-center space-y-2">
-                <div className="w-8 h-8 bg-brand-teal text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-8 h-8 bg-[#cc4f4f] text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
                   3
                 </div>
                 <p className="text-lg text-gray-700">On définit ensemble ton parcours d'accompagnement</p>
               </li>
               <li className="flex flex-col items-center text-center space-y-2">
-                <div className="w-8 h-8 bg-brand-teal text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-8 h-8 bg-[#cc4f4f] text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
                   4
                 </div>
                 <p className="text-lg text-gray-700">Tu démarres avec ton coach ou psychologue dédié</p>
