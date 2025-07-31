@@ -20,13 +20,13 @@ const Index = () => {
       {/* Header/Navbar */}
       <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <img 
               src="/lovable-uploads/4202db25-ce0c-415f-b72b-0766f38e24fb.png" 
               alt="ILAA Logo" 
               className="h-10 w-auto"
             />
-          </div>
+          </Link>
           <nav className="hidden md:flex items-center space-x-6">
             <a href="#services" className="text-gray-600 hover:text-red-600 transition-colors">Services</a>
             <a href="#prestation" className="text-gray-600 hover:text-red-600 transition-colors">Prestations</a>
