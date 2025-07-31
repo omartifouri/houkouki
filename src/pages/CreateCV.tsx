@@ -240,8 +240,8 @@ const CreateCV = () => {
               Authentification requise
             </AlertDialogTitle>
             <AlertDialogDescription>
-              Vous devez être authentifié pour avoir accès à ce service ! 
-              Créez un compte ou connectez-vous pour commencer à créer votre CV professionnel.
+              Tu dois être authentifié pour avoir accès à ce service ! 
+              Crée un compte ou connecte-toi pour commencer à créer ton CV professionnel.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter className="flex gap-2">
