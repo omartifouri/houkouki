@@ -1,4 +1,6 @@
+import React from 'react';
 import { Button } from "@/components/ui/button";
+import ilaaLogoWhite from '@/assets/ilaa-logo-white.png';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Brain, FileText, FileUser, Calendar, Shield, CheckCircle, ChevronRight, Star, ArrowRight, Send } from "lucide-react";
@@ -587,7 +589,11 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <h3 className="text-2xl font-bold text-black">Ilaa</h3>
+                <img 
+                  src={ilaaLogoWhite} 
+                  alt="ILAA Logo" 
+                  className="h-8 w-auto"
+                />
               </div>
               <p className="text-gray-400">
                 ILAA. Trouver sa direction. S'y engager pleinement.
