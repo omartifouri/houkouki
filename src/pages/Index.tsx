@@ -367,7 +367,7 @@ const Index = () => {
                         Gestion des rendez-vous
                       </Link>
                     </h3>
-                    <p className="text-gray-600">Sélectionnez facilement tes créneaux avec nos psychologues et chargés de recrutement via notre formulaire en ligne.</p>
+                    <p className="text-gray-600">Sélectionne facilement tes créneaux avec nos psychologues et chargés de recrutement via notre formulaire en ligne.</p>
                   </div>
                 </div>
 
@@ -377,7 +377,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">CV optimisé</h3>
-                    <p className="text-gray-600">Accédez à notre canevas de CV optimisé et téléchargez un modèle professionnel prêt à diffuser.</p>
+                    <p className="text-gray-600">Accède à notre canevas de CV optimisé et télécharge un modèle professionnel prêt à diffuser.</p>
                   </div>
                 </div>
 
@@ -387,7 +387,7 @@ const Index = () => {
                   </div>
                    <div>
                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Espace sécurisé</h3>
-                     <p className="text-gray-600">Consultez le statut de ton dossier, l'historique de tes rendez-vous et échangez avec nos experts.</p>
+                     <p className="text-gray-600">Consulte le statut de ton dossier, l'historique de tes rendez-vous et échange avec nos experts.</p>
                    </div>
                 </div>
               </div>
