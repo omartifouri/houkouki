@@ -513,7 +513,7 @@ const Index = () => {
                 Est-ce que je peux payer en plusieurs fois ?
               </summary>
               <p className="text-gray-700 mt-4">
-                Oui. Nous proposons des facilités de paiement sur les forfaits supérieurs à 500 DH.
+                Oui. Nous proposons des facilités de paiement sur les forfaits supérieurs à 5000 dh ht.
               </p>
             </details>
             
