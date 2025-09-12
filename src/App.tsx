@@ -29,14 +29,20 @@ import FrDevis from "./pages/fr/Devis";
 import FrContact from "./pages/fr/Contact";
 import FrCGU from "./pages/fr/CGU";
 import FrCGV from "./pages/fr/CGV";
-// English pages
-import EnHome from "./pages/en/Home";
-import EnContact from "./pages/en/Contact";
-import EnPricing from "./pages/en/Pricing";
-// Arabic pages  
-import ArHome from "./pages/ar/Home";
-import ArContact from "./pages/ar/Contact";
-import ArPricing from "./pages/ar/Pricing";
+
+// Pages à la racine (HOUKOUKI)
+import Accueil from "./pages/Accueil";
+import Esprit from "./pages/Esprit";
+import QuiSommesNous from "./pages/QuiSommesNous";
+import Approche from "./pages/Approche";
+import Offre from "./pages/Offre";
+import Profils from "./pages/Profils";
+import Prestations from "./pages/Prestations";
+import Domaines from "./pages/Domaines";
+import Tarifs from "./pages/Tarifs";
+import Blog from "./pages/Blog";
+import Devis from "./pages/Devis";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -49,13 +55,23 @@ const App = () => (
         <BrowserRouter>
           <FloatingRDVButton />
           <Routes>
+            {/* Routes HOUKOUKI à la racine */}
             <Route path="/" element={<Index />} />
-            <Route path="/create-cv" element={<CreateCV />} />
-            <Route path="/booking" element={<Booking />} />
-            <Route path="/questionnaire" element={<Questionnaire />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            {/* Routes françaises (juridique) */}
+            <Route path="/accueil" element={<Accueil />} />
+            <Route path="/esprit" element={<Esprit />} />
+            <Route path="/qui-sommes-nous" element={<QuiSommesNous />} />
+            <Route path="/approche" element={<Approche />} />
+            <Route path="/offre" element={<Offre />} />
+            <Route path="/profils" element={<Profils />} />
+            <Route path="/prestations" element={<Prestations />} />
+            <Route path="/domaines" element={<Domaines />} />
+            <Route path="/tarifs" element={<Tarifs />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/devis" element={<Devis />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cgu" element={<FrCGU />} />
+            <Route path="/cgv" element={<FrCGV />} />
+            {/* Maintien des anciennes routes françaises pour la transition */}
             <Route path="/fr" element={<FrAccueil />} />
             <Route path="/fr/esprit" element={<FrEsprit />} />
             <Route path="/fr/qui-sommes-nous" element={<FrQuiSommesNous />} />
@@ -65,20 +81,11 @@ const App = () => (
             <Route path="/fr/prestations" element={<FrPrestations />} />
             <Route path="/fr/domaines" element={<FrDomaines />} />
             <Route path="/fr/tarifs" element={<FrTarifs />} />
-            
             <Route path="/fr/blog" element={<FrBlog />} />
             <Route path="/fr/devis" element={<FrDevis />} />
             <Route path="/fr/contact" element={<FrContact />} />
             <Route path="/fr/cgu" element={<FrCGU />} />
             <Route path="/fr/cgv" element={<FrCGV />} />
-            {/* English routes */}
-            <Route path="/en" element={<EnHome />} />
-            <Route path="/en/contact" element={<EnContact />} />
-            <Route path="/en/pricing" element={<EnPricing />} />
-            {/* Arabic routes */}
-            <Route path="/ar" element={<ArHome />} />
-            <Route path="/ar/contact" element={<ArContact />} />
-            <Route path="/ar/pricing" element={<ArPricing />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

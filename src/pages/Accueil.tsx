@@ -7,7 +7,7 @@ import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
 
-const Index = () => {
+const Accueil = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       {/* Header/Navbar */}
@@ -376,4 +376,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Accueil;
