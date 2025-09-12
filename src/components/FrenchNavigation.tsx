@@ -181,13 +181,6 @@ const FrenchNavigation = () => {
                  </NavigationMenuLink>
                </NavigationMenuItem>
 
-               <NavigationMenuItem>
-                 <ContactForm>
-                   <span className="text-red-600 hover:text-red-700 transition-colors px-3 py-2 cursor-pointer font-medium">
-                     Je prends RDV
-                   </span>
-                 </ContactForm>
-               </NavigationMenuItem>
              </NavigationMenuList>
            </NavigationMenu>
         </nav>
