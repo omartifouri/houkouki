@@ -56,9 +56,9 @@ const FrenchNavigation = () => {
           <div className="flex items-center space-x-2">
             <Link to="/fr">
               <img 
-                src="/lovable-uploads/dfdc0f4e-a6f8-4767-9a16-dccbe2acd2af.png" 
-                alt="ILAA Logo" 
-                className="h-10 w-auto"
+                src="/lovable-uploads/a2e35cca-9c41-4eed-b0c7-c784e87900a7.png" 
+                alt="HOUKOUKI Logo" 
+                className="h-12 w-auto"
               />
             </Link>
           </div>
