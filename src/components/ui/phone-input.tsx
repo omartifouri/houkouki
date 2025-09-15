@@ -7,20 +7,20 @@ import { Check, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const countries = [
-  { code: "+212", country: "MA", name: "Maroc", flag: "🇲🇦" },
-  { code: "+33", country: "FR", name: "France", flag: "🇫🇷" },
-  { code: "+1", country: "US", name: "États-Unis", flag: "🇺🇸" },
-  { code: "+44", country: "GB", name: "Royaume-Uni", flag: "🇬🇧" },
-  { code: "+49", country: "DE", name: "Allemagne", flag: "🇩🇪" },
-  { code: "+34", country: "ES", name: "Espagne", flag: "🇪🇸" },
-  { code: "+39", country: "IT", name: "Italie", flag: "🇮🇹" },
-  { code: "+31", country: "NL", name: "Pays-Bas", flag: "🇳🇱" },
-  { code: "+32", country: "BE", name: "Belgique", flag: "🇧🇪" },
-  { code: "+41", country: "CH", name: "Suisse", flag: "🇨🇭" },
-  { code: "+213", country: "DZ", name: "Algérie", flag: "🇩🇿" },
-  { code: "+216", country: "TN", name: "Tunisie", flag: "🇹🇳" },
-  { code: "+966", country: "SA", name: "Arabie Saoudite", flag: "🇸🇦" },
-  { code: "+971", country: "AE", name: "Émirats Arabes Unis", flag: "🇦🇪" },
+  { code: "+212", country: "MA", name: "Maroc", flag: "https://flagcdn.com/w20/ma.png" },
+  { code: "+33", country: "FR", name: "France", flag: "https://flagcdn.com/w20/fr.png" },
+  { code: "+1", country: "US", name: "États-Unis", flag: "https://flagcdn.com/w20/us.png" },
+  { code: "+44", country: "GB", name: "Royaume-Uni", flag: "https://flagcdn.com/w20/gb.png" },
+  { code: "+49", country: "DE", name: "Allemagne", flag: "https://flagcdn.com/w20/de.png" },
+  { code: "+34", country: "ES", name: "Espagne", flag: "https://flagcdn.com/w20/es.png" },
+  { code: "+39", country: "IT", name: "Italie", flag: "https://flagcdn.com/w20/it.png" },
+  { code: "+31", country: "NL", name: "Pays-Bas", flag: "https://flagcdn.com/w20/nl.png" },
+  { code: "+32", country: "BE", name: "Belgique", flag: "https://flagcdn.com/w20/be.png" },
+  { code: "+41", country: "CH", name: "Suisse", flag: "https://flagcdn.com/w20/ch.png" },
+  { code: "+213", country: "DZ", name: "Algérie", flag: "https://flagcdn.com/w20/dz.png" },
+  { code: "+216", country: "TN", name: "Tunisie", flag: "https://flagcdn.com/w20/tn.png" },
+  { code: "+966", country: "SA", name: "Arabie Saoudite", flag: "https://flagcdn.com/w20/sa.png" },
+  { code: "+971", country: "AE", name: "Émirats Arabes Unis", flag: "https://flagcdn.com/w20/ae.png" },
 ];
 
 interface PhoneInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'> {
@@ -73,7 +73,7 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
               className="w-[120px] justify-between rounded-r-none border-r-0 bg-background"
             >
               <span className="flex items-center gap-2">
-                <span className="text-lg">{selectedCountry.flag}</span>
+                <img src={selectedCountry.flag} alt={selectedCountry.name} className="w-4 h-3 object-cover" />
                 <span className="text-sm">{selectedCountry.code}</span>
               </span>
               <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
@@ -93,7 +93,7 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
                       className="cursor-pointer"
                     >
                       <div className="flex items-center gap-3 w-full">
-                        <span className="text-lg">{country.flag}</span>
+                        <img src={country.flag} alt={country.name} className="w-4 h-3 object-cover" />
                         <span className="flex-1">{country.name}</span>
                         <span className="text-muted-foreground text-sm">{country.code}</span>
                         <Check
