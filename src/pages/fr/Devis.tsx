@@ -293,6 +293,7 @@ const FrDevis = () => {
                             <SelectItem value="droit-administratif">Droit administratif</SelectItem>
                             <SelectItem value="propriete-intellectuelle">Propriété intellectuelle</SelectItem>
                             <SelectItem value="droit-international">Droit international</SelectItem>
+                            <SelectItem value="autre">Autre</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
