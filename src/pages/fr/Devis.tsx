@@ -263,6 +263,7 @@ const FrDevis = () => {
                             <SelectItem value="audit">Audit juridique</SelectItem>
                             <SelectItem value="formation">Formation juridique</SelectItem>
                             <SelectItem value="veille">Veille réglementaire</SelectItem>
+                            <SelectItem value="autre">Autre</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
