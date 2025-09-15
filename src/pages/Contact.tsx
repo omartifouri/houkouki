@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
+import { PhoneInput } from "@/components/ui/phone-input";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
@@ -96,14 +97,14 @@ const FrContact = () => {
 
                   <div>
                     <Label htmlFor="phone">Votre numéro de téléphone</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => handleInputChange("phone", e.target.value)}
-                      placeholder="+212 6 XX XX XX XX"
-                      className="mt-2"
-                    />
+                    <div className="mt-2">
+                      <PhoneInput
+                        id="phone"
+                        value={formData.phone}
+                        onChange={(value) => handleInputChange("phone", value)}
+                        defaultCountry="+212"
+                      />
+                    </div>
                   </div>
 
                   <div>
