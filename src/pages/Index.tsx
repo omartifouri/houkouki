@@ -283,8 +283,14 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-8">
-            <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-              <Link to="/prestations">Voir toutes nos prestations</Link>
+            <Button 
+              className="bg-[#C0997A] hover:bg-[#B8926F]" 
+              onClick={() => {
+                window.location.href = '/prestations';
+                setTimeout(() => window.scrollTo(0, 0), 100);
+              }}
+            >
+              Voir toutes nos prestations
             </Button>
           </div>
         </div>
