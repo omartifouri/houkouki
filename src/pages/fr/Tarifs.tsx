@@ -330,7 +330,7 @@ const FrTarifs = () => {
           </section>
 
           {/* Prestations à la carte */}
-          <section>
+          <section id="prestations-carte">
             <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Prestations à la carte</h2>
             <p className="text-xl text-gray-600 mb-2 text-center">Payez uniquement ce dont vous avez besoin</p>
             <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-center">
