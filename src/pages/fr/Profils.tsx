@@ -269,7 +269,7 @@ const FrProfils = () => {
           </section>
 
           {/* Des réponses adaptées à votre profil */}
-          <section>
+          <section style={{ backgroundColor: 'yellow', padding: '20px', border: '5px solid red' }}>
             <Card className="bg-red-50 border-red-200">
               <CardHeader>
                 <CardTitle className="text-2xl text-red-800 text-center">Des réponses adaptées à votre profil</CardTitle>
