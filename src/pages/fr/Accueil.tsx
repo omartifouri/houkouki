@@ -182,7 +182,7 @@ const FrAccueil = () => {
                   Nos juristes vous conseillent en toute confidentialité.
                 </p>
                 <Button className="w-full mt-auto bg-primary hover:bg-primary/90 text-primary-foreground border-0 hover-scale transition-all duration-300" asChild>
-                  <Link to="/fr/profils">Découvrir notre offre particuliers</Link>
+                  <Link to="/fr/profils#particulier">Découvrir notre offre particuliers</Link>
                 </Button>
               </CardContent>
             </Card>
