@@ -31,16 +31,24 @@ const FrProfils = () => {
   }, []);
 
   const handleNavigateToTarifs = () => {
-    navigate('/fr/tarifs#top');
-    // Délai pour assurer le chargement et le scroll
+    console.log('Bouton cliqué - Navigation vers /fr/tarifs');
+    navigate('/fr/tarifs');
+    
+    // Attendre que la navigation soit complète
     setTimeout(() => {
-      const element = document.getElementById('top');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    }, 200);
+      console.log('Tentative de scroll après navigation');
+      console.log('URL actuelle:', window.location.href);
+      
+      // Scroll vers le haut de façon forcée
+      window.scrollTo(0, 0);
+      console.log('Scroll exécuté vers le haut');
+      
+      // Double vérification après un délai
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        console.log('Second scroll exécuté');
+      }, 500);
+    }, 100);
   };
 
   return (
