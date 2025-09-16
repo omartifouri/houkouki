@@ -176,7 +176,7 @@ const FrTarifs = () => {
           </section>
 
           {/* Abonnement annuel */}
-          <section>
+          <section id="abonnement-annuel">
             <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Abonnement annuel</h2>
             <p className="text-gray-600 text-center mb-12">
               L'option idéale pour les particuliers, professionnels ou entreprises qui souhaitent un suivi juridique complet tout au long de l'année.
