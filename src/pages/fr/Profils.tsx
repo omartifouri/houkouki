@@ -12,10 +12,17 @@ const FrProfils = () => {
     // Gérer le scroll vers l'ancre après le chargement de la page
     const hash = window.location.hash;
     if (hash) {
-      const element = document.querySelector(hash);
+      const element = document.querySelector(hash) as HTMLElement;
       if (element) {
         setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Ajouter un offset pour tenir compte de la navigation fixe
+          const elementPosition = element.offsetTop;
+          const offsetPosition = elementPosition - 100; // 100px d'offset pour la navigation
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
         }, 100);
       }
     }
