@@ -5,8 +5,22 @@ import { Link } from "react-router-dom";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
+import { useEffect } from "react";
 
 const FrProfils = () => {
+  useEffect(() => {
+    // Gérer le scroll vers l'ancre après le chargement de la page
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       {/* Header avec navigation */}
