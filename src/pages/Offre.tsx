@@ -91,8 +91,19 @@ const FrOffre = () => {
                   <p className="text-gray-600 mb-6">
                     Idéal pour les particuliers ou entreprises qui souhaitent un service de proximité continu.
                   </p>
-                  <Button className="w-full bg-red-600 hover:bg-red-700" asChild>
-                    <Link to="/fr/tarifs">Choisir l'abonnement</Link>
+                  <Button 
+                    className="w-full bg-red-600 hover:bg-red-700"
+                    onClick={() => {
+                      window.location.href = '/fr/tarifs#abonnement-annuel';
+                      setTimeout(() => {
+                        const element = document.getElementById('abonnement-annuel');
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                      }, 100);
+                    }}
+                  >
+                    Choisir l'abonnement
                   </Button>
                 </CardContent>
               </Card>

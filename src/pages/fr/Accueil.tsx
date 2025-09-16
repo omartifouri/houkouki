@@ -315,8 +315,19 @@ const FrAccueil = () => {
                   Un accès illimité à nos juristes + un accompagnement personnalisé tout au long de l'année.
                   Idéal pour les particuliers ou entreprises qui souhaitent un service de proximité continu.
                 </p>
-                <Button className="w-full bg-[#C0997A] hover:bg-[#B8926F] mt-auto" asChild>
-                  <Link to="/fr/tarifs">Choisir l'abonnement</Link>
+                <Button 
+                  className="w-full bg-[#C0997A] hover:bg-[#B8926F] mt-auto"
+                  onClick={() => {
+                    window.location.href = '/fr/tarifs#abonnement-annuel';
+                    setTimeout(() => {
+                      const element = document.getElementById('abonnement-annuel');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }, 100);
+                  }}
+                >
+                  Choisir l'abonnement
                 </Button>
               </CardContent>
             </Card>
