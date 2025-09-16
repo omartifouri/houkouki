@@ -31,10 +31,15 @@ const FrProfils = () => {
   }, []);
 
   const handleNavigateToTarifs = () => {
-    navigate('/fr/tarifs');
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
+    navigate('/fr/tarifs', { replace: true });
+    // Multiple tentatives pour gérer le temps de charge
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    
+    setTimeout(scrollToTop, 100);
+    setTimeout(scrollToTop, 300);
+    setTimeout(scrollToTop, 600);
   };
 
   return (
