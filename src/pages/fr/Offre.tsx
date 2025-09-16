@@ -119,8 +119,20 @@ const FrOffre = () => {
                   <p className="text-gray-600 mb-6">
                     Payez uniquement ce dont vous avez besoin.
                   </p>
-                  <Button variant="outline" className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
-                    <Link to="/fr/tarifs">Choisir une prestation à la carte</Link>
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white"
+                    onClick={() => {
+                      window.location.href = '/fr/tarifs#prestations-carte';
+                      setTimeout(() => {
+                        const element = document.getElementById('prestations-carte');
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                      }, 100);
+                    }}
+                  >
+                    Choisir une prestation à la carte
                   </Button>
                 </CardContent>
               </Card>
