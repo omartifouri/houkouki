@@ -281,26 +281,26 @@ const FrProfils = () => {
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="text-center">
                     <div className="flex items-center justify-center space-x-2 mb-2">
-                      <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-brand-beige flex-shrink-0" />
                       <span className="text-gray-700">Des formules sur abonnement ou à la carte</span>
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="flex items-center justify-center space-x-2 mb-2">
-                      <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-brand-beige flex-shrink-0" />
                       <span className="text-gray-700">Un accompagnement confidentiel et sécurisé</span>
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="flex items-center justify-center space-x-2 mb-2">
-                      <CheckCircle className="h-5 w-5 text-[#C0997A] flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-brand-beige flex-shrink-0" />
                       <span className="text-gray-700">Une prise en charge rapide et personnalisée</span>
                     </div>
                   </div>
                 </div>
                 
                 <div className="text-center mt-8">
-                  <Button className="bg-[#C0997A] hover:bg-[#B8926F] mr-4" asChild>
+                  <Button className="bg-brand-beige hover:bg-brand-beige/90 mr-4" asChild>
                     <Link to="/fr/tarifs">Voir toutes nos offres</Link>
                   </Button>
                 </div>
