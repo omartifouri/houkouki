@@ -301,7 +301,7 @@ const FrProfils = () => {
                 
                 <div className="text-center mt-8">
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F] mr-4" asChild>
-                    <Link to="/fr/tarifs">Voir toutes nos offres</Link>
+                    <Link to="/fr/tarifs" onClick={() => window.scrollTo(0, 0)}>Voir toutes nos offres</Link>
                   </Button>
                 </div>
               </CardContent>
