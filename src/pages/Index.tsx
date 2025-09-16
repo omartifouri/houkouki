@@ -345,7 +345,7 @@ const Index = () => {
                   variant="outline" 
                   className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white mt-auto"
                   onClick={() => {
-                    window.location.href = '/tarifs#prestations-carte';
+                    window.location.href = '/fr/tarifs#prestations-carte';
                     setTimeout(() => {
                       const element = document.getElementById('prestations-carte');
                       if (element) {
