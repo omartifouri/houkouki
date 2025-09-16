@@ -6,8 +6,10 @@ import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const FrProfils = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     // Gérer le scroll vers l'ancre après le chargement de la page
     const hash = window.location.hash;
@@ -27,6 +29,13 @@ const FrProfils = () => {
       }
     }
   }, []);
+
+  const handleNavigateToTarifs = () => {
+    navigate('/fr/tarifs');
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
@@ -300,8 +309,11 @@ const FrProfils = () => {
                 </div>
                 
                 <div className="text-center mt-8">
-                  <Button className="bg-[#C0997A] hover:bg-[#B8926F] mr-4" asChild>
-                    <Link to="/fr/tarifs" onClick={() => window.scrollTo(0, 0)}>Voir toutes nos offres</Link>
+                  <Button 
+                    className="bg-[#C0997A] hover:bg-[#B8926F] mr-4" 
+                    onClick={handleNavigateToTarifs}
+                  >
+                    Voir toutes nos offres
                   </Button>
                 </div>
               </CardContent>
