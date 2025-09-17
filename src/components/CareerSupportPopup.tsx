@@ -77,7 +77,7 @@ const CareerSupportPopup = () => {
           <Button 
             className="w-full bg-[#C0997A] hover:bg-[#B8926F] text-white" 
             onClick={() => {
-              window.open('/create-cv', '_blank', 'noopener,noreferrer');
+              window.open('https://www.ilaa.ma', '_blank', 'noopener,noreferrer');
               handleClose();
             }}
           >
