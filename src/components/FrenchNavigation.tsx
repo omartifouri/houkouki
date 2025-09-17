@@ -100,10 +100,21 @@ const FrenchNavigation = () => {
                           Notre méthode d'accompagnement juridique
                         </p>
                       </Link>
-                    </NavigationMenuLink>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+                     </NavigationMenuLink>
+                     <NavigationMenuLink asChild>
+                       <Link
+                         to="/fr/rse"
+                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                       >
+                         <div className="text-sm font-medium leading-none">Notre vision RSE</div>
+                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                           Notre responsabilité sociétale d'entreprise
+                         </p>
+                       </Link>
+                     </NavigationMenuLink>
+                   </div>
+                 </NavigationMenuContent>
+               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-gray-600 hover:text-brand-beige transition-colors">

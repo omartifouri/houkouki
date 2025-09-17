@@ -29,6 +29,7 @@ import FrDevis from "./pages/fr/Devis";
 import FrContact from "./pages/fr/Contact";
 import FrCGU from "./pages/fr/CGU";
 import FrCGV from "./pages/fr/CGV";
+import FrRSE from "./pages/fr/RSE";
 
 // Pages à la racine (HOUKOUKI)
 import Accueil from "./pages/Accueil";
@@ -84,6 +85,7 @@ const App = () => (
             <Route path="/fr/blog" element={<FrBlog />} />
             <Route path="/fr/devis" element={<FrDevis />} />
             <Route path="/fr/contact" element={<FrContact />} />
+            <Route path="/fr/rse" element={<FrRSE />} />
             <Route path="/fr/cgu" element={<FrCGU />} />
             <Route path="/fr/cgv" element={<FrCGV />} />
             <Route path="*" element={<NotFound />} />
