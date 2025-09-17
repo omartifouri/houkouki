@@ -82,10 +82,10 @@ const Footer = () => {
               <div className="w-12 h-0.5 bg-orange-500 mt-2"></div>
             </h3>
             <div className="space-y-3">
-              <Link to="/fr/cgu" className="block text-gray-300 hover:text-orange-400 transition-colors">
+              <Link to="/fr/cgu#top" className="block text-gray-300 hover:text-orange-400 transition-colors">
                 Conditions générales d'utilisation
               </Link>
-              <Link to="/fr/cgv" className="block text-gray-300 hover:text-orange-400 transition-colors">
+              <Link to="/fr/cgv#top" className="block text-gray-300 hover:text-orange-400 transition-colors">
                 Conditions générales de vente
               </Link>
             </div>
