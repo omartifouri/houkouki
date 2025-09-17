@@ -7,15 +7,15 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         {/* Engagement Section */}
         <div className="bg-brand-red/80 rounded-lg p-6 mb-12 text-center">
-          <h3 className="text-2xl font-semibold mb-4 text-orange-400">
+          <h3 className="text-xl font-semibold mb-4 text-orange-400">
             Houkouki s'engage pour le civisme
           </h3>
-          <p className="text-lg leading-relaxed max-w-4xl mx-auto">
+          <p className="text-sm leading-relaxed max-w-4xl mx-auto">
             Avec notre initiative <span className="font-semibold text-orange-300">Play Fair, Live Fair – L3eb nḍif, 3ich nḍif</span>, 
             nous promouvons chaque jour des gestes simples de respect, de solidarité et de responsabilité, 
             dans la vie quotidienne comme sur la route.
           </p>
-          <p className="text-xl font-medium mt-4 text-orange-300">
+          <p className="text-base font-medium mt-4 text-orange-300">
             Ensemble, faisons du civisme notre plus belle victoire.
           </p>
         </div>
