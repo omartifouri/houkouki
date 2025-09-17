@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
+import { useEffect } from "react";
 import { 
   BookOpen, 
   Newspaper, 
@@ -21,6 +22,11 @@ import {
 } from "lucide-react";
 
 const FrBlog = () => {
+  useEffect(() => {
+    if (window.location.hash === '#top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, []);
   const blogCategories = [
     {
       title: "Vulgarisation juridique",
