@@ -9,7 +9,7 @@ import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const FrContact = () => {
   const [formData, setFormData] = useState({
@@ -30,6 +30,15 @@ const FrContact = () => {
   const handleInputChange = (field: string, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
+
+  useEffect(() => {
+    // Scroll to top when the page loads with #top anchor
+    if (window.location.hash === '#top') {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  }, []);
 
   return (
     <div id="top" className="min-h-screen bg-gradient-to-br from-red-50 to-white">
