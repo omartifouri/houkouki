@@ -45,7 +45,7 @@ const Footer = () => {
               <div className="w-12 h-0.5 bg-orange-500 mt-2"></div>
             </h3>
             <div className="space-y-3">
-              <Link to="/fr" className="block text-gray-300 hover:text-orange-400 transition-colors">
+              <Link to="/fr/qui-sommes-nous" className="block text-gray-300 hover:text-orange-400 transition-colors">
                 Qui sommes-nous ?
               </Link>
               <Link to="/fr/profils" className="block text-gray-300 hover:text-orange-400 transition-colors">
