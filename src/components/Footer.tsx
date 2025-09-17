@@ -51,7 +51,7 @@ const Footer = () => {
               <Link to="/fr/profils#particulier" className="block text-gray-300 hover:text-orange-400 transition-colors">
                 Vous êtes particulier ?
               </Link>
-              <Link to="/fr/prestations" className="block text-gray-300 hover:text-orange-400 transition-colors">
+              <Link to="/fr/profils#entreprise" className="block text-gray-300 hover:text-orange-400 transition-colors">
                 Vous êtes entreprise ?
               </Link>
               <Link to="/fr/tarifs" className="block text-gray-300 hover:text-orange-400 transition-colors">
