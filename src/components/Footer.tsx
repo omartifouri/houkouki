@@ -66,7 +66,7 @@ const Footer = () => {
               <Link to="/fr/blog" className="block text-gray-300 hover:text-orange-400 transition-colors">
                 Blog
               </Link>
-              <Link to="/fr/contact" className="block text-gray-300 hover:text-orange-400 transition-colors">
+              <Link to="/fr/contact#top" className="block text-gray-300 hover:text-orange-400 transition-colors">
                 Contact
               </Link>
               <a href="/create-cv" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-orange-400 transition-colors">
