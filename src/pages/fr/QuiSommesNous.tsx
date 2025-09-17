@@ -32,13 +32,13 @@ const FrQuiSommesNous = () => {
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Trop de personnes renoncent à faire valoir leurs droits, faute d'accès à des conseils juridiques 
-                  fiables, réactifs et abordables. Houkouki est née pour répondre à ce besoin fondamental : 
-                  offrir à tous un accompagnement juridique personnalisé, à distance, avec un haut niveau d'expertise.
+                  L'accès au droit reste souvent perçu comme complexe et intimidant. Houkouki est née pour rendre cette démarche plus claire, plus accessible et plus proche des personnes qui en ont besoin.
+                </p>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  <strong>Notre mission ?</strong> Offrir à chacun — résidents, citoyens, expatriés — un accompagnement juridique personnalisé, réactif et professionnel, directement à distance.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  <strong>Notre ambition ?</strong> Faciliter l'accès au droit pour toutes les personnes concernées — 
-                  résidents, citoyens, expatriés — grâce à une plateforme claire, professionnelle et rassurante.
+                  Notre ambition est de faciliter l'accès au droit grâce à une plateforme fiable, rassurante et moderne, qui met l'expertise juridique à la portée de tous.
                 </p>
               </CardContent>
             </Card>
