@@ -54,7 +54,7 @@ const Footer = () => {
               <Link to="/fr/profils#entreprise" className="block text-gray-300 hover:text-orange-400 transition-colors">
                 Vous êtes entreprise ?
               </Link>
-              <Link to="/fr/tarifs" className="block text-gray-300 hover:text-orange-400 transition-colors">
+              <Link to="/fr/tarifs#abonnement-annuel" className="block text-gray-300 hover:text-orange-400 transition-colors">
                 Abonnement annuel
               </Link>
               <Link to="/fr/offre" className="block text-gray-300 hover:text-orange-400 transition-colors">
