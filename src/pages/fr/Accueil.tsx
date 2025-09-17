@@ -218,7 +218,7 @@ const FrAccueil = () => {
                   de façon fluide et fiable.
                 </p>
                 <Button className="w-full mt-auto bg-primary hover:bg-primary/90 text-primary-foreground border-0 hover-scale transition-all duration-300" asChild>
-                  <Link to="/fr/profils">Découvrir notre offre MRE</Link>
+                  <Link to="/fr/profils#mre">Découvrir notre offre MRE</Link>
                 </Button>
               </CardContent>
             </Card>

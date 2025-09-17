@@ -244,7 +244,7 @@ const FrProfils = () => {
           </section>
 
           {/* Un Marocain résidant à l'étranger (MRE) */}
-          <section>
+          <section id="mre">
             <Card className="border-2 border-red-200">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3 text-3xl text-red-800">
