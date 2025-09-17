@@ -5,6 +5,21 @@ const Footer = () => {
   return (
     <footer className="bg-brand-red text-white py-12">
       <div className="container mx-auto px-4">
+        {/* Engagement Section */}
+        <div className="bg-brand-red/80 rounded-lg p-6 mb-12 text-center">
+          <h3 className="text-2xl font-semibold mb-4 text-orange-400">
+            Houkouki s'engage pour le civisme
+          </h3>
+          <p className="text-lg leading-relaxed max-w-4xl mx-auto">
+            Avec notre initiative <span className="font-semibold text-orange-300">Play Fair, Live Fair – L3eb nḍif, 3ich nḍif</span>, 
+            nous promouvons chaque jour des gestes simples de respect, de solidarité et de responsabilité, 
+            dans la vie quotidienne comme sur la route.
+          </p>
+          <p className="text-xl font-medium mt-4 text-orange-300">
+            Ensemble, faisons du civisme notre plus belle victoire.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Contact Section */}
           <div>
