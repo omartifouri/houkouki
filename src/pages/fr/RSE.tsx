@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Shield, Heart, Sparkles, Users } from "lucide-react";
@@ -7,6 +8,11 @@ import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
 
 const FrRSE = () => {
+  useEffect(() => {
+    if (window.location.hash === '#top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, []);
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       {/* Header avec navigation */}
