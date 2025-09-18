@@ -1,8 +1,15 @@
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useEffect } from "react";
 
 const CGV = () => {
+  useEffect(() => {
+    // Scroll automatique vers le haut si l'ancre #top est présente
+    if (window.location.hash === '#top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, []);
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       <FrenchNavigation />
