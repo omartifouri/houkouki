@@ -345,7 +345,7 @@ const Accueil = () => {
                   variant="outline" 
                   className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white mt-auto"
                   onClick={() => {
-                    window.location.href = '/fr/contact#prestations-a-la-carte';
+                    window.location.href = '/tarifs#prestations-a-la-carte';
                   }}
                 >
                   Choisir une prestation à la carte

@@ -5,7 +5,21 @@ import { Clock, Users, Building2, Heart, CheckCircle, Info } from "lucide-react"
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
+import { useEffect } from "react";
 const FrTarifs = () => {
+  // Effect pour gérer le scroll automatique avec les ancres
+  useEffect(() => {
+    // Vérifier si l'URL contient l'ancre #prestations-a-la-carte
+    if (window.location.hash === "#prestations-a-la-carte") {
+      // Scroll automatique vers la section "Prestations à la carte"
+      setTimeout(() => {
+        const element = document.getElementById('prestations-a-la-carte');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, []);
 
   // Définition des tooltips pour les fonctionnalités
   const featureTooltips: { [key: string]: string } = {
@@ -348,7 +362,7 @@ const FrTarifs = () => {
           </section>
 
           {/* Prestations à la carte */}
-          <section id="prestations-carte">
+          <section id="prestations-a-la-carte">
             <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Prestations à la carte</h2>
             <p className="text-xl text-gray-600 mb-2 text-center">Payez uniquement ce dont vous avez besoin</p>
             <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-center">
