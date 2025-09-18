@@ -7,6 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { PhoneInput } from "@/components/ui/phone-input";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
@@ -188,7 +189,11 @@ const FrDevis = () => {
                       <FormItem>
                         <FormLabel>Téléphone *</FormLabel>
                         <FormControl>
-                          <Input placeholder="+212 6 12 02 30 XX" {...field} />
+                          <PhoneInput 
+                            value={field.value}
+                            onChange={field.onChange}
+                            defaultCountry="+212"
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
