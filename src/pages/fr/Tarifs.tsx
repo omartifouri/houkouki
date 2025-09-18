@@ -325,7 +325,12 @@ const FrTarifs = () => {
               
               <div className="px-6 pb-6">
                 <div className="grid md:grid-cols-2 gap-4">
-                  <Button className="bg-[#C0997A] hover:bg-[#B8926F] text-white font-semibold py-3">
+                  <Button 
+                    className="bg-[#C0997A] hover:bg-[#B8926F] text-white font-semibold py-3"
+                    onClick={() => {
+                      window.location.href = "/fr/devis#top";
+                    }}
+                  >
                     Demander un devis sur mesure
                   </Button>
                   <Button variant="outline" className="border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white font-semibold py-3">
