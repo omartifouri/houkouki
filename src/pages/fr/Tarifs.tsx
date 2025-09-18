@@ -20,6 +20,16 @@ const FrTarifs = () => {
         }
       }, 100);
     }
+    // Vérifier si l'URL contient l'ancre #abonnement-annuel
+    if (window.location.hash === "#abonnement-annuel") {
+      // Scroll automatique vers la section "Abonnement annuel"
+      setTimeout(() => {
+        const element = document.getElementById('abonnement-annuel');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
   }, []);
 
   // Définition des tooltips pour les fonctionnalités
