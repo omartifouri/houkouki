@@ -15,7 +15,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { FileText, User, Phone, Mail, Clock, Euro, MessageSquare, Upload } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const formSchema = z.object({
   type_client: z.string().min(1, "Veuillez sélectionner votre profil"),
@@ -37,6 +37,14 @@ type FormData = z.infer<typeof formSchema>;
 const FrDevis = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  useEffect(() => {
+    // Vérifier si l'URL contient l'ancre #top
+    if (window.location.hash === "#top") {
+      // Scroll automatique vers le haut
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, []);
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
