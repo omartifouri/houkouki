@@ -5,6 +5,7 @@ import { Clock, Users, Building2, Heart, CheckCircle, Info } from "lucide-react"
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
+import FloatingDevisButton from "@/components/FloatingDevisButton";
 import { useEffect } from "react";
 const FrTarifs = () => {
   // Effect pour gérer le scroll automatique avec les ancres
@@ -440,6 +441,7 @@ const FrTarifs = () => {
       
       <Footer />
       <CareerSupportPopup />
+      <FloatingDevisButton />
       </div>
     </TooltipProvider>
   );
