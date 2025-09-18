@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Calculator } from "lucide-react";
-import DevisModal from "./DevisModal";
+import { Link } from "react-router-dom";
 
 const FloatingDevisButton = () => {
   return (
     <div className="fixed bottom-6 left-6 z-50 animate-fade-in">
-      <DevisModal>
+      <Link to="/devis#top">
         <Button
           className="bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover-scale rounded-full px-6 py-3 flex items-center gap-2 group"
           size="lg"
@@ -13,7 +13,7 @@ const FloatingDevisButton = () => {
           <Calculator className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
           <span className="font-medium">Devis sur mesure</span>
         </Button>
-      </DevisModal>
+      </Link>
     </div>
   );
 };
