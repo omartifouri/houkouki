@@ -27,6 +27,11 @@ const FrContact = () => {
       // Scroll automatique vers le haut
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
+    // Vérifier si l'URL contient l'ancre #prestations-a-la-carte
+    else if (window.location.hash === "#prestations-a-la-carte") {
+      // Scroll automatique vers le haut (ou vers une section spécifique si elle existe)
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
