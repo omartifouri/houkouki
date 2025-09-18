@@ -44,18 +44,12 @@ const CGV = () => {
             <CardContent>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-gray-800">• Paiement à la carte (tarif horaire)</h4>
-                  <p className="mt-1">Les prestations ponctuelles sont facturées sur la base d'un tarif horaire indiqué au client avant toute intervention.</p>
-                  <p>Le paiement est exigible à la commande et couvre uniquement le temps effectivement réservé.</p>
-                  <p>Toute séance commencée est due intégralement.</p>
+                  <h4 className="font-semibold text-gray-800 mb-2">Paiement à la carte (tarif horaire) :</h4>
+                  <p>Les prestations ponctuelles sont facturées sur la base d'un tarif horaire indiqué au client avant toute intervention. Le paiement est exigible à la commande et couvre uniquement le temps effectivement réservé. Toute séance commencée est due intégralement.</p>
                 </div>
-                
                 <div>
-                  <h4 className="font-semibold text-gray-800">• Abonnements (forfait périodique)</h4>
-                  <p className="mt-1">Houkouki propose également des abonnements forfaitaires (mensuels, trimestriels, annuels).</p>
-                  <p>Ces abonnements incluent un nombre défini d'heures de consultation et/ou de services, utilisables uniquement pendant la période en cours.</p>
-                  <p>Les heures ou prestations non consommées ne peuvent être ni reportées ni remboursées.</p>
-                  <p>Le montant de l'abonnement est dû en totalité dès le début de la période et reste acquis à Houkouki.</p>
+                  <h4 className="font-semibold text-gray-800 mb-2">Abonnements (forfait périodique) :</h4>
+                  <p>Houkouki propose des abonnements forfaitaires (mensuels, trimestriels, annuels). Ces abonnements incluent un nombre défini d'heures de consultation et/ou de services, utilisables uniquement pendant la période en cours. Les heures ou prestations non consommées ne peuvent être ni reportées ni remboursées. Le montant de l'abonnement est dû en totalité dès le début de la période et reste acquis à Houkouki.</p>
                 </div>
               </div>
             </CardContent>
@@ -66,10 +60,7 @@ const CGV = () => {
               <CardTitle className="text-red-700">4. Droit de rétractation</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc list-inside space-y-1">
-                <li>Si le client est un consommateur (au sens de la loi), il dispose d'un délai légal de 7 jours pour se rétracter après la souscription.</li>
-                <li>Toutefois, si le service a commencé à être exécuté avant la fin du délai légal, et avec l'accord du client, ce droit ne peut plus être exercé.</li>
-              </ul>
+              <p>Si le client est un consommateur (au sens de la loi), il dispose d'un délai légal de 7 jours pour se rétracter après la souscription. Toutefois, si le service a commencé à être exécuté avant la fin du délai légal, et avec l'accord du client, ce droit ne peut plus être exercé.</p>
             </CardContent>
           </Card>
 
@@ -107,17 +98,12 @@ const CGV = () => {
             <CardContent>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-gray-800">• Paiement à la carte</h4>
-                  <p className="mt-1">Toute prestation ponctuelle confirmée et réglée est définitive et non résiliable.</p>
-                  <p>Aucun remboursement n'est possible, même en cas de non-consommation par le client.</p>
+                  <h4 className="font-semibold text-gray-800 mb-2">Paiement à la carte :</h4>
+                  <p>Toute prestation ponctuelle confirmée et réglée est définitive et non résiliable. Aucun remboursement n'est possible, même en cas de non-consommation par le client.</p>
                 </div>
-                
                 <div>
-                  <h4 className="font-semibold text-gray-800">• Abonnements</h4>
-                  <p className="mt-1">L'abonnement est conclu pour une durée initiale déterminée (mensuelle, trimestrielle ou annuelle), renouvelable par tacite reconduction sauf dénonciation par le client adressée par email à contact@houkouki.com avec un préavis de 15 jours avant l'échéance.</p>
-                  <p>La résiliation en cours de période n'est pas possible : le montant de l'abonnement reste intégralement dû.</p>
-                  <p>En cas de non-renouvellement, les prestations non consommées à la date d'échéance sont perdues et ne donnent lieu à aucun remboursement.</p>
-                  <p>Houkouki se réserve le droit de résilier l'abonnement en cas de manquement grave du client à ses obligations (fraude, non-respect des rendez-vous, comportement inapproprié…), sans remboursement.</p>
+                  <h4 className="font-semibold text-gray-800 mb-2">Abonnements :</h4>
+                  <p>L'abonnement est conclu pour une durée initiale déterminée (mensuelle, trimestrielle ou annuelle), renouvelable par tacite reconduction sauf dénonciation par le client adressée par email à contact@houkouki.com avec un préavis de 15 jours avant l'échéance. La résiliation en cours de période n'est pas possible : le montant de l'abonnement reste intégralement dû. En cas de non-renouvellement, les prestations non consommées à la date d'échéance sont perdues et ne donnent lieu à aucun remboursement. Houkouki se réserve le droit de résilier l'abonnement en cas de manquement grave du client à ses obligations (fraude, non-respect des rendez-vous, comportement inapproprié…), sans remboursement.</p>
                 </div>
               </div>
             </CardContent>
@@ -137,17 +123,7 @@ const CGV = () => {
               <CardTitle className="text-red-700">9. Force majeure</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>Houkouki ne saurait être tenue responsable d'un manquement à ses obligations résultant d'un cas de force majeure (notamment catastrophes naturelles, pannes massives, cyberattaques, conflits sociaux, décisions administratives, troubles civils ou politiques).</p>
-              
-              <p className="mt-4">En cas de force majeure :</p>
-              <ul className="list-disc list-inside mt-2 ml-4">
-                <li>Les obligations des parties sont suspendues pendant la durée de l'événement.</li>
-                <li>Les paiements déjà effectués restent acquis à Houkouki.</li>
-              </ul>
-              
-              <p className="mt-4">Pour les abonnements : si l'interruption excède 30 jours consécutifs, le client peut demander la résiliation de son abonnement avec remboursement au prorata temporis de la période non exécutée.</p>
-              
-              <p className="mt-2">Pour les prestations ponctuelles : les séances non réalisées seront reportées à une date ultérieure, sans frais. Aucun remboursement ne pourra être demandé si le client est dans l'impossibilité d'utiliser la prestation après la levée de l'événement.</p>
+              <p>Houkouki ne saurait être tenue responsable d'un manquement à ses obligations résultant d'un cas de force majeure (notamment catastrophes naturelles, pannes massives, cyberattaques, conflits sociaux, décisions administratives, troubles civils ou politiques). En cas de force majeure, les obligations des parties sont suspendues. Les paiements déjà effectués restent acquis à Houkouki. Pour les abonnements, si l'interruption excède 30 jours consécutifs, le client peut demander la résiliation avec remboursement au prorata de la période non exécutée. Pour les prestations ponctuelles, les séances non réalisées seront reportées.</p>
             </CardContent>
           </Card>
 
