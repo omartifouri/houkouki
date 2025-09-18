@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         {/* Engagement Section */}
         <div className="bg-brand-red/80 rounded-lg p-6 mb-12 text-center">
-          <h3 className="text-xl font-semibold mb-4 text-orange-400">
+          <h3 className="text-xl font-semibold mb-4 text-brand-beige">
             Houkouki s'engage pour le civisme
           </h3>
           <p className="text-sm leading-relaxed max-w-4xl mx-auto">
