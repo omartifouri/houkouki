@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
 import FloatingDevisButton from "@/components/FloatingDevisButton";
 import { useEffect } from "react";
-import legalBackground from "@/assets/legal-background.jpg";
 const FrTarifs = () => {
   // Effect pour gérer le scroll automatique avec les ancres
   useEffect(() => {
@@ -150,18 +149,8 @@ const FrTarifs = () => {
 
   return (
     <TooltipProvider>
-      <div id="top" className="min-h-screen relative">
-        {/* Background avec overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${legalBackground})` }}
-        >
-          <div className="absolute inset-0 bg-white/85"></div>
-        </div>
-        
-        {/* Contenu au-dessus du background */}
-        <div className="relative z-10">
-          <FrenchNavigation />
+      <div id="top" className="min-h-screen bg-gradient-to-br from-red-50 to-white">
+        <FrenchNavigation />
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -448,12 +437,11 @@ const FrTarifs = () => {
             </Card>
           </section>
         </div>
-        </div>
-        
-        <Footer />
-        <CareerSupportPopup />
-        <FloatingDevisButton />
       </div>
+      
+      <Footer />
+      <CareerSupportPopup />
+      <FloatingDevisButton />
       </div>
     </TooltipProvider>
   );
