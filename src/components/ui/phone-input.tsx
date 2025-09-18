@@ -63,14 +63,14 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
     };
 
     return (
-      <div className="flex">
+      <div className="flex items-stretch">
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
             <Button
               variant="outline"
               role="combobox"
               aria-expanded={open}
-              className="w-[120px] justify-between rounded-r-none border-r-0 bg-background"
+              className="w-[120px] justify-between rounded-r-none border-r-0 bg-background h-10 px-3"
             >
               <span className="flex items-center gap-2">
                 <img src={selectedCountry.flag} alt={selectedCountry.name} className="w-4 h-3 object-cover" />
@@ -115,7 +115,7 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
           ref={ref}
           value={phoneNumber}
           onChange={(e) => handlePhoneChange(e.target.value)}
-          className={cn("rounded-l-none", className)}
+          className={cn("rounded-l-none h-10", className)}
           placeholder="6 XX XX XX XX"
         />
       </div>
