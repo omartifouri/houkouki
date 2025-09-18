@@ -89,9 +89,9 @@ const FrRSE = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200">
+          <Card className="bg-gradient-to-r from-brand-beige/20 to-brand-red/10 border-2 border-brand-beige">
             <CardHeader>
-              <CardTitle className="text-2xl text-green-800 flex items-center space-x-2">
+              <CardTitle className="text-2xl text-brand-red flex items-center space-x-2">
                 <Users className="h-8 w-8" />
                 <span>Initiative citoyenne : Play Fair, Live Fair</span>
               </CardTitle>
@@ -100,7 +100,7 @@ const FrRSE = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Parce que l'esprit sportif rejoint l'esprit citoyen, Houkouki lance l'initiative :
               </p>
-              <h3 className="text-xl font-bold text-green-700 mb-4 text-center">
+              <h3 className="text-xl font-bold text-brand-beige mb-4 text-center">
                 "Play Fair, Live Fair – L3eb nḍif, 3ich nḍif"
               </h3>
               <div className="bg-white/70 p-4 rounded-lg mb-4">
@@ -115,7 +115,7 @@ const FrRSE = () => {
                 Cette initiative s'inscrit dans la dynamique des grands événements sportifs que le Maroc s'apprête à accueillir 
                 et vise à renforcer notre rôle d'hôtes responsables et accueillants.
               </p>
-              <p className="text-xl font-semibold text-green-700 text-center">
+              <p className="text-xl font-semibold text-brand-beige text-center">
                 Ensemble, faisons du civisme notre plus belle victoire.
               </p>
             </CardContent>
