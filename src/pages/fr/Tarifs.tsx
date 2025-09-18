@@ -333,7 +333,13 @@ const FrTarifs = () => {
                   >
                     Demander un devis sur mesure
                   </Button>
-                  <Button variant="outline" className="border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white font-semibold py-3">
+                  <Button 
+                    variant="outline" 
+                    className="border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white font-semibold py-3"
+                    onClick={() => {
+                      window.location.href = "/fr/contact#top";
+                    }}
+                  >
                     Contacter notre équipe entreprise
                   </Button>
                 </div>

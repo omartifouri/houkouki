@@ -21,6 +21,14 @@ const FrContact = () => {
     acceptMarketing: false
   });
 
+  useEffect(() => {
+    // Vérifier si l'URL contient l'ancre #top
+    if (window.location.hash === "#top") {
+      // Scroll automatique vers le haut
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
