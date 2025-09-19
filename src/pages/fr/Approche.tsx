@@ -194,7 +194,7 @@ const FrApproche = () => {
 
           <div className="text-center">
             <Button className="bg-red-600 hover:bg-red-700" asChild>
-              <Link to="/fr/prestations">Découvrir nos services</Link>
+              <Link to="/fr/prestations#top">Découvrir nos services</Link>
             </Button>
           </div>
         </div>
