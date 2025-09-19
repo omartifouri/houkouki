@@ -349,7 +349,7 @@ const FrDomaines = () => {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button className="bg-red-600 hover:bg-red-700" asChild>
-                    <Link to="/fr/prestations">Accéder à nos prestations</Link>
+                    <Link to="/fr/prestations#top">Accéder à nos prestations</Link>
                   </Button>
                   <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
                     <Link to="/fr/contact#top">Prendre contact avec un juriste</Link>
