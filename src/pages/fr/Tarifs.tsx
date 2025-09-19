@@ -134,7 +134,7 @@ const FrTarifs = () => {
     {
       title: "AU DELÀ DE 50 EMPLOYÉS",
       icon: Building2,
-      subtitle: "Un recours amiable ou une coordination d'un recours judiciaire gratuit / an",
+      subtitle: "",
       features: [
         "Consultations juridiques illimitées*",
         "Lecture et analyse de documents juridiques",
