@@ -43,7 +43,7 @@ const FrTarifs = () => {
     "Audit de contrats et documents RH": "Vérification et optimisation de vos contrats de travail, règlements intérieurs et procédures RH.",
     "Sécurisation des procédures RH": "Mise en conformité de vos processus de recrutement, sanctions disciplinaires et ruptures de contrat.",
     "Rédaction de CGV ou d'actes juridiques": "Création sur-mesure de vos conditions générales de vente, contrats commerciaux et documents juridiques.",
-    "Accompagnement en cas de contrôle ou litige": "Assistance lors des contrôles administratifs (URSSAF, inspection du travail) et gestion des contentieux."
+    "Accompagnement en cas de contrôle ou litige": "Assistance lors des contrôles administratifs (CNSS, inspection du travail) et gestion des contentieux."
   };
 
   const services = [
