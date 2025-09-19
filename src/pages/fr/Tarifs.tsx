@@ -151,7 +151,7 @@ const FrTarifs = () => {
       ],
       price: "Sur devis",
       currency: "",
-      buttonText: "COMMANDER", 
+      buttonText: "DEMANDER UN DEVIS",
       popular: false
     }
   ];
