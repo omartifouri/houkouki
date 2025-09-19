@@ -146,47 +146,6 @@ const FrDomaines = () => {
             </CardContent>
           </Card>
 
-          {/* Droit public et administratif */}
-          <Card className="border-2 border-red-200">
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-3 text-2xl text-red-800">
-                <Landmark className="h-7 w-7" />
-                <span>Droit public et administratif</span>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700 text-lg mb-4">
-                Nous vous aidons à faire valoir vos droits face à l'administration ou à comprendre vos obligations :
-              </p>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    <span className="text-gray-700">Recours contre une décision administrative</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    <span className="text-gray-700">Accès à des aides ou autorisations</span>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    <span className="text-gray-700">Fonction publique et carrière administrative</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    <span className="text-gray-700">Démarches d'état civil ou documents officiels</span>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-6">
-                <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
-                  Contacter un juriste en droit public
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
 
           {/* Droit commercial et des sociétés */}
           <Card className="border-2 border-red-200">
