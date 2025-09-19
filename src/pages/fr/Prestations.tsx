@@ -125,7 +125,7 @@ const FrPrestations = () => {
                   </div>
 
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                    <Link to="/fr/contact">Demander une rédaction ou un audit</Link>
+                    <Link to="/fr/contact#top">Demander une rédaction ou un audit</Link>
                   </Button>
                 </CardContent>
               </Card>
