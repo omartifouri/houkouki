@@ -277,7 +277,7 @@ const FrTarifs = () => {
                           className="w-full bg-[#C0997A] hover:bg-[#B8926F] text-white font-semibold py-3"
                           onClick={() => {
                             if (plan.price === "Sur devis") {
-                              window.location.href = "/fr/devis#top";
+                              window.location.href = "/fr/contact#top";
                             }
                           }}
                         >
