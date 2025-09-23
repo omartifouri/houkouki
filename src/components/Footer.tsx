@@ -3,10 +3,10 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-red text-white py-12">
+    <footer className="bg-brand-purple text-white py-12">
       <div className="container mx-auto px-4">
         {/* Engagement Section */}
-        <div className="bg-brand-red/80 rounded-lg p-6 mb-12 text-center">
+        <div className="bg-brand-purple/80 rounded-lg p-6 mb-12 text-center">
           <h3 className="text-xl font-semibold mb-4 text-brand-beige">
             Houkouki s'engage pour le civisme
           </h3>
@@ -29,19 +29,19 @@ const Footer = () => {
             </h3>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div className="bg-red-600 p-2 rounded-full">
+                 <div className="bg-brand-coral p-2 rounded-full">
                   <Phone className="h-4 w-4" />
                 </div>
                 <span>+212 529 045 999</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="bg-red-600 p-2 rounded-full">
+                <div className="bg-brand-coral p-2 rounded-full">
                   <Mail className="h-4 w-4" />
                 </div>
                 <span>contact@houkouki.com</span>
               </div>
               <div className="flex items-start gap-3">
-                <div className="bg-red-600 p-2 rounded-full mt-1">
+                <div className="bg-brand-coral p-2 rounded-full mt-1">
                   <MapPin className="h-4 w-4" />
                 </div>
                 <div>
