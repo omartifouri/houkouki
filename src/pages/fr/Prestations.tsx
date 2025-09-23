@@ -233,7 +233,7 @@ const FrPrestations = () => {
                   </p>
 
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                    <Link to="/fr/contact">Préparer un recours judiciaire</Link>
+                    <Link to="/fr/contact#top">Préparer un recours judiciaire</Link>
                   </Button>
                 </CardContent>
               </Card>
