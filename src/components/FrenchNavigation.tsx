@@ -43,7 +43,7 @@ const FrenchNavigation = () => {
                   0529 045 999
                 </a>
               </div>
-              <LanguageSelector />
+              {/* <LanguageSelector /> */}
             </div>
           </div>
         </div>
