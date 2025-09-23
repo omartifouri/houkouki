@@ -231,7 +231,7 @@ const FrProfils = () => {
                     </div>
 
                     <Button variant="outline" className="mt-4 border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white" asChild>
-                      <Link to="/fr/devis">Demander mon devis personnalisé</Link>
+                      <Link to="/fr/contact#top">Demander mon devis personnalisé</Link>
                     </Button>
                   </CardContent>
                 </Card>

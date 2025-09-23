@@ -353,7 +353,7 @@ const FrTarifs = () => {
                   <Button 
                     className="bg-[#C0997A] hover:bg-[#B8926F] text-white font-semibold py-3"
                     onClick={() => {
-                      window.location.href = "/fr/devis#top";
+                      window.location.href = "/fr/contact#top";
                     }}
                   >
                     Demander un devis sur mesure

@@ -25,7 +25,6 @@ import FrDomaines from "./pages/fr/Domaines";
 import FrTarifs from "./pages/fr/Tarifs";
 
 import FrBlog from "./pages/fr/Blog";
-import FrDevis from "./pages/fr/Devis";
 import FrContact from "./pages/fr/Contact";
 import FrCGU from "./pages/fr/CGU";
 import FrCGV from "./pages/fr/CGV";
@@ -83,7 +82,6 @@ const App = () => (
             <Route path="/fr/domaines" element={<FrDomaines />} />
             <Route path="/fr/tarifs" element={<FrTarifs />} />
             <Route path="/fr/blog" element={<FrBlog />} />
-            <Route path="/fr/devis" element={<FrDevis />} />
             <Route path="/fr/contact" element={<FrContact />} />
             <Route path="/fr/rse" element={<FrRSE />} />
             <Route path="/fr/cgu" element={<FrCGU />} />
