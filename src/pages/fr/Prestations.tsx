@@ -80,7 +80,7 @@ const FrPrestations = () => {
                   </div>
 
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                    <Link to="/fr/contact#top">Choisir un conseil juridique</Link>
+                    <Link to="/fr/contact#top">Demander un conseil juridique</Link>
                   </Button>
                 </CardContent>
               </Card>
