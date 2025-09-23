@@ -28,7 +28,7 @@ const FrAccueil = () => {
           </p>
           <div className="flex justify-center">
             <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
-              <Link to="/fr/contact">
+              <Link to="/fr/contact#top">
                 Demander un devis
               </Link>
             </Button>
