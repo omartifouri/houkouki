@@ -41,7 +41,6 @@ import Prestations from "./pages/Prestations";
 import Domaines from "./pages/Domaines";
 import Tarifs from "./pages/Tarifs";
 import Blog from "./pages/Blog";
-import Devis from "./pages/Devis";
 import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
@@ -67,7 +66,6 @@ const App = () => (
             <Route path="/domaines" element={<Domaines />} />
             <Route path="/tarifs" element={<Tarifs />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/devis" element={<Devis />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cgu" element={<FrCGU />} />
             <Route path="/cgv" element={<FrCGV />} />

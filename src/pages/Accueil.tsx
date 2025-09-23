@@ -28,7 +28,7 @@ const Accueil = () => {
           </p>
           <div className="flex justify-center">
             <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
-              <Link to="/devis">
+              <Link to="/fr/contact">
                 Demander un devis
               </Link>
             </Button>
