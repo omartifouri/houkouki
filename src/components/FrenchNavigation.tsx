@@ -178,7 +178,7 @@ const FrenchNavigation = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/fr/contact#top" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
+                  <Link to="/fr/contact" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
                     Devis
                   </Link>
                 </NavigationMenuLink>

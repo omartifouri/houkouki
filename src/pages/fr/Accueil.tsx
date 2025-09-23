@@ -28,7 +28,7 @@ const FrAccueil = () => {
           </p>
           <div className="flex justify-center">
             <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
-              <Link to="/fr/contact#top">
+              <Link to="/fr/contact">
                 Demander un devis
               </Link>
             </Button>
@@ -403,7 +403,7 @@ const FrAccueil = () => {
               <strong>Rapide. Sécurisé. Efficace.</strong>
             </p>
             <Button className="bg-gradient-to-r from-[#C0997A] to-red-600 hover:from-[#B8926F] hover:to-red-700" asChild>
-              <Link to="/fr/contact#top">En savoir plus sur notre fonctionnement</Link>
+              <Link to="/fr/contact">En savoir plus sur notre fonctionnement</Link>
             </Button>
           </div>
         </div>

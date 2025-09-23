@@ -56,7 +56,7 @@ const FrDomaines = () => {
               </div>
               <div className="mt-6">
                 <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
-                  <Link to="/fr/contact#top">Demander un conseil en droit de la famille</Link>
+                  <Link to="/fr/contact">Demander un conseil en droit de la famille</Link>
                 </Button>
               </div>
             </CardContent>
@@ -98,7 +98,7 @@ const FrDomaines = () => {
               </div>
               <div className="mt-6">
                 <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
-                  <Link to="/fr/contact#top">Être accompagné sur un dossier foncier</Link>
+                  <Link to="/fr/contact">Être accompagné sur un dossier foncier</Link>
                 </Button>
               </div>
             </CardContent>
@@ -140,7 +140,7 @@ const FrDomaines = () => {
               </div>
               <div className="mt-6">
                 <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
-                  <Link to="/fr/contact#top">Poser une question en droit du travail</Link>
+                  <Link to="/fr/contact">Poser une question en droit du travail</Link>
                 </Button>
               </div>
             </CardContent>
@@ -187,7 +187,7 @@ const FrDomaines = () => {
               </div>
               <div className="mt-6">
                 <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
-                  <Link to="/fr/contact#top">Être conseillé pour son activité professionnelle</Link>
+                  <Link to="/fr/contact">Être conseillé pour son activité professionnelle</Link>
                 </Button>
               </div>
             </CardContent>
@@ -229,7 +229,7 @@ const FrDomaines = () => {
               </div>
               <div className="mt-6">
                 <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
-                  <Link to="/fr/contact#top">Obtenir un recours pour un litige de consommation</Link>
+                  <Link to="/fr/contact">Obtenir un recours pour un litige de consommation</Link>
                 </Button>
               </div>
             </CardContent>
@@ -271,7 +271,7 @@ const FrDomaines = () => {
               </div>
               <div className="mt-6">
                 <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
-                  <Link to="/fr/contact#top">Faire valoir ses droits en assurance</Link>
+                  <Link to="/fr/contact">Faire valoir ses droits en assurance</Link>
                 </Button>
               </div>
             </CardContent>
@@ -313,7 +313,7 @@ const FrDomaines = () => {
               </div>
               <div className="mt-6">
                 <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
-                  <Link to="/fr/contact#top">Obtenir un accompagnement CNDP</Link>
+                  <Link to="/fr/contact">Obtenir un accompagnement CNDP</Link>
                 </Button>
               </div>
             </CardContent>
@@ -352,7 +352,7 @@ const FrDomaines = () => {
                     <Link to="/fr/prestations#top">Accéder à nos prestations</Link>
                   </Button>
                   <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
-                    <Link to="/fr/contact#top">Prendre contact avec un juriste</Link>
+                    <Link to="/fr/contact">Prendre contact avec un juriste</Link>
                   </Button>
                 </div>
               </div>

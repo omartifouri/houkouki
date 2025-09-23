@@ -80,7 +80,7 @@ const FrPrestations = () => {
                   </div>
 
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                    <Link to="/fr/contact#top">Demander un conseil juridique</Link>
+                    <Link to="/fr/contact">Demander un conseil juridique</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -125,7 +125,7 @@ const FrPrestations = () => {
                   </div>
 
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                    <Link to="/fr/contact#top">Demander une rédaction ou un audit</Link>
+                    <Link to="/fr/contact">Demander une rédaction ou un audit</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -171,7 +171,7 @@ const FrPrestations = () => {
                   </div>
 
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                    <Link to="/fr/contact#top">Confier une procédure administrative</Link>
+                    <Link to="/fr/contact">Confier une procédure administrative</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -209,7 +209,7 @@ const FrPrestations = () => {
                   </div>
 
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                    <Link to="/fr/contact#top">Obtenir une aide pour un litige</Link>
+                    <Link to="/fr/contact">Obtenir une aide pour un litige</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -233,7 +233,7 @@ const FrPrestations = () => {
                   </p>
 
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                    <Link to="/fr/contact#top">Préparer un recours judiciaire</Link>
+                    <Link to="/fr/contact">Préparer un recours judiciaire</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -343,7 +343,7 @@ const FrPrestations = () => {
                   </div>
 
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                    <Link to="/fr/contact#top">Demander un conseil en financement</Link>
+                    <Link to="/fr/contact">Demander un conseil en financement</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -391,7 +391,7 @@ const FrPrestations = () => {
                     <a href="/fr/tarifs#top">Voir nos formules</a>
                   </Button>
                   <Button size="lg" variant="outline" className="bg-white text-red-600 hover:bg-gray-100" asChild>
-                    <a href="/fr/contact#top">Contactez-nous</a>
+                    <a href="/fr/contact">Contactez-nous</a>
                   </Button>
                 </div>
               </CardContent>

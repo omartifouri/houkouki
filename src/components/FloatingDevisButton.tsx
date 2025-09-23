@@ -10,7 +10,7 @@ const FloatingDevisButton = () => {
         className="bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover-scale rounded-full px-6 py-3 flex items-center gap-2 group"
         size="lg"
       >
-        <Link to="/fr/contact#top">
+        <Link to="/fr/contact">
           <Calculator className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
           <span className="font-medium">Devis sur mesure</span>
         </Link>

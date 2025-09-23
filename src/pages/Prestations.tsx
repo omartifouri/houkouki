@@ -381,7 +381,7 @@ const FrPrestations = () => {
                     <a href="/fr/tarifs#top">Voir nos formules</a>
                   </Button>
                   <Button size="lg" variant="outline" className="bg-white text-red-600 hover:bg-gray-100" asChild>
-                    <a href="/fr/contact#top">Contactez-nous</a>
+                    <a href="/fr/contact">Contactez-nous</a>
                   </Button>
                 </div>
               </CardContent>

@@ -277,7 +277,7 @@ const FrTarifs = () => {
                           className="w-full bg-[#C0997A] hover:bg-[#B8926F] text-white font-semibold py-3"
                           onClick={() => {
                             if (plan.price === "Sur devis") {
-                              window.location.href = "/fr/contact#top";
+                              window.location.href = "/fr/contact";
                             }
                           }}
                         >
@@ -353,7 +353,7 @@ const FrTarifs = () => {
                   <Button 
                     className="bg-[#C0997A] hover:bg-[#B8926F] text-white font-semibold py-3"
                     onClick={() => {
-                      window.location.href = "/fr/contact#top";
+                      window.location.href = "/fr/contact";
                     }}
                   >
                     Demander un devis sur mesure
@@ -362,7 +362,7 @@ const FrTarifs = () => {
                     variant="outline" 
                     className="border-[#C0997A] text-[#C0997A] hover:bg-[#C0997A] hover:text-white font-semibold py-3"
                     onClick={() => {
-                      window.location.href = "/fr/contact#top";
+                      window.location.href = "/fr/contact";
                     }}
                   >
                     Contacter notre équipe entreprise
