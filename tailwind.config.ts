@@ -65,7 +65,8 @@ export default {
 				brand: {
 					red: 'hsl(var(--brand-red))',
 					beige: 'hsl(var(--brand-beige))',
-					teal: 'hsl(var(--brand-teal))'
+					teal: 'hsl(var(--brand-teal))',
+					purple: 'hsl(var(--brand-purple))'
 				}
 			},
 			borderRadius: {

@@ -14,7 +14,7 @@ const EnglishNavigation = () => {
   return (
     <>
       {/* Top Info Bar */}
-      <div className="bg-slate-900 text-white py-2 text-sm">
+      <div className="bg-brand-purple text-white py-2 text-sm">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             {/* Left side - Hours and Email */}
