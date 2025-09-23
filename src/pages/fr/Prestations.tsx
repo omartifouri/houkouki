@@ -343,7 +343,7 @@ const FrPrestations = () => {
                   </div>
 
                   <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                    <Link to="/fr/contact">Demander un conseil en financement</Link>
+                    <Link to="/fr/contact#top">Demander un conseil en financement</Link>
                   </Button>
                 </CardContent>
               </Card>
