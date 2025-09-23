@@ -33,7 +33,7 @@ const ArabicNavigation = () => {
             
             {/* Left side - Services and Phone (RTL) */}
             <div className="flex flex-col md:flex-row items-center space-y-1 md:space-y-0 md:space-x-4">
-              <a href="https://crm.hokouki.com/" target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-sm transition-colors">
+              <a href="https://crm.hokouki.com/" target="_blank" rel="noopener noreferrer" className="bg-brand-tan hover:bg-brand-tan/80 text-white px-3 py-1 rounded text-sm transition-colors">
                 منطقة المشتركين
               </a>
               <div className="flex items-center space-x-2">
