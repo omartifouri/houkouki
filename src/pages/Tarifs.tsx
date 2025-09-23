@@ -190,7 +190,7 @@ const FrTarifs = () => {
                     key={index} 
                     className={`border-2 border-red-200 relative overflow-hidden transition-all duration-300 hover:shadow-xl ${
                       plan.popular 
-                        ? 'ring-2 ring-red-500 shadow-xl scale-105 bg-gradient-to-br from-red-50 to-orange-50' 
+                        ? 'ring-2 ring-brand-coral shadow-xl scale-105 bg-gradient-to-br from-brand-coral/20 to-brand-beige/20' 
                         : 'hover:scale-102 bg-white'
                     }`}
                   >

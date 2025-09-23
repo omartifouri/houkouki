@@ -51,7 +51,7 @@ const LanguageSelector = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="flex items-center space-x-1 hover:text-orange-400 transition-colors">
+        <Button variant="ghost" size="sm" className="flex items-center space-x-1 hover:text-brand-beige transition-colors">
           <Globe className="h-4 w-4" />
           <span className="hidden sm:inline">{currentLang.name}</span>
           <span className="sm:hidden">{currentLang.flag}</span>
@@ -64,7 +64,7 @@ const LanguageSelector = () => {
             key={lang.code}
             onClick={() => handleLanguageChange(lang.code)}
             className={`flex items-center space-x-2 ${
-              currentLang.code === lang.code ? "bg-orange-50 text-orange-600" : ""
+              currentLang.code === lang.code ? "bg-brand-beige/20 text-brand-beige" : ""
             }`}
           >
             <span>{lang.flag}</span>

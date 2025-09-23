@@ -25,7 +25,7 @@ const EnglishNavigation = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:contact@houkouki.com" className="hover:text-orange-400 transition-colors">
+                <a href="mailto:contact@houkouki.com" className="hover:text-brand-beige transition-colors">
                   contact@houkouki.com
                 </a>
               </div>
@@ -38,7 +38,7 @@ const EnglishNavigation = () => {
               </a>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <a href="tel:0529045999" className="hover:text-orange-400 transition-colors font-medium">
+                <a href="tel:0529045999" className="hover:text-brand-beige transition-colors font-medium">
                   0529 045 999
                 </a>
               </div>

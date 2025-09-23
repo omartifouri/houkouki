@@ -45,7 +45,7 @@ const FrBlog = () => {
         "Réformes en cours sur les droits de succession"
       ],
       buttonText: "Lire les dernières actualités",
-      color: "orange"
+      color: "beige"
     },
     {
       title: "Témoignages & cas concrets",
@@ -71,13 +71,13 @@ const FrBlog = () => {
           button: "bg-red-500 hover:bg-red-600",
           buttonOutline: "border-red-500 text-red-600 hover:bg-red-50"
         };
-      case "orange":
+      case "beige":
         return {
-          bg: "from-orange-50 to-red-50",
-          border: "border-orange-200",
-          icon: "bg-orange-500",
-          button: "bg-orange-500 hover:bg-orange-600",
-          buttonOutline: "border-orange-500 text-orange-600 hover:bg-orange-50"
+          bg: "from-brand-beige/20 to-brand-coral/20",
+          border: "border-brand-beige",
+          icon: "bg-brand-beige",
+          button: "bg-brand-beige hover:bg-brand-beige/90",
+          buttonOutline: "border-brand-beige text-brand-beige hover:bg-brand-beige/20"
         };
       case "rose":
         return {
@@ -113,7 +113,7 @@ const FrBlog = () => {
 
         {/* Introduction */}
         <div className="max-w-6xl mx-auto mb-20">
-          <Card className="bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-200 shadow-lg">
+          <Card className="bg-gradient-to-br from-brand-beige/20 to-brand-coral/20 border-2 border-brand-beige shadow-lg">
             <CardHeader className="text-center">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-red-500 text-white flex items-center justify-center shadow-lg">
                 <BookOpen className="w-10 h-10" />
