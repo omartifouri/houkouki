@@ -17,16 +17,16 @@ html {
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 0 73% 41%;
+    --primary: 5 60% 65%;       /* Pantone 18-0651 coral */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 28 32% 62%;
+    --secondary: 37 30% 55%;     /* Pantone 7530 EC beige */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 28 32% 62%;
+    --accent: 37 30% 55%;        /* Pantone 7530 EC beige */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -36,12 +36,11 @@ html {
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
     
-    /* Custom colors */
-    --brand-red: 0 66% 31%;
-    --brand-beige: 26 35% 62%;
+    /* Custom colors - Houkouki Official Palette */
+    --brand-coral: 5 60% 65%;        /* Pantone 18-0651 */
+    --brand-beige: 37 30% 55%;       /* Pantone 7530 EC */  
+    --brand-purple: 317 38% 29%;     /* Pantone P74-15C */
     --brand-teal: 188 44% 48%;
-    --brand-purple: 317 38% 29%;
-    --brand-tan: 37 30% 55%;
 
     --radius: 0.5rem;
 

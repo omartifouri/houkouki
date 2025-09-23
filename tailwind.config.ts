@@ -63,11 +63,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				brand: {
-					red: 'hsl(var(--brand-red))',
+					coral: 'hsl(var(--brand-coral))',
 					beige: 'hsl(var(--brand-beige))',
 					teal: 'hsl(var(--brand-teal))',
-					purple: 'hsl(var(--brand-purple))',
-					tan: 'hsl(var(--brand-tan))'
+					purple: 'hsl(var(--brand-purple))'
 				}
 			},
 			borderRadius: {
