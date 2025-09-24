@@ -346,13 +346,7 @@ const FrAccueil = () => {
                   variant="outline" 
                   className="w-full border-brand-coral text-brand-coral hover:bg-brand-coral hover:text-white mt-auto"
                   onClick={() => {
-                    window.location.href = '/fr/tarifs#prestations-carte';
-                    setTimeout(() => {
-                      const element = document.getElementById('prestations-carte');
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                      }
-                    }, 100);
+                    window.location.href = '/fr/tarifs#prestations-a-la-carte';
                   }}
                 >
                   Choisir une prestation à la carte
