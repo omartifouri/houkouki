@@ -278,6 +278,9 @@ const FrTarifs = () => {
                           onClick={() => {
                             if (plan.price === "Sur devis") {
                               window.location.href = "/fr/contact";
+                            } else if (plan.buttonText === "SOUSCRIRE" || plan.buttonText === "COMMANDER") {
+                              const planParam = plan.title === "PARTICULIER" ? "PARTICULIER" : "1-50";
+                              window.location.href = `/souscription?plan=${planParam}`;
                             }
                           }}
                         >
