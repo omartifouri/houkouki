@@ -36,7 +36,7 @@ export const BookingsManagerTab = () => {
       <Card>
         <CardContent className="p-6">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 mx-auto"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-coral mx-auto"></div>
             <p className="mt-2 text-gray-600">Chargement de vos rendez-vous...</p>
           </div>
         </CardContent>
@@ -48,7 +48,7 @@ export const BookingsManagerTab = () => {
     return (
       <Card>
         <CardContent className="p-6">
-          <div className="text-center text-red-600">
+          <div className="text-center text-brand-coral">
             <p>Erreur lors du chargement de vos rendez-vous</p>
           </div>
         </CardContent>
@@ -61,7 +61,7 @@ export const BookingsManagerTab = () => {
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-semibold">Mes rendez-vous</h2>
         <Link to="/booking">
-          <Button className="bg-red-600 hover:bg-red-700">
+          <Button className="bg-brand-coral hover:bg-brand-coral-dark">
             <Plus className="h-4 w-4 mr-2" />
             Nouveau rendez-vous
           </Button>
@@ -123,7 +123,7 @@ export const BookingsManagerTab = () => {
               Vous n'avez pas encore de rendez-vous planifiés
             </p>
             <Link to="/booking">
-              <Button className="bg-red-600 hover:bg-red-700">
+              <Button className="bg-brand-coral hover:bg-brand-coral-dark">
                 <Plus className="h-4 w-4 mr-2" />
                 Réserver un rendez-vous
               </Button>

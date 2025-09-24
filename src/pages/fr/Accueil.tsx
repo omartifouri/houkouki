@@ -16,18 +16,18 @@ const FrAccueil = () => {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <Badge variant="outline" className="mb-6 border-red-600 text-red-600 text-xl px-8 py-3">
+          <Badge variant="outline" className="mb-6 border-brand-coral text-brand-coral text-xl px-8 py-3">
             Vos droits, notre mission.
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Un accompagnement juridique<br />
-            <span className="text-red-600">simple, rapide et humain</span>
+            <span className="text-brand-coral">simple, rapide et humain</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Où que vous soyez, bénéficiez de l'expertise de nos juristes pour vous conseiller, vous orienter, et protéger vos intérêts.
           </p>
           <div className="flex justify-center">
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white" asChild>
+            <Button size="lg" className="bg-brand-coral hover:bg-brand-coral-dark text-white" asChild>
               <Link to="/fr/contact#top">
                 Demander un devis
               </Link>
@@ -46,12 +46,12 @@ const FrAccueil = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
+            <Card className="border-2 border-brand-coral-light hover:border-brand-coral transition-all duration-300">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-brand-beige to-brand-beige rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-red-800">Conseil à distance</CardTitle>
+                <CardTitle className="text-brand-coral-dark">Conseil à distance</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
@@ -60,12 +60,12 @@ const FrAccueil = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
+            <Card className="border-2 border-brand-coral-light hover:border-brand-coral transition-all duration-300">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-brand-beige to-brand-beige rounded-full flex items-center justify-center mx-auto mb-4">
                   <Scale className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-red-800">Services personnalisés</CardTitle>
+                <CardTitle className="text-brand-coral-dark">Services personnalisés</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
@@ -74,12 +74,12 @@ const FrAccueil = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
+            <Card className="border-2 border-brand-coral-light hover:border-brand-coral transition-all duration-300">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-brand-beige to-brand-beige rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-red-800">Sécurité garantie</CardTitle>
+                <CardTitle className="text-brand-coral-dark">Sécurité garantie</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
@@ -172,8 +172,8 @@ const FrAccueil = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               <CardHeader>
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-red-600" />
+                <div className="w-12 h-12 bg-brand-coral-light rounded-lg flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-brand-coral" />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Vous êtes un particulier ?</CardTitle>
               </CardHeader>
@@ -239,45 +239,45 @@ const FrAccueil = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-brand-coral flex-shrink-0" />
                 <span className="text-gray-700">Création de société et suivi de la vie juridique</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-brand-coral flex-shrink-0" />
                 <span className="text-gray-700">Audit conformité sociale</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-brand-coral flex-shrink-0" />
                 <span className="text-gray-700">Rédaction de contrats et conventions</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-brand-coral flex-shrink-0" />
                 <span className="text-gray-700">Conseil en droit social</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-brand-coral flex-shrink-0" />
                 <span className="text-gray-700">Conseil en droit de la famille</span>
               </div>
             </div>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-brand-coral flex-shrink-0" />
                 <span className="text-gray-700">Conseil en droit immobilier</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-brand-coral flex-shrink-0" />
                 <span className="text-gray-700">Recours amiables et accompagnement litiges</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-brand-coral flex-shrink-0" />
                 <span className="text-gray-700">Procédures administratives</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-brand-coral flex-shrink-0" />
                 <span className="text-gray-700">Audit juridique de documents</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-brand-coral flex-shrink-0" />
                 <span className="text-gray-700">Conseil en financement</span>
               </div>
             </div>
@@ -335,7 +335,7 @@ const FrAccueil = () => {
 
             <Card className="bg-white p-6 flex flex-col h-full">
               <CardHeader>
-                <CardTitle className="text-2xl text-red-800">À la carte</CardTitle>
+                <CardTitle className="text-2xl text-brand-coral-dark">À la carte</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
                 <p className="text-gray-600 mb-4 flex-1">
@@ -344,7 +344,7 @@ const FrAccueil = () => {
                 </p>
                 <Button 
                   variant="outline" 
-                  className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white mt-auto"
+                  className="w-full border-brand-coral text-brand-coral hover:bg-brand-coral hover:text-white mt-auto"
                   onClick={() => {
                     window.location.href = '/fr/tarifs#prestations-carte';
                     setTimeout(() => {
@@ -374,24 +374,24 @@ const FrAccueil = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-red-600 font-bold text-xl">1</span>
+              <div className="w-16 h-16 bg-brand-coral-light rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-brand-coral font-bold text-xl">1</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Vous choisissez votre formule</h3>
               <p className="text-gray-600">Abonnement ou prestation à la carte selon vos besoins</p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-red-600 font-bold text-xl">2</span>
+              <div className="w-16 h-16 bg-brand-coral-light rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-brand-coral font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Vous accédez à nos juristes</h3>
               <p className="text-gray-600">Par téléphone ou visioconférence, rapidement et facilement</p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-red-600 font-bold text-xl">3</span>
+              <div className="w-16 h-16 bg-brand-coral-light rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-brand-coral font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Nous vous accompagnons</h3>
               <p className="text-gray-600">Jusqu'à résolution complète de votre situation</p>

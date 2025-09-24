@@ -28,26 +28,26 @@ const DevisSuccessModal = ({ isOpen, onClose }: DevisSuccessModalProps) => {
           </p>
 
           {/* Prochaines étapes */}
-          <div className="bg-red-50 rounded-lg p-4 border border-red-200">
-            <h3 className="font-semibold text-red-900 mb-3 flex items-center gap-2">
+          <div className="bg-brand-coral-light rounded-lg p-4 border border-brand-coral-light">
+            <h3 className="font-semibold text-brand-coral-dark mb-3 flex items-center gap-2">
               <Clock className="w-4 h-4" />
               Prochaines étapes
             </h3>
-            <div className="space-y-2 text-sm text-red-700">
+            <div className="space-y-2 text-sm text-brand-coral-dark">
               <div className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-brand-coral rounded-full mt-2 flex-shrink-0"></div>
                 <span>Accusé de réception par email dans les 5 minutes</span>
               </div>
               <div className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-brand-coral rounded-full mt-2 flex-shrink-0"></div>
                 <span>Analyse de votre demande par nos juristes</span>
               </div>
               <div className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-brand-coral rounded-full mt-2 flex-shrink-0"></div>
                 <span>Proposition détaillée sous 24h ouvrées</span>
               </div>
               <div className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-brand-coral rounded-full mt-2 flex-shrink-0"></div>
                 <span>Appel de notre équipe pour finaliser</span>
               </div>
             </div>
@@ -61,11 +61,11 @@ const DevisSuccessModal = ({ isOpen, onClose }: DevisSuccessModalProps) => {
             </p>
             <div className="flex flex-col gap-2 text-sm">
               <div className="flex items-center gap-2 text-gray-700">
-                <Phone className="w-4 h-4 text-red-600" />
+                <Phone className="w-4 h-4 text-brand-coral" />
                 <span>05 29 045 999</span>
               </div>
               <div className="flex items-center gap-2 text-gray-700">
-                <Mail className="w-4 h-4 text-red-600" />
+                <Mail className="w-4 h-4 text-brand-coral" />
                 <span>contact@houkouki.com</span>
               </div>
             </div>
@@ -75,7 +75,7 @@ const DevisSuccessModal = ({ isOpen, onClose }: DevisSuccessModalProps) => {
           <div className="flex flex-col gap-3 pt-4">
             <Button 
               onClick={onClose}
-              className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white"
+              className="w-full bg-gradient-to-r from-brand-coral to-brand-coral-dark hover:from-brand-coral-dark hover:to-brand-coral text-white"
             >
               Parfait, j'ai compris
             </Button>

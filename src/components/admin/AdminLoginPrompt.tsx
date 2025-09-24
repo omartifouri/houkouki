@@ -11,7 +11,7 @@ const AdminLoginPrompt = () => {
       <h2 className="text-2xl font-semibold text-gray-900 mb-2">Accès administrateur requis</h2>
       <p className="text-gray-600 mb-6">Vous devez être connecté avec un compte administrateur</p>
       <AuthModal>
-        <Button className="bg-red-600 hover:bg-red-700">
+        <Button className="bg-brand-coral hover:bg-brand-coral-dark">
           Se connecter
         </Button>
       </AuthModal>

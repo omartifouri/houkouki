@@ -17,7 +17,7 @@ const AdminHeader = () => {
             alt="ILAA Logo" 
             className="h-8 w-auto"
           />
-          <span className="text-2xl font-bold text-red-800">ILAA Admin</span>
+          <span className="text-2xl font-bold text-brand-coral-dark">ILAA Admin</span>
         </div>
       </div>
     </header>

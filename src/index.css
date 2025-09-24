@@ -38,6 +38,8 @@ html {
     
     /* Custom colors - Houkouki Official Palette */
     --brand-coral: 5 60% 65%;        /* Pantone 18-0651 */
+    --brand-coral-light: 5 60% 85%;  /* Light variant for backgrounds */
+    --brand-coral-dark: 5 60% 45%;   /* Dark variant for text */
     --brand-beige: 37 30% 55%;       /* Pantone 7530 EC */  
     --brand-purple: 317 38% 29%;     /* Pantone P74-15C */
     --brand-teal: 188 44% 48%;

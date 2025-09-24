@@ -107,7 +107,7 @@ const RecommendToFriend = () => {
       <Button
         onClick={sendRecommendation}
         disabled={isLoading}
-        className="bg-red-600 hover:bg-red-700 text-white"
+        className="bg-brand-coral hover:bg-brand-coral-dark text-white"
       >
         <Send className="mr-2 h-4 w-4" />
         {isLoading ? "Envoi..." : "Envoyer la recommandation"}

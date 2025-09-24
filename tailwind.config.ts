@@ -64,6 +64,8 @@ export default {
 				},
 				brand: {
 					coral: 'hsl(var(--brand-coral))',
+					'coral-light': 'hsl(var(--brand-coral-light))',
+					'coral-dark': 'hsl(var(--brand-coral-dark))',
 					beige: 'hsl(var(--brand-beige))',
 					teal: 'hsl(var(--brand-teal))',
 					purple: 'hsl(var(--brand-purple))'

@@ -19,7 +19,7 @@ const AdminAuthDialog = ({ open, onOpenChange }: AdminAuthDialogProps) => {
       <AlertDialogContent className="sm:max-w-md">
         <AlertDialogHeader>
           <AlertDialogTitle className="flex items-center gap-2">
-            <Shield className="h-5 w-5 text-red-600" />
+            <Shield className="h-5 w-5 text-brand-coral" />
             Accès administrateur requis
           </AlertDialogTitle>
           <AlertDialogDescription>

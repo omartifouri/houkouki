@@ -22,7 +22,7 @@ export const CVManagerTab = () => {
       <Card>
         <CardContent className="p-6">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 mx-auto"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-coral mx-auto"></div>
             <p className="mt-2 text-gray-600">Chargement de vos CV...</p>
           </div>
         </CardContent>
@@ -34,7 +34,7 @@ export const CVManagerTab = () => {
     return (
       <Card>
         <CardContent className="p-6">
-          <div className="text-center text-red-600">
+          <div className="text-center text-brand-coral">
             <p>Erreur lors du chargement de vos CV</p>
           </div>
         </CardContent>
@@ -47,7 +47,7 @@ export const CVManagerTab = () => {
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-semibold">Mes CV</h2>
         <Link to="/create-cv">
-          <Button className="bg-red-600 hover:bg-red-700">
+          <Button className="bg-brand-coral hover:bg-brand-coral-dark">
             <Plus className="h-4 w-4 mr-2" />
             {userCV ? 'Modifier mon CV' : 'Créer un CV'}
           </Button>
@@ -113,7 +113,7 @@ export const CVManagerTab = () => {
               Créez votre premier CV professionnel dès maintenant
             </p>
             <Link to="/create-cv">
-              <Button className="bg-red-600 hover:bg-red-700">
+              <Button className="bg-brand-coral hover:bg-brand-coral-dark">
                 <Plus className="h-4 w-4 mr-2" />
                 Créer mon premier CV
               </Button>

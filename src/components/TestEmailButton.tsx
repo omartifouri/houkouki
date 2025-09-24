@@ -69,7 +69,7 @@ const TestEmailButton = () => {
         <Button
           onClick={sendTestEmail}
           disabled={isLoading}
-          className="bg-red-600 hover:bg-red-700"
+          className="bg-brand-coral hover:bg-brand-coral-dark"
         >
           {isLoading ? "Envoi..." : "Envoyer test"}
         </Button>

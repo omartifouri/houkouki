@@ -46,12 +46,12 @@ const Accueil = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
+            <Card className="border-2 border-brand-coral-light hover:border-brand-coral transition-all duration-300">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-brand-beige to-brand-beige rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-red-800">Conseil à distance</CardTitle>
+                <CardTitle className="text-brand-coral-dark">Conseil à distance</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
@@ -60,12 +60,12 @@ const Accueil = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
+            <Card className="border-2 border-brand-coral-light hover:border-brand-coral transition-all duration-300">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-brand-beige to-brand-beige rounded-full flex items-center justify-center mx-auto mb-4">
                   <Scale className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-red-800">Services personnalisés</CardTitle>
+                <CardTitle className="text-brand-coral-dark">Services personnalisés</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
@@ -74,12 +74,12 @@ const Accueil = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300">
+            <Card className="border-2 border-brand-coral-light hover:border-brand-coral transition-all duration-300">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-brand-beige to-brand-beige rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-red-800">Sécurité garantie</CardTitle>
+                <CardTitle className="text-brand-coral-dark">Sécurité garantie</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
@@ -171,7 +171,7 @@ const Accueil = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               <CardHeader>
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-brand-coral-light rounded-lg flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-red-600" />
                 </div>
                 <CardTitle className="text-xl text-gray-900">Vous êtes un particulier ?</CardTitle>

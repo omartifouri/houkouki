@@ -41,7 +41,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ cvData }) => {
       {/* Résumé professionnel */}
       {summary && (
         <div className="mb-6">
-          <h2 className="text-lg font-semibold text-red-800 mb-2 border-b border-red-200 pb-1">
+          <h2 className="text-lg font-semibold text-brand-coral-dark mb-2 border-b border-brand-coral-light pb-1">
             Résumé Professionnel
           </h2>
           <p className="text-sm text-gray-700 leading-relaxed">{summary}</p>
@@ -51,7 +51,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ cvData }) => {
       {/* Expérience professionnelle */}
       {experience.length > 0 && (
         <div className="mb-6">
-          <h2 className="text-lg font-semibold text-red-800 mb-3 border-b border-red-200 pb-1">
+          <h2 className="text-lg font-semibold text-brand-coral-dark mb-3 border-b border-brand-coral-light pb-1">
             Expérience Professionnelle
           </h2>
           <div className="space-y-4">
@@ -73,7 +73,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ cvData }) => {
       {/* Formation */}
       {education.length > 0 && (
         <div className="mb-6">
-          <h2 className="text-lg font-semibold text-red-800 mb-3 border-b border-red-200 pb-1">
+          <h2 className="text-lg font-semibold text-brand-coral-dark mb-3 border-b border-brand-coral-light pb-1">
             Formation
           </h2>
           <div className="space-y-3">
@@ -92,7 +92,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ cvData }) => {
       {/* Compétences */}
       {skills.length > 0 && (
         <div className="mb-6">
-          <h2 className="text-lg font-semibold text-red-800 mb-3 border-b border-red-200 pb-1">
+          <h2 className="text-lg font-semibold text-brand-coral-dark mb-3 border-b border-brand-coral-light pb-1">
             Compétences
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -111,7 +111,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ cvData }) => {
       {/* Langues */}
       {languages.length > 0 && (
         <div className="mb-6">
-          <h2 className="text-lg font-semibold text-red-800 mb-3 border-b border-red-200 pb-1">
+          <h2 className="text-lg font-semibold text-brand-coral-dark mb-3 border-b border-brand-coral-light pb-1">
             Langues
           </h2>
           <div className="space-y-2">
