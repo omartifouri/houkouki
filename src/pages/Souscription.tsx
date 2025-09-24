@@ -10,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Separator } from "@/components/ui/separator";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ArrowLeft, CreditCard, Building, FileText } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import FrenchNavigation from "@/components/FrenchNavigation";
@@ -22,6 +23,7 @@ const Souscription = () => {
   // Récupérer le type d'abonnement depuis les paramètres d'URL
   const searchParams = new URLSearchParams(location.search);
   const planType = searchParams.get('plan') || 'PARTICULIER';
+  const isEntreprise = planType !== 'PARTICULIER';
   
   const [formData, setFormData] = useState({
     nom: "",
@@ -31,6 +33,10 @@ const Souscription = () => {
     ville: "",
     codePostal: "",
     adresse: "",
+    // Champs entreprise
+    raisonSociale: "",
+    ice: "",
+    effectif: "",
     paymentMethod: "carte",
     accepteTraitement: false
   });
@@ -63,6 +69,12 @@ const Souscription = () => {
     // Vérifier l'acceptation du traitement des données
     if (!formData.accepteTraitement) {
       alert('Vous devez accepter le traitement de vos données personnelles pour continuer.');
+      return;
+    }
+
+    // Vérifier les champs obligatoires pour les entreprises
+    if (isEntreprise && (!formData.raisonSociale || !formData.ice || !formData.effectif)) {
+      alert('Veuillez remplir tous les champs obligatoires de l\'entreprise.');
       return;
     }
     
@@ -205,6 +217,62 @@ const Souscription = () => {
                     />
                   </div>
                 </div>
+
+                {/* Champs entreprise conditionnels */}
+                {isEntreprise && (
+                  <>
+                    <Separator className="my-6" />
+                    <div className="space-y-4">
+                      <h3 className="text-lg font-semibold">Informations entreprise</h3>
+                      
+                      <div>
+                        <Label htmlFor="raisonSociale">Raison sociale *</Label>
+                        <Input
+                          id="raisonSociale"
+                          value={formData.raisonSociale}
+                          onChange={(e) => handleInputChange('raisonSociale', e.target.value)}
+                          placeholder="Nom de votre entreprise"
+                          required={isEntreprise}
+                          className="border-gray-300 focus:border-red-500"
+                        />
+                      </div>
+
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div>
+                          <Label htmlFor="ice">ICE *</Label>
+                          <Input
+                            id="ice"
+                            value={formData.ice}
+                            onChange={(e) => handleInputChange('ice', e.target.value)}
+                            placeholder="Identifiant Commun de l'Entreprise"
+                            required={isEntreprise}
+                            className="border-gray-300 focus:border-red-500"
+                          />
+                        </div>
+                        <div>
+                          <Label htmlFor="effectif">Effectif *</Label>
+                          <Select 
+                            value={formData.effectif} 
+                            onValueChange={(value) => handleInputChange('effectif', value)}
+                            required={isEntreprise}
+                          >
+                            <SelectTrigger className="border-gray-300 focus:border-red-500">
+                              <SelectValue placeholder="Sélectionnez l'effectif" />
+                            </SelectTrigger>
+                            <SelectContent className="bg-white">
+                              <SelectItem value="1-10 employés">1-10 employés</SelectItem>
+                              <SelectItem value="10-20 employés">10 - 20 employés</SelectItem>
+                              <SelectItem value="20-50 employés">20 - 50 employés</SelectItem>
+                              <SelectItem value="50-100 employés">50 - 100 employés</SelectItem>
+                              <SelectItem value="100-200 employés">100 - 200 employés</SelectItem>
+                              <SelectItem value="+200 employés">+ 200 employés</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
 
                 <div>
                   <Label htmlFor="adresse">Adresse</Label>
