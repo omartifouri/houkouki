@@ -345,9 +345,11 @@ const FrAccueil = () => {
                 <Button 
                   variant="outline" 
                   className="w-full border-brand-coral text-brand-coral hover:bg-brand-coral hover:text-white mt-auto"
-                  asChild
+                  onClick={() => {
+                    window.location.href = '/fr/tarifs#prestations-a-la-carte';
+                  }}
                 >
-                  <Link to="/fr/tarifs#prestations-a-la-carte">Choisir une prestation à la carte</Link>
+                  Choisir une prestation à la carte
                 </Button>
               </CardContent>
             </Card>
