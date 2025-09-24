@@ -17,6 +17,8 @@ const FrTarifs = () => {
         const element = document.getElementById('prestations-a-la-carte');
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Ajuster la position pour prendre en compte la navigation fixe
+          window.scrollBy(0, -100);
         }
       }, 100);
     }
