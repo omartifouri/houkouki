@@ -13,12 +13,14 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ArrowLeft, CreditCard, Building, FileText } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 
 const Souscription = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { toast } = useToast();
   
   // Récupérer le type d'abonnement depuis les paramètres d'URL
   const searchParams = new URLSearchParams(location.search);
@@ -57,6 +59,28 @@ const Souscription = () => {
   const currentPlan = planDetails[planType as keyof typeof planDetails] || planDetails['PARTICULIER'];
 
   const handleInputChange = (field: string, value: string | boolean) => {
+    // Vérifier si l'utilisateur sélectionne plus de 50 employés
+    if (field === 'effectif' && typeof value === 'string') {
+      const isOver50 = value === "50-100 employés" || value === "100-200 employés" || value === "+200 employés";
+      
+      if (isOver50) {
+        toast({
+          title: "Abonnement non adapté",
+          description: "Cet abonnement est destiné aux entreprises de moins de 50 employés. Pour les entreprises de plus de 50 employés, veuillez faire une demande de devis personnalisé.",
+          variant: "destructive",
+          duration: 5000,
+        });
+        
+        // Rediriger vers la page de contact après un délai
+        setTimeout(() => {
+          navigate('/fr/contact');
+        }, 2000);
+        
+        // Ne pas mettre à jour le champ
+        return;
+      }
+    }
+    
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -259,13 +283,13 @@ const Souscription = () => {
                             <SelectTrigger className="border-gray-300 focus:border-red-500">
                               <SelectValue placeholder="Sélectionnez l'effectif" />
                             </SelectTrigger>
-                            <SelectContent className="bg-white">
+                            <SelectContent className="bg-white z-50">
                               <SelectItem value="1-10 employés">1-10 employés</SelectItem>
                               <SelectItem value="10-20 employés">10 - 20 employés</SelectItem>
                               <SelectItem value="20-50 employés">20 - 50 employés</SelectItem>
-                              <SelectItem value="50-100 employés">50 - 100 employés</SelectItem>
-                              <SelectItem value="100-200 employés">100 - 200 employés</SelectItem>
-                              <SelectItem value="+200 employés">+ 200 employés</SelectItem>
+                              <SelectItem value="50-100 employés" className="text-gray-400">50 - 100 employés</SelectItem>
+                              <SelectItem value="100-200 employés" className="text-gray-400">100 - 200 employés</SelectItem>
+                              <SelectItem value="+200 employés" className="text-gray-400">+ 200 employés</SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
