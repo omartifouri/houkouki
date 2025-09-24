@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Separator } from "@/components/ui/separator";
+import { Checkbox } from "@/components/ui/checkbox";
 import { ArrowLeft, CreditCard, Building, FileText } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import FrenchNavigation from "@/components/FrenchNavigation";
@@ -30,7 +31,8 @@ const Souscription = () => {
     ville: "",
     codePostal: "",
     adresse: "",
-    paymentMethod: "carte"
+    paymentMethod: "carte",
+    accepteTraitement: false
   });
 
   const planDetails = {
@@ -48,7 +50,7 @@ const Souscription = () => {
 
   const currentPlan = planDetails[planType as keyof typeof planDetails] || planDetails['PARTICULIER'];
 
-  const handleInputChange = (field: string, value: string) => {
+  const handleInputChange = (field: string, value: string | boolean) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -57,6 +59,13 @@ const Souscription = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Vérifier l'acceptation du traitement des données
+    if (!formData.accepteTraitement) {
+      alert('Vous devez accepter le traitement de vos données personnelles pour continuer.');
+      return;
+    }
+    
     // Logique de soumission du formulaire
     console.log('Données de souscription:', formData);
     
@@ -240,7 +249,7 @@ const Souscription = () => {
                       <div className="flex gap-2 mt-2">
                         <img src={visaLogo} alt="Visa" className="h-5 w-auto" />
                         <img src={mastercardLogo} alt="Mastercard" className="h-5 w-auto" />
-                        <img src={cmiLogo} alt="CMI" className="h-5 w-auto" />
+                        <img src={cmiLogo} alt="CMI" className="h-4 w-auto" />
                       </div>
                     </div>
                   </div>
@@ -280,6 +289,30 @@ const Souscription = () => {
                     </div>
                   </div>
                 </RadioGroup>
+              </CardContent>
+            </Card>
+
+            {/* Acceptation du traitement des données */}
+            <Card>
+              <CardContent className="pt-6">
+                <div className="flex items-start space-x-3 p-4 border-l-4 border-red-200 bg-red-50/50">
+                  <Checkbox
+                    id="accepteTraitement"
+                    checked={formData.accepteTraitement}
+                    onCheckedChange={(checked) => handleInputChange('accepteTraitement', !!checked)}
+                    className="mt-0.5"
+                    required
+                  />
+                  <div className="flex-1">
+                    <Label htmlFor="accepteTraitement" className="font-semibold cursor-pointer text-sm">
+                      J'accepte le traitement de mes données personnelles *
+                    </Label>
+                    <p className="text-xs text-gray-600 mt-1">
+                      Vos données seront utilisées uniquement pour traiter votre demande de devis. 
+                      Elles ne seront pas transmises à des tiers sans votre accord.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
