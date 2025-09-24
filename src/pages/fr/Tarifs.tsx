@@ -18,7 +18,7 @@ const FrTarifs = () => {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
           // Ajuster la position pour prendre en compte la navigation fixe
-          window.scrollBy(0, 100);
+          window.scrollBy(0, 150);
         }
       }, 100);
     }
