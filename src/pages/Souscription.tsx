@@ -1,4 +1,7 @@
 import { useState } from "react";
+import visaLogo from "@/assets/visa-logo.png";
+import mastercardLogo from "@/assets/mastercard-logo.png";
+import cmiLogo from "@/assets/cmi-logo.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -235,15 +238,9 @@ const Souscription = () => {
                         Visa, Mastercard
                       </p>
                       <div className="flex gap-2 mt-2">
-                        <div className="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center font-bold">
-                          VISA
-                        </div>
-                        <div className="w-8 h-5 bg-red-600 rounded text-white text-xs flex items-center justify-center font-bold">
-                          MC
-                        </div>
-                        <div className="w-8 h-5 bg-orange-600 rounded text-white text-xs flex items-center justify-center font-bold">
-                          CMI
-                        </div>
+                        <img src={visaLogo} alt="Visa" className="h-5 w-auto" />
+                        <img src={mastercardLogo} alt="Mastercard" className="h-5 w-auto" />
+                        <img src={cmiLogo} alt="CMI" className="h-5 w-auto" />
                       </div>
                     </div>
                   </div>
