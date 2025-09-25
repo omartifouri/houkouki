@@ -296,28 +296,40 @@ const Accueil = () => {
         </div>
       </section>
 
-      {/* Nos formules */}
+      {/* Nos formules et tarifs */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Nos formules
+              Nos formules et tarifs
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="bg-white p-6 flex flex-col h-full">
-              <CardHeader>
+            <Card 
+              className="bg-white p-6 flex flex-col h-full cursor-pointer hover:shadow-lg transition-all duration-300"
+              onClick={() => {
+                window.location.href = '/tarifs#abonnement-annuel';
+                setTimeout(() => {
+                  const element = document.getElementById('abonnement-annuel');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }, 100);
+              }}
+            >
+              <CardHeader className="text-center">
                 <CardTitle className="text-2xl text-[#C0997A]">Abonnement annuel</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
-                <p className="text-gray-600 mb-4 flex-1">
+                <p className="text-gray-600 mb-4 flex-1 text-center">
                   Un accès illimité à nos juristes + un accompagnement personnalisé tout au long de l'année.
                   Idéal pour les particuliers ou entreprises qui souhaitent un service de proximité continu.
                 </p>
                 <Button 
                   className="w-full bg-[#C0997A] hover:bg-[#B8926F] mt-auto"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation();
                     window.location.href = '/tarifs#abonnement-annuel';
                     setTimeout(() => {
                       const element = document.getElementById('abonnement-annuel');
@@ -332,19 +344,25 @@ const Accueil = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-white p-6 flex flex-col h-full">
-              <CardHeader>
+            <Card 
+              className="bg-white p-6 flex flex-col h-full cursor-pointer hover:shadow-lg transition-all duration-300"
+              onClick={() => {
+                window.location.href = '/tarifs#prestations-a-la-carte';
+              }}
+            >
+              <CardHeader className="text-center">
                 <CardTitle className="text-2xl text-red-800">À la carte</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
-                <p className="text-gray-600 mb-4 flex-1">
+                <p className="text-gray-600 mb-4 flex-1 text-center">
                   Une question, un besoin ponctuel, un document à rédiger ou une procédure à lancer ? 
                   Payez uniquement ce dont vous avez besoin.
                 </p>
                 <Button 
                   variant="outline" 
                   className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white mt-auto"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation();
                     window.location.href = '/tarifs#prestations-a-la-carte';
                   }}
                 >
