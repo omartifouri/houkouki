@@ -169,7 +169,7 @@ const FrenchNavigation = () => {
                       <div className="font-medium">Abonnement</div>
                       <p className="text-sm text-gray-600">Formules d'abonnement annuel</p>
                     </Link>
-                    <Link to="/fr/tarifs#prestations-a-la-carte" className="block p-3 hover:bg-gray-50 rounded-md">
+                    <Link to="/fr/tarifs#prestations-carte" className="block p-3 hover:bg-gray-50 rounded-md">
                       <div className="font-medium">À la carte</div>
                       <p className="text-sm text-gray-600">Prestations ponctuelles</p>
                     </Link>
