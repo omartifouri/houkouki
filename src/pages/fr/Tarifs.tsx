@@ -10,11 +10,11 @@ import { useEffect } from "react";
 const FrTarifs = () => {
   // Effect pour gérer le scroll automatique avec les ancres
   useEffect(() => {
-    // Vérifier si l'URL contient l'ancre #prestations-carte
-    if (window.location.hash === "#prestations-carte") {
+    // Vérifier si l'URL contient l'ancre #prestations-a-la-carte
+    if (window.location.hash === "#prestations-a-la-carte") {
       // Scroll automatique vers la section "Prestations à la carte"
       setTimeout(() => {
-        const element = document.getElementById('prestations-carte');
+        const element = document.getElementById('prestations-a-la-carte');
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
@@ -188,7 +188,7 @@ const FrTarifs = () => {
                     </div>
                   </div>
                   <div className="flex flex-col items-center space-y-3 cursor-pointer hover:bg-red-50 p-4 rounded-lg transition-all" onClick={() => {
-                    document.getElementById('prestations-carte')?.scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('prestations-a-la-carte')?.scrollIntoView({ behavior: 'smooth' });
                   }}>
                     <CheckCircle className="h-6 w-6 text-red-600 flex-shrink-0" />
                     <div>
@@ -393,7 +393,7 @@ const FrTarifs = () => {
           </section>
 
           {/* Prestations à la carte */}
-          <section id="prestations-carte">
+          <section id="prestations-a-la-carte">
             <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Prestations à la carte</h2>
             <p className="text-xl text-gray-600 mb-2 text-center">Payez uniquement ce dont vous avez besoin</p>
             <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-center">
