@@ -308,7 +308,7 @@ const FrAccueil = () => {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="bg-white p-6 flex flex-col h-full">
-              <CardHeader>
+              <CardHeader className="text-center">
                 <CardTitle className="text-2xl text-[#C0997A]">Abonnement annuel</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
@@ -334,7 +334,7 @@ const FrAccueil = () => {
             </Card>
 
             <Card className="bg-white p-6 flex flex-col h-full">
-              <CardHeader>
+              <CardHeader className="text-center">
                 <CardTitle className="text-2xl text-brand-coral-dark">À la carte</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
