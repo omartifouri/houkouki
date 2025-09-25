@@ -198,7 +198,7 @@ const FrTarifs = () => {
                     </div>
                   </div>
                   <div className="flex flex-col items-center space-y-3 cursor-pointer hover:bg-red-50 p-4 rounded-lg transition-all" onClick={() => {
-                    document.getElementById('prestations-a-la-carte')?.scrollIntoView({ behavior: 'smooth' });
+                    window.location.href = '/fr/tarifs#prestations-a-la-carte';
                   }}>
                     <CheckCircle className="h-6 w-6 text-red-600 flex-shrink-0" />
                     <div>
