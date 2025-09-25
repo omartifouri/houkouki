@@ -18,14 +18,14 @@ const FrPrestations = () => {
   }, []);
 
   return (
-    <div id="top" className="min-h-screen bg-gradient-to-br from-red-50 to-white">{" "}
+    <div id="top" className="min-h-screen bg-gradient-to-br from-brand-coral-light/20 to-white">{" "}
       {/* Header avec navigation */}
       <FrenchNavigation />
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Nos prestations</h1>
-          <h2 className="text-2xl text-red-600 mb-8">Un accompagnement juridique sur mesure</h2>
+          <h2 className="text-2xl text-brand-coral-dark mb-8">Un accompagnement juridique sur mesure</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Chez Houkouki, nous vous accompagnons dans toutes vos démarches juridiques, avec une approche personnalisée, 
             réactive et sécurisée. Nos prestations couvrent l'ensemble des besoins courants, que vous soyez un particulier, 
@@ -36,13 +36,13 @@ const FrPrestations = () => {
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Nos principaux services */}
           <section>
-            <h2 className="text-3xl font-bold text-red-800 mb-8 text-center">6 services pensés pour vous</h2>
+            <h2 className="text-3xl font-bold text-brand-coral-dark mb-8 text-center">6 services pensés pour vous</h2>
             
             <div className="space-y-12">
               {/* 1. Conseil juridique à distance */}
-              <Card className="border-2 border-red-200">
+              <Card className="border-2 border-brand-coral-light">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-3 text-2xl text-red-800">
+                  <CardTitle className="flex items-center space-x-3 text-2xl text-brand-coral-dark">
                     <Phone className="h-7 w-7" />
                     <span>1. Conseil juridique à distance</span>
                   </CardTitle>
@@ -58,21 +58,21 @@ const FrPrestations = () => {
                     <div className="grid md:grid-cols-2 gap-3">
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                          <div className="w-2 h-2 bg-brand-coral rounded-full"></div>
                           <span className="text-gray-700">Ai-je le droit de… ?</span>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                          <div className="w-2 h-2 bg-brand-coral rounded-full"></div>
                           <span className="text-gray-700">Mon contrat est-il valable ?</span>
                         </div>
                       </div>
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                          <div className="w-2 h-2 bg-brand-coral rounded-full"></div>
                           <span className="text-gray-700">Quels sont mes recours ?</span>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                          <div className="w-2 h-2 bg-brand-coral rounded-full"></div>
                           <span className="text-gray-700">Que dois-je faire en cas de litige ?</span>
                         </div>
                       </div>
@@ -86,9 +86,9 @@ const FrPrestations = () => {
               </Card>
 
               {/* 2. Rédaction et audit de documents juridiques */}
-              <Card className="border-2 border-red-200">
+              <Card className="border-2 border-brand-coral-light">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-3 text-2xl text-red-800">
+                  <CardTitle className="flex items-center space-x-3 text-2xl text-brand-coral-dark">
                     <FileText className="h-7 w-7" />
                     <span>2. Rédaction et audit de documents juridiques</span>
                   </CardTitle>
@@ -103,7 +103,7 @@ const FrPrestations = () => {
                     <div className="grid md:grid-cols-2 gap-3">
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-[#C0997A] rounded-full"></div>
+                          <div className="w-2 h-2 bg-brand-coral rounded-full"></div>
                           <span className="text-gray-700">Contrats de travail, de location, de prestation de service</span>
                         </div>
                         <div className="flex items-center space-x-2">
@@ -131,9 +131,9 @@ const FrPrestations = () => {
               </Card>
 
               {/* 3. Démarches et procédures administratives */}
-              <Card className="border-2 border-red-200">
+              <Card className="border-2 border-brand-coral-light">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-3 text-2xl text-red-800">
+                  <CardTitle className="flex items-center space-x-3 text-2xl text-brand-coral-dark">
                     <ClipboardList className="h-7 w-7" />
                     <span>3. Démarches et procédures administratives</span>
                   </CardTitle>
@@ -177,9 +177,9 @@ const FrPrestations = () => {
               </Card>
 
               {/* 4. Recours amiables et précontentieux */}
-              <Card className="border-2 border-red-200">
+              <Card className="border-2 border-brand-coral-light">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-3 text-2xl text-red-800">
+                  <CardTitle className="flex items-center space-x-3 text-2xl text-brand-coral-dark">
                     <MessageSquare className="h-7 w-7" />
                     <span>4. Recours amiables et précontentieux</span>
                   </CardTitle>
@@ -215,9 +215,9 @@ const FrPrestations = () => {
               </Card>
 
               {/* 5. Coordination de recours judiciaires */}
-              <Card className="border-2 border-red-200">
+              <Card className="border-2 border-brand-coral-light">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-3 text-2xl text-red-800">
+                  <CardTitle className="flex items-center space-x-3 text-2xl text-brand-coral-dark">
                     <Scale className="h-7 w-7" />
                     <span>5. Coordination de recours judiciaires</span>
                   </CardTitle>
@@ -239,9 +239,9 @@ const FrPrestations = () => {
               </Card>
 
               {/* 6. Conseil en financement & accompagnement stratégique */}
-              <Card className="border-2 border-red-200">
+              <Card className="border-2 border-brand-coral-light">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-3 text-2xl text-red-800">
+                  <CardTitle className="flex items-center space-x-3 text-2xl text-brand-coral-dark">
                     <TrendingUp className="h-7 w-7" />
                     <span>6. Conseil en financement & accompagnement stratégique</span>
                   </CardTitle>
@@ -336,7 +336,7 @@ const FrPrestations = () => {
                     </div>
                     <p className="text-gray-700">
                       Le conseil en financement est également étendu aux prestations accordées aux salariés des entreprises adhérentes, pour leurs besoins personnels en financement (achat d'un logement ou d'un bien, santé, dettes, etc...) 
-                      <Link to="/fr/profils#entreprises" className="text-red-600 hover:text-red-700 underline ml-1">
+                      <Link to="/fr/profils#entreprises" className="text-brand-coral-dark hover:text-brand-coral underline ml-1">
                         voir la section salariés
                       </Link>
                     </p>
@@ -352,8 +352,8 @@ const FrPrestations = () => {
 
           {/* Et aussi... */}
           <section>
-            <h2 className="text-3xl font-bold text-red-800 mb-8 text-center">Et aussi…</h2>
-            <Card className="bg-red-50 border-red-200">
+            <h2 className="text-3xl font-bold text-brand-coral-dark mb-8 text-center">Et aussi…</h2>
+            <Card className="bg-brand-coral-light/20 border-brand-coral-light">
               <CardContent className="pt-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
@@ -379,7 +379,7 @@ const FrPrestations = () => {
 
           {/* CTA final */}
           <section className="text-center">
-            <Card className="bg-red-600 text-white">
+            <Card className="bg-brand-coral text-white">
               <CardContent className="pt-8 pb-8">
                 <h2 className="text-3xl font-bold mb-4">Gagnez du temps, protégez vos intérêts</h2>
                 <p className="text-xl mb-8 opacity-90">
@@ -387,10 +387,10 @@ const FrPrestations = () => {
                   la fiabilité juridique de vos démarches.
                 </p>
                 <div className="space-x-4">
-                  <Button size="lg" variant="outline" className="bg-white text-red-600 hover:bg-gray-100" asChild>
+                  <Button size="lg" variant="outline" className="bg-white text-brand-coral-dark hover:bg-gray-100" asChild>
                     <a href="/fr/tarifs#top">Voir nos formules</a>
                   </Button>
-                  <Button size="lg" variant="outline" className="bg-white text-red-600 hover:bg-gray-100" asChild>
+                  <Button size="lg" variant="outline" className="bg-white text-brand-coral-dark hover:bg-gray-100" asChild>
                     <a href="/fr/contact">Contactez-nous</a>
                   </Button>
                 </div>
