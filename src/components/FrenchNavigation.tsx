@@ -173,7 +173,7 @@ const FrenchNavigation = () => {
                       <div className="font-medium">À la carte</div>
                       <p className="text-sm text-gray-600">Prestations ponctuelles</p>
                     </Link>
-                    <Link to="/fr/profils#entreprise" className="block p-3 hover:bg-gray-50 rounded-md">
+                    <Link to="/fr/tarifs#formule-entreprise-social" className="block p-3 hover:bg-gray-50 rounded-md">
                       <div className="font-medium">Formule entreprise et employés</div>
                       <p className="text-sm text-gray-600">Solutions sur mesure</p>
                     </Link>

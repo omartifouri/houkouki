@@ -30,6 +30,16 @@ const FrTarifs = () => {
         }
       }, 100);
     }
+    // Vérifier si l'URL contient l'ancre #formule-entreprise-social
+    if (window.location.hash === "#formule-entreprise-social") {
+      // Scroll automatique vers la section "Formule Entreprise + Social"
+      setTimeout(() => {
+        const element = document.getElementById('formule-entreprise-social');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
   }, []);
 
   // Définition des tooltips pour les fonctionnalités
@@ -313,7 +323,7 @@ const FrTarifs = () => {
           </section>
 
           {/* Formule Entreprise + Social */}
-          <section>
+          <section id="formule-entreprise-social">
             <Card className="border-2 border-red-200 bg-red-50">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-600 text-white flex items-center justify-center">
