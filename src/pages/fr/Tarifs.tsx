@@ -297,6 +297,19 @@ const FrTarifs = () => {
               })}
             </div>
 
+            {/* Note importante */}
+            <Card className="border-2 border-red-200 mt-8">
+              <CardContent className="pt-6 text-center">
+                <p className="text-gray-700 mb-4">
+                  <strong>*</strong> Consultations illimitées dans le cadre d'un usage raisonnable et de bonne foi.
+                </p>
+                <p className="text-gray-700 text-sm">
+                  Les tarifs sont exprimés en dirhams marocains (MAD). TVA applicable selon la réglementation en vigueur.
+                  Les prestations sont réalisées par des juristes qualifiés, membres de l'équipe Houkouki.
+                </p>
+              </CardContent>
+            </Card>
+
           </section>
 
           {/* Formule Entreprise + Social */}
@@ -437,21 +450,6 @@ const FrTarifs = () => {
               </CardContent>
             </Card>
 
-          </section>
-
-          {/* Note importante */}
-          <section>
-            <Card className="border-2 border-red-200">
-              <CardContent className="pt-6 text-center">
-                <p className="text-gray-700 mb-4">
-                  <strong>*</strong> Consultations illimitées dans le cadre d'un usage raisonnable et de bonne foi.
-                </p>
-                <p className="text-gray-700 text-sm">
-                  Les tarifs sont exprimés en dirhams marocains (MAD). TVA applicable selon la réglementation en vigueur.
-                  Les prestations sont réalisées par des juristes qualifiés, membres de l'équipe Houkouki.
-                </p>
-              </CardContent>
-            </Card>
           </section>
         </div>
       </div>
