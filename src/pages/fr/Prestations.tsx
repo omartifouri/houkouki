@@ -36,7 +36,7 @@ const FrPrestations = () => {
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Nos principaux services */}
           <section>
-            <h2 className="text-3xl font-bold text-red-800 mb-8 text-center">Nos principaux services</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-8 text-center">6 services pensés pour vous</h2>
             
             <div className="space-y-12">
               {/* 1. Conseil juridique à distance */}
@@ -336,8 +336,8 @@ const FrPrestations = () => {
                     </div>
                     <p className="text-gray-700">
                       Le conseil en financement est également étendu aux prestations accordées aux salariés des entreprises adhérentes, pour leurs besoins personnels en financement (achat d'un logement ou d'un bien, santé, dettes, etc...) 
-                      <Link to="/fr/profils" className="text-red-600 hover:text-red-700 underline ml-1">
-                        (voir la section salariés)
+                      <Link to="/fr/profils#entreprises" className="text-red-600 hover:text-red-700 underline ml-1">
+                        voir la section salariés
                       </Link>
                     </p>
                   </div>

@@ -164,7 +164,7 @@ const FrTarifs = () => {
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Nos tarifs</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Nos formules et tarifs</h1>
           <h2 className="text-2xl text-red-600 mb-8">Une tarification simple, claire et adaptée à vos besoins</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Chez Houkouki, nous croyons que l'accès au droit ne doit pas être un luxe.
@@ -172,21 +172,25 @@ const FrTarifs = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto space-y-16">
+        <div className="max-w-6xl mx-auto space-y-8">
           {/* Introduction aux formules */}
           <section>
             <Card className="border-2 border-red-200">
               <CardContent className="pt-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-6 w-6 text-red-600 mt-1 flex-shrink-0" />
+                <div className="grid md:grid-cols-2 gap-6 text-center">
+                  <div className="flex flex-col items-center space-y-3 cursor-pointer hover:bg-red-50 p-4 rounded-lg transition-all" onClick={() => {
+                    document.getElementById('abonnement-annuel')?.scrollIntoView({ behavior: 'smooth' });
+                  }}>
+                    <CheckCircle className="h-6 w-6 text-red-600 flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-gray-900">Formule d'abonnement</p>
                       <p className="text-gray-700">Pour un accompagnement régulier</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-6 w-6 text-red-600 mt-1 flex-shrink-0" />
+                  <div className="flex flex-col items-center space-y-3 cursor-pointer hover:bg-red-50 p-4 rounded-lg transition-all" onClick={() => {
+                    document.getElementById('prestations-a-la-carte')?.scrollIntoView({ behavior: 'smooth' });
+                  }}>
+                    <CheckCircle className="h-6 w-6 text-red-600 flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-gray-900">Prestations à la carte</p>
                       <p className="text-gray-700">Sans engagement, pour un besoin ponctuel</p>

@@ -160,11 +160,25 @@ const FrenchNavigation = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link to="/fr/tarifs" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
-                    Nos tarifs
-                  </Link>
-                </NavigationMenuLink>
+                <NavigationMenuTrigger className="text-gray-600 hover:text-brand-beige transition-colors">
+                  Nos formules et tarifs
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="w-96 p-4">
+                    <Link to="/fr/tarifs#abonnement-annuel" className="block p-3 hover:bg-gray-50 rounded-md">
+                      <div className="font-medium">Abonnement</div>
+                      <p className="text-sm text-gray-600">Formules d'abonnement annuel</p>
+                    </Link>
+                    <Link to="/fr/tarifs#prestations-a-la-carte" className="block p-3 hover:bg-gray-50 rounded-md">
+                      <div className="font-medium">À la carte</div>
+                      <p className="text-sm text-gray-600">Prestations ponctuelles</p>
+                    </Link>
+                    <Link to="/fr/contact" className="block p-3 hover:bg-gray-50 rounded-md">
+                      <div className="font-medium">Formule entreprise et employés</div>
+                      <p className="text-sm text-gray-600">Solutions sur mesure</p>
+                    </Link>
+                  </div>
+                </NavigationMenuContent>
               </NavigationMenuItem>
 
 
