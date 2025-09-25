@@ -312,7 +312,7 @@ const FrAccueil = () => {
                 <CardTitle className="text-2xl text-[#C0997A]">Abonnement annuel</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
-                <p className="text-gray-600 mb-4 flex-1">
+                <p className="text-gray-600 mb-4 flex-1 text-center">
                   Un accès illimité à nos juristes + un accompagnement personnalisé tout au long de l'année.
                   Idéal pour les particuliers ou entreprises qui souhaitent un service de proximité continu.
                 </p>
@@ -338,7 +338,7 @@ const FrAccueil = () => {
                 <CardTitle className="text-2xl text-brand-coral-dark">À la carte</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
-                <p className="text-gray-600 mb-4 flex-1">
+                <p className="text-gray-600 mb-4 flex-1 text-center">
                   Une question, un besoin ponctuel, un document à rédiger ou une procédure à lancer&nbsp;? 
                   Payez uniquement ce dont vous avez besoin.
                 </p>
