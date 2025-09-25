@@ -285,12 +285,11 @@ const Accueil = () => {
           <div className="text-center mt-8">
             <Button 
               className="bg-[#C0997A] hover:bg-[#B8926F]" 
-              onClick={() => {
-                window.location.href = '/prestations';
-                setTimeout(() => window.scrollTo(0, 0), 100);
-              }}
+              asChild
             >
-              Voir toutes nos prestations
+              <Link to="/prestations">
+                Voir toutes nos prestations
+              </Link>
             </Button>
           </div>
         </div>
@@ -306,43 +305,22 @@ const Accueil = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card 
-              className="bg-white p-6 flex flex-col h-full cursor-pointer hover:shadow-lg transition-all duration-300"
-              onClick={() => {
-                window.location.href = '/tarifs#abonnement-annuel';
-                setTimeout(() => {
-                  const element = document.getElementById('abonnement-annuel');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }, 100);
-              }}
-            >
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl text-[#C0997A]">Abonnement annuel</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-1 flex flex-col">
-                <p className="text-gray-600 mb-4 flex-1 text-center">
-                  Un accès illimité à nos juristes + un accompagnement personnalisé tout au long de l'année.
-                  Idéal pour les particuliers ou entreprises qui souhaitent un service de proximité continu.
-                </p>
-                <Button 
-                  className="w-full bg-[#C0997A] hover:bg-[#B8926F] mt-auto"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    window.location.href = '/tarifs#abonnement-annuel';
-                    setTimeout(() => {
-                      const element = document.getElementById('abonnement-annuel');
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                      }
-                    }, 100);
-                  }}
-                >
-                  Choisir l'abonnement
-                </Button>
-              </CardContent>
-            </Card>
+            <Link to="/tarifs#abonnement-annuel" className="block">
+              <Card className="bg-white p-6 flex flex-col h-full cursor-pointer hover:shadow-lg transition-all duration-300">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl text-[#C0997A]">Abonnement annuel</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <p className="text-gray-600 mb-4 flex-1 text-center">
+                    Un accès illimité à nos juristes + un accompagnement personnalisé tout au long de l'année.
+                    Idéal pour les particuliers ou entreprises qui souhaitent un service de proximité continu.
+                  </p>
+                  <Button className="w-full bg-[#C0997A] hover:bg-[#B8926F] mt-auto">
+                    Choisir l'abonnement
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
 
             <Card 
               className="bg-white p-6 flex flex-col h-full cursor-pointer hover:shadow-lg transition-all duration-300"

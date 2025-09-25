@@ -286,12 +286,11 @@ const FrAccueil = () => {
           <div className="text-center mt-8">
             <Button 
               className="bg-[#C0997A] hover:bg-[#B8926F]" 
-              onClick={() => {
-                window.location.href = '/fr/prestations';
-                setTimeout(() => window.scrollTo(0, 0), 100);
-              }}
+              asChild
             >
-              Voir toutes nos prestations
+              <Link to="/fr/prestations">
+                Voir toutes nos prestations
+              </Link>
             </Button>
           </div>
         </div>
@@ -307,70 +306,42 @@ const FrAccueil = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card 
-              className="bg-white p-6 flex flex-col h-full cursor-pointer hover:shadow-lg transition-all duration-300"
-              onClick={() => {
-                window.location.href = '/fr/tarifs#abonnement-annuel';
-                setTimeout(() => {
-                  const element = document.getElementById('abonnement-annuel');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }, 100);
-              }}
-            >
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl text-[#C0997A]">Abonnement annuel</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-1 flex flex-col">
-                <p className="text-gray-600 mb-4 flex-1 text-center">
-                  Un accès illimité à nos juristes + un accompagnement personnalisé tout au long de l'année.
-                  Idéal pour les particuliers ou entreprises qui souhaitent un service de proximité continu.
-                </p>
-                <Button 
-                  className="w-full bg-[#C0997A] hover:bg-[#B8926F] mt-auto"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    window.location.href = '/fr/tarifs#abonnement-annuel';
-                    setTimeout(() => {
-                      const element = document.getElementById('abonnement-annuel');
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                      }
-                    }, 100);
-                  }}
-                >
-                  Choisir l'abonnement
-                </Button>
-              </CardContent>
-            </Card>
+            <Link to="/fr/tarifs#abonnement-annuel" className="block">
+              <Card className="bg-white p-6 flex flex-col h-full cursor-pointer hover:shadow-lg transition-all duration-300">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl text-[#C0997A]">Abonnement annuel</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <p className="text-gray-600 mb-4 flex-1 text-center">
+                    Un accès illimité à nos juristes + un accompagnement personnalisé tout au long de l'année.
+                    Idéal pour les particuliers ou entreprises qui souhaitent un service de proximité continu.
+                  </p>
+                  <Button className="w-full bg-[#C0997A] hover:bg-[#B8926F] mt-auto">
+                    Choisir l'abonnement
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card 
-              className="bg-white p-6 flex flex-col h-full cursor-pointer hover:shadow-lg transition-all duration-300"
-              onClick={() => {
-                window.location.href = '/fr/tarifs#prestations-a-la-carte';
-              }}
-            >
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl text-brand-coral-dark">À la carte</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-1 flex flex-col">
-                <p className="text-gray-600 mb-4 flex-1 text-center">
-                  Une question, un besoin ponctuel, un document à rédiger ou une procédure à lancer&nbsp;? 
-                  Payez uniquement ce dont vous avez besoin.
-                </p>
-                <Button 
-                  variant="outline" 
-                  className="w-full border-brand-coral text-brand-coral hover:bg-brand-coral hover:text-white mt-auto"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    window.location.href = '/fr/tarifs#prestations-a-la-carte';
-                  }}
-                >
-                  Choisir une prestation à la carte
-                </Button>
-              </CardContent>
-            </Card>
+            <Link to="/fr/tarifs#prestations-a-la-carte" className="block">
+              <Card className="bg-white p-6 flex flex-col h-full cursor-pointer hover:shadow-lg transition-all duration-300">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl text-brand-coral-dark">À la carte</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <p className="text-gray-600 mb-4 flex-1 text-center">
+                    Une question, un besoin ponctuel, un document à rédiger ou une procédure à lancer&nbsp;? 
+                    Payez uniquement ce dont vous avez besoin.
+                  </p>
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-brand-coral text-brand-coral hover:bg-brand-coral hover:text-white mt-auto"
+                  >
+                    Choisir une prestation à la carte
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>

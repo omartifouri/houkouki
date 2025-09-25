@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, Clock } from "lucide-react";
+import { Phone, Mail, Clock, Menu, X } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
+import { useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,6 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const ArabicNavigation = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <>
       {/* Top Info Bar */}
@@ -180,7 +182,110 @@ const ArabicNavigation = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 rounded-md text-gray-600 hover:text-brand-beige transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </nav>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 border-t border-gray-200" dir="rtl">
+            <div className="flex flex-col space-y-2 pt-4">
+              <Link 
+                to="/ar" 
+                className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                الرئيسية
+              </Link>
+              
+              <div className="px-3 py-2">
+                <div className="font-medium text-gray-900 mb-2">روح حقوقي</div>
+                <div className="pr-4 space-y-1">
+                  <Link 
+                    to="/ar/about-us" 
+                    className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    من نحن؟
+                  </Link>
+                  <Link 
+                    to="/ar/approach" 
+                    className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    منهجيتنا
+                  </Link>
+                </div>
+              </div>
+
+              <div className="px-3 py-2">
+                <div className="font-medium text-gray-900 mb-2">خدماتنا</div>
+                <div className="pr-4 space-y-1">
+                  <Link 
+                    to="/ar/profiles" 
+                    className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    من أنت؟
+                  </Link>
+                  <Link 
+                    to="/ar/services" 
+                    className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    خدماتنا
+                  </Link>
+                  <Link 
+                    to="/ar/legal-domains" 
+                    className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    مجالات القانون
+                  </Link>
+                </div>
+              </div>
+
+              <Link 
+                to="/ar/pricing" 
+                className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                أسعارنا
+              </Link>
+              
+              <Link 
+                to="/ar/blog" 
+                className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                المدونة والنصائح
+              </Link>
+              
+              <Link 
+                to="/ar/quote" 
+                className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                عرض سعر
+              </Link>
+              
+              <Link 
+                to="/ar/contact" 
+                className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                اتصل بنا
+              </Link>
+            </div>
+          </div>
+        )}
         </div>
       </header>
     </>

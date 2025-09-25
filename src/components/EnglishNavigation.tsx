@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, Clock } from "lucide-react";
+import { Phone, Mail, Clock, Menu, X } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
+import { useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,6 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const EnglishNavigation = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <>
       {/* Top Info Bar */}
@@ -180,7 +182,110 @@ const EnglishNavigation = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 rounded-md text-gray-600 hover:text-brand-beige transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </nav>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+            <div className="flex flex-col space-y-2 pt-4">
+              <Link 
+                to="/en" 
+                className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              
+              <div className="px-3 py-2">
+                <div className="font-medium text-gray-900 mb-2">About Houkouki</div>
+                <div className="pl-4 space-y-1">
+                  <Link 
+                    to="/en/about-us" 
+                    className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Who are we?
+                  </Link>
+                  <Link 
+                    to="/en/approach" 
+                    className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Our approach
+                  </Link>
+                </div>
+              </div>
+
+              <div className="px-3 py-2">
+                <div className="font-medium text-gray-900 mb-2">Our Services</div>
+                <div className="pl-4 space-y-1">
+                  <Link 
+                    to="/en/profiles" 
+                    className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Who are you?
+                  </Link>
+                  <Link 
+                    to="/en/services" 
+                    className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Our services
+                  </Link>
+                  <Link 
+                    to="/en/legal-domains" 
+                    className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Legal areas
+                  </Link>
+                </div>
+              </div>
+
+              <Link 
+                to="/en/pricing" 
+                className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Pricing
+              </Link>
+              
+              <Link 
+                to="/en/blog" 
+                className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Blog & Advice
+              </Link>
+              
+              <Link 
+                to="/en/quote" 
+                className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Quote
+              </Link>
+              
+              <Link 
+                to="/en/contact" 
+                className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        )}
         </div>
       </header>
     </>
