@@ -71,7 +71,7 @@ const FrQuiSommesNous = () => {
           <section>
             <h3 className="text-2xl font-bold text-red-800 mb-6 text-center">Nos domaines d'intervention</h3>
             <p className="text-gray-700 mb-6">Nos juristes interviennent dans le droit civil en général dont :</p>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <Scale className="h-5 w-5 text-red-600" />
