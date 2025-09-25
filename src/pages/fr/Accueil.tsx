@@ -307,7 +307,18 @@ const FrAccueil = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="bg-white p-6 flex flex-col h-full">
+            <Card 
+              className="bg-white p-6 flex flex-col h-full cursor-pointer hover:shadow-lg transition-all duration-300"
+              onClick={() => {
+                window.location.href = '/fr/tarifs#abonnement-annuel';
+                setTimeout(() => {
+                  const element = document.getElementById('abonnement-annuel');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }, 100);
+              }}
+            >
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl text-[#C0997A]">Abonnement annuel</CardTitle>
               </CardHeader>
@@ -318,7 +329,8 @@ const FrAccueil = () => {
                 </p>
                 <Button 
                   className="w-full bg-[#C0997A] hover:bg-[#B8926F] mt-auto"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation();
                     window.location.href = '/fr/tarifs#abonnement-annuel';
                     setTimeout(() => {
                       const element = document.getElementById('abonnement-annuel');
@@ -333,7 +345,12 @@ const FrAccueil = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-white p-6 flex flex-col h-full">
+            <Card 
+              className="bg-white p-6 flex flex-col h-full cursor-pointer hover:shadow-lg transition-all duration-300"
+              onClick={() => {
+                window.location.href = '/fr/tarifs#prestations-a-la-carte';
+              }}
+            >
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl text-brand-coral-dark">À la carte</CardTitle>
               </CardHeader>
@@ -345,7 +362,8 @@ const FrAccueil = () => {
                 <Button 
                   variant="outline" 
                   className="w-full border-brand-coral text-brand-coral hover:bg-brand-coral hover:text-white mt-auto"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation();
                     window.location.href = '/fr/tarifs#prestations-a-la-carte';
                   }}
                 >
