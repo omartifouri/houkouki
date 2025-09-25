@@ -414,7 +414,7 @@ const FrAccueil = () => {
             <p className="text-xl text-gray-700 mb-6">
               <strong>Rapide. Sécurisé. Efficace.</strong>
             </p>
-            <Button className="bg-gradient-to-r from-[#C0997A] to-red-600 hover:from-[#B8926F] hover:to-red-700" asChild>
+            <Button className="bg-brand-coral hover:bg-brand-coral-dark text-white" asChild>
               <Link to="/fr/contact#top">En savoir plus sur notre fonctionnement</Link>
             </Button>
           </div>
