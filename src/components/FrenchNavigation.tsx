@@ -175,7 +175,12 @@ const FrenchNavigation = () => {
                       onClick={(e) => {
                         if (window.location.pathname === '/fr/tarifs') {
                           e.preventDefault();
-                          document.getElementById('abonnement-annuel')?.scrollIntoView({ behavior: 'smooth' });
+                          const element = document.getElementById('abonnement-annuel');
+                          if (element) {
+                            const headerHeight = document.querySelector('header')?.offsetHeight || 80;
+                            const elementPosition = element.offsetTop - headerHeight - 20;
+                            window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+                          }
                         }
                       }}
                     >
@@ -188,7 +193,12 @@ const FrenchNavigation = () => {
                       onClick={(e) => {
                         if (window.location.pathname === '/fr/tarifs') {
                           e.preventDefault();
-                          document.getElementById('prestations-a-la-carte')?.scrollIntoView({ behavior: 'smooth' });
+                          const element = document.getElementById('prestations-a-la-carte');
+                          if (element) {
+                            const headerHeight = document.querySelector('header')?.offsetHeight || 80;
+                            const elementPosition = element.offsetTop - headerHeight - 20;
+                            window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+                          }
                         }
                       }}
                     >
@@ -201,7 +211,12 @@ const FrenchNavigation = () => {
                       onClick={(e) => {
                         if (window.location.pathname === '/fr/tarifs') {
                           e.preventDefault();
-                          document.getElementById('formule-entreprise-social')?.scrollIntoView({ behavior: 'smooth' });
+                          const element = document.getElementById('formule-entreprise-social');
+                          if (element) {
+                            const headerHeight = document.querySelector('header')?.offsetHeight || 80;
+                            const elementPosition = element.offsetTop - headerHeight - 20;
+                            window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+                          }
                         }
                       }}
                     >
