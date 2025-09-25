@@ -19,4 +19,18 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        // Désactiver les preloads automatiques pour éviter les warnings
+        experimentalMinChunkSize: 1000,
+        manualChunks: (id) => {
+          // Regrouper les dépendances node_modules dans un chunk séparé
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        }
+      }
+    }
+  }
 }));
