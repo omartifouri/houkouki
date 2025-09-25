@@ -187,14 +187,14 @@ const FrTarifs = () => {
           <section>
             <Card className="border-2 border-red-200">
               <CardContent className="pt-6">
-                <div className="grid md:grid-cols-2 gap-6 text-center">
+                <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div className="flex flex-col items-center space-y-3 cursor-pointer hover:bg-red-50 p-4 rounded-lg transition-all" onClick={() => {
                     document.getElementById('abonnement-annuel')?.scrollIntoView({ behavior: 'smooth' });
                   }}>
                     <CheckCircle className="h-6 w-6 text-red-600 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-gray-900">Formule d'abonnement</p>
-                      <p className="text-gray-700">Pour un accompagnement régulier</p>
+                      <p className="font-semibold text-gray-900">Abonnement</p>
+                      <p className="text-gray-700">Formules d'abonnement annuel</p>
                     </div>
                   </div>
                   <div className="flex flex-col items-center space-y-3 cursor-pointer hover:bg-red-50 p-4 rounded-lg transition-all" onClick={() => {
@@ -202,8 +202,17 @@ const FrTarifs = () => {
                   }}>
                     <CheckCircle className="h-6 w-6 text-red-600 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-gray-900">Prestations à la carte</p>
-                      <p className="text-gray-700">Sans engagement, pour un besoin ponctuel</p>
+                      <p className="font-semibold text-gray-900">À la carte</p>
+                      <p className="text-gray-700">Prestations ponctuelles</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center space-y-3 cursor-pointer hover:bg-red-50 p-4 rounded-lg transition-all" onClick={() => {
+                    document.getElementById('formule-entreprise-social')?.scrollIntoView({ behavior: 'smooth' });
+                  }}>
+                    <CheckCircle className="h-6 w-6 text-red-600 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-gray-900">Formule entreprise et employés</p>
+                      <p className="text-gray-700">Solutions sur mesure</p>
                     </div>
                   </div>
                 </div>
