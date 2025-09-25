@@ -1,7 +1,27 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleScrollToSection = (sectionId: string) => {
+    if (location.pathname === '/fr/tarifs') {
+      // Si on est déjà sur la page tarifs, on scroll directement vers la section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerHeight = 80; // Hauteur approximative du header
+        const elementPosition = element.offsetTop - headerHeight - 20; // 20px de marge supplémentaire
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      // Sinon on navigue vers la page avec l'ancre
+      navigate(`/fr/tarifs#${sectionId}`);
+    }
+  };
   return (
     <footer className="bg-brand-purple text-white py-12">
       <div className="container mx-auto px-4">
@@ -63,21 +83,36 @@ const Footer = () => {
               <Link to="/fr/qui-sommes-nous#top" className="block text-gray-300 hover:text-brand-beige transition-colors">
                 Qui sommes-nous ?
               </Link>
-              <Link to="/fr/tarifs#prestations-a-la-carte" className="block text-gray-300 hover:text-brand-beige transition-colors">
+              <button 
+                onClick={() => handleScrollToSection('prestations-a-la-carte')} 
+                className="block text-gray-300 hover:text-brand-beige transition-colors text-left"
+              >
                 Vous êtes particulier ?
-              </Link>
-              <Link to="/fr/tarifs#formule-entreprise-social" className="block text-gray-300 hover:text-brand-beige transition-colors">
+              </button>
+              <button 
+                onClick={() => handleScrollToSection('formule-entreprise-social')} 
+                className="block text-gray-300 hover:text-brand-beige transition-colors text-left"
+              >
                 Vous êtes une entreprise ?
-              </Link>
-              <Link to="/fr/tarifs#abonnement-annuel" className="block text-gray-300 hover:text-brand-beige transition-colors">
+              </button>
+              <button 
+                onClick={() => handleScrollToSection('abonnement-annuel')} 
+                className="block text-gray-300 hover:text-brand-beige transition-colors text-left"
+              >
                 Abonnement annuel
-              </Link>
-              <Link to="/fr/tarifs#prestations-a-la-carte" className="block text-gray-300 hover:text-brand-beige transition-colors">
+              </button>
+              <button 
+                onClick={() => handleScrollToSection('prestations-a-la-carte')} 
+                className="block text-gray-300 hover:text-brand-beige transition-colors text-left"
+              >
                 Prestations à la carte (particulier)
-              </Link>
-              <Link to="/fr/tarifs#prestations-a-la-carte" className="block text-gray-300 hover:text-brand-beige transition-colors">
+              </button>
+              <button 
+                onClick={() => handleScrollToSection('prestations-a-la-carte')} 
+                className="block text-gray-300 hover:text-brand-beige transition-colors text-left"
+              >
                 Prestations à la carte (entreprise)
-              </Link>
+              </button>
               <Link to="/fr/blog#top" className="block text-gray-300 hover:text-brand-beige transition-colors">
                 Blog
               </Link>
