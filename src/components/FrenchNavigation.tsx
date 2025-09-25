@@ -190,6 +190,19 @@ const FrenchNavigation = () => {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <a 
+                    href="https://www.ilaa.ma" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2"
+                  >
+                    Soutien carrière
+                  </a>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
                <NavigationMenuItem>
                  <NavigationMenuLink asChild>
                     <Link to="/fr/contact" className="text-gray-600 hover:text-brand-beige transition-colors px-3 py-2">
