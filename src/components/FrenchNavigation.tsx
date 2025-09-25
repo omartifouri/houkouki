@@ -169,18 +169,45 @@ const FrenchNavigation = () => {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="w-96 p-4">
-                    <Link to="/fr/tarifs#abonnement-annuel" className="block p-3 hover:bg-gray-50 rounded-md">
+                    <a 
+                      href="/fr/tarifs#abonnement-annuel" 
+                      className="block p-3 hover:bg-gray-50 rounded-md"
+                      onClick={(e) => {
+                        if (window.location.pathname === '/fr/tarifs') {
+                          e.preventDefault();
+                          document.getElementById('abonnement-annuel')?.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                    >
                       <div className="font-medium">Abonnement</div>
                       <p className="text-sm text-gray-600">Formules d'abonnement annuel</p>
-                    </Link>
-                    <Link to="/fr/tarifs#prestations-a-la-carte" className="block p-3 hover:bg-gray-50 rounded-md">
+                    </a>
+                    <a 
+                      href="/fr/tarifs#prestations-a-la-carte" 
+                      className="block p-3 hover:bg-gray-50 rounded-md"
+                      onClick={(e) => {
+                        if (window.location.pathname === '/fr/tarifs') {
+                          e.preventDefault();
+                          document.getElementById('prestations-a-la-carte')?.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                    >
                       <div className="font-medium">À la carte</div>
                       <p className="text-sm text-gray-600">Prestations ponctuelles</p>
-                    </Link>
-                    <Link to="/fr/tarifs#formule-entreprise-social" className="block p-3 hover:bg-gray-50 rounded-md">
+                    </a>
+                    <a 
+                      href="/fr/tarifs#formule-entreprise-social" 
+                      className="block p-3 hover:bg-gray-50 rounded-md"
+                      onClick={(e) => {
+                        if (window.location.pathname === '/fr/tarifs') {
+                          e.preventDefault();
+                          document.getElementById('formule-entreprise-social')?.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                    >
                       <div className="font-medium">Formule entreprise et employés</div>
                       <p className="text-sm text-gray-600">Solutions sur mesure</p>
-                    </Link>
+                    </a>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -297,27 +324,45 @@ const FrenchNavigation = () => {
               <div className="px-3 py-2">
                 <div className="font-medium text-gray-900 mb-2">Nos formules et tarifs</div>
                 <div className="pl-4 space-y-1">
-                  <Link 
-                    to="/fr/tarifs#abonnement-annuel" 
+                  <a 
+                    href="/fr/tarifs#abonnement-annuel" 
                     className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => {
+                      setIsMobileMenuOpen(false);
+                      if (window.location.pathname === '/fr/tarifs') {
+                        e.preventDefault();
+                        document.getElementById('abonnement-annuel')?.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
                   >
                     Abonnement
-                  </Link>
-                  <Link 
-                    to="/fr/tarifs#prestations-a-la-carte" 
+                  </a>
+                  <a 
+                    href="/fr/tarifs#prestations-a-la-carte" 
                     className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => {
+                      setIsMobileMenuOpen(false);
+                      if (window.location.pathname === '/fr/tarifs') {
+                        e.preventDefault();
+                        document.getElementById('prestations-a-la-carte')?.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
                   >
                     À la carte
-                  </Link>
-                  <Link 
-                    to="/fr/tarifs#formule-entreprise-social" 
+                  </a>
+                  <a 
+                    href="/fr/tarifs#formule-entreprise-social" 
                     className="block text-gray-600 hover:text-brand-beige transition-colors py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => {
+                      setIsMobileMenuOpen(false);
+                      if (window.location.pathname === '/fr/tarifs') {
+                        e.preventDefault();
+                        document.getElementById('formule-entreprise-social')?.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
                   >
                     Formule entreprise et employés
-                  </Link>
+                  </a>
                 </div>
               </div>
 
