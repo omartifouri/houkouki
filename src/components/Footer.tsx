@@ -75,7 +75,7 @@ const Footer = () => {
               <Link to="/fr/tarifs#prestations-carte" className="block text-gray-300 hover:text-brand-beige transition-colors">
                 Prestations à la carte (particulier)
               </Link>
-              <Link to="/fr/prestations#top" className="block text-gray-300 hover:text-brand-beige transition-colors">
+              <Link to="/fr/tarifs#prestations-carte" className="block text-gray-300 hover:text-brand-beige transition-colors">
                 Prestations à la carte (entreprise)
               </Link>
               <Link to="/fr/blog#top" className="block text-gray-300 hover:text-brand-beige transition-colors">
