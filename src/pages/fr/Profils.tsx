@@ -281,7 +281,7 @@ const FrProfils = () => {
                 </div>
 
                 <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                  <Link to="/fr/prestations">Découvrir notre accompagnement MRE</Link>
+                  <Link to="/fr/contact#top">Découvrir notre accompagnement MRE</Link>
                 </Button>
               </CardContent>
             </Card>
