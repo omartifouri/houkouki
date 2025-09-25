@@ -233,7 +233,7 @@ const FrProfils = () => {
                 </Card>
 
                 <Button className="bg-[#C0997A] hover:bg-[#B8926F]" asChild>
-                  <Link to="/fr/prestations">Consulter nos prestations pour entreprises</Link>
+                  <Link to="/fr/prestations#top">Consulter nos prestations pour entreprises</Link>
                 </Button>
               </CardContent>
             </Card>
