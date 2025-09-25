@@ -25,13 +25,17 @@ const FrContact = () => {
   useEffect(() => {
     // Vérifier si l'URL contient l'ancre #top
     if (window.location.hash === "#top") {
-      // Scroll automatique vers le haut
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      // Scroll automatique vers le haut avec un délai pour s'assurer que la page est chargée
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 100);
     }
     // Vérifier si l'URL contient l'ancre #prestations-a-la-carte
     else if (window.location.hash === "#prestations-a-la-carte") {
       // Scroll automatique vers le haut (ou vers une section spécifique si elle existe)
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 100);
     }
   }, []);
 
@@ -44,15 +48,6 @@ const FrContact = () => {
   const handleInputChange = (field: string, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
-
-  useEffect(() => {
-    // Scroll to top when the page loads with #top anchor
-    if (window.location.hash === '#top') {
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }, 100);
-    }
-  }, []);
 
   return (
     <div id="top" className="min-h-screen bg-gradient-to-br from-red-50 to-white">
