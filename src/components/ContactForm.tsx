@@ -264,7 +264,7 @@ const ContactForm = ({ children }: ContactFormProps) => {
                 <Button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
+                  className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80"
                 >
                   {isSubmitting ? "Envoi en cours..." : "Envoyer"}
                 </Button>

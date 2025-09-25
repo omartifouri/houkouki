@@ -17,7 +17,7 @@ html {
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 5 60% 65%;       /* Pantone 18-0651 coral */
+    --primary: 7 75% 66%;       /* Pantone 18-0651 coral #ED7464 */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 37 30% 55%;     /* Pantone 7530 EC beige */
@@ -29,7 +29,7 @@ html {
     --accent: 37 30% 55%;        /* Pantone 7530 EC beige */
     --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 7 75% 66%;    /* Using Pantone 18-0651 coral for destructive too */
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
@@ -37,9 +37,9 @@ html {
     --ring: 222.2 84% 4.9%;
     
     /* Custom colors - Houkouki Official Palette */
-    --brand-coral: 5 60% 65%;        /* Pantone 18-0651 */
-    --brand-coral-light: 5 60% 85%;  /* Light variant for backgrounds */
-    --brand-coral-dark: 5 60% 45%;   /* Dark variant for text */
+    --brand-coral: 7 75% 66%;        /* Pantone 18-0651 #ED7464 */
+    --brand-coral-light: 7 75% 85%;  /* Light variant for backgrounds */
+    --brand-coral-dark: 7 75% 45%;   /* Dark variant for text */
     --brand-beige: 37 30% 55%;       /* Pantone 7530 EC */  
     --brand-purple: 317 38% 29%;     /* Pantone P74-15C */
     --brand-teal: 188 44% 48%;
@@ -85,7 +85,7 @@ html {
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 7 75% 56%;    /* Pantone 18-0651 coral adjusted for dark mode */
     --destructive-foreground: 210 40% 98%;
 
     --border: 217.2 32.6% 17.5%;

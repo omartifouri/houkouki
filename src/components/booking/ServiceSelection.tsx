@@ -33,8 +33,8 @@ const ServiceSelection = ({ services, selectedService, onServiceChange }: Servic
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-            <span className="text-red-600 font-bold text-sm">1</span>
+          <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+            <span className="text-primary font-bold text-sm">1</span>
           </div>
           <span>Choisissez votre service</span>
         </CardTitle>

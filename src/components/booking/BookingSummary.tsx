@@ -33,7 +33,7 @@ const BookingSummary = ({
       <CardContent className="space-y-4">
         {selectedService && (
           <div className="flex items-start space-x-3">
-            <User className="h-5 w-5 text-red-600 mt-0.5" />
+            <User className="h-5 w-5 text-primary mt-0.5" />
             <div>
               <p className="font-medium">Service</p>
               <p className="text-sm text-gray-600">{selectedService}</p>
@@ -83,7 +83,7 @@ const BookingSummary = ({
         {selectedService && selectedDate && selectedTime && name && email && (
           <Button 
             onClick={onSubmit}
-            className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
+            className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80"
           >
             Confirmer le rendez-vous
           </Button>

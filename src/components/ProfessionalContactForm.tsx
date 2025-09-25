@@ -137,12 +137,12 @@ const ProfessionalContactForm = () => {
 
   return (
     <Card className="w-full max-w-2xl mx-auto shadow-lg">
-      <CardHeader className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-t-lg">
+      <CardHeader className="bg-gradient-to-r from-primary to-primary/90 text-white rounded-t-lg">
         <CardTitle className="text-2xl font-bold flex items-center gap-2">
           <MessageSquare className="w-6 h-6" />
           Contactez-nous
         </CardTitle>
-        <CardDescription className="text-red-100">
+        <CardDescription className="text-primary/80">
           Nous sommes là pour vous accompagner dans vos projets professionnels
         </CardDescription>
       </CardHeader>
@@ -153,7 +153,7 @@ const ProfessionalContactForm = () => {
             {/* Informations personnelles */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                <User className="w-5 h-5 text-red-600" />
+                <User className="w-5 h-5 text-primary" />
                 Informations personnelles
               </h3>
               
@@ -237,7 +237,7 @@ const ProfessionalContactForm = () => {
             {/* Informations professionnelles */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                <Building className="w-5 h-5 text-red-600" />
+                <Building className="w-5 h-5 text-primary" />
                 Informations professionnelles
               </h3>
               
@@ -326,7 +326,7 @@ const ProfessionalContactForm = () => {
             <Button 
               type="submit" 
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-lg py-3"
+              className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80 text-lg py-3"
             >
               {isSubmitting ? (
                 <>
