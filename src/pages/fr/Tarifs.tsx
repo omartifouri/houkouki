@@ -10,36 +10,31 @@ import { useEffect } from "react";
 const FrTarifs = () => {
   // Effect pour gérer le scroll automatique avec les ancres
   useEffect(() => {
-    // Vérifier si l'URL contient l'ancre #prestations-a-la-carte
-    if (window.location.hash === "#prestations-a-la-carte") {
-      // Scroll automatique vers la section "Prestations à la carte"
-      setTimeout(() => {
-        const element = document.getElementById('prestations-a-la-carte');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    }
-    // Vérifier si l'URL contient l'ancre #abonnement-annuel
-    if (window.location.hash === "#abonnement-annuel") {
-      // Scroll automatique vers la section "Abonnement annuel"
-      setTimeout(() => {
-        const element = document.getElementById('abonnement-annuel');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    }
-    // Vérifier si l'URL contient l'ancre #formule-entreprise-social
-    if (window.location.hash === "#formule-entreprise-social") {
-      // Scroll automatique vers la section "Formule Entreprise + Social"
-      setTimeout(() => {
-        const element = document.getElementById('formule-entreprise-social');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    }
+    const handleAnchorScroll = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const element = document.getElementById(hash.substring(1));
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      }
+    };
+
+    // Gérer le scroll au chargement de la page
+    handleAnchorScroll();
+
+    // Gérer les changements d'ancre
+    const handleHashChange = () => {
+      handleAnchorScroll();
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
   }, []);
 
   // Définition des tooltips pour les fonctionnalités
