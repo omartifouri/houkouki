@@ -435,12 +435,18 @@ const FrTarifs = () => {
                              </tr>
                            </thead>
                            <tbody>
-                             {categoryServices.map((service, index) => (
-                               <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
-                                 <td className="py-3 px-4 font-medium text-gray-900 text-sm">{service.name}</td>
-                                 <td className="py-3 px-4 text-gray-600 text-sm">{service.description}</td>
-                               </tr>
-                             ))}
+                              {categoryServices.map((service, index) => (
+                                <tr 
+                                  key={index} 
+                                  className="border-b border-gray-100 hover:bg-red-50 cursor-pointer transition-colors"
+                                  onClick={() => {
+                                    window.location.href = "/fr/contact#top";
+                                  }}
+                                >
+                                  <td className="py-3 px-4 font-medium text-gray-900 text-sm">{service.name}</td>
+                                  <td className="py-3 px-4 text-gray-600 text-sm">{service.description}</td>
+                                </tr>
+                              ))}
                            </tbody>
                          </table>
                        </div>
