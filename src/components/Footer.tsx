@@ -67,7 +67,7 @@ const Footer = () => {
                 Vous êtes particulier ?
               </Link>
               <Link to="/fr/profils#entreprise" className="block text-gray-300 hover:text-brand-beige transition-colors">
-                Vous êtes entreprise ?
+                Vous êtes une entreprise ?
               </Link>
               <Link to="/fr/tarifs#abonnement-annuel" className="block text-gray-300 hover:text-brand-beige transition-colors">
                 Abonnement annuel
