@@ -336,7 +336,7 @@ const FrPrestations = () => {
                     </div>
                     <p className="text-gray-700">
                       Le conseil en financement est également étendu aux prestations accordées aux salariés des entreprises adhérentes, pour leurs besoins personnels en financement (achat d'un logement ou d'un bien, santé, dettes, etc...) 
-                      <Link to="/fr/profils#entreprises" className="text-brand-coral-dark hover:text-brand-coral underline ml-1">
+                      <Link to="/fr/profils#proteger-collaborateurs" className="text-brand-coral-dark hover:text-brand-coral underline ml-1">
                         voir la section salariés
                       </Link>
                     </p>

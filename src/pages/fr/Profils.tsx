@@ -162,7 +162,7 @@ const FrProfils = () => {
                 </div>
 
                 {/* Section spéciale pour les collaborateurs */}
-                <Card className="bg-red-50 border-red-200 mb-6">
+                <Card className="bg-red-50 border-red-200 mb-6" id="proteger-collaborateurs">
                   <CardHeader>
                     <CardTitle className="text-xl text-red-800">Protéger et soutenir vos collaborateurs</CardTitle>
                     <p className="text-gray-600">
