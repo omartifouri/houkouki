@@ -63,7 +63,7 @@ const Footer = () => {
               <Link to="/fr/qui-sommes-nous#top" className="block text-gray-300 hover:text-brand-beige transition-colors">
                 Qui sommes-nous ?
               </Link>
-              <Link to="/fr/profils#particulier" className="block text-gray-300 hover:text-brand-beige transition-colors">
+              <Link to="/fr/tarifs#prestations-a-la-carte" className="block text-gray-300 hover:text-brand-beige transition-colors">
                 Vous êtes particulier ?
               </Link>
               <Link to="/fr/profils#entreprise" className="block text-gray-300 hover:text-brand-beige transition-colors">
