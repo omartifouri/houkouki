@@ -34,7 +34,7 @@ const FrProfils = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-white" id="top">
       {/* Header avec navigation */}
       <FrenchNavigation />
 

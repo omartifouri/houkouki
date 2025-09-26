@@ -16,6 +16,26 @@ const Footer = () => {
       navigate(`/fr/tarifs#${sectionId}`);
     }
   };
+
+  const handleScrollToEntreprise = () => {
+    if (location.pathname === '/fr/profils') {
+      // Si on est déjà sur la page profils, on scroll directement vers la section
+      scrollToSection('entreprise');
+    } else {
+      // Sinon on navigue vers la page avec l'ancre
+      navigate(`/fr/profils#entreprise`);
+    }
+  };
+
+  const handleScrollToParticulier = () => {
+    if (location.pathname === '/fr/profils') {
+      // Si on est déjà sur la page profils, on scroll directement vers la section
+      scrollToSection('particulier');
+    } else {
+      // Sinon on navigue vers la page avec l'ancre
+      navigate(`/fr/profils#particulier`);
+    }
+  };
   return (
     <footer className="bg-brand-purple text-white py-12">
       <div className="container mx-auto px-4">
@@ -78,13 +98,13 @@ const Footer = () => {
                 Qui sommes-nous ?
               </Link>
               <button 
-                onClick={() => handleScrollToSection('prestations-a-la-carte')} 
+                onClick={handleScrollToParticulier} 
                 className="block text-gray-300 hover:text-brand-beige transition-colors text-left"
               >
                 Vous êtes particulier ?
               </button>
               <button 
-                onClick={() => handleScrollToSection('formule-entreprise-social')} 
+                onClick={handleScrollToEntreprise} 
                 className="block text-gray-300 hover:text-brand-beige transition-colors text-left"
               >
                 Vous êtes une entreprise ?
