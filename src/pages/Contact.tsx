@@ -40,7 +40,7 @@ const FrContact = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Contactez Houkouki</h1>
-            <p className="text-xl text-[#C0997A] font-medium mb-2">Votre juriste à portée de main</p>
+            <p className="text-xl text-brand-beige font-medium mb-2">Votre juriste à portée de main</p>
             
             {/* Call to action */}
             <div className="bg-red-100 border-l-4 border-red-600 p-4 mb-8 max-w-2xl mx-auto">
@@ -144,7 +144,7 @@ const FrContact = () => {
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-[#C0997A] hover:bg-[#B8926F] text-white py-3"
+                    className="w-full bg-brand-beige hover:bg-brand-beige/80 text-white py-3"
                   >
                     <Send className="mr-2 h-4 w-4" />
                     Envoyer
@@ -161,7 +161,7 @@ const FrContact = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <MapPin className="h-6 w-6 text-[#C0997A] mt-1 flex-shrink-0" />
+                    <MapPin className="h-6 w-6 text-brand-beige mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Adresse</h3>
                       <p className="text-gray-600">27, Rue Ain Asserdoune</p>
@@ -171,7 +171,7 @@ const FrContact = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <Phone className="h-6 w-6 text-[#C0997A] mt-1 flex-shrink-0" />
+                    <Phone className="h-6 w-6 text-brand-beige mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Téléphone</h3>
                       <p className="text-gray-600">+212 (0)529 045 999</p>
@@ -179,7 +179,7 @@ const FrContact = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <Mail className="h-6 w-6 text-[#C0997A] mt-1 flex-shrink-0" />
+                    <Mail className="h-6 w-6 text-brand-beige mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-900">E-mail et support</h3>
                       <p className="text-gray-600">contact@houkouki.com</p>
@@ -187,7 +187,7 @@ const FrContact = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <Clock className="h-6 w-6 text-[#C0997A] mt-1 flex-shrink-0" />
+                    <Clock className="h-6 w-6 text-brand-beige mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Horaires d'ouverture</h3>
                       <p className="text-gray-600">Lundi - Vendredi : 9h00 - 19h00</p>
@@ -199,22 +199,22 @@ const FrContact = () => {
               </Card>
 
               {/* Pourquoi nous contacter */}
-              <Card className="shadow-lg bg-gradient-to-br from-[#C0997A]/10 to-red-50">
+              <Card className="shadow-lg bg-gradient-to-br from-brand-beige/10 to-red-50">
                 <CardHeader>
                   <CardTitle className="text-xl text-gray-900">Pourquoi nous contacter ?</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-[#C0997A] rounded-full"></div>
+                      <div className="w-2 h-2 bg-brand-beige rounded-full"></div>
                       <span className="text-gray-700">Devis personnalisé sous 24h</span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-[#C0997A] rounded-full"></div>
+                      <div className="w-2 h-2 bg-brand-beige rounded-full"></div>
                       <span className="text-gray-700">Accompagnement sur mesure</span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-[#C0997A] rounded-full"></div>
+                      <div className="w-2 h-2 bg-brand-beige rounded-full"></div>
                       <span className="text-gray-700">Disponible à distance</span>
                     </li>
                   </ul>

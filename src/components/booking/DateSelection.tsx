@@ -12,7 +12,7 @@ const DateSelection = ({ selectedDate, onDateSelect }: DateSelectionProps) => {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-[#C0997A] rounded-full flex items-center justify-center">
+          <div className="w-8 h-8 bg-brand-beige rounded-full flex items-center justify-center">
             <span className="text-white font-bold text-sm">2</span>
           </div>
           <span>Choisissez une date</span>

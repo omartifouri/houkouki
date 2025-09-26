@@ -120,29 +120,29 @@ const Accueil = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-brand-beige rounded-full mt-3 flex-shrink-0"></div>
                     <span className="text-gray-700">Des consultations juridiques sur mesure délivrées par des juristes spécialisés</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-brand-beige rounded-full mt-3 flex-shrink-0"></div>
                     <span className="text-gray-700">La rédaction et l'audit de vos documents juridiques</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-brand-beige rounded-full mt-3 flex-shrink-0"></div>
                     <span className="text-gray-700">La prise en charge de vos démarches administratives</span>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-brand-beige rounded-full mt-3 flex-shrink-0"></div>
                     <span className="text-gray-700">La gestion amiable ou la coordination judiciaire de vos litiges, si nécessaire</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-brand-beige rounded-full mt-3 flex-shrink-0"></div>
                     <span className="text-gray-700">Un accès sécurisé à nos services via notre application mobile</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#C0997A] rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-brand-beige rounded-full mt-3 flex-shrink-0"></div>
                     <span className="text-gray-700">Conseil & accompagnement stratégique en financement</span>
                   </div>
                 </div>
@@ -153,7 +153,7 @@ const Accueil = () => {
               <p className="text-xl font-semibold text-gray-900 mb-4">
                 Notre engagement : vous rendre le droit plus simple, plus rapide, plus humain.
               </p>
-              <p className="text-lg text-[#C0997A] font-medium">
+              <p className="text-lg text-brand-beige font-medium">
                 Vous cherchez un partenaire de confiance ?
               </p>
             </div>
@@ -162,7 +162,7 @@ const Accueil = () => {
       </section>
 
       {/* Nos offres selon vos besoins */}
-      <section className="py-16 px-4 bg-gradient-to-br from-[#C0997A]/10 to-gray-50">
+      <section className="py-16 px-4 bg-gradient-to-br from-brand-beige/10 to-gray-50">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -286,7 +286,7 @@ const Accueil = () => {
 
           <div className="text-center mt-8">
             <Button 
-              className="bg-[#C0997A] hover:bg-[#B8926F]" 
+              className="bg-brand-beige hover:bg-brand-beige/80" 
               asChild
             >
               <Link to="/prestations">
@@ -310,14 +310,14 @@ const Accueil = () => {
             <Link to="/tarifs#abonnement-annuel" className="block">
               <Card className="bg-white p-6 flex flex-col h-full cursor-pointer hover:shadow-lg transition-all duration-300">
                 <CardHeader className="text-center">
-                  <CardTitle className="text-2xl text-[#C0997A]">Abonnement annuel</CardTitle>
+                  <CardTitle className="text-2xl text-brand-beige">Abonnement annuel</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
                   <p className="text-gray-600 mb-4 flex-1 text-center">
                     Un accès illimité à nos juristes + un accompagnement personnalisé tout au long de l'année.
                     Idéal pour les particuliers ou entreprises qui souhaitent un service de proximité continu.
                   </p>
-                  <Button className="w-full bg-[#C0997A] hover:bg-[#B8926F] mt-auto">
+                  <Button className="w-full bg-brand-beige hover:bg-brand-beige/80 mt-auto">
                     Choisir l'abonnement
                   </Button>
                 </CardContent>

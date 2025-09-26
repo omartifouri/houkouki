@@ -43,7 +43,7 @@ const BookingSummary = ({
 
         {selectedDate && (
           <div className="flex items-start space-x-3">
-            <CalendarIcon className="h-5 w-5 text-[#C0997A] mt-0.5" />
+            <CalendarIcon className="h-5 w-5 text-brand-beige mt-0.5" />
             <div>
               <p className="font-medium">Date</p>
               <p className="text-sm text-gray-600">

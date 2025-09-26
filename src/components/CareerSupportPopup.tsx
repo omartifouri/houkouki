@@ -42,7 +42,7 @@ const CareerSupportPopup = () => {
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <Card className={`
-        w-80 shadow-lg border-2 border-[#C0997A] bg-white
+        w-80 shadow-lg border-2 border-brand-beige bg-white
         transform transition-all duration-300 ease-in-out
         ${isAnimating 
           ? 'translate-x-0 opacity-100' 
@@ -52,7 +52,7 @@ const CareerSupportPopup = () => {
         <CardContent className="p-4">
           <div className="flex items-start justify-between mb-3">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-[#C0997A] to-[#B8926F] rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-brand-beige to-brand-beige/80 rounded-full flex items-center justify-center">
                 <Briefcase className="h-5 w-5 text-white" />
               </div>
               <div>
@@ -75,7 +75,7 @@ const CareerSupportPopup = () => {
           </p>
           
           <Button 
-            className="w-full bg-[#C0997A] hover:bg-[#B8926F] text-white" 
+            className="w-full bg-brand-beige hover:bg-brand-beige/80 text-white" 
             onClick={() => {
               window.open('https://www.ilaa.ma', '_blank', 'noopener,noreferrer');
               handleClose();

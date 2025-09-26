@@ -56,9 +56,9 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ cvData }) => {
           </h2>
           <div className="space-y-4">
             {experience.map((exp) => (
-              <div key={exp.id} className="border-l-2 border-[#C0997A] pl-4">
+              <div key={exp.id} className="border-l-2 border-brand-beige pl-4">
                 <h3 className="font-semibold text-gray-900">{exp.position}</h3>
-                <div className="text-sm text-[#C0997A] font-medium">
+                <div className="text-sm text-brand-beige font-medium">
                   {exp.company} | {exp.startDate} - {exp.endDate}
                 </div>
                 {exp.description && (
@@ -78,9 +78,9 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ cvData }) => {
           </h2>
           <div className="space-y-3">
             {education.map((edu) => (
-              <div key={edu.id} className="border-l-2 border-[#C0997A] pl-4">
+              <div key={edu.id} className="border-l-2 border-brand-beige pl-4">
                 <h3 className="font-semibold text-gray-900">{edu.degree}</h3>
-                <div className="text-sm text-[#C0997A] font-medium">
+                <div className="text-sm text-brand-beige font-medium">
                   {edu.institution} | {edu.startDate} - {edu.endDate}
                 </div>
               </div>
@@ -99,7 +99,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ cvData }) => {
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="bg-[#C0997A]/20 text-[#C0997A] px-2 py-1 rounded text-sm font-medium"
+                className="bg-brand-beige/20 text-brand-beige px-2 py-1 rounded text-sm font-medium"
               >
                 {skill}
               </span>
@@ -118,7 +118,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ cvData }) => {
             {languages.map((lang) => (
               <div key={lang.id} className="flex justify-between items-center">
                 <span className="font-medium text-gray-900">{lang.language}</span>
-                <span className="text-sm text-[#C0997A] font-medium">{lang.level}</span>
+                <span className="text-sm text-brand-beige font-medium">{lang.level}</span>
               </div>
             ))}
           </div>

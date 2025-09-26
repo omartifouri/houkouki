@@ -42,7 +42,7 @@ export const SkillsSection = ({ skills, onAdd, onRemove }: SkillsSectionProps) =
             {skills.map((skill) => (
               <div
                 key={skill}
-                className="bg-[#C0997A]/20 text-[#C0997A] px-3 py-1 rounded-full text-sm flex items-center gap-2"
+                className="bg-brand-beige/20 text-brand-beige px-3 py-1 rounded-full text-sm flex items-center gap-2"
               >
                 {skill}
                 <button

@@ -112,12 +112,12 @@ Message: ${data.message}`
 
   return (
     <Card className="w-full max-w-2xl mx-auto shadow-lg">
-      <CardHeader className="bg-gradient-to-r from-[#C0997A] to-[#A68A6E] text-white rounded-t-lg">
+      <CardHeader className="bg-gradient-to-r from-brand-beige to-brand-beige/80 text-white rounded-t-lg">
         <CardTitle className="text-2xl font-bold flex items-center gap-2">
           <FileText className="w-6 h-6" />
           Demande de devis personnalisé
         </CardTitle>
-        <CardDescription className="text-[#C0997A]/20">
+        <CardDescription className="text-brand-beige/20">
           Remplissez ce formulaire pour recevoir un devis adapté à vos besoins
         </CardDescription>
       </CardHeader>
@@ -128,7 +128,7 @@ Message: ${data.message}`
             {/* Informations personnelles */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                <User className="w-5 h-5 text-[#C0997A]" />
+                <User className="w-5 h-5 text-brand-beige" />
                 Informations personnelles
               </h3>
               
@@ -212,7 +212,7 @@ Message: ${data.message}`
             {/* Informations professionnelles */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                <Building className="w-5 h-5 text-[#C0997A]" />
+                <Building className="w-5 h-5 text-brand-beige" />
                 Informations professionnelles
               </h3>
               
@@ -250,7 +250,7 @@ Message: ${data.message}`
             {/* Détails du projet */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                <FileText className="w-5 h-5 text-[#C0997A]" />
+                <FileText className="w-5 h-5 text-brand-beige" />
                 Détails de ton projet
               </h3>
               
@@ -310,7 +310,7 @@ Message: ${data.message}`
             <Button 
               type="submit" 
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-[#C0997A] to-[#A68A6E] hover:from-[#A68A6E] hover:to-[#8B7355] text-lg py-3"
+              className="w-full bg-gradient-to-r from-brand-beige to-brand-beige/80 hover:from-brand-beige/80 hover:to-brand-beige/60 text-lg py-3"
             >
               {isSubmitting ? (
                 <>
