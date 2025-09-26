@@ -51,7 +51,7 @@ const Souscription = () => {
     },
     '1-50': {
       title: 'Abonnement Entreprise (1-50 employés)',
-      price: '6500 MAD TTC',
+      price: '7200 MAD TTC',
       description: 'Solution complète pour petites et moyennes entreprises'
     }
   };

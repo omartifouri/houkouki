@@ -101,7 +101,7 @@ const FrTarifs = () => {
         "Accompagnement en cas de contrôle ou litige",
         "Des prestations supplémentaires à un tarif préférentiel de 325 DH / HT / heure réservé aux abonnés"
       ],
-      price: "6500",
+      price: "7200",
       currency: "MAD TTC", 
       buttonText: "COMMANDER",
       popular: true
