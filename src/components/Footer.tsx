@@ -1,22 +1,16 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { useScrollToAnchor } from "@/hooks/useScrollToAnchor";
 
 const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { scrollToSection } = useScrollToAnchor();
 
   const handleScrollToSection = (sectionId: string) => {
     if (location.pathname === '/fr/tarifs') {
       // Si on est déjà sur la page tarifs, on scroll directement vers la section
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const headerHeight = 80; // Hauteur approximative du header
-        const elementPosition = element.offsetTop - headerHeight - 20; // 20px de marge supplémentaire
-        window.scrollTo({
-          top: elementPosition,
-          behavior: 'smooth'
-        });
-      }
+      scrollToSection(sectionId);
     } else {
       // Sinon on navigue vers la page avec l'ancre
       navigate(`/fr/tarifs#${sectionId}`);

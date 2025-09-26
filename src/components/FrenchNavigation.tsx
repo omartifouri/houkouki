@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Phone, Mail, Clock, Menu, X } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
 import ContactForm from "./ContactForm";
 import { useState } from "react";
+import { useScrollToAnchor } from "@/hooks/useScrollToAnchor";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,6 +15,19 @@ import {
 
 const FrenchNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { scrollToSection } = useScrollToAnchor();
+
+  const handleScrollToSection = (sectionId: string) => {
+    if (location.pathname === '/fr/tarifs') {
+      // Si on est déjà sur la page tarifs, on scroll directement vers la section
+      scrollToSection(sectionId);
+    } else {
+      // Sinon on navigue vers la page avec l'ancre
+      navigate(`/fr/tarifs#${sectionId}`);
+    }
+  };
 
   return (
     <>

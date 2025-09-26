@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
+import { useScrollToAnchor } from "@/hooks/useScrollToAnchor";
 
 const FrDomaines = () => {
+  useScrollToAnchor();
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       <FrenchNavigation />

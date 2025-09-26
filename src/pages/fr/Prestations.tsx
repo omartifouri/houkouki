@@ -5,17 +5,10 @@ import { Link } from "react-router-dom";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
-import { useEffect } from "react";
+import { useScrollToAnchor } from "@/hooks/useScrollToAnchor";
 
 const FrPrestations = () => {
-  useEffect(() => {
-    // Scroll to top when the page loads with #top anchor
-    if (window.location.hash === '#top') {
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }, 100);
-    }
-  }, []);
+  useScrollToAnchor();
 
   return (
     <div id="top" className="min-h-screen bg-gradient-to-br from-brand-coral-light/20 to-white">{" "}

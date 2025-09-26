@@ -6,36 +6,10 @@ import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import CareerSupportPopup from "@/components/CareerSupportPopup";
 import FloatingDevisButton from "@/components/FloatingDevisButton";
-import { useEffect } from "react";
+import { useScrollToAnchor } from "@/hooks/useScrollToAnchor";
+
 const FrTarifs = () => {
-  // Effect pour gérer le scroll automatique avec les ancres
-  useEffect(() => {
-    const handleAnchorScroll = () => {
-      const hash = window.location.hash;
-      if (hash) {
-        setTimeout(() => {
-          const element = document.getElementById(hash.substring(1));
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }, 100);
-      }
-    };
-
-    // Gérer le scroll au chargement de la page
-    handleAnchorScroll();
-
-    // Gérer les changements d'ancre
-    const handleHashChange = () => {
-      handleAnchorScroll();
-    };
-
-    window.addEventListener('hashchange', handleHashChange);
-    
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
-  }, []);
+  useScrollToAnchor();
 
   // Définition des tooltips pour les fonctionnalités
   const featureTooltips: { [key: string]: string } = {
