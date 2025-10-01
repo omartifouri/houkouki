@@ -20,13 +20,13 @@ html {
     --primary: 357 64% 62%;      /* Nouvelle couleur #de5a60 */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 37 30% 62%;     /* Nouvelle couleur #c0997a */
+    --secondary: 31 30% 62%;     /* Nouvelle couleur #c0997a */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 37 30% 62%;        /* Nouvelle couleur #c0997a */
+    --accent: 31 30% 62%;        /* Nouvelle couleur #c0997a */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 357 64% 62%;  /* Nouvelle couleur #de5a60 */
@@ -40,7 +40,7 @@ html {
     --brand-coral: 357 64% 62%;      /* Nouvelle couleur #de5a60 */
     --brand-coral-light: 357 64% 85%; /* Light variant for backgrounds */
     --brand-coral-dark: 357 64% 45%;  /* Dark variant for text */
-    --brand-beige: 37 30% 62%;       /* Nouvelle couleur #c0997a */  
+    --brand-beige: 31 30% 62%;       /* Nouvelle couleur #c0997a */  
     --brand-purple: 325 62% 34%;     /* Nouvelle couleur #8e214f */
     --brand-teal: 188 44% 48%;
 
