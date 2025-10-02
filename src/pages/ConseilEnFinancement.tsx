@@ -5,6 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Check, Building2, FileText, BarChart3, RefreshCw, Home, Users, Handshake } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { toast } from "@/hooks/use-toast";
+import FrenchNavigation from "@/components/FrenchNavigation";
+import Footer from "@/components/Footer";
 
 const ConseilEnFinancement = () => {
   const [formData, setFormData] = useState({
@@ -95,6 +97,7 @@ const ConseilEnFinancement = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <FrenchNavigation />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-primary/5 to-background py-20">
         <div className="container mx-auto px-4">
@@ -284,6 +287,8 @@ const ConseilEnFinancement = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

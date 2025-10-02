@@ -6,6 +6,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Star, CheckCircle, Scale, Briefcase, Home, FileText, Users, Building, Shield, Lightbulb } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { useToast } from '@/hooks/use-toast';
+import FrenchNavigation from '@/components/FrenchNavigation';
+import Footer from '@/components/Footer';
 
 const LpConsultation = () => {
   const { toast } = useToast();
@@ -132,6 +134,7 @@ const LpConsultation = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+      <FrenchNavigation />
       {/* Hero Section with Form */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 md:py-24">
         <div className="container mx-auto px-4">
@@ -385,6 +388,8 @@ const LpConsultation = () => {
           </p>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
