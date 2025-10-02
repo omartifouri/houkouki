@@ -33,6 +33,7 @@ import FrRSE from "./pages/fr/RSE";
 import Souscription from "./pages/Souscription";
 import LpConsultation from "./pages/LpConsultation";
 import LpConsultationAr from "./pages/LpConsultationAr";
+import ConseilEnFinancement from "./pages/ConseilEnFinancement";
 
 // Pages à la racine (HOUKOUKI)
 import Accueil from "./pages/Accueil";
@@ -92,6 +93,7 @@ const App = () => (
             <Route path="/souscription" element={<Souscription />} />
             <Route path="/lp-consultation" element={<LpConsultation />} />
             <Route path="/lp-consultation-ar" element={<LpConsultationAr />} />
+            <Route path="/conseil-en-financement" element={<ConseilEnFinancement />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
