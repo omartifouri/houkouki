@@ -32,9 +32,21 @@ import FrCGV from "./pages/fr/CGV";
 import FrRSE from "./pages/fr/RSE";
 import Souscription from "./pages/Souscription";
 import LpConsultation from "./pages/LpConsultation";
-import LpConsultationAr from "./pages/LpConsultationAr";
-import ConseilEnFinancement from "./pages/ConseilEnFinancement";
-import ConseilEnFinancementAr from "./pages/ConseilEnFinancementAr";
+
+// Arabic pages
+import ArAccueil from "./pages/ar/Accueil";
+import ArEsprit from "./pages/ar/Esprit";
+import ArQuiSommesNous from "./pages/ar/QuiSommesNous";
+import ArApproche from "./pages/ar/Approche";
+import ArOffre from "./pages/ar/Offre";
+import ArProfils from "./pages/ar/Profils";
+import ArPrestations from "./pages/ar/Prestations";
+import ArDomaines from "./pages/ar/Domaines";
+import ArTarifs from "./pages/ar/Tarifs";
+import ArBlog from "./pages/ar/Blog";
+import ArContact from "./pages/ar/Contact";
+import ArLpConsultation from "./pages/ar/LpConsultation";
+import ArConseilEnFinancement from "./pages/ar/ConseilEnFinancement";
 
 // Pages à la racine (HOUKOUKI)
 import Accueil from "./pages/Accueil";
@@ -93,9 +105,22 @@ const App = () => (
             <Route path="/fr/cgv" element={<FrCGV />} />
             <Route path="/souscription" element={<Souscription />} />
             <Route path="/lp-consultation" element={<LpConsultation />} />
-            <Route path="/lp-consultation-ar" element={<LpConsultationAr />} />
-            <Route path="/conseil-en-financement" element={<ConseilEnFinancement />} />
-            <Route path="/conseil-en-financement-ar" element={<ConseilEnFinancementAr />} />
+            
+            {/* Arabic routes */}
+            <Route path="/ar" element={<ArAccueil />} />
+            <Route path="/ar/accueil" element={<ArAccueil />} />
+            <Route path="/ar/esprit" element={<ArEsprit />} />
+            <Route path="/ar/qui-sommes-nous" element={<ArQuiSommesNous />} />
+            <Route path="/ar/approche" element={<ArApproche />} />
+            <Route path="/ar/offre" element={<ArOffre />} />
+            <Route path="/ar/profils" element={<ArProfils />} />
+            <Route path="/ar/prestations" element={<ArPrestations />} />
+            <Route path="/ar/domaines" element={<ArDomaines />} />
+            <Route path="/ar/tarifs" element={<ArTarifs />} />
+            <Route path="/ar/blog" element={<ArBlog />} />
+            <Route path="/ar/contact" element={<ArContact />} />
+            <Route path="/ar/lp-consultation" element={<ArLpConsultation />} />
+            <Route path="/ar/conseil-en-financement" element={<ArConseilEnFinancement />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
