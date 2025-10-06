@@ -106,7 +106,7 @@ const App = () => (
             <Route path="/souscription" element={<Souscription />} />
             <Route path="/lp-consultation" element={<LpConsultation />} />
             
-            {/* Arabic routes */}
+            {/* Arabic routes - French URLs */}
             <Route path="/ar" element={<ArAccueil />} />
             <Route path="/ar/accueil" element={<ArAccueil />} />
             <Route path="/ar/esprit" element={<ArEsprit />} />
@@ -121,6 +121,19 @@ const App = () => (
             <Route path="/ar/contact" element={<ArContact />} />
             <Route path="/ar/lp-consultation" element={<ArLpConsultation />} />
             <Route path="/ar/conseil-en-financement" element={<ArConseilEnFinancement />} />
+            
+            {/* Arabic routes - English URLs (aliases) */}
+            <Route path="/ar/home" element={<ArAccueil />} />
+            <Route path="/ar/spirit" element={<ArEsprit />} />
+            <Route path="/ar/about-us" element={<ArQuiSommesNous />} />
+            <Route path="/ar/approach" element={<ArApproche />} />
+            <Route path="/ar/offer" element={<ArOffre />} />
+            <Route path="/ar/profiles" element={<ArProfils />} />
+            <Route path="/ar/services" element={<ArPrestations />} />
+            <Route path="/ar/domains" element={<ArDomaines />} />
+            <Route path="/ar/pricing" element={<ArTarifs />} />
+            <Route path="/ar/blog" element={<ArBlog />} />
+            <Route path="/ar/contact" element={<ArContact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
