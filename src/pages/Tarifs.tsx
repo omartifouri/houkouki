@@ -13,7 +13,7 @@ const FrTarifs = () => {
     "Consultations juridiques illimitées*": "Posez toutes vos questions juridiques par téléphone ou visioconférence, sans limite de volume, dans le respect de votre vie privée.\n* Consultations illimitées dans le cadre d'un usage raisonnable et de bonne foi.",
     "Lecture et explication de documents courants": "Nos juristes analysent vos contrats, courriers officiels, actes notariés et vous expliquent les enjeux en termes simples.",
     "Assistance à la rédaction de courriers": "Aide à la rédaction de lettres de réclamation, mises en demeure, réponses administratives et correspondances officielles.", 
-    "Conseil en cas de litige ou de pré-contentieux": "Orientation stratégique et juridique avant d'engager une procédure, pour résoudre vos conflits à l'amiable.",
+    "Conseil en cas de litige ou de pré-contentieux": "Obtenez un éclairage juridique clair sur votre situation et les options possibles pour gérer un désaccord avant qu'il ne s'aggrave.\n\nNos juristes vous aident à adopter la bonne posture et à préparer vos échanges pour favoriser une issue amiable.\n\nL'accompagnement dans une procédure ou la rédaction d'actes juridiques spécifiques relève d'une prestation complémentaire.",
     "Accès à l'application mobile et guides juridiques": "Interface dédiée avec guides pratiques, modèles de documents et suivi de vos dossiers en temps réel.",
     "Suivi par un conseiller référent": "Un juriste dédié qui connaît votre dossier et vous accompagne dans la durée pour une relation de confiance.",
     "Audit de contrats et documents RH": "Vérification et optimisation de vos contrats de travail, règlements intérieurs et procédures RH.",
