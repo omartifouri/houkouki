@@ -23,6 +23,16 @@ const FrTarifs = () => {
   };
 
   const services = [
+    // Droit de la famille
+    { name: "Conseil et assistance en matière de divorce", description: "Accompagnement juridique complet dans les procédures de divorce (consentement mutuel, judiciaire)", category: "Droit de la famille" },
+    { name: "Rédaction d'une convention de divorce", description: "Élaboration d'une convention de divorce par consentement mutuel incluant tous les aspects patrimoniaux", category: "Droit de la famille" },
+    { name: "Conseil sur la garde des enfants", description: "Orientation juridique sur les droits de garde, droit de visite et hébergement des enfants", category: "Droit de la famille" },
+    { name: "Calcul et conseil sur la pension alimentaire", description: "Estimation et conseil juridique sur le montant de la pension alimentaire pour enfants ou ex-conjoint", category: "Droit de la famille" },
+    { name: "Conseil en matière de succession et héritage", description: "Accompagnement juridique sur les questions de succession, partage successoral et droits des héritiers", category: "Droit de la famille" },
+    { name: "Rédaction d'un contrat de mariage", description: "Élaboration d'un contrat de mariage définissant le régime matrimonial et les conditions patrimoniales", category: "Droit de la famille" },
+    { name: "Conseil sur la reconnaissance de paternité", description: "Assistance juridique pour les démarches de reconnaissance ou contestation de paternité", category: "Droit de la famille" },
+    { name: "Procédure de tutelle ou curatelle", description: "Accompagnement dans les démarches de protection juridique des majeurs vulnérables", category: "Droit de la famille" },
+    
     // Droit des sociétés
     { name: "Conseil + procédure carte auto-entrepreneur", description: "Accompagnement complet pour l'obtention et les démarches liées à la carte d'entrepreneur", category: "Droit des sociétés" },
     { name: "Création de société", description: "Assistance juridique pour la constitution d'une société selon le statut approprié", category: "Droit des sociétés" },
