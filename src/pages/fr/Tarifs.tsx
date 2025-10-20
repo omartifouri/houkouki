@@ -249,7 +249,21 @@ const FrTarifs = () => {
                               </Tooltip>
                             ) : feature.includes("Des prestations supplémentaires") ? (
                               <span className="text-sm text-gray-700 leading-relaxed">
-                                Des prestations supplémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés - <a href="#exemples-prestations" className="text-red-600 underline hover:text-red-800">voir les prestations complémentaires</a>
+                                Des prestations supplémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés - <button 
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    const element = document.getElementById('exemples-prestations');
+                                    if (element) {
+                                      const offset = 100;
+                                      const elementPosition = element.getBoundingClientRect().top;
+                                      const offsetPosition = elementPosition + window.scrollY - offset;
+                                      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                                    }
+                                  }}
+                                  className="text-red-600 underline hover:text-red-800 cursor-pointer"
+                                >
+                                  voir les prestations complémentaires
+                                </button>
                               </span>
                             ) : (
                               <span className="text-sm text-gray-700 leading-relaxed">
