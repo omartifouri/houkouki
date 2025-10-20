@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Clock, Users, Building2, Heart, CheckCircle, Info } from "lucide-react";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
@@ -353,11 +354,10 @@ const FrTarifs = () => {
               </CardHeader>
               <CardContent>
                 <div className="overflow-x-auto">
-                  <p className="text-sm text-gray-600 mb-4 text-center italic">
-                    La durée par heures est estimée par l'équipe de nos juristes
-                  </p>
-                   <div className="space-y-8">
-                     {/* Grouper les services par catégorie */}
+                   <p className="text-sm text-gray-600 mb-4 text-center italic">
+                     La durée par heures est estimée par l'équipe de nos juristes
+                   </p>
+                   <Accordion type="multiple" className="w-full">
                      {Object.entries(
                        services.reduce((acc, service) => {
                          if (!acc[service.category]) {
@@ -367,29 +367,31 @@ const FrTarifs = () => {
                          return acc;
                        }, {} as Record<string, typeof services>)
                      ).map(([category, categoryServices]) => (
-                       <div key={category}>
-                         <h3 className="text-lg font-semibold text-red-800 mb-4 border-b border-red-200 pb-2">
+                       <AccordionItem key={category} value={category} className="border-b border-red-200">
+                         <AccordionTrigger className="text-lg font-semibold text-red-800 hover:text-red-900 py-4">
                            {category}
-                         </h3>
-                         <table className="w-full border-collapse mb-6">
-                           <thead>
-                             <tr className="border-b border-gray-200">
-                               <th className="text-left py-3 px-4 font-medium text-gray-900 w-2/5">Prestation</th>
-                               <th className="text-left py-3 px-4 font-medium text-gray-900">Description</th>
-                             </tr>
-                           </thead>
-                           <tbody>
-                             {categoryServices.map((service, index) => (
-                               <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
-                                 <td className="py-3 px-4 font-medium text-gray-900 text-sm">{service.name}</td>
-                                 <td className="py-3 px-4 text-gray-600 text-sm">{service.description}</td>
+                         </AccordionTrigger>
+                         <AccordionContent>
+                           <table className="w-full border-collapse">
+                             <thead>
+                               <tr className="border-b border-gray-200">
+                                 <th className="text-left py-3 px-4 font-medium text-gray-900 w-2/5">Prestation</th>
+                                 <th className="text-left py-3 px-4 font-medium text-gray-900">Description</th>
                                </tr>
-                             ))}
-                           </tbody>
-                         </table>
-                       </div>
+                             </thead>
+                             <tbody>
+                               {categoryServices.map((service, index) => (
+                                 <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
+                                   <td className="py-3 px-4 font-medium text-gray-900 text-sm">{service.name}</td>
+                                   <td className="py-3 px-4 text-gray-600 text-sm">{service.description}</td>
+                                 </tr>
+                               ))}
+                             </tbody>
+                           </table>
+                         </AccordionContent>
+                       </AccordionItem>
                      ))}
-                   </div>
+                   </Accordion>
                 </div>
               </CardContent>
             </Card>
