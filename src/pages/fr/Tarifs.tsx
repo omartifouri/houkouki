@@ -14,7 +14,7 @@ const FrTarifs = () => {
   // Définition des tooltips pour les fonctionnalités
   const featureTooltips: { [key: string]: string } = {
     "Consultations juridiques illimitées*": "Posez toutes vos questions juridiques par téléphone ou visioconférence, sans limite de volume, dans le respect de votre vie privée.\n* Consultations illimitées dans le cadre d'un usage raisonnable et de bonne foi.",
-    "Lecture et analyse de documents juridiques": "Nos juristes analysent vos contrats, courriers officiels, actes notariés et vous expliquent les enjeux en termes simples.",
+    "Lecture et explication de documents courants": "Nos juristes analysent vos contrats, courriers officiels, actes notariés et vous expliquent les enjeux en termes simples.",
     "Assistance à la rédaction de courriers": "Aide à la rédaction de lettres de réclamation, mises en demeure, réponses administratives et correspondances officielles.", 
     "Conseil en cas de litige ou précontentieux": "Orientation stratégique et juridique avant d'engager une procédure, pour résoudre vos conflits à l'amiable.",
     "Accès à l'application mobile et guides juridiques": "Interface dédiée avec guides pratiques, modèles de documents et suivi de vos dossiers en temps réel.",
@@ -77,7 +77,7 @@ const FrTarifs = () => {
       subtitle: "Un recours amiable ou une coordination d'un recours judiciaire gratuit / an",
       features: [
         "Consultations juridiques illimitées*",
-        "Lecture et analyse de documents juridiques", 
+        "Lecture et explication de documents courants",
         "Assistance à la rédaction de courriers",
         "Conseil en cas de litige ou précontentieux",
         "Accès à l'application mobile et guides juridiques",
@@ -94,7 +94,7 @@ const FrTarifs = () => {
       subtitle: "Un recours amiable ou une coordination d'un recours judiciaire gratuit / an",
       features: [
         "Consultations juridiques illimitées*",
-        "Lecture et analyse de documents juridiques",
+        "Lecture et explication de documents courants",
         "Assistance à la rédaction de courriers", 
         "Conseil en cas de litige ou précontentieux",
         "Accès à l'application mobile et guides juridiques",
@@ -116,7 +116,7 @@ const FrTarifs = () => {
       subtitle: "",
       features: [
         "Consultations juridiques illimitées*",
-        "Lecture et analyse de documents juridiques",
+        "Lecture et explication de documents courants",
         "Assistance à la rédaction de courriers",
         "Conseil en cas de litige ou précontentieux", 
         "Accès à l'application mobile et guides juridiques",
