@@ -103,7 +103,7 @@ const FrTarifs = () => {
         "Sécurisation des procédures RH",
         "Rédaction de CGV ou d'actes juridiques",
         "Accompagnement en cas de contrôle ou litige",
-        "Des prestations supplémentaires à un tarif préférentiel de 400 DH / HT / heure réservé aux abonnés"
+        "Des prestations supplémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés"
       ],
       price: "7200",
       currency: "MAD TTC", 
@@ -244,7 +244,7 @@ const FrTarifs = () => {
                               </Tooltip>
                             ) : feature.includes("Des prestations supplémentaires") ? (
                               <span className="text-sm text-gray-700 leading-relaxed">
-                                Des prestations supplémentaires à un tarif préférentiel de 400 DH / HT / heure réservé aux abonnés - <a href="#exemples-prestations" className="text-red-600 underline hover:text-red-800">Voir les exemples de prestations</a>
+                                Des prestations supplémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés - <a href="#exemples-prestations" className="text-red-600 underline hover:text-red-800">Voir les exemples de prestations</a>
                               </span>
                             ) : (
                               <span className="text-sm text-gray-700 leading-relaxed">
