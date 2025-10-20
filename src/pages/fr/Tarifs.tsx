@@ -249,7 +249,7 @@ const FrTarifs = () => {
                               </Tooltip>
                             ) : feature.includes("Des prestations supplémentaires") ? (
                               <span className="text-sm text-gray-700 leading-relaxed">
-                                Des prestations supplémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés - <a href="#exemples-prestations" className="text-red-600 underline hover:text-red-800">Voir les exemples de prestations</a>
+                                Des prestations supplémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés - <a href="#exemples-prestations" className="text-red-600 underline hover:text-red-800">voir les prestations complémentaires</a>
                               </span>
                             ) : (
                               <span className="text-sm text-gray-700 leading-relaxed">
