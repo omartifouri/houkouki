@@ -39,6 +39,8 @@ const FrTarifs = () => {
     { name: "Audit de contrat", description: "Examen approfondi d'un contrat pour identifier les risques et opportunités", category: "Droit des sociétés" },
     { name: "Rédaction d'une convention ou d'un contrat de partenariat", description: "Élaboration de conventions de partenariat adaptées aux besoins spécifiques", category: "Droit des sociétés" },
     { name: "Rédaction d'une procuration générale", description: "Rédaction de procurations pour représentation dans les actes juridiques", category: "Droit des sociétés" },
+    { name: "Audit de contrats et documents RH", description: "Vérification et optimisation de vos contrats de travail, règlements intérieurs et procédures RH", category: "Droit des sociétés" },
+    { name: "Sécurisation des procédures RH", description: "Mise en conformité de vos processus de recrutement, sanctions disciplinaires et ruptures de contrat", category: "Droit des sociétés" },
 
 
     // Droit foncier
