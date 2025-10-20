@@ -188,7 +188,7 @@ const FrTarifs = () => {
           <section>
             <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Abonnement annuel</h2>
             <p className="text-gray-600 text-center mb-12">
-              L'option idéale pour les particuliers, professionnels ou entreprises qui souhaitent un suivi juridique complet tout au long de l'année.
+              Conçu pour les particuliers, professionnels ou entreprises souhaitant bénéficier d'un accompagnement juridique continu, et de conditions tarifaires avantageuses et d'un traitement prioritaire de leurs demandes.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-8">
