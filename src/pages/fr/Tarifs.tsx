@@ -376,7 +376,7 @@ const FrTarifs = () => {
             <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-center">
               Une solution flexible pour celles et ceux qui ont un besoin ponctuel, sans engagement.
               Nos prestations à la carte sont tarifées en fonction du nombre d'heures nécessaires au tarif de<br />
-              <strong>600 DH HT / heure</strong>.
+              <strong>800 DH HT / heure</strong>.
             </p>
 
             {/* Tableau des prestations */}
