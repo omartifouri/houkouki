@@ -260,9 +260,9 @@ const FrTarifs = () => {
                                   <p>{featureTooltips[feature]}</p>
                                 </TooltipContent>
                               </Tooltip>
-                            ) : feature.includes("Des prestations supplémentaires") ? (
+                            ) : feature.includes("Les prestations complémentaires") ? (
                               <span className="text-sm text-gray-700 leading-relaxed">
-                                Des prestations complémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés - <button 
+                                Les prestations complémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés - <button 
                                   onClick={(e) => {
                                     e.preventDefault();
                                     const element = document.getElementById('exemples-prestations');
@@ -275,7 +275,7 @@ const FrTarifs = () => {
                                   }}
                                   className="text-red-600 underline hover:text-red-800 cursor-pointer"
                                 >
-                                  voir les prestations complémentaires
+                                  voir prestations à la carte
                                 </button>
                               </span>
                             ) : (
