@@ -124,7 +124,7 @@ const FrTarifs = () => {
         "Conseil en cas de litige ou de pré-contentieux",
         "Accès à l'application mobile et guides juridiques",
         "Suivi par un conseiller référent",
-        "Des prestations supplémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés"
+        "Les prestations complémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés"
       ],
       price: "7200",
       currency: "MAD TTC", 
