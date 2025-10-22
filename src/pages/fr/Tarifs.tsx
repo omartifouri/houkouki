@@ -89,7 +89,10 @@ const FrTarifs = () => {
     { name: "Rédaction de documents juridiques sur mesure", description: "Rédaction personnalisée de vos conditions générales de vente, contrats commerciaux ou autres actes juridiques, adaptés à votre activité et à votre réglementation.", category: "Services transversaux" },
     { name: "Accompagnement en cas de contrôle ou de litige", description: "Nos juristes vous conseillent sur la conduite à adopter lors d'un contrôle administratif (CNSS, inspection du travail, fiscalité…).\nL'orientation et la stratégie en cas de litige, l'assistance directe auprès des administrations ou la gestion complète d'un dossier contentieux font l'objet d'un devis spécifique.", category: "Services transversaux" },
     { name: "Orientation et stratégie en cas de contrôle administratif ou de litige", description: "Analyse approfondie de votre situation et élaboration d'une stratégie de réponse ou de négociation adaptée à votre contexte (échanges avec l'administration, rédaction de courriers argumentés, préparation de défense).", category: "Services transversaux" },
-    { name: "Autre", description: "Autre prestation transversale", category: "Services transversaux" }
+    { name: "Autre", description: "Autre prestation transversale", category: "Services transversaux" },
+
+    // Autres domaines de droits
+    { name: "Autre", description: "Autre prestation dans d'autres domaines de droits", category: "Autres domaines de droits" }
   ];
 
   const pricingPlans = [
