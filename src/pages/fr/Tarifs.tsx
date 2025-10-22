@@ -124,7 +124,7 @@ const FrTarifs = () => {
         "Conseil en cas de litige ou de pré-contentieux",
         "Accès à l'application mobile et guides juridiques",
         "Suivi par un conseiller référent",
-        "Les prestations complémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés"
+        "Des prestations supplémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés"
       ],
       price: "7200",
       currency: "MAD TTC", 
@@ -421,15 +421,7 @@ const FrTarifs = () => {
                   <p className="text-sm text-gray-600 mb-4 text-center italic">
                     La durée par heures est estimée par l'équipe de nos juristes
                   </p>
-                  <Accordion type="multiple" defaultValue={Object.keys(
-                    services.reduce((acc, service) => {
-                      if (!acc[service.category]) {
-                        acc[service.category] = [];
-                      }
-                      acc[service.category].push(service);
-                      return acc;
-                    }, {} as Record<string, typeof services>)
-                  )} className="w-full">
+                  <Accordion type="multiple" className="w-full">
                     {Object.entries(
                       services.reduce((acc, service) => {
                         if (!acc[service.category]) {
