@@ -124,7 +124,7 @@ const FrTarifs = () => {
         "Conseil en cas de litige ou de pré-contentieux",
         "Accès à l'application mobile et guides juridiques",
         "Suivi par un conseiller référent",
-        "Les prestations complémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés"
+        "Les prestations complémentaires sont à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés"
       ],
       price: "7200",
       currency: "MAD TTC", 
@@ -262,7 +262,7 @@ const FrTarifs = () => {
                               </Tooltip>
                             ) : feature.includes("Les prestations complémentaires") ? (
                               <span className="text-sm text-gray-700 leading-relaxed">
-                                Les prestations complémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés - <button 
+                                Les prestations complémentaires sont à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés - <button
                                   onClick={(e) => {
                                     e.preventDefault();
                                     const element = document.getElementById('exemples-prestations');
