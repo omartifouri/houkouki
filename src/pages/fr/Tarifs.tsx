@@ -34,6 +34,7 @@ const FrTarifs = () => {
     { name: "Conseil en matière de succession et héritage", description: "Accompagnement juridique sur les questions de succession, partage successoral et droits des héritiers", category: "Droit de la famille" },
     { name: "Rédaction d'un contrat de mariage", description: "Élaboration d'un contrat de mariage définissant le régime matrimonial et les conditions patrimoniales", category: "Droit de la famille" },
     { name: "Conseil sur la reconnaissance de paternité", description: "Assistance juridique pour les démarches de reconnaissance ou contestation de paternité", category: "Droit de la famille" },
+    { name: "Autre", description: "Autre prestation en droit de la famille", category: "Droit de la famille" },
     
     // Droit des sociétés
     { name: "Conseil + procédure carte auto-entrepreneur", description: "Accompagnement complet pour l'obtention et les démarches liées à la carte d'entrepreneur", category: "Droit des sociétés" },
@@ -50,12 +51,14 @@ const FrTarifs = () => {
     { name: "Rédaction d'une procuration générale", description: "Rédaction de procurations pour représentation dans les actes juridiques", category: "Droit des sociétés" },
     { name: "Audit de contrats et documents RH", description: "Vérification et optimisation de vos contrats de travail, règlements intérieurs et procédures RH", category: "Droit des sociétés" },
     { name: "Sécurisation des procédures RH", description: "Mise en conformité de vos processus de recrutement, sanctions disciplinaires et ruptures de contrat", category: "Droit des sociétés" },
+    { name: "Autre", description: "Autre prestation en droit des sociétés", category: "Droit des sociétés" },
 
 
     // Droit foncier
     { name: "Audit contrat de bail commercial", description: "Analyse complète des clauses d'un bail commercial existant", category: "Droit foncier" },
     { name: "Rédaction de contrat de bail commercial", description: "Élaboration sur-mesure de contrats de bail commercial", category: "Droit foncier" },
     { name: "Rédaction de contrat de bail commercial avec des clauses particulières", description: "Conception de baux commerciaux avec clauses spécifiques selon les besoins", category: "Droit foncier" },
+    { name: "Autre", description: "Autre prestation en droit foncier", category: "Droit foncier" },
     
 
     // Droit du travail
@@ -63,25 +66,30 @@ const FrTarifs = () => {
     { name: "Établir un solde de tout compte", description: "Calcul et rédaction du solde de tout compte lors de la rupture", category: "Droit du travail" },
     { name: "Audit d'un contrat de travail", description: "Vérification de la conformité et optimisation des contrats existants", category: "Droit du travail" },
     { name: "Procédure d'inscription des travailleurs de l'étranger", description: "Démarches pour l'emploi légal de travailleurs étrangers", category: "Droit du travail" },
+    { name: "Autre", description: "Autre prestation en droit du travail", category: "Droit du travail" },
 
     // Droit du consommateur
     { name: "Conseil + Audit contrat de service ou d'achat de produit", description: "Analyse des contrats de consommation et protection des droits", category: "Droit du consommateur" },
     { name: "Recours amiable en vue de la réparation du dommage causé à l'acheteur", description: "Médiation pour obtenir réparation des préjudices subis", category: "Droit du consommateur" },
     { name: "Conseil et démarche à suivre en cas d'une difficulté financière face aux crédits", description: "Assistance pour les problèmes de surendettement et négociation", category: "Droit du consommateur" },
     { name: "Conseil et démarche à suivre en cas d'un chèque impayé", description: "Procédures à suivre en cas de chèque sans provision", category: "Droit du consommateur" },
+    { name: "Autre", description: "Autre prestation en droit du consommateur", category: "Droit du consommateur" },
 
     // Droit des assurances
     { name: "Accompagnement recours amiable pour obtenir les indemnités en cas de sinistre", description: "Négociation amiable pour l'indemnisation des sinistres", category: "Droit des assurances" },
+    { name: "Autre", description: "Autre prestation en droit des assurances", category: "Droit des assurances" },
 
     // Droit de la protection des données
     { name: "Suivi des dossiers auprès de la CNDP", description: "Accompagnement dans les relations avec la Commission Nationale de contrôle de la protection des Données Personnelles", category: "Protection des données" },
+    { name: "Autre", description: "Autre prestation en protection des données", category: "Protection des données" },
 
     // Services transversaux
     { name: "Coordination d'un recours judiciaire", description: "Organisation et suivi des procédures judiciaires avec les avocats", category: "Services transversaux" },
     { name: "Recours amiable - Rédaction d'une mise en demeure", description: "Rédaction de courriers de mise en demeure pour résolution amiable", category: "Services transversaux" },
     { name: "Rédaction de documents juridiques sur mesure", description: "Rédaction personnalisée de vos conditions générales de vente, contrats commerciaux ou autres actes juridiques, adaptés à votre activité et à votre réglementation.", category: "Services transversaux" },
     { name: "Accompagnement en cas de contrôle ou de litige", description: "Nos juristes vous conseillent sur la conduite à adopter lors d'un contrôle administratif (CNSS, inspection du travail, fiscalité…).\nL'orientation et la stratégie en cas de litige, l'assistance directe auprès des administrations ou la gestion complète d'un dossier contentieux font l'objet d'un devis spécifique.", category: "Services transversaux" },
-    { name: "Orientation et stratégie en cas de contrôle administratif ou de litige", description: "Analyse approfondie de votre situation et élaboration d'une stratégie de réponse ou de négociation adaptée à votre contexte (échanges avec l'administration, rédaction de courriers argumentés, préparation de défense).", category: "Services transversaux" }
+    { name: "Orientation et stratégie en cas de contrôle administratif ou de litige", description: "Analyse approfondie de votre situation et élaboration d'une stratégie de réponse ou de négociation adaptée à votre contexte (échanges avec l'administration, rédaction de courriers argumentés, préparation de défense).", category: "Services transversaux" },
+    { name: "Autre", description: "Autre prestation transversale", category: "Services transversaux" }
   ];
 
   const pricingPlans = [
