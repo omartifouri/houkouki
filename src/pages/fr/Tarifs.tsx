@@ -421,7 +421,15 @@ const FrTarifs = () => {
                   <p className="text-sm text-gray-600 mb-4 text-center italic">
                     La durée par heures est estimée par l'équipe de nos juristes
                   </p>
-                  <Accordion type="multiple" className="w-full">
+                  <Accordion type="multiple" defaultValue={Object.keys(
+                    services.reduce((acc, service) => {
+                      if (!acc[service.category]) {
+                        acc[service.category] = [];
+                      }
+                      acc[service.category].push(service);
+                      return acc;
+                    }, {} as Record<string, typeof services>)
+                  )} className="w-full">
                     {Object.entries(
                       services.reduce((acc, service) => {
                         if (!acc[service.category]) {
