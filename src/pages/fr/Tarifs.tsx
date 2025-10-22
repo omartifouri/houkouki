@@ -414,7 +414,7 @@ const FrTarifs = () => {
             {/* Tableau des prestations */}
             <Card className="border-2 border-red-200 mb-12" id="exemples-prestations">
               <CardHeader>
-                <CardTitle className="text-xl text-center text-red-800">Exemples de prestations</CardTitle>
+                <CardTitle className="text-xl text-center text-red-800">Liste des prestations</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="overflow-x-auto">
