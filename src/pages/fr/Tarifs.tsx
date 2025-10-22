@@ -113,9 +113,6 @@ const FrTarifs = () => {
         "Conseil en cas de litige ou de pré-contentieux",
         "Accès à l'application mobile et guides juridiques",
         "Suivi par un conseiller référent",
-        "Audit de contrats et documents RH",
-        "Sécurisation des procédures RH",
-        "Rédaction de CGV ou d'actes juridiques",
         "Accompagnement en cas de contrôle ou litige",
         "Des prestations supplémentaires à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés"
       ],
@@ -135,9 +132,6 @@ const FrTarifs = () => {
         "Conseil en cas de litige ou de pré-contentieux",
         "Accès à l'application mobile et guides juridiques",
         "Suivi par un conseiller référent",
-        "Audit de contrats et documents RH",
-        "Sécurisation des procédures RH",
-        "Rédaction de CGV ou d'actes juridiques",
         "Suivi prioritaire et dédié",
         "Réunions de cadrage juridiques sur-mesure",
         "Politique de gestion des risques juridiques"
