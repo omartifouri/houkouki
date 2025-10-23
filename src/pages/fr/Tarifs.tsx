@@ -83,6 +83,11 @@ const FrTarifs = () => {
     { name: "Suivi des dossiers auprès de la CNDP", description: "Accompagnement dans les relations avec la Commission Nationale de contrôle de la protection des Données Personnelles", category: "Protection des données" },
     { name: "Autre", description: "Autre prestation en protection des données", category: "Protection des données" },
 
+    // Conseil en financement
+    { name: "Montage financier", description: "Structuration et optimisation de votre plan de financement pour vos projets d'entreprise", category: "Conseil en financement" },
+    { name: "Analyse bilancielle", description: "Analyse détaillée de vos bilans financiers et recommandations stratégiques", category: "Conseil en financement" },
+    { name: "Stratégie de finance", description: "Élaboration de stratégies financières adaptées à vos objectifs de développement", category: "Conseil en financement" },
+
     // Services transversaux
     { name: "Coordination d'un recours judiciaire", description: "Organisation et suivi des procédures judiciaires avec les avocats", category: "Services transversaux" },
     { name: "Recours amiable - Rédaction d'une mise en demeure", description: "Rédaction de courriers de mise en demeure pour résolution amiable", category: "Services transversaux" },
