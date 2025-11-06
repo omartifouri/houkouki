@@ -16,6 +16,26 @@ interface BlogArticle {
 const articles: BlogArticle[] = [
   {
     id: 1,
+    title: "Les Obligations Contractuelles dans le contexte du Covid-19",
+    content: `La pandémie du Covid-19 a un impact sur la gestion des contrats en cours, en effet, en raison du contexte actuel, vous pourrez être dans l'impossibilité d'exécuter une partie de vos obligations au titre de vos contrats en cours (contrats de prestation de services, contrats financiers etc.) ou être confrontés à des co-contractants qui pourraient tenter de se délier de certaines de leurs obligations contractuelles, en se prévalant notamment d'un cas de force majeure.
+
+L'article 269 du Dahir formant Code des Obligations et des Contrats (DOC) dans son 1èr alinéa dispose que : « La force majeure est tout fait que l'homme ne peut prévenir, tel que les phénomènes naturels (inondations, sécheresses, orages, incendies, sauterelles), l'invasion ennemie, le fait du prince, et qui rend impossible l'exécution de l'obligation » Traditionnellement, l'événement doit être imprévisible, irrésistible et extérieur.
+
+Ainsi, pour déterminer si le COVID-19 peut être considéré comme un cas de force majeure, il conviendra d'étudier précautionneusement les stipulations de chaque contrat concerné, mais également de porter une attention particulière à la date de conclusion du contrat. En dépit de l'absence de jurisprudence latente en la matière, le COVID-19 peut être– sous réserve de l'interprétation souveraine des juridictions marocaines – constitutif d'un cas de force majeure, en raison principalement de son caractère imprévisible, irrésistible et extérieur aux parties.
+
+Le coronavirus en soi ne rend pas impossible l'exécution des contrats, ce sont les décisions du gouvernement marocain qui sont considérées comme une situation de force majeure. Parmi les différentes mesures prises par le gouvernement marocain, il est à préciser qu'en date du 16 Mars 2020, le ministère de l'intérieur a annoncé via un communiqué la fermeture des cafés, restaurants, salles de cinéma et théâtre, salle de fête, clubs et salles de sport, hammams, salle de jeu et terrains de proximité et ce du 16 Mars 2020 à 18h jusqu'à nouvel ordre.
+
+À titre d'exemple, bien qu'il soit impossible d'envisager tous les cas, on peut raisonnablement concevoir qu'une entreprise ou des locaux commerciaux dont les activités ont été suspendues par le gouvernement, pourraient être dans l'impossibilité d'exécuter certaines obligations.
+
+La perte d'utilité économique n'est pas en soi une raison pour se libérer de son obligation. A cet effet, dans un contrat commercial, Il faut donc recommander les clauses d'imprévision comme une solution de réadaptation, en cas d'apparition d'imprévus rendant critique voire impossible la continuation du contrat.
+
+Il serait envisageable de privilégier au sein du contrat une solution amiable, et de prévoir quel chemin devront emprunter les parties en cas d'impossibilité d'obtenir celle-ci.`,
+    date: "20/03/2020",
+    image: "/lovable-uploads/obligations-contractuelles-covid.png",
+    category: "Jamila Alami"
+  },
+  {
+    id: 2,
     title: "Procès à distance ou tribunal électronique",
     content: `Dans le cadre des mesures nationales visant à endiguer la propagation du coronavirus (Covid-19), le coup d'envoi du dispositif des procès à distance a été donné, lundi 27 Avril au Tribunal de première instance à Salé.
 
@@ -59,7 +79,7 @@ En conclusion, cette exigence est devenue une réalité malgré le manque de con
     category: "Jamila Alami"
   },
   {
-    id: 2,
+    id: 3,
     title: "Covid 19 – Mesures fiscales et sociales",
     content: `Afin d'endiguer la propagation de la pandémie COVID-19, le 19 mars 2020, conformément aux dispositions de l'article 81 de la constitution, le Gouvernement marocain a adopté le décret-loi n°2.20.292 prévoyant l'état d'urgence sur l'ensemble du territoire du royaume et ce du 20 mars au 20 avril 2020, ce décret-loi a été validé le 22 mars par les deux commissions parlementaires. Afin d'accompagner et de préserver l'économie marocaine durant cette crise sanitaire, plusieurs mesures fiscales et sociales ont été prises par les autorités marocaines pour faire face à cette situation exceptionnelle.
 
@@ -108,7 +128,7 @@ Les entreprises qui s'engagent à ne pas réduire leurs effectifs, déclarés au
     category: "Jamila Alami"
   },
   {
-    id: 3,
+    id: 4,
     title: "La spoliation foncière : les nouvelles mesures d'affrontement.",
     content: `La spoliation foncière repose sur l'idée selon laquelle un bien immobilier, propriété de quelqu'un, fait l'objet par un spoliateur d'une attaque, tout en utilisant le faux et ce, dans le dessein de se faire reconnaître un droit de propriété sur ce bien. A vrai dire, des histoires relatant ses faits ne cessent de circuler de la bouche de nos proches ou via la presse, et leur répercussion sur l'image du pays est très néfaste, en créant des écueils implacables dans le secteur immobilier, auxquels également sont impliqués des professionnels tels des notaires, des avocats, et des fonctionnaires de cadastre, c'est morose!
 
@@ -132,7 +152,7 @@ Le registre des SCI : un registre spécial réservé aux SCI a été créé afin
     category: "Jamila Alami"
   },
   {
-    id: 4,
+    id: 5,
     title: "Covid 19 : L'impact sur la relation locative",
     content: `Après avoir déclaré le 20 mars 2020 l'état d'urgence sanitaire au Maroc pour lutter contre le Corona virus, les autorités se sont efforcées de prendre un ensemble de mesures proactives pour limiter la propagation de la pandémie en imposant la quarantaine et empêchant les individus de quitter leur domicile sauf pour la nécessité spécifiée exclusivement dans la fiche de sortie exceptionnelle.
 
@@ -168,7 +188,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Jamila Alami"
   },
   {
-    id: 5,
+    id: 6,
     title: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     content: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     date: "10/01/2025",
@@ -176,7 +196,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 6,
+    id: 7,
     title: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     content: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     date: "10/01/2025",
@@ -184,7 +204,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 7,
+    id: 8,
     title: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     content: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     date: "01/02/2024",
@@ -192,7 +212,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 8,
+    id: 9,
     title: "Le Maroc renforce sa posture face aux menaces numériques",
     content: "Le Maroc renforce sa posture face aux menaces numériques",
     date: "07/01/2024",
@@ -200,7 +220,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 9,
+    id: 10,
     title: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     content: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     date: "02/01/2024",
@@ -208,7 +228,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 10,
+    id: 11,
     title: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     content: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     date: "29/01/2024",
