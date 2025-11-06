@@ -2,13 +2,7 @@ import { Card } from "@/components/ui/card";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import { Calendar, Users, ArrowRight } from "lucide-react";
-import { useState } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Link } from "react-router-dom";
 
 interface BlogArticle {
   id: number;
@@ -20,9 +14,6 @@ interface BlogArticle {
 }
 
 const FrBlog = () => {
-  const [selectedArticle, setSelectedArticle] = useState<BlogArticle | null>(null);
-
-  // Articles temporaires - à remplacer par les vrais articles
   const articles: BlogArticle[] = [
     {
       id: 1,
@@ -126,56 +117,18 @@ const FrBlog = () => {
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                   {article.excerpt}
                 </p>
-                <button 
-                  onClick={() => setSelectedArticle(article)}
+                <Link 
+                  to={`/fr/blog/${article.id}`}
                   className="text-red-500 font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   Voir plus
                   <ArrowRight className="w-4 h-4" />
-                </button>
+                </Link>
               </div>
             </Card>
           ))}
         </div>
       </div>
-
-      {/* Article Detail Modal */}
-      <Dialog open={!!selectedArticle} onOpenChange={() => setSelectedArticle(null)}>
-        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
-          {selectedArticle && (
-            <>
-              <DialogHeader>
-                <DialogTitle className="text-2xl font-bold text-gray-900">
-                  {selectedArticle.title}
-                </DialogTitle>
-              </DialogHeader>
-              <div className="space-y-4">
-                <img 
-                  src={selectedArticle.image} 
-                  alt={selectedArticle.title}
-                  className="w-full h-64 object-cover rounded-lg"
-                />
-                <div className="flex items-center gap-4 text-sm text-gray-600">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    <span>{selectedArticle.date}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    <span>{selectedArticle.category}</span>
-                  </div>
-                </div>
-                <div className="prose max-w-none">
-                  <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                    {selectedArticle.excerpt}
-                  </p>
-                </div>
-              </div>
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
-
       <Footer />
     </div>
   );
