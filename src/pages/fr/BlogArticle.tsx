@@ -922,9 +922,23 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
   {
     id: 14,
     title: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
-    content: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
+    content: `E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services administratifs policiers au Maroc
+
+La Direction Générale de la Sûreté Nationale (DGSN) annonce le lancement de sa plateforme numérique E-Police. Ce portail interactif, accessible à partir du 20 décembre 2024 aux citoyens, vise à moderniser et à simplifier l'accès aux services administratifs policiers pour tous les citoyens marocains.
+
+Ce que vous offre E-Police :
+
+E-Police est conçu pour offrir une gamme de services administratifs dans un espace numérique sécurisé et facile à utiliser. Les citoyens peuvent désormais demander en ligne la fiche anthropométrique, un document essentiel pour diverses démarches administratives. Grâce à la plateforme "Tiers de confiance" et au portail "Identité numérique", les utilisateurs peuvent vérifier leur identité à distance, garantissant ainsi la protection de leurs données personnelles.
+
+En plus de la demande de la fiche anthropométrique, E-Police intégrera d'autres services numériques déjà existants tels que la prise de rendez-vous pour l'obtention de la carte d'identité nationale électronique et l'inscription aux concours de police. Ce portail représente la première phase d'un processus continu de numérisation des services publics policiers, avec des plans pour intégrer d'autres documents administratifs comme le certificat de résidence et la demande de renouvellement de la carte nationale d'identité électronique.
+
+Pourquoi utiliser E-Police ?
+
+Le lancement de cette plateforme s'inscrit dans une démarche plus large de la DGSN pour améliorer l'efficacité et l'accessibilité des services publics, tout en renforçant la proximité entre la police et les citoyens. En facilitant les démarches administratives et en réduisant les délais de traitement, E-Police promet de transformer l'expérience des citoyens avec les services policiers au Maroc.
+
+Vous pouvez vous rendre sur la plateforme E-Police dès le 20 décembre 2024 pour découvrir ses fonctionnalités et profiter de ses nombreux avantages.`,
     date: "01/02/2024",
-    image: "/lovable-uploads/5d7e7c1c-ebd4-4271-a028-9798957bf332.png",
+    image: "/lovable-uploads/e-police-dgsn.png",
     category: "Équipe HOUKOUKI"
   },
   {

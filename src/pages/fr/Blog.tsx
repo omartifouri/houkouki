@@ -210,9 +210,9 @@ const FrBlog = () => {
     {
       id: 25,
       title: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
-      excerpt: "E-Police",
+      excerpt: "La DGSN annonce le lancement de sa plateforme numérique E-Police. Ce portail interactif vise à moderniser et à simplifier l'accès aux services administratifs policiers pour tous les citoyens marocains...",
       date: "01/02/2024",
-      image: "/lovable-uploads/5d7e7c1c-ebd4-4271-a028-9798957bf332.png",
+      image: "/lovable-uploads/e-police-dgsn.png",
       category: "Équipe HOUKOUKI"
     },
     {
