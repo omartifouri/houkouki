@@ -17,6 +17,14 @@ const FrBlog = () => {
   const articles: BlogArticle[] = [
     {
       id: 1,
+      title: "Covid 19 : L'impact sur la relation locative",
+      excerpt: "Après avoir déclaré le 20 mars 2020 l'état d'urgence sanitaire au Maroc pour lutter contre le Corona virus, les autorités se sont efforcées de prendre un ensemble de mesures proactives pour limiter la propagation de la pandémie...",
+      date: "25/03/2020",
+      image: "/lovable-uploads/covid-impact-locatif.png",
+      category: "Jamila Alami"
+    },
+    {
+      id: 2,
       title: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
       excerpt: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
       date: "10/01/2025",
@@ -24,7 +32,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 2,
+      id: 3,
       title: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
       excerpt: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
       date: "10/01/2025",
@@ -32,7 +40,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 3,
+      id: 4,
       title: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
       excerpt: "E-Police",
       date: "01/02/2024",
@@ -40,7 +48,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 4,
+      id: 5,
       title: "Le Maroc renforce sa posture face aux menaces numériques",
       excerpt: "Le Maroc renforce sa posture face aux menaces numériques",
       date: "07/01/2024",
@@ -48,7 +56,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 5,
+      id: 6,
       title: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
       excerpt: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
       date: "02/01/2024",
@@ -56,7 +64,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 6,
+      id: 7,
       title: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
       excerpt: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
       date: "29/01/2024",
