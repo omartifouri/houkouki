@@ -663,7 +663,7 @@ Maintenant que vous savez que le contrat de bail peut comporter des clauses en v
 
 Nous pouvons aussi vous le rédiger nous-mêmes, grâce aux compétences de notre équipe de juristes, pour que vous ayez un contrat « en béton » (c'est le cas de le dire !) qui vous protégera en cas de litige judiciaire.`,
     date: "05/02/2020",
-    image: "/lovable-uploads/contrat-bail.png",
+    image: "/lovable-uploads/contrat-bail-commercial.png",
     category: "Jamila Alami"
   },
   {

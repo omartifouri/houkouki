@@ -132,7 +132,7 @@ const FrBlog = () => {
       title: "Contrat de bail",
       excerpt: "Devenir locataire est une étape par laquelle passent des milliers de marocains chaque année. Pour que la location se concrétise, il faut signer un contrat de bail avec le propriétaire...",
       date: "05/02/2020",
-      image: "/lovable-uploads/contrat-bail.png",
+      image: "/lovable-uploads/contrat-bail-commercial.png",
       category: "Jamila Alami"
     },
     {
