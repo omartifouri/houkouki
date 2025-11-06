@@ -20,7 +20,7 @@ const FrBlog = () => {
       title: "Contrat de bail d'habitation",
       excerpt: "Un contrat de bail est un contrat de location établi entre le propriétaire du bien à louer et son locataire. L'établissement du contrat de bail à usage d'habitation est indispensable...",
       date: "20/01/2025",
-      image: "/lovable-uploads/contrat-bail.png",
+      image: "/lovable-uploads/contrat-bail-habitation.png",
       category: "Équipe HOUKOUKI"
     },
     {

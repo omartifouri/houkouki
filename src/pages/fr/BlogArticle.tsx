@@ -16,6 +16,489 @@ interface BlogArticle {
 const articles: BlogArticle[] = [
   {
     id: 1,
+    title: "Contrat de bail d'habitation",
+    content: `Définition du contrat de bail
+
+Un contrat de bail est un contrat de location établi entre le propriétaire du bien à louer et son locataire :
+
+L'établissement du contrat de bail à usage d'habitation (qu'elle soit vide ou meublée), entre le propriétaire et le locataire, est indispensable.
+
+Ce contrat qui doit être un acte écrit, signé et légalisé par les deux parties,définit les conditions et les clauses convenues dans le cadre de la location.
+
+Que doit contenir un contrat de bail à usage d'habitation ? 
+
+Les informations concernant les 2 parties :
+
+Il faut décliner l'identité du locataire et du propriétaire :
+- Nom,
+- Prénom,
+- Nationalité,
+- Adresse,
+- n° CIN ou passeport.
+
+Attention, Si l'une des parties ou les deux sont «personne morale» , c'est-à-dire une société, il faut indiquer pour chacune :
+- sa dénomination,
+- son siège social,
+- son n° de Registre du Commerce,
+- le nom et prénom ainsi que la CIN de son représentant légal.
+
+La description du bien loué:
+- superficie,
+- nombre de chambres,
+- balcons,
+- terrasses, etc…
+- les dépendances (garage, box etc…)
+- les installations conçues comme chauffage, électroménager, équipement cuisine etc…),
+- compteur d'électricité et d'eau
+
+Les obligations particulières de chaque partie :
+
+Exemple :
+- le bailleur doit livrer le bien loué en bon état d'usage, et veiller au bon fonctionnement des équipements,
+- le contrat doit mentionner l'usage convenu du bien loué (dans ce cas l'habitation),
+- Le locataire doit veiller à l'entretien du bien loué et à sa propreté,
+
+Le contrat doit mentionner que :
+- les grandes réparations doivent faire l'objet d'une autorisation écrite du propriétaire, à défaut d'accord, le propriétaire pourra exiger la remise immédiate du bien loué en état initial aux frais du locataire,
+- interdiction de sous – louer le bien en totalité ou en partie, ne pas céder le bien loué , etc…
+
+Durée du contrat :
+
+Il faut mentionner dans le contrat :
+- la durée de la location ainsi que son renouvellement
+- les délais de préavis de résiliation du contrat par l'une et/ou l'autre partie
+
+Montant du loyer :
+
+Les 2 parties doivent se mettre d'accord sur :
+- le montant du loyer y compris les charges locatives (syndic …)
+- Une provision sur charges peut être fixée entre les 2 parties
+- Écrire le montant en lettre et en chiffres
+- Indiquer la date du paiement : début ou fin de mois (à fixer par les 2 parties)
+- Indiquer le mode de paiement : chèque – virement ou espèces
+
+ATTENTION : il faut demander un reçu après chaque paiement !
+
+Caution de garantie :
+
+Le bailleur peut demander au locataire un dépôt de garantie dont le montant est fixé par les 2 parties et qui sera restitué au locataire, en totalité ou en partie, selon l'inventaire du bien loué et de ses dépendances, le jour de la restitution des clés.
+
+Election de domicile :
+- Le bailleur fait élection à son domicile,
+- Le locataire fait élection au bien loué.
+
+Litige :
+
+En cas de litige portant sur l'exécution du contrat, les parties peuvent convenir d'un accord amiable , une médiation.
+
+Si le recours amiable n'aboutit pas, la partie lésée peut saisir le tribunal dont dépend le bien loué.
+
+Pourquoi prendre un contrat d'assurance multirisque habitation en tant que locataire?
+
+Ces contrats contiennent plusieurs garanties qui vous protègent :
+- Recours des voisins et des tiers: Elle a pour but de couvrir des dommages (incendie, explosion, dégât des eaux, etc.) causés à des tiers ou aux voisins.
+- Recours des locataires: Un locataire réclame à son propriétaire la réparation des dommages qu'il a subi sur ses biens en raison d'un défaut d'entretien de l'immeuble ou d'un vice de construction.
+- Responsabilité civile du locataire: Elle vous couvre en tant que locataire contre les dommages que vous pouvez causer au bâtiment du propriétaire à l'occasion d'un dégât d'eau, incendie, explosion,...
+- Défense et recours: La garantie défense-recours couvre les frais nécessaires à l'engagement d'une procédure judiciaire en cas de litige avec un tiers suite à un sinistre lié au contrat multirisque habitation.
+
+Pourquoi prendre un contrat d'assurance multirisque habitation en tant que propriétaire?
+
+Ces contrats contiennent plusieurs garanties qui vous protègent :
+- La perte des loyers: La garantie perte de loyers a pour objet la prise en charge de la perte économique subie par le propriétaire non occupant d'un logement lorsqu'à la suite d'un sinistre, le locataire doit quitter le logement (locaux non utilisables).
+
+POUR PLUS D'INFORMATIONS CONTACTEZ NOUS À:
++212 (0)529.045.999
+contact@houkouki.com
+www.houkouki.com`,
+    date: "20/01/2025",
+    image: "/lovable-uploads/contrat-bail-habitation.png",
+    category: "Équipe HOUKOUKI"
+  },
+  {
+    id: 2,
+    title: "Contrat de bail commercial",
+    content: `Définition du contrat de bail commercial
+
+Le bail commercial est un contrat de location d'un local dans lequel est exercée une activité commerciale, industrielle ou artisanale. Ce local doit servir à l'exploitation d'un fond de commerce.
+
+Établir un contrat de bail commercial est une obligation pour le bailleur et le locataire qu'ils soient personne physique ou morale.
+
+Ce contrat écrit, légalisé par les deux parties et enregistré, est un document principal pour demander la taxe professionnelle afin d'exercer toute activité par le locataire.
+
+Il est composé notamment d'un état descriptif du bail en location et décrit les droits et les obligations du locataire en tant qu'occupant du bien loué dans le cadre d'une activité commerciale, industrielle ou artisanale.
+
+Que doit contenir un contrat de bail commercial ?
+
+1/Les parties signataires :
+- Identité et adresse du bailleur et du locataire (personne physique ou morale)
+
+Pour les personnes morales il faut mentionner :
+- la dénomination de la société,
+- le siège social,
+- le représentant légal et son identité,
+- le n° de registre du commerce.
+
+2/Les Caractéristiques du contrat de bail commercial, à savoir :
+- Le Type de commerce ou d'activité à exercer dans le local,
+- Le Montant du loyer et ses charges,
+- Le Mode et la date de règlement du loyer,
+- Le Droit au renouvellement du bail,
+- Le Montant du dépôt de garantie.
+
+ATTENTION : demander un reçu après chaque paiement
+
+3/La description du local commercial loué :
+- superficie,
+- les dépendances (garage, box etc…)
+- les installations conçues comme équipements, chauffage etc…),
+- compteur d'électricité et d'eau
+
+4/Les obligations de chaque partie :
+Exemples :
+- le bailleur doit livrer le bien loué en bon état d'usage, et veiller au bon fonctionnement des équipements,
+- le contrat doit mentionner l'usage convenu du bien loué (l'usage commercial)
+- Le locataire doit veiller à l'entretien du bien loué et à sa propreté.
+
+Le contrat doit mentionner que :
+- les grandes réparations doivent faire l'objet d'une autorisation écrite du propriétaire, à défaut d'accord, le propriétaire pourra exiger la remise immédiate du bien loué en état initial aux frais du locataire,
+- interdiction de sous – louer le bien en totalité ou en partie,
+- la possibilité d'ajouter d'autres activités que celles exercées à l'origine
+- la possibilité de céder le bail à l'acquéreur du fonds de commerce sans que le bailleur puisse s'y opposer et ce conformément à la loi.
+- l'augmentation limitée des loyers en cours du bail conformément à la loi.
+
+5/Durée du contrat :
+Il faut mentionner la durée du bail commercial qui peut être de 3 ans, 6 ans ou 9 ans au maximum.
+
+Dans cette durée, le bail peut être reconduit par tacite reconduction à moins que l'une des parties ne décide de le résilier. Dans ce cas, la partie qui demande la résiliation doit en notifier l'autre soit par lettre recommandée avec accusé de réception ou par huissier de justice. Attention dans ce cas à respecter les délais de préavis impartis par la loi, à savoir 15 jours de la date d'échéance.
+
+Lors de la résiliation du bail par le locataire, ce dernier doit s'acquitter auprès du bailleur de toutes les sommes dues. A défaut, le dépôt de garantie ne pourra lui être restitué.
+
+6/ Caution :
+Le bailleur peut demander au locataire un dépôt de garantie dont le montant est fixé par les 2 parties et qui sera restitué au locataire, en totalité ou en partie, selon l'inventaire du bien loué et de ses dépendances, le jour de la restitution des clés.
+
+7/ Élection de domicile :
+- Le bailleur fait élection à son domicile,
+- Le locataire fait élection au bien commercial loué.
+
+8/ Litige :
+En cas de litige portant sur l'exécution du contrat, les parties peuvent convenir d'un accord amiable ou une médiation.
+
+Si le recours amiable n'aboutit pas, la partie lésée peut saisir le tribunal de commerce dont dépend le bien loué.
+
+Pourquoi prendre un contrat d'assurance multirisque professionnelle et accident de travail en tant qu'employeur?
+
+Ces contrats contiennent plusieurs garanties qui vous protègent ainsi que vos employés et les tiers :
+
+Assurance Multirisque Professionnelle :
+C'est une assurance indispensable qui couvre les biens mobiliers, immobiliers et l'exploitation de l'entreprise pour garantir sa pérennité.
+
+- Recours des locataires
+- Recours des voisins et des tiers
+- Responsabilité civile du locataire
+- Défense et recours
+
+Assurance accident de travail :
+La souscription à une assurance « accident de travail» est une obligation, si vous ne la respectez pas vous encourez des sanctions lourdes.
+
+Cette assurance couvre vos salariés en cas d'accident de travail soit au sein du lieu de travail, pendant le trajet régulier d'aller et de retour entre le lieu de travail et le lieu d'habitation ainsi que les lieux des repas.
+
+POUR PLUS D'INFORMATIONS CONTACTEZ NOUS À:
++212 (0)529.045.999
+contact@houkouki.com
+www.houkouki.com`,
+    date: "18/01/2025",
+    image: "/lovable-uploads/contrat-bail.png",
+    category: "Équipe HOUKOUKI"
+  },
+  {
+    id: 3,
+    title: "Protéger sa marque au Maroc",
+    content: `Si vous comptez exploiter votre marque au Maroc, il est important de protéger vos droits de propriété intellectuelle.
+
+Il est primordial pour le propriétaire d'une marque, de la protéger à l'intérieur du pays où il exerce son activité, et éventuellement la protéger à l'extérieur des frontières dans le but d'étendre son activité.
+
+Pour protéger sa marque, il faut obligatoirement effectuer un dépôt auprès de l'OMPIC.
+
+Mais avant de procéder à ce dépôt, il convient de s'assurer que sa marque réponde bien aux critères d'éligibilité posés par la loi 17-97 relative à la protection de la propriété industrielle.
+
+VOTRE MARQUE DOIT ETRE
+
+Licite :
+Elle ne doit comporter ni de signes interdits par la loi, ou être contraire à l'ordre public et aux bonnes mœurs, ni d'éléments trompeurs qui pourraient induire le consommateur en erreur.
+
+Distinctive :
+il s'agit de la capacité du signe à identifier des produits ou services comme provenant d'une entreprise et donc de distinguer ces produits de ceux d'autres entreprises, il doit également être indépendant de la désignation habituelle de l'objet marqué.
+
+Disponible :
+ne peut être adopté comme marque un signe portant atteinte aux droits antérieurs (marque enregistrée ou notoirement connue) et ce afin d'éviter toute confusion dans l'esprit du public.
+
+Vous vous demandez comment déposer votre propre marque ?
+
+HOUKOUKI vous explique toutes les étapes à réaliser et peut aussi vous représenter pour déposer votre marque si vous ne résidez pas au Maroc, car la législation marocaine vous oblige à vous faire représenter dans ce cas.
+
+HOUKOUKI s'occupe de toutes les formalités à votre place. et prend en charge toute la procédure de dépôt et de suivi. Vous avez ainsi la garantie de protéger votre marque de manière optimale.
+
+HOUKOUKI vous évitera de subir un refus ou une opposition grâce à ses connaissances en droit des marques et vous conseillera de plus les classes de dépôt les plus pertinentes en fonction de vos besoins présents et futurs.
+
+Contactez nous par mail à l'adresse suivante: contact@houkouki.com
+Par téléphone: 0529 04 59 99
+Nous vous invitons à consulter notre site web : https://houkouki.com/ pour plus d'informations`,
+    date: "15/01/2025",
+    image: "/lovable-uploads/spoliation-fonciere.png",
+    category: "Leila QAMAR"
+  },
+  {
+    id: 4,
+    title: "Projet de loi N°69.21 - Délais de paiement",
+    content: `Projet de loi N°69.21 modifiant la loi N°15.95 formant code de commerce édictant des dispositions particulières relatives aux délais de paiement
+
+Un délai de paiement entre 60 et 120 jours. (Article 78-2)
+
+Quand le délai de paiement n'est pas convenu entre les parties dans le contrat, le délai de paiement est fixé à 60 jours.
+
+Parmi les nouveautés de ce texte, Quand le délai est défini dans le contrat, le délai de paiement ne pourra dépasser 120 jours au lieu de 90 jours à compter de la date d'émission de la facture.
+
+Le projet de loi introduit également un délai maximum pour émettre la facture. Il s'agit du "dernier jour du mois durant lequel la marchandise a été livrée ou durant lequel les services ont été réalisés". Si la facture n'est pas émise dans ledit délai, "le délai de paiement commence à courir à compter de la fin du mois durant lequel les marchandises ont été reçues ou durant lequel les services demandés ont été réalisés"
+
+Lorsque les parties sont convenues d'effectuer des transactions commerciales entre elles sur une périodicité ne dépassant pas un mois, le calcul de ces deux délais court à partir du 1er du mois suivant.
+
+Une dérogation à cette disposition est déjà prévue par l'article 78.2, elle concerne les spécificités et le caractère saisonnier de certains secteurs, pour lesquels il faudra fixer, par voie de décret, un autre délai, qui ne peut dépasser 180 jours.
+
+Des pénalités de retard sont prévues
+
+Des sanctions pécuniaires sont également prévues en cas de non-respect des dispositions relatives aux déclarations et au paiement des pénalités de retard.
+
+La pénalité est fixée à l'équivalent du taux directeur de Bank Al-Maghrib pour le premier mois, et à 0,85% pour tout mois ou fraction de mois supplémentaire. (Article 78-3)
+
+Le taux directeur actuel: 2,50 % (Source : Bank almaghreb , décision du 22/12/2022).
+
+Ces sanctions vont de 5.000 DH lorsque le chiffre d'affaires annuel de l'entreprise est compris entre 2 MDH et 10 MDH, jusqu'à 250.000 DH lorsque le chiffre d'affaires annuel dépasse les 500 MDH.`,
+    date: "12/01/2025",
+    image: "/lovable-uploads/delais-paiement.png",
+    category: "Leila QAMAR"
+  },
+  {
+    id: 5,
+    title: "Les OPCI au Maroc",
+    content: `LES OPCI AU MAROC - Règlementé par la loi 70.14
+
+Qu'est-ce qu'un Organisme de placement collectif immobilier ? OPCI :
+
+Un Organisme de Placement Collectif Immobilier (OPCI) est un véhicule d'investissement réglementé dont l'objet principal est l'acquisition ou la construction d'immeubles exclusivement en vue de leur location. Ce véhicule d'investissement permet à des investisseurs de toutes natures (personnes physiques, personnes morales, investisseurs qualifiés, etc.) d'avoir accès au marché immobilier à travers l'acquisition de parts ou d'actions d'un OPCI détenant directement ou indirectement des actifs immobiliers.
+
+Quels sont les différents types d'OPCI ?
+
+Les OPCI peuvent prendre deux formes juridiques, les FPI (Fonds de Placement Immobilier) et les SPI (Société de Placement Immobilier):
+
+SPI :
+- Société anonyme à capital variable.
+- Le nombre d'actionnaires minimum est égal à 3.
+- Le capital minimum initial est égal à 50 millions de dirhams.
+- La possibilité d'inscription à la cote de la bourse des valeurs.
+- Les titres peuvent être libellés en devise ou régis par une législation étrangère.
+- Une gouvernance flexible : aucun quorum requis pour l'AGO et l'AGE sur 2ème convocation.
+- Gérée par une société de gestion agréée qui exerce la direction générale de la SPI.
+
+FPI :
+- Copropriété d'actifs (pas de personnalité morale).
+- Constitué par l'émission d'au moins 2 parts représentant les actifs.
+- Le montant de l'apport minimum initial est égal à 50 millions de dirhams.
+- La possibilité d'inscription à la cote de la bourse des valeurs.
+- Les titres peuvent être libellés en devise ou régis par une législation étrangère.
+- Géré par une société de gestion agréée.
+- La société de gestion est le mandataire du FPI
+
+A quelle autorisation est soumis un OPCI ?
+
+Tout OPCI est constitué à l'initiative d'une société de gestion. Pour pouvoir gérer et commercialiser un OPCI, la société de gestion doit demander deux types d'autorisation :
+• agrément de l'OPCI à travers l'approbation de son projet de règlement de gestion.
+• visa du document d'information de l'OPCI.
+
+Quelles sont les conditions d'exercice de l'activité de société de gestion d'OPCI ?
+
+Pour exercer l'activité de société de gestion d'OPCI, toute société anonyme doit remplir les conditions suivantes :
+• avoir son siège au Maroc ;
+• avoir pour activité principale et habituelle la gestion d'OPCI et/ou la gestion d'organismes de placement immobilier de droit étranger;
+• avoir un capital social ≥ 1 million de dirhams, entièrement libéré lors de la demande d'agrément ;
+• présenter des garanties suffisantes en termes de moyens organisationnels, techniques et humains (notamment l'expérience professionnelle de ses dirigeants) ;
+• les dirigeants ne doivent pas avoir fait l'objet d'une décision de condamnation pour une infraction en relation avec leur activité.`,
+    date: "10/01/2025",
+    image: "/lovable-uploads/opci-maroc.png",
+    category: "Laila QAMAR"
+  },
+  {
+    id: 6,
+    title: "Points de vigilance lors de la souscription d'un contrat d'assurance",
+    content: `Quels sont les points sur lesquels je dois être vigilant lors de la souscription du contrat d'assurance ?
+
+Lorsque vous souscrivez un contrat d'assurance, que ce soit pour votre voiture, votre habitation, votre santé ou tout autre aspect de votre vie, il est essentiel d'être vigilant.
+
+Les contrats d'assurance peuvent être complexes et comporter des termes et des conditions qui peuvent avoir un impact considérable sur votre protection et vos droits en cas de sinistre.
+
+Il est donc crucial de comprendre pleinement ce que vous acceptez et d'être conscient des points sur lesquels vous devez être particulièrement attentif.
+
+Dans cette perspective, examinons quelques points clés sur lesquels vous devriez porter une vigilance particulière lors de la souscription d'un contrat d'assurance :
+
+• Déclaration de l'assuré : vous devez faire attention à l'exactitude des informations recueillies par l'assureur, ainsi qu'à leur retranscription exacte sur le contrat. Toute mauvaise déclaration de votre part, même non intentionnelle, peut être la cause de la perte d'une partie ou de la totalité de vos droits.
+
+• Etendue de la couverture : Vous devrez prendre connaissance de l'étendue des garanties afin de vérifier que le contrat répond à vos besoins de couverture et est adapté à votre profil de risque. Plusieurs éléments sont à prendre en considération :
+
+- Objet de la garantie : définition des événements, biens, et personnes couvertes ;
+- Clauses d'exclusions : ce sont les circonstances dans lesquelles l'assuré n'est pas couvert. Les clauses d'exclusion doivent être formelles, limitées et écrites en caractères très apparents ;
+- Clauses de déchéance : c'est la perte du droit à indemnité au titre d'un sinistre suite au non-respect par l'assuré de l'un de ses engagements ;
+- Plafond de garantie : Le montant qui constitue le maximum de l'engagement de l'assureur. Tout dépassement de ce plafond sera donc supporté par vous ;
+- La prise d'effet des garanties : vous devrez faire attention à la date à partir de laquelle la garantie commence à jouer.
+- Franchise : C'est la somme qui restera à votre charge en cas de sinistre et qui n'est donc pas indemnisée par l'assureur.
+
+• Durée de couverture : Il vous faudra prêter attention à la durée du contrat, et discerner s'il est à durée ferme ou à tacite reconduction.
+
+• Conditions d'exécution : Veillez à bien lire, au niveau de votre police d'assurance, les conditions posées par certaines clauses afin de pouvoir bénéficier de la garantie.
+
+En conclusion, la souscription d'un contrat d'assurance nécessite une attention particulière. N'hésitez pas à poser des questions à votre conseil en assurance pour clarifier tous les points qui vous semblent flous.
+
+Pour être certain.e que votre contrat d'assurance correspond à vos besoins avant sa signature, adressez-vous à un conseil en assurance de qualité : n'hésitez pas à prendre conseil auprès d'Assur'wi :
+- C'est un courtier d'assurance qui peut vous renseigner sur toutes les offres du marché.
+- A travers sa plateforme www.digiassur.ma, ou par tel au 0522368182`,
+    date: "08/01/2025",
+    image: "/lovable-uploads/contrat-assurance.png",
+    category: "Laila QAMAR"
+  },
+  {
+    id: 7,
+    title: "Comprendre la franchise : un modèle d'entreprise prometteur",
+    content: `1. Qu'est-ce que la franchise?
+
+La franchise est un accord commercial entre deux parties : le franchiseur et le franchisé. Le franchiseur est le détenteur de l'entreprise qui a développé un concept, une marque ou un produit réussi. Le franchisé est l'entrepreneur individuel ou l'entreprise qui obtient le droit d'exploiter ce concept en échange de redevances et de respecter les normes et les procédures établies par le franchiseur.
+
+2. Comment fonctionne la franchise?
+
+Dans le cadre d'une franchise, le franchiseur fournit au franchisé non seulement le droit d'utiliser sa marque et son concept, mais également un soutien et une formation continuels. Le franchisé bénéficie ainsi de l'expertise, des méthodes opérationnelles, des ressources marketing et de l'image de marque déjà établie du franchiseur.
+
+Le franchisé est généralement responsable de l'investissement initial pour établir son entreprise, y compris les coûts liés à l'aménagement du local, l'achat d'équipement et l'approvisionnement initial. En retour, le franchisé reverse des redevances régulières au franchiseur, généralement calculées en pourcentage du chiffre d'affaires réalisé.
+
+3. Avantages de la franchise pour les entrepreneurs:
+
+3.1 Expansion plus rapide:
+La franchise offre aux entrepreneurs une opportunité d'expansion rapide sans avoir à créer une entreprise de toutes pièces. Grâce au modèle de franchise, ils peuvent profiter de la notoriété et de la clientèle existantes du franchiseur, ce qui leur permet de se développer plus rapidement que s'ils devaient partir de zéro.
+
+3.2 Réduction des risques:
+En optant pour une franchise, les entrepreneurs réduisent les risques liés au démarrage d'une nouvelle entreprise. Le concept a déjà fait ses preuves et les procédures opérationnelles sont établies, ce qui augmente les chances de succès.
+
+3.3 Soutien et formation:
+Les franchiseurs offrent un soutien et une formation continus aux franchisés. Cela inclut souvent une assistance dans le choix de l'emplacement, la gestion des opérations, le marketing et la publicité, ainsi que la résolution des problèmes. Les entrepreneurs bénéficient ainsi de l'expertise et de l'expérience du franchiseur.
+
+3.4 Image de marque et marketing:
+La franchise permet aux entrepreneurs de profiter de la notoriété de la marque déjà établie. Cela facilite la promotion de l'entreprise et la fidélisation de la clientèle, car les consommateurs sont souvent plus enclins à faire confiance à une marque bien connue.
+
+4. Conclusion :
+
+La franchise offre aux entrepreneurs une occasion unique de se lancer dans le monde des affaires en bénéficiant de l'expertise, de la notoriété de la marque et du soutien d'une entreprise déjà établie. Bien que cela ne convienne pas à tous les types d'entreprises, le modèle de franchise a prouvé son efficacité dans de nombreux secteurs. Si vous êtes un entrepreneur ambitieux à la recherche d'une expansion rapide et d'un soutien professionnel, la franchise peut être une option à envisager sérieusement.`,
+    date: "05/01/2025",
+    image: "/lovable-uploads/franchise-maroc.png",
+    category: "Équipe HOUKOUKI"
+  },
+  {
+    id: 8,
+    title: "Évolution du code de la famille - Mariage des mineurs",
+    content: `Évolution du code de la famille
+
+Sous l'impulsion du Roi Mohamed VI, que Dieu le glorifie, le chantier de la révision de la Moudawana a été lancé le 26 Septembre dernier. Un délai de six mois a été donné au gouvernement pour soumettre des propositions d'amendements.
+
+A cet effet, et dans un esprit démocratique, Houkouki lance un débat sur les réseaux sociaux autour du Code de la Famille pour collecter les avis des Marocaines et Marocains sur les articles qu'ils souhaitent voir évoluer… ou pas.
+
+Chaque semaine, un article du Code actuel, vous sera détaillé et un vote sur son évolution sera lancé.
+
+Cette semaine, nous vous exposons la réglementation actuelle sur « le mariage des mineurs » et ses conséquences sur les droits des enfants.
+
+Le mariage du mineur selon «LA MOUDAWANA » de 2004
+
+Le mariage des mineurs demeure un phénomène qui constitue une violation des droits des enfants à l'échelle internationale et atteinte à leurs droits fondamentaux.
+
+Au Maroc, malgré sa prohibition par le code de la famille en 2004, le mariage précoce continue à se propager à cause des dérogations permises par l'article 20 et 21 du code de la famille qui stipulent que :
+
+Article 20 :
+« Le juge de la famille chargé du mariage peut autoriser le mariage du garçon et de la fille avant l'âge de la capacité matrimoniale prévu à l'Article 19 ci-dessus, par décision motivée précisant l'intérêt et les motifs justifiant ce mariage. Il aura entendu, au préalable, les parents du mineur ou son représentant légal. De même, il aura fait procéder à une expertise médicale ou à une enquête sociale. La décision du juge autorisant le mariage d'un mineur n'est susceptible d'aucun recours »
+
+Article 21 :
+« Le mariage du mineur est subordonné à l'approbation de son représentant légal. L'approbation du représentant légal est constatée par sa signature apposée, avec celle du mineur, sur la demande d'autorisation de mariage et par sa présence lors de l'établissement de l'acte de mariage. Lorsque le représentant légal du mineur refuse d'accorder son approbation, le juge de la famille chargé du mariage statue en l'objet ».
+
+Cet article a apporté une exception accordant au juge de la famille d'autoriser le mariage d'un mineur à condition que sa décision soit motivée par un motif ou un intérêt justifiant ce mariage sous réserve de :
+• Procéder à une expertise médicale ou une enquête sociale,
+• Approbation de ce mariage par la présence du mineur et l'apposition de la signature du tuteur légal
+
+A titre indicatif en 2020, d'après les statistiques du ministère public, 19.266 demandes de mariage de mineurs ont été présentées à travers les tribunaux du Royaume marocain, 13.000 accords ont été délivrés.
+
+Et vous, êtes-vous pour ou contre le mariage des mineurs ? L'exception prévue à cet article doit-elle ou pas évoluer ?`,
+    date: "03/01/2025",
+    image: "/lovable-uploads/code-famille-evolution.png",
+    category: "Jamila ALAMI"
+  },
+  {
+    id: 9,
+    title: "Bonne nouvelle pour les mamans !",
+    content: `Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.
+
+Désormais, l'autorisation maternelle suffit pour l'obtention du passeport biométrique des enfants !
+
+Dans une décision marquante, les consulats du Royaume à l'étranger notamment celui de New-York et de Madrid ont annoncé un changement significatif dans les procédures d'obtention et de renouvellement des passeports biométriques pour les enfants mineurs. Conformément à cette réforme, l'autorisation du père ne sera plus obligatoire si la mère a donné la sienne pour l'établissement du passeport de l'enfant, à moins qu'il y'ait une décision judiciaire qui exige l'accord du père en tant que tuteur légal. Cette mesure, entrée en vigueur récemment, marque un tournant dans la politique administrative du pays.
+
+Auparavant, étant donné que le père a la qualité de « représentant légal » de ses enfants mineurs après le divorce, la législation marocaine exigeait explicitement l'approbation des deux parents pour obtenir le passeport biométrique pour l'enfant mineur. Cette exigence pouvait parfois poser des défis, en particulier dans les cas où le père était absent ou indisponible pour donner son consentement. Cependant, cette nouvelle directive vient assouplir cette contrainte en permettant aux mères de fournir leur autorisation seule, sans nécessiter celle du père.
+
+Il s'agit essentiellement de la simplification des procédures administratives pour les femmes au Maroc.
+
+Cette réforme est susceptible d'avoir un impact remarquable sur de nombreuses familles à travers le pays, en particulier celles dirigées par des mères célibataires ou dans lesquelles les pères sont absents. En éliminant la nécessité d'obtenir l'approbation des deux parents, le processus d'obtention d'un passeport pour un enfant devient plus accessible et moins contraignant pour de nombreuses familles.
+
+En somme, cette décision marque un progrès significatif dans la manière dont les passeports biométriques pour les enfants sont délivrés au Maroc, reflétant une approche plus progressiste et inclusive de la gouvernance administrative, ainsi que du changement positif qui s'aligne sur les normes internationales en matière de droit des femmes.`,
+    date: "02/01/2025",
+    image: "/lovable-uploads/passeport-maman.png",
+    category: "Équipe HOUKOUKI"
+  },
+  {
+    id: 10,
+    title: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SGG !!",
+    content: `Plongez au cœur de la révolution numérique avec la nouvelle initiative du SGG !!
+
+La création de la « commission chargée du numérique », pour un renforcement du cadre juridique des nouvelles transitions digitales.
+
+Monsieur Mohamed Hajoui, Secrétaire Général du Gouvernement a récemment annoncé une initiative novatrice le mercredi 13 mars 2024 portant sur la création d'une "Cellule Numérique" au sein du Secrétariat Général du Gouvernement (SGG). Cette cellule aura pour mission principale de superviser les sujets, les projets et les actualités liés à la transition digitale au sein du SGG. Elle se concentrera également sur l'analyse des projets de textes légaux en lien avec cette évolution technologique.
+
+Cette démarche s'inscrit dans le cadre de la stratégie nationale Morocco Digital 2030. Cette stratégie ambitieuse requiert une adaptation des lois et règlements existants pour mieux encadrer les nouveaux défis et opportunités issus des avancées technologiques. Cela implique notamment l'élaboration de nouvelles lois pour régir des secteurs émergents comme l'intelligence artificielle, le Big Data, le Cloud computing, la FinTech et les contrats intelligents.
+
+La création de cette "Cellule Numérique" témoigne du fort engagement du gouvernement marocain à rester à l'avant-garde de la révolution digitale et à mettre en place un cadre légal approprié et adaptable pour accompagner cette transformation. La mise en œuvre de cette "Cellule Numérique" reflète également la volonté d'encourager l'innovation et la compétitivité dans le domaine digital.`,
+    date: "29/01/2024",
+    image: "/lovable-uploads/sgg-numerique.png",
+    category: "Équipe HOUKOUKI"
+  },
+  {
+    id: 11,
+    title: "Le Maroc renforce sa posture face aux menaces numériques",
+    content: `Le Maroc renforce sa posture face aux menaces numériques
+
+Adoptez les nouvelles mesures de sécurité de la Directive Nationale de la Sécurité des Systèmes d'Information (DNSSI)
+
+Le Maroc s'est engagé depuis plusieurs années dans un processus de développement numérique. Cette évolution comporte également des risques liés à la cybersécurité. Pour répondre à ces enjeux, le pays a déployé des efforts importants, notamment par la création de la Direction Générale de la Sécurité des Systèmes d'Information (DGSSI).
+
+Dans cette optique, la Directive Nationale de la Sécurité des Systèmes d'Information (DNSSI) a récemment fait l'objet d'une mise à jour majeure, visant à renforcer la protection des données et des infrastructures sensibles (Logiciels, procédures, …), qui s'applique à toutes les entités publiques et privées, ainsi qu'aux infrastructures d'importance vitale (IIV).
+
+Cybersécurité au Maroc : le dispositif que vous devez adopter pour la sécurité de vos systèmes d'information !
+
+• La définition d'une politique de Sécurité des Systèmes d'Information adaptée à chaque organisation ;
+• Une structuration claire des responsabilités en matière de sécurité des systèmes d'information ;
+• Une coordination efficace entre les différents acteurs impliqués ;
+• Une analyse approfondie des risques auxquels s'expose l'organisation et une analyse systématique des risques survenus le cas échéant ;
+• La gestion des actifs informationnels (matériels et logiciels...), et leur mise à jour régulière
+• La mise en place des procédures de gestion des incidents, incluant la détection, la réponse et la remédiation rapide en cas d'attaques ou d'infractions ;
+• La conformité et le suivi des règles de sécurité, par le biais des mécanismes de contrôle et d'évaluation.
+
+Les entités concernées disposent de six mois pour se conformer aux nouvelles mesures de sécurité énoncées dans ladite directive.
+
+Cette mise à jour de la DNSSI vise à renforcer la résilience des systèmes d'information face aux menaces numériques croissantes en respectant la confidentialité, l'intégrité et la disponibilité des données et desdits systèmes, ainsi qu'à prévenir les risques de sécurité, et à réagir efficacement en cas d'incident.`,
+    date: "07/01/2024",
+    image: "/lovable-uploads/cybersecurite-maroc.png",
+    category: "Équipe HOUKOUKI"
+  },
+  {
+    id: 12,
     title: "Spoliation foncière : Article 2 de la loi 39-08",
     content: `Article 2 de la loi 39 08 portant code des droits réels
 
