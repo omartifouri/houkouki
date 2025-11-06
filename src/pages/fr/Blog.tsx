@@ -17,6 +17,22 @@ const FrBlog = () => {
   const articles: BlogArticle[] = [
     {
       id: 1,
+      title: "Spoliation foncière : Article 2 de la loi 39-08",
+      excerpt: "ÊTES-VOUS CERTAIN.E QUE VOTRE TITRE FONCIER EST TOUJOURS EN VOTRE NOM ? Votre bien immobilier vous appartient à partir du moment où il est enregistré à la conservation foncière...",
+      date: "01/02/2020",
+      image: "/lovable-uploads/spoliation-fonciere-alert.png",
+      category: "Jamila Alami"
+    },
+    {
+      id: 2,
+      title: "Contrat de travail",
+      excerpt: "Le contrat de travail est une formalité essentielle pour l'intégration d'un nouveau salarié dans une entreprise. Il est important que ce contrat soit bien rédigé pour que le salarié et l'employeur soient protégés...",
+      date: "28/01/2020",
+      image: "/lovable-uploads/contrat-travail.png",
+      category: "Jamila Alami"
+    },
+    {
+      id: 3,
       title: "Création de société au Maroc",
       excerpt: "Créer sa propre entreprise est un rêve que plusieurs marocains veulent réaliser, mais la plupart d'entre eux ignorent les contraintes et procédures liées à la création de société...",
       date: "10/02/2020",
@@ -24,7 +40,7 @@ const FrBlog = () => {
       category: "Jamila Alami"
     },
     {
-      id: 2,
+      id: 4,
       title: "Contrat de bail",
       excerpt: "Devenir locataire est une étape par laquelle passent des milliers de marocains chaque année. Pour que la location se concrétise, il faut signer un contrat de bail avec le propriétaire...",
       date: "05/02/2020",
@@ -32,7 +48,7 @@ const FrBlog = () => {
       category: "Jamila Alami"
     },
     {
-      id: 3,
+      id: 5,
       title: "La succession au Maroc",
       excerpt: "Après un décès, il est normal de se sentir perdu et ne pas savoir par où commencer. Le temps semble s'arrêter et votre cerveau n'arrive plus à suivre. La procédure de succession est longue et pleine de tracas...",
       date: "15/02/2020",
@@ -40,7 +56,7 @@ const FrBlog = () => {
       category: "Jamila Alami"
     },
     {
-      id: 4,
+      id: 6,
       title: "LA BASE JURIDIQUE D'UNE URGENCE SANITAIRE AU MAROC",
       excerpt: "Le décret-loi n° 2.20.292 publié au bulletin officiel n° 6867 bis le 23 Mars 2020 portant sur les dispositions relatives à l'état d'urgence sanitaire au Maroc, s'inscrit dans le cadre des mesures de prévention urgentes...",
       date: "23/03/2020",
@@ -48,7 +64,7 @@ const FrBlog = () => {
       category: "Jamila Alami"
     },
     {
-      id: 5,
+      id: 7,
       title: "Les Obligations Contractuelles dans le contexte du Covid-19",
       excerpt: "La pandémie du Covid-19 a un impact sur la gestion des contrats en cours, en effet, en raison du contexte actuel, vous pourrez être dans l'impossibilité d'exécuter une partie de vos obligations au titre de vos contrats en cours...",
       date: "20/03/2020",
@@ -56,7 +72,7 @@ const FrBlog = () => {
       category: "Jamila Alami"
     },
     {
-      id: 6,
+      id: 8,
       title: "Procès à distance ou tribunal électronique",
       excerpt: "Dans le cadre des mesures nationales visant à endiguer la propagation du coronavirus (Covid-19), le coup d'envoi du dispositif des procès à distance a été donné, lundi 27 Avril au Tribunal de première instance à Salé...",
       date: "05/05/2020",
@@ -64,7 +80,7 @@ const FrBlog = () => {
       category: "Jamila Alami"
     },
     {
-      id: 7,
+      id: 9,
       title: "Covid 19 – Mesures fiscales et sociales",
       excerpt: "Afin d'endiguer la propagation de la pandémie COVID-19, le 19 mars 2020, conformément aux dispositions de l'article 81 de la constitution, le Gouvernement marocain a adopté le décret-loi n°2.20.292 prévoyant l'état d'urgence sur l'ensemble du territoire du royaume...",
       date: "28/03/2020",
@@ -72,7 +88,7 @@ const FrBlog = () => {
       category: "Jamila Alami"
     },
     {
-      id: 8,
+      id: 10,
       title: "La spoliation foncière : les nouvelles mesures d'affrontement.",
       excerpt: "La spoliation foncière repose sur l'idée selon laquelle un bien immobilier, propriété de quelqu'un, fait l'objet par un spoliateur d'une attaque, tout en utilisant le faux et ce, dans le dessein de se faire reconnaître un droit de propriété sur ce bien...",
       date: "15/01/2025",
@@ -80,7 +96,7 @@ const FrBlog = () => {
       category: "Jamila Alami"
     },
     {
-      id: 9,
+      id: 11,
       title: "Covid 19 : L'impact sur la relation locative",
       excerpt: "Après avoir déclaré le 20 mars 2020 l'état d'urgence sanitaire au Maroc pour lutter contre le Corona virus, les autorités se sont efforcées de prendre un ensemble de mesures proactives pour limiter la propagation de la pandémie...",
       date: "25/03/2020",
@@ -88,7 +104,7 @@ const FrBlog = () => {
       category: "Jamila Alami"
     },
     {
-      id: 10,
+      id: 12,
       title: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
       excerpt: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
       date: "10/01/2025",
@@ -96,7 +112,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 11,
+      id: 13,
       title: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
       excerpt: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
       date: "10/01/2025",
@@ -104,7 +120,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 12,
+      id: 14,
       title: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
       excerpt: "E-Police",
       date: "01/02/2024",
@@ -112,7 +128,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 13,
+      id: 15,
       title: "Le Maroc renforce sa posture face aux menaces numériques",
       excerpt: "Le Maroc renforce sa posture face aux menaces numériques",
       date: "07/01/2024",
@@ -120,7 +136,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 14,
+      id: 16,
       title: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
       excerpt: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
       date: "02/01/2024",
@@ -128,7 +144,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 15,
+      id: 17,
       title: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
       excerpt: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
       date: "29/01/2024",

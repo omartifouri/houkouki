@@ -16,6 +16,102 @@ interface BlogArticle {
 const articles: BlogArticle[] = [
   {
     id: 1,
+    title: "Spoliation foncière : Article 2 de la loi 39-08",
+    content: `Article 2 de la loi 39 08 portant code des droits réels
+
+Article 2 :
+
+"Les titres fonciers et les immatriculations subséquentes qui y sont mentionnées conservent le droit qu'ils relatent et font preuve à l'égard des tiers que la personne qui y est dénommée est réellement investie des droits qui y sont spécifiés. Les annulations ou modifications ultérieures ou radiations du titre foncier ne peuvent être opposées ou préjudicier aux tiers inscrits de bonne foi sauf si le titulaire du droit a subi un préjudice par suite d'une falsification ou de faux et usage de faux à condition toutefois qu'il ait porté plainte en vue de réclamer son droit dans un délai de quatre ans à compter de la date d'immatriculation objet de la demande d'annulation, modification ou radiation."
+
+ÊTES-VOUS CERTAIN.E QUE VOTRE TITRE FONCIER EST TOUJOURS EN VOTRE NOM ?
+
+Votre bien immobilier (que ce soit votre maison d'habitation, ou tout autre bien vous appartenant, que vous l'occupiez ou que vous l'ayez mis en location), vous appartient à partir du moment où il est enregistré à la conservation foncière sous un numéro qui correspond à son « titre ».
+
+Cependant, du jour au lendemain vous pouvez être surpris d'apprendre, alors même que vous occupez ou louez toujours les lieux et que vous n'avez procédé à aucune modification ni à la vente de votre titre, que le lieu ne vous appartient plus !!
+
+Et ce en raison d'un détournement frauduleux de ce titre par suite de falsification ou de faux et usage de faux !
+
+PIRE ENCORE : A partir de cette date, la loi vous donne 4 ANS pour porter plainte en vue de réclamer votre droit.
+
+Si passé ce délai vous ne vous êtes toujours pas rendu compte de la falsification dont vous avez été victime et BIEN VOUS N'AUREZ PLUS QUE VOS YEUX POUR PLEURER ET VOTRE BIEN REVIENDRA D'OFFICE À SON VOLEUR !
+
+Conseil de Houkouki: soyez vigilant et téléchargez l'application MOHAFADATI (www.ancfcc.gov.ma/DemandeSuiviTitresPage/) mise à votre disposition par la conservation foncière pour vérifier régulièrement l'état de votre titre foncier !
+
+Pour plus d'informations, contactez nos juristes Houkouki`,
+    date: "01/02/2020",
+    image: "/lovable-uploads/spoliation-fonciere-alert.png",
+    category: "Jamila Alami"
+  },
+  {
+    id: 2,
+    title: "Contrat de travail",
+    content: `Le contrat de travail est une formalité essentielle pour l'intégration d'un nouveau salarié dans une entreprise.
+
+Il est important que ce contrat soit bien rédigé pour que le salarié et l'employeur soient protégés en cas de litige.
+
+Le contrat de travail est un accord passé entre l'employeur et le nouveau salarié qui fixe les dispositions qui encadrent leur relation durant toute la durée du contrat.
+
+Au Maroc, le contrat de travail peut s'effectuer de manière orale et peut être prouvé dans ce cas par tous moyens de rémunération, ou par écrit.
+
+La forme écrite est bien sûr la plus recommandée afin d'avoir une base à faire valoir auprès des tribunaux en cas de litiges.
+
+Toutefois, la rédaction d'un contrat de travail dépend de la forme du contrat. Selon l'article 16 du code du travail marocain, il y a trois types de contrat de travail :
+
+Le contrat à durée indéterminée (CDI):
+
+Le contrat à durée indéterminée est l'un des contrats les plus répandus et a la particularité de n'avoir aucune date de fin de contrat.
+
+La rédaction du CDI doit se faire dès que le nouveau salarié donne son accord pour intégrer l'entreprise.
+
+L'employeur a le devoir d'établir ce contrat en deux exemplaires à faire légaliser par les deux parties contractantes.
+
+Le contenu du contrat de travail permet de préciser les points essentiels de la relation de travail, à savoir :
+
+- la date de démarrage du contrat,
+- la rémunération,
+- les conditions de travail auxquelles sera soumis le salarié,
+- la position occupée,
+- les jours de congés
+- ainsi que le délai de préavis en cas de départ.
+
+Le contrat à durée déterminée (CDD):
+
+Comme son nom l'indique, le contrat à durée déterminée doit mentionner à la fois une date de début de contrat et une date de fin, en plus des points essentiels de la relation de travail similaire au CDI. Le recours au CDD est limité aux cas suivants:
+
+● Remplacement d'un salarié dont le contrat est suspendu pour cause de congé, maladie..., sauf la grève;
+● Augmentation temporaire de l'activité de l'entreprise ;
+● Travail à caractère saisonnier
+
+Le contrat de travail temporaire (intérim):
+
+Il s'agit d'un contrat dont la durée de vie correspond à celle du projet.
+
+Le contrat d'intérim se fait en général entre une agence d'intérim qui se positionne comme médiateur, un salarié et une entreprise.
+
+Tout comme les contrats précédents, le contrat d'intérim doit mentionner les points essentiels de la relation de travail en plus de :
+
+- la durée de la mission,
+- le lieu de l'exécution,
+- les qualifications qui ont poussé à recruter le salarié,
+- le motif qui a poussé l'entreprise à recourir à un intérimaire,
+- la précision sur le poste,
+- ainsi que le montant de la rémunération.
+
+Maintenant que vous savez à quel point un contrat de travail est important et ce qu'il implique, comment pouvez-vous être sûr que le prochain contrat de travail que vous aurez à rédiger protège vos droits ainsi que ceux de vos employés?
+
+Contactez-nous chez Houkouki !
+
+Nos juristes spécialisés dans le droit du travail, procéderont à un audit de vos contrats de travail pour vérifier que tout est en règle et que les intérêts des parties sont préservés autant que la loi le prévoit.
+
+Si vous n'avez jamais mis en place de contrat de travail et que vous souhaitez structurer l'intégration de vos nouveaux employés, nous pouvons procéder à la rédaction d'un modèle de contrat de travail selon vos besoins.
+
+Houkouki, le meilleur allié de l'entreprise et de ses salariés!`,
+    date: "28/01/2020",
+    image: "/lovable-uploads/contrat-travail.png",
+    category: "Jamila Alami"
+  },
+  {
+    id: 3,
     title: "Création de société au Maroc",
     content: `Créer sa propre entreprise est un rêve que plusieurs marocains veulent réaliser, mais la plupart d'entre eux ignorent les contraintes et procédures liées à la création de société et renoncent à leur projet lorsqu'ils en prennent connaissance.
 
@@ -49,7 +145,7 @@ Houkouki, le meilleur allié pour la création d'entreprise et le conseil juridi
     category: "Jamila Alami"
   },
   {
-    id: 2,
+    id: 4,
     title: "Contrat de bail",
     content: `Devenir locataire est une étape par laquelle passent des milliers de marocains chaque année. Mais pour que la location se concrétise, il faut signer un contrat de bail avec le propriétaire. Beaucoup de personnes, emballées par leur trouvaille, ne prêtent pas attention à cette étape un peu rébarbative, nous le concédons ! Ils signent le contrat que le propriétaire leur soumet sans chercher à en décoder les termes…. Ce qui peut générer de bien mauvaises surprises !
 
@@ -88,7 +184,7 @@ Nous pouvons aussi vous le rédiger nous-mêmes, grâce aux compétences de notr
     category: "Jamila Alami"
   },
   {
-    id: 3,
+    id: 5,
     title: "La succession au Maroc",
     content: `Après un décès, il est normal de se sentir perdu et ne pas savoir par où commencer. Le temps semble s'arrêter et votre cerveau n'arrive plus à suivre. Heureusement (ou malheureusement) la vie reprend son cours rapidement et vous êtes rattrapé par la réalité des procédures de funérailles et de succession.
 
@@ -132,7 +228,7 @@ N'hésitez pas à nous contacter au 0529.045.999 dès maintenant.`,
     category: "Jamila Alami"
   },
   {
-    id: 4,
+    id: 6,
     title: "LA BASE JURIDIQUE D'UNE URGENCE SANITAIRE AU MAROC",
     content: `Le décret-loi n° 2.20.292 publié au bulletin officiel n° 6867 bis le 23 Mars 2020 portant sur les dispositions relatives à l'état d'urgence sanitaire au Maroc, s'inscrit dans le cadre des mesures de prévention urgentes prises par le gouvernement marocain, afin d'endiguer les répercussions de la pandémie de COVID-19.
 
@@ -152,7 +248,7 @@ L'état d'urgence sanitaire a été instauré le 20 Mars 2020 à 18h et continue
     category: "Jamila Alami"
   },
   {
-    id: 5,
+    id: 7,
     title: "Les Obligations Contractuelles dans le contexte du Covid-19",
     content: `La pandémie du Covid-19 a un impact sur la gestion des contrats en cours, en effet, en raison du contexte actuel, vous pourrez être dans l'impossibilité d'exécuter une partie de vos obligations au titre de vos contrats en cours (contrats de prestation de services, contrats financiers etc.) ou être confrontés à des co-contractants qui pourraient tenter de se délier de certaines de leurs obligations contractuelles, en se prévalant notamment d'un cas de force majeure.
 
@@ -172,7 +268,7 @@ Il serait envisageable de privilégier au sein du contrat une solution amiable, 
     category: "Jamila Alami"
   },
   {
-    id: 6,
+    id: 8,
     title: "Procès à distance ou tribunal électronique",
     content: `Dans le cadre des mesures nationales visant à endiguer la propagation du coronavirus (Covid-19), le coup d'envoi du dispositif des procès à distance a été donné, lundi 27 Avril au Tribunal de première instance à Salé.
 
@@ -216,7 +312,7 @@ En conclusion, cette exigence est devenue une réalité malgré le manque de con
     category: "Jamila Alami"
   },
   {
-    id: 7,
+    id: 9,
     title: "Covid 19 – Mesures fiscales et sociales",
     content: `Afin d'endiguer la propagation de la pandémie COVID-19, le 19 mars 2020, conformément aux dispositions de l'article 81 de la constitution, le Gouvernement marocain a adopté le décret-loi n°2.20.292 prévoyant l'état d'urgence sur l'ensemble du territoire du royaume et ce du 20 mars au 20 avril 2020, ce décret-loi a été validé le 22 mars par les deux commissions parlementaires. Afin d'accompagner et de préserver l'économie marocaine durant cette crise sanitaire, plusieurs mesures fiscales et sociales ont été prises par les autorités marocaines pour faire face à cette situation exceptionnelle.
 
@@ -265,7 +361,7 @@ Les entreprises qui s'engagent à ne pas réduire leurs effectifs, déclarés au
     category: "Jamila Alami"
   },
   {
-    id: 8,
+    id: 10,
     title: "La spoliation foncière : les nouvelles mesures d'affrontement.",
     content: `La spoliation foncière repose sur l'idée selon laquelle un bien immobilier, propriété de quelqu'un, fait l'objet par un spoliateur d'une attaque, tout en utilisant le faux et ce, dans le dessein de se faire reconnaître un droit de propriété sur ce bien. A vrai dire, des histoires relatant ses faits ne cessent de circuler de la bouche de nos proches ou via la presse, et leur répercussion sur l'image du pays est très néfaste, en créant des écueils implacables dans le secteur immobilier, auxquels également sont impliqués des professionnels tels des notaires, des avocats, et des fonctionnaires de cadastre, c'est morose!
 
@@ -289,7 +385,7 @@ Le registre des SCI : un registre spécial réservé aux SCI a été créé afin
     category: "Jamila Alami"
   },
   {
-    id: 9,
+    id: 11,
     title: "Covid 19 : L'impact sur la relation locative",
     content: `Après avoir déclaré le 20 mars 2020 l'état d'urgence sanitaire au Maroc pour lutter contre le Corona virus, les autorités se sont efforcées de prendre un ensemble de mesures proactives pour limiter la propagation de la pandémie en imposant la quarantaine et empêchant les individus de quitter leur domicile sauf pour la nécessité spécifiée exclusivement dans la fiche de sortie exceptionnelle.
 
@@ -325,7 +421,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Jamila Alami"
   },
   {
-    id: 10,
+    id: 12,
     title: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     content: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     date: "10/01/2025",
@@ -333,7 +429,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 11,
+    id: 13,
     title: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     content: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     date: "10/01/2025",
@@ -341,7 +437,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 12,
+    id: 14,
     title: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     content: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     date: "01/02/2024",
@@ -349,7 +445,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 13,
+    id: 15,
     title: "Le Maroc renforce sa posture face aux menaces numériques",
     content: "Le Maroc renforce sa posture face aux menaces numériques",
     date: "07/01/2024",
@@ -357,7 +453,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 14,
+    id: 16,
     title: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     content: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     date: "02/01/2024",
@@ -365,7 +461,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 15,
+    id: 17,
     title: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     content: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     date: "29/01/2024",
