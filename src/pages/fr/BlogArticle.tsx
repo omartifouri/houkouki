@@ -15,6 +15,45 @@ interface BlogArticle {
 
 const articles: BlogArticle[] = [
   {
+    id: 26,
+    title: "Réforme des chèques sans provision au Maroc : entre dépénalisation ciblée et modernisation du paiement",
+    content: `Réforme des chèques sans provision au Maroc : entre dépénalisation ciblée et modernisation du paiement
+
+Au Maroc, le chèque reste un instrument de paiement très utilisé, selon les statistiques de Bank Al-Maghrib pour l'année 2024, 30 millions d'opérations de paiement par chèque ont été enregistrées pour une valeur totale de près de 1.319 milliards de dirhams, avec 972.232 chèques refusés pour absence ou insuffisance de provision, ajoutant à cela 180.223 plaintes ont été déposées entre 2022 et fin juin 2025, donnant lieu à des poursuites à l'encontre de 76.936 personnes, dont 58.710 en détention.
+
+Ces chiffres inquiétants très pénalisants, posent un problème qui nous emmène au recours systématique à la voie pénale pour des litiges parfois civils, un engorgement des tribunaux et des effets lourds pour les entreprises et les particuliers.
+
+Devant cette problématique, Le Conseil de gouvernement a approuvé le projet de loi n° 71.24 modifiant et complétant la loi n° 15.95 relative au code de commerce, visant à moderniser les transactions commerciales, renforcer la sécurité juridique et encadrer l'émission des chèques, tout en facilitant la régularisation des amendes fiscales pour incidents de paiement.
+
+Voici les points clés de ce projet de loi n° 71-24 et ce qu'elle signifie pour les entreprises, banques et particuliers.
+
+Les axes majeurs de la réforme :
+
+• La réforme porte sur plusieurs dispositions, notamment l'article 316 qui stipule que dans l'ancienne législation, en cas de non-paiement, le dossier restait au tribunal, qui statuait et infligeait des sanctions avec une amende de 25 % de la valeur du chèque. Désormais, après la réforme, le règlement du montant du chèque accompagné d'une amende de 2 % met définitivement fin aux poursuites.
+
+• Un système d'accord à l'amiable à toutes les étapes du procès a été également instauré, y compris au stade de l'exécution de la peine, il est à préciser que le paiement ou le retrait de la plainte entraîne la non-ouverture ou la cessation de la poursuite, le projet prévoit aussi une exemption pénale lorsque l'acte est commis entre conjoints ou ascendants.
+
+• Ce projet de loi s'inscrit dans le cadre des orientations stratégiques du Royaume visant à moderniser le cadre juridique et légal des transactions financières et commerciales, afin d'accompagner les mutations rapides en matière des effets de commerce et répondre aux exigences de la politique pénale dans le domaine des finances et des affaires.
+
+• Il vient également pour répondre au problème des chèques sans provision qui continue de préoccuper la société, notamment les investisseurs, en raison de ses répercussions économiques et sociales sur l'ensemble des parties concernées, notamment le tireur et le bénéficiaire.
+
+• Le texte comporte des dispositions visant à réviser le cadre juridique régissant l'usage des chèques et à inciter une large catégorie de citoyens à régulariser leur situation en s'acquittant d'une contribution libératoire relative aux amendes fiscales pour incidents de paiement. Ces nouvelles dispositions auront un impact positif sur la dynamique économique et contribueront à réduire les détentions et à alléger la pression sur les tribunaux pour ce qui est des affaires liées aux chèques.
+
+Conclusion
+
+La réforme annoncée du régime des chèques sans provision au Maroc marque un virage majeur vers une justice plus équilibrée et une meilleure adaptation aux réalités économiques. En déplaçant l'accent du pénal vers la régularisation, en introduisant des mécanismes de flexibilité comme le bracelet électronique ou le délai de grâce, le législateur entend moderniser l'instrument chèque, améliorer la fluidité des transactions et alléger la charge judiciaire.
+
+Pour les acteurs économiques, cette réforme représente une opportunité : il s'agit d'un moment propice pour revoir les processus internes de gestion des paiements, renforcer les vérifications de solvabilité, et anticiper le nouveau cadre légal. Mais il s'agit aussi d'un enjeu de vigilance : la transition devra être accompagnée avec rigueur pour éviter les effets pervers.
+
+POUR PLUS D'INFORMATIONS CONTACTEZ NOUS À:
++212 (0)529.045.999
+contact@houkouki.com
+www.houkouki.com`,
+    date: "07/12/2025",
+    image: "/lovable-uploads/reforme-cheques.png",
+    category: "Équipe HOUKOUKI"
+  },
+  {
     id: 1,
     title: "Contrat de bail d'habitation",
     content: `Définition du contrat de bail

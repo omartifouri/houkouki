@@ -16,6 +16,14 @@ interface BlogArticle {
 const FrBlog = () => {
   const articles: BlogArticle[] = [
     {
+      id: 26,
+      title: "Réforme des chèques sans provision au Maroc : entre dépénalisation ciblée et modernisation du paiement",
+      excerpt: "Au Maroc, le chèque reste un instrument de paiement très utilisé. Le Conseil de gouvernement a approuvé le projet de loi n° 71.24 visant à moderniser les transactions commerciales et encadrer l'émission des chèques...",
+      date: "07/12/2025",
+      image: "/lovable-uploads/reforme-cheques.png",
+      category: "Équipe HOUKOUKI"
+    },
+    {
       id: 1,
       title: "Contrat de bail d'habitation",
       excerpt: "Un contrat de bail est un contrat de location établi entre le propriétaire du bien à louer et son locataire. L'établissement du contrat de bail à usage d'habitation est indispensable...",
