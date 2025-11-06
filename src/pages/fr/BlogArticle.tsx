@@ -16,6 +16,30 @@ interface BlogArticle {
 const articles: BlogArticle[] = [
   {
     id: 1,
+    title: "La spoliation foncière : les nouvelles mesures d'affrontement.",
+    content: `La spoliation foncière repose sur l'idée selon laquelle un bien immobilier, propriété de quelqu'un, fait l'objet par un spoliateur d'une attaque, tout en utilisant le faux et ce, dans le dessein de se faire reconnaître un droit de propriété sur ce bien. A vrai dire, des histoires relatant ses faits ne cessent de circuler de la bouche de nos proches ou via la presse, et leur répercussion sur l'image du pays est très néfaste, en créant des écueils implacables dans le secteur immobilier, auxquels également sont impliqués des professionnels tels des notaires, des avocats, et des fonctionnaires de cadastre, c'est morose!
+
+Les opérations de spoliation foncière peuvent se faire sur un bien immobilier non titré, et cela est plus facile dans la mesure où ce dernier ne fait pas l'objet d'immatriculation à la conservation foncière, et le droit sur ce bien n'est acquis que par une possession pendant un délai impartis. Incontestablement, la spoliation peut aussi être faite sur un bien titré, ce dernier est inscrit au système d'immatriculation foncière, et individualisé par un titre foncier propre. En fait, les moyens utilisés dans ces opérations peuvent être des actes de procuration falsifiés, ou de vente, de testament ou de succession truqués, dont les victimes préférées sont les propriétaires marocains résidents à l'étranger et les expatriés.
+
+Pour faire face à cela, une lettre royale en fin décembre 2016 a été adressée aux responsables, dans laquelle des ordres ont été donnés pour la création des mécanismes de lutte contre la spoliation foncière.
+
+Les Mesures de Lutte :
+
+Afin d'éradiquer les spoliateurs le législateur marocain a mis en place les mécanismes suivants :
+
+La plateforme « Mohafadati » : crée par l'Agence Nationale de la Conservation foncière, du Cadastre et de la Cartographie, dont l'objectif est de garantir une meilleure protection des droits de la propriété immobilière. En fait, le service permet le suivi à distance de la situation des titres des biens immatriculés sur les livres fonciers, et alerte ses utilisateurs de toute opération inscrite sur les titres et ce, par SMS ou par Email. (le lien d'inscription sur cette plateforme : https://www.ancfcc.gov.ma/DemandeSuiviTitresPage/ ).
+
+Les actes authentiques : Les actes qui font l'objet d'une transaction foncière doivent être rédigés par un professionnel : notaire, adoul, ou avocat habilité à la cour de cassation, sinon l'acte et l'opération seront nuls. Et de même pour la procuration, si le propriétaire d'un bien immobilier voulant accorder un mandat à un tiers pour l'inscription d'un droit à son titre foncier, l'acte de procuration doit être soit authentifié par un notaire ou un adoul, soit ayant une date certaine dressé par un avocat agréé près de la cour de cassation. Par la suite, cet acte doit être inscrit dans un registre national des procurations, établi à cet effet. Ce registre est tenu par le bureau d'ordre du tribunal de première instance où se situe le bien immobilier. Aussi, les demandes de certificat de propriété immobilière faites par une tierce personne doivent être accompagnées d'un acte de procuration officiel relevé par un professionnel notaire, avocat ou adoul, et cela pour freiner les spoliateurs.
+
+Une protection pour les propriétaires surtout ceux résidant à l'étranger : Quant à la modification et l'annulation sur le titre foncier, réalisées par falsification, faux ou usage de faux, les propriétaires ont le droit de faire une réclamation dans un délai de quatre ans à compter de la date d'immatriculation contestée.
+
+Le registre des SCI : un registre spécial réservé aux SCI a été créé afin d'établir un cadre particulier aux Sociétés Civiles Immobilières, dont chaque société doit s'y immatriculer dans un délai de 3 mois suivant la date d'inscription à la taxe professionnelle.`,
+    date: "15/01/2025",
+    image: "/lovable-uploads/spoliation-fonciere.png",
+    category: "Jamila Alami"
+  },
+  {
+    id: 2,
     title: "Covid 19 : L'impact sur la relation locative",
     content: `Après avoir déclaré le 20 mars 2020 l'état d'urgence sanitaire au Maroc pour lutter contre le Corona virus, les autorités se sont efforcées de prendre un ensemble de mesures proactives pour limiter la propagation de la pandémie en imposant la quarantaine et empêchant les individus de quitter leur domicile sauf pour la nécessité spécifiée exclusivement dans la fiche de sortie exceptionnelle.
 
@@ -51,7 +75,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Jamila Alami"
   },
   {
-    id: 2,
+    id: 3,
     title: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     content: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     date: "10/01/2025",
@@ -59,7 +83,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 3,
+    id: 4,
     title: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     content: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     date: "10/01/2025",
@@ -67,7 +91,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 4,
+    id: 5,
     title: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     content: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     date: "01/02/2024",
@@ -75,7 +99,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 5,
+    id: 6,
     title: "Le Maroc renforce sa posture face aux menaces numériques",
     content: "Le Maroc renforce sa posture face aux menaces numériques",
     date: "07/01/2024",
@@ -83,7 +107,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 6,
+    id: 7,
     title: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     content: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     date: "02/01/2024",
@@ -91,7 +115,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 7,
+    id: 8,
     title: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     content: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     date: "29/01/2024",
