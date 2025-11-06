@@ -194,17 +194,17 @@ const FrBlog = () => {
     {
       id: 23,
       title: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
-      excerpt: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
+      excerpt: "La CNSS prolonge jusqu'au 15 janvier 2025 sa mesure exceptionnelle de remise gracieuse sur les pénalités de retard, les astreintes, et les frais de recouvrement...",
       date: "10/01/2025",
-      image: "/lovable-uploads/4202db25-ce0c-415f-b72b-0766f38e24fb.png",
+      image: "/lovable-uploads/cnss-remise.png",
       category: "Équipe HOUKOUKI"
     },
     {
       id: 24,
       title: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
-      excerpt: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
+      excerpt: "L'Office des changes a publié une nouvelle circulaire visant à simplifier les règles pour les voyages d'études post-baccalauréat. Les étudiants peuvent ouvrir un compte à l'étranger et bénéficier de facilités de transfert...",
       date: "10/01/2025",
-      image: "/lovable-uploads/52bc0c0c-34a4-4850-b667-a57ab1fe2408.png",
+      image: "/lovable-uploads/etudes-etranger.png",
       category: "Équipe HOUKOUKI"
     },
     {

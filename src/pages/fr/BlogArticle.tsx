@@ -906,17 +906,89 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
   {
     id: 12,
     title: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
-    content: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
+    content: `Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025
+
+Bonne nouvelle pour les entreprises marocaines !
+
+La Caisse nationale de sécurité sociale (CNSS) prolonge jusqu'au 15 janvier 2025 sa mesure exceptionnelle de remise gracieuse sur les pénalités de retard, les astreintes, et les frais de recouvrement.
+
+Cette initiative vise à soutenir les entreprises en difficulté économique tout en les incitant à régulariser leur situation financière.
+
+1. Mesure exceptionnelle : La CNSS offre aux entreprises la possibilité de bénéficier d'une remise sur les majorations de retard, astreintes et frais de recouvrement pour les créances antérieures à décembre 2024.
+
+2. Délai limité : Les entreprises doivent profiter de cette mesure avant le 15 janvier 2025 pour bénéficier de réductions significatives.
+
+3. Options de paiement : Trois options de paiement sont proposées, chacune avec des niveaux de remise différents :
+
+• Paiement intégral : remise de 60% sur les pénalités et frais de recouvrement, et de 90% sur les astreintes.
+
+• Facilité de paiement sur 24 mois et moins : remise de 50% sur les pénalités et frais de recouvrement et de 80% sur les astreintes.
+
+• Facilité de paiement au-delà de 24 mois : remise de 40% sur les pénalités et frais de recouvrement et de 70% sur les astreintes.
+
+4. Simplification des démarches : La CNSS a réactivé son service électronique via la plateforme Daman.com pour faciliter l'accès à cette mesure.
+
+5. Soutien aux entreprises : Cette initiative vise à soutenir les entreprises en difficulté économique et à encourager la régularisation de leur situation financière.`,
     date: "10/01/2025",
-    image: "/lovable-uploads/4202db25-ce0c-415f-b72b-0766f38e24fb.png",
+    image: "/lovable-uploads/cnss-remise.png",
     category: "Équipe HOUKOUKI"
   },
   {
     id: 13,
     title: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
-    content: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
+    content: `Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger
+
+L'Office des changes a publié une nouvelle circulaire n° 1/2025 le 2 janvier 2025 intitulée "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger", celle-ci vise à simplifier les règles à respecter pour les voyages d'études post-baccalauréat.
+
+Personnes éligibles :
+
+• Les personnes physiques de nationalité marocaine résidentes ;
+• Les Marocains résidant à l'étranger ;
+• Les étrangers nés de mère ou de père marocain, ne disposant pas de passeport marocain ou de Carte nationale d'identité marocaine.
+
+Dépenses couvertes : 
+
+Les dépenses incluent les frais de scolarité, de séjour, de loyer et les charges correspondantes.
+
+Compte à l'étranger : 
+
+Les étudiants doivent ouvrir un compte bancaire à l'étranger pour gérer leurs dépenses, mais doivent le clôturer et rapatrier le solde au Maroc à la fin de leurs études.
+
+Domiciliation du dossier :
+
+La domiciliation du dossier « études à l'étranger » consiste, pour le donneur d'ordre, à faire le choix d'une banque qui sera la seule chargée d'exécuter le règlement des dépenses prévues à l'article 3 de la présente circulaire.
+
+La banque domiciliataire doit exiger, au début de chaque année scolaire, la remise de l'attestation d'inscription ou de préinscription de l'année en cours ou tout document délivré par un établissement d'enseignement à l'étranger.
+
+Dans le cas de la préinscription, l'étudiant doit fournir à la banque domiciliataire l'attestation d'inscription dans un délai ne dépassant pas 4 mois à compter de la date du premier règlement au titre des dépenses relatives aux voyages pour études à l'étranger.
+
+Documents requis : 
+
+Les banques doivent exiger des documents spécifiques pour les frais de scolarité, de séjour et de loyer.
+
+Transferts anticipés : 
+
+Les transferts anticipés peuvent être effectués jusqu'à 12 mois sous certaines conditions :
+
+1- le règlement par anticipation des frais de séjour est exigé par l'établissement d'enseignement à l'étranger, préalablement à la délivrance de l'attestation d'inscription, ou par les services consulaires du pays d'accueil pour l'obtention du visa étudiant ;
+
+2- le règlement par anticipation du loyer et charges correspondantes est exigé par le bailleur.
+
+Programmes d'échange : 
+
+Les étudiants participant à des programmes d'échange bénéficient des mêmes facilités de change.
+
+Déclarations bancaires : 
+
+Les déclarations bancaires doivent être établies conformément aux modalités fixées par le dispositif des déclarations bancaires.
+
+Source : Circulaire de l'office des changes n° 1/2025 du 02/01/2025
+
+Abrogation des articles : 
+
+La nouvelle circulaire abroge certains articles notamment (Les articles 122, 123, 124, 125, 126 et 127) de l'Instruction Générale des Opérations de Change du 2 janvier 2024 et entre en vigueur à compter du 2 janvier 2025.`,
     date: "10/01/2025",
-    image: "/lovable-uploads/52bc0c0c-34a4-4850-b667-a57ab1fe2408.png",
+    image: "/lovable-uploads/etudes-etranger.png",
     category: "Équipe HOUKOUKI"
   },
   {
