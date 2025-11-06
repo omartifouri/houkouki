@@ -17,6 +17,14 @@ const FrBlog = () => {
   const articles: BlogArticle[] = [
     {
       id: 1,
+      title: "Covid 19 – Mesures fiscales et sociales",
+      excerpt: "Afin d'endiguer la propagation de la pandémie COVID-19, le 19 mars 2020, conformément aux dispositions de l'article 81 de la constitution, le Gouvernement marocain a adopté le décret-loi n°2.20.292 prévoyant l'état d'urgence sur l'ensemble du territoire du royaume...",
+      date: "28/03/2020",
+      image: "/lovable-uploads/covid-mesures-fiscales.png",
+      category: "Jamila Alami"
+    },
+    {
+      id: 2,
       title: "La spoliation foncière : les nouvelles mesures d'affrontement.",
       excerpt: "La spoliation foncière repose sur l'idée selon laquelle un bien immobilier, propriété de quelqu'un, fait l'objet par un spoliateur d'une attaque, tout en utilisant le faux et ce, dans le dessein de se faire reconnaître un droit de propriété sur ce bien...",
       date: "15/01/2025",
@@ -24,7 +32,7 @@ const FrBlog = () => {
       category: "Jamila Alami"
     },
     {
-      id: 2,
+      id: 3,
       title: "Covid 19 : L'impact sur la relation locative",
       excerpt: "Après avoir déclaré le 20 mars 2020 l'état d'urgence sanitaire au Maroc pour lutter contre le Corona virus, les autorités se sont efforcées de prendre un ensemble de mesures proactives pour limiter la propagation de la pandémie...",
       date: "25/03/2020",
@@ -32,7 +40,7 @@ const FrBlog = () => {
       category: "Jamila Alami"
     },
     {
-      id: 3,
+      id: 4,
       title: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
       excerpt: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
       date: "10/01/2025",
@@ -40,7 +48,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 4,
+      id: 5,
       title: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
       excerpt: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
       date: "10/01/2025",
@@ -48,7 +56,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 5,
+      id: 6,
       title: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
       excerpt: "E-Police",
       date: "01/02/2024",
@@ -56,7 +64,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 6,
+      id: 7,
       title: "Le Maroc renforce sa posture face aux menaces numériques",
       excerpt: "Le Maroc renforce sa posture face aux menaces numériques",
       date: "07/01/2024",
@@ -64,7 +72,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 7,
+      id: 8,
       title: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
       excerpt: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
       date: "02/01/2024",
@@ -72,7 +80,7 @@ const FrBlog = () => {
       category: "Équipe HOUKOUKI"
     },
     {
-      id: 8,
+      id: 9,
       title: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
       excerpt: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
       date: "29/01/2024",

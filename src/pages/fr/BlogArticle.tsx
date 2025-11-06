@@ -16,6 +16,55 @@ interface BlogArticle {
 const articles: BlogArticle[] = [
   {
     id: 1,
+    title: "Covid 19 – Mesures fiscales et sociales",
+    content: `Afin d'endiguer la propagation de la pandémie COVID-19, le 19 mars 2020, conformément aux dispositions de l'article 81 de la constitution, le Gouvernement marocain a adopté le décret-loi n°2.20.292 prévoyant l'état d'urgence sur l'ensemble du territoire du royaume et ce du 20 mars au 20 avril 2020, ce décret-loi a été validé le 22 mars par les deux commissions parlementaires. Afin d'accompagner et de préserver l'économie marocaine durant cette crise sanitaire, plusieurs mesures fiscales et sociales ont été prises par les autorités marocaines pour faire face à cette situation exceptionnelle.
+
+I – Mesures fiscales :
+
+Report des échéances fiscales
+
+Pour les entreprises dont le chiffre d'affaires HT est < à 20 MDH :
+
+Les entreprises dont le CA de l'exercice 2018 est inférieur à 20 millions de dirhams pourront bénéficier sans formalité préalable d'un report des échéances fiscales du 31 mars jusqu'au 30 juin 2020. Ce report concerne les échéances fiscales suivantes :
+• Déclaration du résultat fiscal ;
+• Paiement du complément d'IS dû au titre de l'exercice 2019 ;
+• Paiement du 1er acompte provisionnel.
+
+Les déclarations de TVA ainsi que le reversement des impôts retenus à la source ne sont pas concernés par ce report.
+
+Pour les entreprises dont le chiffre d'affaires HT est => à 20 MDH :
+
+Le communiqué de la DGI précise également que les entreprises dont le CA de l'exercice 2018 dépasse le seuil des 20 millions de dirhams, et qui subissent des préjudices économiques importants du fait de la baisse d'activité liée à la crise sanitaire actuelle, peuvent bénéficier d'un étalement ou d'un report du paiement de l'IS. Le bénéfice de ces mesures dérogatoires est conditionné par le dépôt d'une demande auprès du ministre chargé des finances. Les demandes seront traitées au cas par cas, à la lumière des pièces justificatives fournies.
+
+Il est à signaler que les mesures reprises dans le communiqué de la DGI ne sont pas en conformité avec les dispositions de l'article 6 du décret-loi n° 2.20.292 qui prévoit la suspension de tous les délais légaux et réglementaires. Cette discordance est justifiée par les contraintes budgétaires qui poussent la Direction Générale des Impôts à passer outre ces dispositions.
+
+2. Suspension des ATD et des contrôles fiscaux
+
+Le comité de veille économique a précisé dans son communiqué du 19 mars 2020 que les Avis à tiers détenteurs (ATD) et les contrôles fiscaux seront suspendus jusqu'au 30 juin 2020.
+
+3. Déductibilité des dons accordés au fonds spécial COVID-19
+
+Afin d'encourager les dons au profit du fonds spécial pour la gestion de la pandémie COVID-19, la DGI a consacré la déductibilité des dons effectués au profit dudit fonds. En effet, dans le communiqué en date du 23 mars 2020, la DGI précise que les contributions apportées au fonds spécial sont traitées comme des dons revêtant le caractère de charges comptables déductibles du résultat fiscal.
+
+II. Mesures en matière de cotisations sociales
+
+Octroi d'une indemnité forfaitaire mensuelle
+
+Les salariés déclarés à la CNSS au titre de février 2020, relevant des entreprises affiliées à cette caisse, en situation d'arrêt total ou partiel, pourront bénéficier d'une indemnité forfaitaire mensuelle nette de 2000 dirhams et des prestations de l'AMO et des allocations familiales. Pour bénéficier de cette indemnité, les salariés doivent être déclarés à la CNSS au titre du mois de février 2020. L'indemnité sera versée par virement bancaire ou mise à disposition par la CNSS au profit des salariés bénéficiaires sur toute la période allant du 15 Mars au 30 Juin 2020. L'indemnité forfaitaire du 15 au 31 Mars est fixée à 1000 DH.
+
+2. Suspension du paiement des cotisations sociales
+
+Les employeurs en difficulté affiliés à la CNSS peuvent bénéficier d'une suspension du paiement des cotisations sociales au titre de la période allant du 1er mars au 30 juin 2020. Le bénéfice de la suspension est conditionné par le dépôt du formulaire prévu sur la plateforme DAMANCOM avant le 30 juin 2020.
+
+3. Prise en charge par l'Etat de la part patronale
+
+Les entreprises qui s'engagent à ne pas réduire leurs effectifs, déclarés au titre de février 2020, de plus de 20% pour la période allant du 15 mars 2020 au 30 juin 2020 peuvent bénéficier de la prise en charge par l'Etat de la part patronale des cotisations sociales et de la taxe de formation professionnelle.`,
+    date: "28/03/2020",
+    image: "/lovable-uploads/covid-mesures-fiscales.png",
+    category: "Jamila Alami"
+  },
+  {
+    id: 2,
     title: "La spoliation foncière : les nouvelles mesures d'affrontement.",
     content: `La spoliation foncière repose sur l'idée selon laquelle un bien immobilier, propriété de quelqu'un, fait l'objet par un spoliateur d'une attaque, tout en utilisant le faux et ce, dans le dessein de se faire reconnaître un droit de propriété sur ce bien. A vrai dire, des histoires relatant ses faits ne cessent de circuler de la bouche de nos proches ou via la presse, et leur répercussion sur l'image du pays est très néfaste, en créant des écueils implacables dans le secteur immobilier, auxquels également sont impliqués des professionnels tels des notaires, des avocats, et des fonctionnaires de cadastre, c'est morose!
 
@@ -39,7 +88,7 @@ Le registre des SCI : un registre spécial réservé aux SCI a été créé afin
     category: "Jamila Alami"
   },
   {
-    id: 2,
+    id: 3,
     title: "Covid 19 : L'impact sur la relation locative",
     content: `Après avoir déclaré le 20 mars 2020 l'état d'urgence sanitaire au Maroc pour lutter contre le Corona virus, les autorités se sont efforcées de prendre un ensemble de mesures proactives pour limiter la propagation de la pandémie en imposant la quarantaine et empêchant les individus de quitter leur domicile sauf pour la nécessité spécifiée exclusivement dans la fiche de sortie exceptionnelle.
 
@@ -75,7 +124,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Jamila Alami"
   },
   {
-    id: 3,
+    id: 4,
     title: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     content: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     date: "10/01/2025",
@@ -83,7 +132,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 4,
+    id: 5,
     title: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     content: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     date: "10/01/2025",
@@ -91,7 +140,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 5,
+    id: 6,
     title: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     content: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     date: "01/02/2024",
@@ -99,7 +148,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 6,
+    id: 7,
     title: "Le Maroc renforce sa posture face aux menaces numériques",
     content: "Le Maroc renforce sa posture face aux menaces numériques",
     date: "07/01/2024",
@@ -107,7 +156,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 7,
+    id: 8,
     title: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     content: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     date: "02/01/2024",
@@ -115,7 +164,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 8,
+    id: 9,
     title: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     content: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     date: "29/01/2024",
