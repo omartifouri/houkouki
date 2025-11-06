@@ -16,6 +16,26 @@ interface BlogArticle {
 const articles: BlogArticle[] = [
   {
     id: 1,
+    title: "LA BASE JURIDIQUE D'UNE URGENCE SANITAIRE AU MAROC",
+    content: `Le décret-loi n° 2.20.292 publié au bulletin officiel n° 6867 bis le 23 Mars 2020 portant sur les dispositions relatives à l'état d'urgence sanitaire au Maroc, s'inscrit dans le cadre des mesures de prévention urgentes prises par le gouvernement marocain, afin d'endiguer les répercussions de la pandémie de COVID-19.
+
+L'adoption de ce décret était nécessaire, conformément aux dispositions de l'article 21 de la Constitution qui décrète que « Les pouvoirs publics assurent la sécurité des populations et du territoire national, dans le respect des libertés et des droits fondamentaux garantis à tous ».
+
+Les autorités publiques sont amenées donc à prendre toutes les dispositions qu'elles jugent nécessaires et adéquates et cela par tout moyen : décisions organiques ou administratives, circulaires, communiqués. Conformément à ces directives, l'état d'urgence sanitaire a été instauré à travers le royaume afin de protéger la population de cette pandémie.
+
+Le décret-loi dispose que toute personne qui manque aux instructions, décisions et injonctions des autorités, sera sanctionnée ;
+
+Tout désobéissant est passible d'une peine de prison d'un à trois mois et d'une amende de 300 à 1300 dh ou l'une de ces deux peines. Les mêmes sanctions seront prises contre toute personne ayant recours à la menace, à la fraude, à la violence ou à la contrainte.
+
+Ainsi que les individus qui incitent le public à enfreindre toute décision prise par les autorités à travers discours, cris, réunions ou tout autre moyen utilisant un support électronique.
+
+L'état d'urgence sanitaire a été instauré le 20 Mars 2020 à 18h et continuera jusqu'au 20 Avril 2020 à 18h, ceci sauf dans le cas d'une prolongation.`,
+    date: "23/03/2020",
+    image: "/lovable-uploads/base-juridique-urgence-sanitaire.png",
+    category: "Jamila Alami"
+  },
+  {
+    id: 2,
     title: "Les Obligations Contractuelles dans le contexte du Covid-19",
     content: `La pandémie du Covid-19 a un impact sur la gestion des contrats en cours, en effet, en raison du contexte actuel, vous pourrez être dans l'impossibilité d'exécuter une partie de vos obligations au titre de vos contrats en cours (contrats de prestation de services, contrats financiers etc.) ou être confrontés à des co-contractants qui pourraient tenter de se délier de certaines de leurs obligations contractuelles, en se prévalant notamment d'un cas de force majeure.
 
@@ -35,7 +55,7 @@ Il serait envisageable de privilégier au sein du contrat une solution amiable, 
     category: "Jamila Alami"
   },
   {
-    id: 2,
+    id: 3,
     title: "Procès à distance ou tribunal électronique",
     content: `Dans le cadre des mesures nationales visant à endiguer la propagation du coronavirus (Covid-19), le coup d'envoi du dispositif des procès à distance a été donné, lundi 27 Avril au Tribunal de première instance à Salé.
 
@@ -79,7 +99,7 @@ En conclusion, cette exigence est devenue une réalité malgré le manque de con
     category: "Jamila Alami"
   },
   {
-    id: 3,
+    id: 4,
     title: "Covid 19 – Mesures fiscales et sociales",
     content: `Afin d'endiguer la propagation de la pandémie COVID-19, le 19 mars 2020, conformément aux dispositions de l'article 81 de la constitution, le Gouvernement marocain a adopté le décret-loi n°2.20.292 prévoyant l'état d'urgence sur l'ensemble du territoire du royaume et ce du 20 mars au 20 avril 2020, ce décret-loi a été validé le 22 mars par les deux commissions parlementaires. Afin d'accompagner et de préserver l'économie marocaine durant cette crise sanitaire, plusieurs mesures fiscales et sociales ont été prises par les autorités marocaines pour faire face à cette situation exceptionnelle.
 
@@ -128,7 +148,7 @@ Les entreprises qui s'engagent à ne pas réduire leurs effectifs, déclarés au
     category: "Jamila Alami"
   },
   {
-    id: 4,
+    id: 5,
     title: "La spoliation foncière : les nouvelles mesures d'affrontement.",
     content: `La spoliation foncière repose sur l'idée selon laquelle un bien immobilier, propriété de quelqu'un, fait l'objet par un spoliateur d'une attaque, tout en utilisant le faux et ce, dans le dessein de se faire reconnaître un droit de propriété sur ce bien. A vrai dire, des histoires relatant ses faits ne cessent de circuler de la bouche de nos proches ou via la presse, et leur répercussion sur l'image du pays est très néfaste, en créant des écueils implacables dans le secteur immobilier, auxquels également sont impliqués des professionnels tels des notaires, des avocats, et des fonctionnaires de cadastre, c'est morose!
 
@@ -152,7 +172,7 @@ Le registre des SCI : un registre spécial réservé aux SCI a été créé afin
     category: "Jamila Alami"
   },
   {
-    id: 5,
+    id: 6,
     title: "Covid 19 : L'impact sur la relation locative",
     content: `Après avoir déclaré le 20 mars 2020 l'état d'urgence sanitaire au Maroc pour lutter contre le Corona virus, les autorités se sont efforcées de prendre un ensemble de mesures proactives pour limiter la propagation de la pandémie en imposant la quarantaine et empêchant les individus de quitter leur domicile sauf pour la nécessité spécifiée exclusivement dans la fiche de sortie exceptionnelle.
 
@@ -188,7 +208,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Jamila Alami"
   },
   {
-    id: 6,
+    id: 7,
     title: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     content: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     date: "10/01/2025",
@@ -196,7 +216,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 7,
+    id: 8,
     title: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     content: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     date: "10/01/2025",
@@ -204,7 +224,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 8,
+    id: 9,
     title: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     content: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     date: "01/02/2024",
@@ -212,7 +232,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 9,
+    id: 10,
     title: "Le Maroc renforce sa posture face aux menaces numériques",
     content: "Le Maroc renforce sa posture face aux menaces numériques",
     date: "07/01/2024",
@@ -220,7 +240,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 10,
+    id: 11,
     title: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     content: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     date: "02/01/2024",
@@ -228,7 +248,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 11,
+    id: 12,
     title: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     content: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     date: "29/01/2024",
