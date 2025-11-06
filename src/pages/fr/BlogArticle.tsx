@@ -16,6 +16,50 @@ interface BlogArticle {
 const articles: BlogArticle[] = [
   {
     id: 1,
+    title: "Procès à distance ou tribunal électronique",
+    content: `Dans le cadre des mesures nationales visant à endiguer la propagation du coronavirus (Covid-19), le coup d'envoi du dispositif des procès à distance a été donné, lundi 27 Avril au Tribunal de première instance à Salé.
+
+Ce dispositif repose sur l'utilisation des technologies de communication entre les établissements pénitentiaires d'un côté et les juges et les avocats dans les tribunaux d'un autre.
+
+Il s'inscrit aussi dans le cadre des mesures de renforcement de la sécurité sanitaire des détenus et de la famille de la justice, imposées par l'état d'urgence sanitaire.
+
+La mise en œuvre de cette technologie est intervenue après un consensus entre le ministère de la Justice, le Conseil suprême de l'autorité judiciaire, la présidence du ministère public, le délégué général et la Fondation du ministère public en adoptant une technique de visioconférence.
+
+Les partisans de cette technologie ont reçu l'annonce avec amabilité, car elle contribue à faciliter l'accès à la justice, à gagner du temps, à unifier et à simplifier les procédures des procès, ainsi qu'à contribuer à la préservation des données et à faciliter l'accès à celles-ci.
+
+Les opposants de cette nouvelle mesure argumentent que cette technologie n'a aucune base légale, et qu'elle intervient au détriment des droits des plaideurs et de la défense, leur présence et leur confrontation étant des principes importants d'un procès équitable.
+
+Pour être conscient de la problématique des procès à distance, il faut répondre aux questions suivantes :
+
+Quel est le concept de litige à distance ?
+Quelles sont les conditions à remplir pour télécharger un litige à distance à un tribunal électronique ?
+
+Le concept de litige à distance :
+
+Il est étroitement lié au concept de tribunal électronique, où ces termes sont apparus avec la révolution technologique, en particulier lorsque l'Internet est accessible à presque tout le monde. Le litige à distance est la transition du stade d'un procès classique qui nécessite de comparaître devant les tribunaux et de créer des dossiers et de mener des procédures vers un litige à distance qui donne l'opportunité de plaider de n'importe où dans le monde par voie électronique, ce qui permet une utilisation optimale du temps, étant donné que le report et les procédures contentieuses relativement longues et complexes sont aujourd'hui les plus grands inconvénients de la justice.
+
+Un litige à distance peut être défini comme le processus de transfert électronique des documents du litige au tribunal compétent où ils sont examinés.
+
+Conditions de téléchargement des litiges à distance ou du tribunal électronique :
+
+Pour télécharger un litige à distance, trois conditions doivent être remplies :
+
+1. Le texte juridique qui encadre le processus :
+Le législateur marocain a fixé 2021 pour entamer ce tribunal électronique ; et donc ceux qui s'opposent à la décision du ministre de la Justice de télécharger les documents du contentieux à distance exigent de respecter le principe de légalité juridique.
+
+2. Tribunaux équipés et connectés au net :
+Aujourd'hui tous les tribunaux du Royaume sont connectés au net car ils ont été les précurseurs du processus de modernisation de l'administration afin de faciliter le processus de contrôle à distance des dossiers et de suivi de la mise en œuvre des décisions.
+
+3. Une composante humaine formée pour faire face à ces mécanismes :
+Après la promulgation de la loi, le ministère doit former les employés du livre de saisie devant les tribunaux pour savoir comment traiter ces technologies modernes.
+
+En conclusion, cette exigence est devenue une réalité malgré le manque de conditions de base d'un texte juridique et de tribunaux équipés et employés pour traiter cette technologie qui a été adoptée dans de nombreux tribunaux malgré la crainte des avocats que la question ne soit pas respectée par la loi.`,
+    date: "05/05/2020",
+    image: "/lovable-uploads/tribunal-electronique.png",
+    category: "Jamila Alami"
+  },
+  {
+    id: 2,
     title: "Covid 19 – Mesures fiscales et sociales",
     content: `Afin d'endiguer la propagation de la pandémie COVID-19, le 19 mars 2020, conformément aux dispositions de l'article 81 de la constitution, le Gouvernement marocain a adopté le décret-loi n°2.20.292 prévoyant l'état d'urgence sur l'ensemble du territoire du royaume et ce du 20 mars au 20 avril 2020, ce décret-loi a été validé le 22 mars par les deux commissions parlementaires. Afin d'accompagner et de préserver l'économie marocaine durant cette crise sanitaire, plusieurs mesures fiscales et sociales ont été prises par les autorités marocaines pour faire face à cette situation exceptionnelle.
 
@@ -64,7 +108,7 @@ Les entreprises qui s'engagent à ne pas réduire leurs effectifs, déclarés au
     category: "Jamila Alami"
   },
   {
-    id: 2,
+    id: 3,
     title: "La spoliation foncière : les nouvelles mesures d'affrontement.",
     content: `La spoliation foncière repose sur l'idée selon laquelle un bien immobilier, propriété de quelqu'un, fait l'objet par un spoliateur d'une attaque, tout en utilisant le faux et ce, dans le dessein de se faire reconnaître un droit de propriété sur ce bien. A vrai dire, des histoires relatant ses faits ne cessent de circuler de la bouche de nos proches ou via la presse, et leur répercussion sur l'image du pays est très néfaste, en créant des écueils implacables dans le secteur immobilier, auxquels également sont impliqués des professionnels tels des notaires, des avocats, et des fonctionnaires de cadastre, c'est morose!
 
@@ -88,7 +132,7 @@ Le registre des SCI : un registre spécial réservé aux SCI a été créé afin
     category: "Jamila Alami"
   },
   {
-    id: 3,
+    id: 4,
     title: "Covid 19 : L'impact sur la relation locative",
     content: `Après avoir déclaré le 20 mars 2020 l'état d'urgence sanitaire au Maroc pour lutter contre le Corona virus, les autorités se sont efforcées de prendre un ensemble de mesures proactives pour limiter la propagation de la pandémie en imposant la quarantaine et empêchant les individus de quitter leur domicile sauf pour la nécessité spécifiée exclusivement dans la fiche de sortie exceptionnelle.
 
@@ -124,7 +168,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Jamila Alami"
   },
   {
-    id: 4,
+    id: 5,
     title: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     content: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     date: "10/01/2025",
@@ -132,7 +176,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 5,
+    id: 6,
     title: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     content: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     date: "10/01/2025",
@@ -140,7 +184,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 6,
+    id: 7,
     title: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     content: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     date: "01/02/2024",
@@ -148,7 +192,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 7,
+    id: 8,
     title: "Le Maroc renforce sa posture face aux menaces numériques",
     content: "Le Maroc renforce sa posture face aux menaces numériques",
     date: "07/01/2024",
@@ -156,7 +200,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 8,
+    id: 9,
     title: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     content: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     date: "02/01/2024",
@@ -164,7 +208,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 9,
+    id: 10,
     title: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     content: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     date: "29/01/2024",
