@@ -16,6 +16,50 @@ interface BlogArticle {
 const articles: BlogArticle[] = [
   {
     id: 1,
+    title: "La succession au Maroc",
+    content: `Après un décès, il est normal de se sentir perdu et ne pas savoir par où commencer. Le temps semble s'arrêter et votre cerveau n'arrive plus à suivre. Heureusement (ou malheureusement) la vie reprend son cours rapidement et vous êtes rattrapé par la réalité des procédures de funérailles et de succession.
+
+La procédure de succession est une procédure longue et pleine de tracas qui tombe durant une période de deuil, ce qui la rend d'autant plus difficile.
+
+Il est absolument normal de se sentir dépassé, car la perte d'un être cher est une véritable épreuve, mais il ne faut pas laisser cet état prendre le dessus.
+
+Prenez un moment pour faire votre deuil correctement et entamer la procédure la tête froide pour que vous puissiez en finir rapidement et efficacement.
+
+Sachez qu'avant de pouvoir entamer la procédure de succession, il va falloir être muni de 2 documents essentiels:
+
+1) Le certificat de décès:
+
+Avant d'obtenir son certificat de décès, il faut d'abord déclarer le décès. Vous avez un délai de 30 jours suivant la mort de la personne si elle réside au Maroc et un délai d'1 an si la personne réside à l'étranger, passé ces délais et vous risquez de payer une amende allant de 300 à 1200 DHS. La demande de certificat de décès se fait auprès des services de protection sanitaire de la commune et requiert le dossier médical du défunt ainsi que sa carte d'identité.
+
+2) L'acte d'hérédité:
+
+Cet acte d'hérédité est le document clé dans une procédure de succession. Il est indispensable pour toute personne ayant des droits d'héritier et voulant se protéger en cas d'éventuelles mésententes entre héritiers.
+
+Après l'obtention du certificat de décès, vous devrez le présenter à l'adoul, en plus de l'état civil et éventuellement d'une photocopie de la carte d'identité nationale de chaque héritier, à la demande de l'adoul. Ce dernier va ensuite rédiger «l'acte d'hérédité» où il mentionne le nom du défunt, ceux des héritiers légaux ainsi que la quote-part de chacun d'eux. L'élaboration de ce document se fait en présence de douze témoins de sexe masculin (proches, amis de la famille ou voisins) qui devront confirmer les informations en question et signer à tour de rôle le document, qui sera par la suite authentifié par le tribunal.
+
+Maintenant que vous êtes en possession de ces deux documents, vous pouvez entamer la procédure de succession sans soucis. Le Code de la famille définit la succession en tant que: "Tout ce que le défunt possédait de son vivant, en fait de biens comme l'argent, les biens immeubles et meubles et les droits patrimoniaux tels que le droit de préemption et le droit d'acceptation du testament ne dépassant pas le tiers total du défunt".
+
+Pour éviter que tous les héritiers se déplacent, il est possible de nommer l'un d'eux en tant que représentant grâce à une procuration spéciale rédigée devant notaire ou un aadoul ou un avocat nommé devant la cour de cassation, et signée par tous les héritiers et qui définit les formalités exactes à traiter par le représentant.
+
+L'acte d'hérédité et le certificat de décès doivent être déposés par les héritiers (ou le représentant) auprès des différentes institutions concernées selon la nature des biens à partager (la banque, la conservation foncière, le service des mines, la CIMR, la CNSS, la DGI, etc.).
+
+Cette partie de la procédure est la plus lourde et la plus difficile et mobilise beaucoup d'énergie. Aussi elle peut être éprouvante lorsque l'entente entre les héritiers n'est pas au rendez-vous. Le conflit d'intérêt entre les héritiers retarde l'opération du partage des biens de plusieurs semaines, voire de plusieurs mois.
+
+Maintenant que vous connaissez les étapes à suivre et le stress qu'elles peuvent générer sans compter le blocage éventuel de l'héritage, que pouvez-vous faire pour faciliter cette douloureuse épreuve liée à la « succession » ?
+
+Contactez Houkouki ! C'est un tiers neutre qui peut non seulement vous conseiller, mais aussi vous accompagner dans les différentes procédures (partage de biens immobiliers, mobiliers, parts sociales, etc.) à partir du moment où l'acte de décès et celui de l'hérédité lui sont fournis.
+
+Houkouki peut aussi intervenir dans la médiation entre les héritiers pour accélérer le partage de l'héritage.
+
+Enfin, Houkouki, fort de son expérience dans le domaine de la succession a mis en place un partenariat avec une plateforme d'écoute psychologique pour accompagner les héritiers en période de deuil.
+
+N'hésitez pas à nous contacter au 0529.045.999 dès maintenant.`,
+    date: "15/02/2020",
+    image: "/lovable-uploads/succession-maroc.png",
+    category: "Jamila Alami"
+  },
+  {
+    id: 2,
     title: "LA BASE JURIDIQUE D'UNE URGENCE SANITAIRE AU MAROC",
     content: `Le décret-loi n° 2.20.292 publié au bulletin officiel n° 6867 bis le 23 Mars 2020 portant sur les dispositions relatives à l'état d'urgence sanitaire au Maroc, s'inscrit dans le cadre des mesures de prévention urgentes prises par le gouvernement marocain, afin d'endiguer les répercussions de la pandémie de COVID-19.
 
@@ -35,7 +79,7 @@ L'état d'urgence sanitaire a été instauré le 20 Mars 2020 à 18h et continue
     category: "Jamila Alami"
   },
   {
-    id: 2,
+    id: 3,
     title: "Les Obligations Contractuelles dans le contexte du Covid-19",
     content: `La pandémie du Covid-19 a un impact sur la gestion des contrats en cours, en effet, en raison du contexte actuel, vous pourrez être dans l'impossibilité d'exécuter une partie de vos obligations au titre de vos contrats en cours (contrats de prestation de services, contrats financiers etc.) ou être confrontés à des co-contractants qui pourraient tenter de se délier de certaines de leurs obligations contractuelles, en se prévalant notamment d'un cas de force majeure.
 
@@ -55,7 +99,7 @@ Il serait envisageable de privilégier au sein du contrat une solution amiable, 
     category: "Jamila Alami"
   },
   {
-    id: 3,
+    id: 4,
     title: "Procès à distance ou tribunal électronique",
     content: `Dans le cadre des mesures nationales visant à endiguer la propagation du coronavirus (Covid-19), le coup d'envoi du dispositif des procès à distance a été donné, lundi 27 Avril au Tribunal de première instance à Salé.
 
@@ -99,7 +143,7 @@ En conclusion, cette exigence est devenue une réalité malgré le manque de con
     category: "Jamila Alami"
   },
   {
-    id: 4,
+    id: 5,
     title: "Covid 19 – Mesures fiscales et sociales",
     content: `Afin d'endiguer la propagation de la pandémie COVID-19, le 19 mars 2020, conformément aux dispositions de l'article 81 de la constitution, le Gouvernement marocain a adopté le décret-loi n°2.20.292 prévoyant l'état d'urgence sur l'ensemble du territoire du royaume et ce du 20 mars au 20 avril 2020, ce décret-loi a été validé le 22 mars par les deux commissions parlementaires. Afin d'accompagner et de préserver l'économie marocaine durant cette crise sanitaire, plusieurs mesures fiscales et sociales ont été prises par les autorités marocaines pour faire face à cette situation exceptionnelle.
 
@@ -148,7 +192,7 @@ Les entreprises qui s'engagent à ne pas réduire leurs effectifs, déclarés au
     category: "Jamila Alami"
   },
   {
-    id: 5,
+    id: 6,
     title: "La spoliation foncière : les nouvelles mesures d'affrontement.",
     content: `La spoliation foncière repose sur l'idée selon laquelle un bien immobilier, propriété de quelqu'un, fait l'objet par un spoliateur d'une attaque, tout en utilisant le faux et ce, dans le dessein de se faire reconnaître un droit de propriété sur ce bien. A vrai dire, des histoires relatant ses faits ne cessent de circuler de la bouche de nos proches ou via la presse, et leur répercussion sur l'image du pays est très néfaste, en créant des écueils implacables dans le secteur immobilier, auxquels également sont impliqués des professionnels tels des notaires, des avocats, et des fonctionnaires de cadastre, c'est morose!
 
@@ -172,7 +216,7 @@ Le registre des SCI : un registre spécial réservé aux SCI a été créé afin
     category: "Jamila Alami"
   },
   {
-    id: 6,
+    id: 7,
     title: "Covid 19 : L'impact sur la relation locative",
     content: `Après avoir déclaré le 20 mars 2020 l'état d'urgence sanitaire au Maroc pour lutter contre le Corona virus, les autorités se sont efforcées de prendre un ensemble de mesures proactives pour limiter la propagation de la pandémie en imposant la quarantaine et empêchant les individus de quitter leur domicile sauf pour la nécessité spécifiée exclusivement dans la fiche de sortie exceptionnelle.
 
@@ -208,7 +252,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Jamila Alami"
   },
   {
-    id: 7,
+    id: 8,
     title: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     content: "Prolongation exceptionnelle : La CNSS accorde des remises sur les pénalités et frais de retard jusqu'au 15 janvier 2025",
     date: "10/01/2025",
@@ -216,7 +260,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 8,
+    id: 9,
     title: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     content: "Mesures d'assouplissement et de simplification du régime des voyages pour études à l'étranger",
     date: "10/01/2025",
@@ -224,7 +268,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 9,
+    id: 10,
     title: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     content: "E-Police : La nouvelle plateforme numérique de la DGSN pour simplifier les services policiers au Maroc",
     date: "01/02/2024",
@@ -232,7 +276,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 10,
+    id: 11,
     title: "Le Maroc renforce sa posture face aux menaces numériques",
     content: "Le Maroc renforce sa posture face aux menaces numériques",
     date: "07/01/2024",
@@ -240,7 +284,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 11,
+    id: 12,
     title: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     content: "Bonne nouvelle pour les mamans ! Chaque jour, HOUKOUKI vous donne l'actualité juridique qui vous intéresse.",
     date: "02/01/2024",
@@ -248,7 +292,7 @@ Si, ces deux lois sont promulguées, qui protégera les propriétaires dont les 
     category: "Équipe HOUKOUKI"
   },
   {
-    id: 12,
+    id: 13,
     title: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     content: "Plongez au cœur de la révolution numérique avec la nouvelle initiative du SDG !!",
     date: "29/01/2024",
