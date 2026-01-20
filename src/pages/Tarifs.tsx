@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Clock, Users, Building2, CheckCircle, FileText, MessageSquare, HelpCircle, ArrowRight } from "lucide-react";
+import { Clock, Users, Building2, CheckCircle, FileText, MessageSquare, HelpCircle, ArrowRight, AlertCircle, Info } from "lucide-react";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
@@ -10,10 +10,10 @@ const FrTarifs = () => {
   const particulierFeatures = [
     "Consultations juridiques illimitées*, par téléphone, email ou chat",
     "Lecture et explication de documents courants",
-    "Assistance et rédaction de courriers juridiques standards (réclamations, mises en demeure simples, contestations, relances)",
+    "Assistance et rédaction de courriers juridiques standards\n(réclamations, mises en demeure simples, contestations, relances)",
     "Conseil en cas de litige ou de situation pré contentieuse",
     "Recours amiables lorsque cela est possible",
-    "Coordination d'un recours judiciaire avec l'avocat du client (1 dossier par an)",
+    "Coordination d'un recours judiciaire avec l'avocat du client\n(1 dossier par an)",
     "Accès à l'application mobile et aux guides juridiques",
     "Suivi par un conseiller référent"
   ];
@@ -24,7 +24,7 @@ const FrTarifs = () => {
     "Assistance et rédaction de courriers juridiques standards",
     "Conseil en cas de litige ou de situation pré contentieuse",
     "Recours amiables",
-    "Coordination d'un recours judiciaire avec l'avocat du client (1 dossier par an)",
+    "Coordination d'un recours judiciaire avec l'avocat du client\n(1 dossier par an)",
     "Accès à l'application mobile et aux guides juridiques",
     "Suivi par un conseiller référent"
   ];
@@ -35,7 +35,7 @@ const FrTarifs = () => {
     "Assistance et rédaction de courriers juridiques standards",
     "Conseil en cas de litige ou de situation pré contentieuse",
     "Recours amiables",
-    "Coordination de procédures judiciaires avec les avocats concernés (jusqu'à 2 dossiers par an – ajustable selon les besoins)",
+    "Coordination de procédures judiciaires avec les avocats concernés\n(jusqu'à 2 dossiers par an – ajustable selon les besoins)",
     "Accès à l'application mobile et aux guides juridiques",
     "Suivi par un conseiller référent"
   ];
@@ -137,7 +137,7 @@ const FrTarifs = () => {
                       {particulierFeatures.map((feature, index) => (
                         <div key={index} className="flex items-start space-x-2">
                           <CheckCircle className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
-                          <span className="text-sm text-gray-700">{feature}</span>
+                          <span className="text-sm text-gray-700 whitespace-pre-line">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -179,7 +179,7 @@ const FrTarifs = () => {
                       {entreprisePetiteFeatures.map((feature, index) => (
                         <div key={index} className="flex items-start space-x-2">
                           <CheckCircle className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
-                          <span className="text-sm text-gray-700">{feature}</span>
+                          <span className="text-sm text-gray-700 whitespace-pre-line">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -221,7 +221,7 @@ const FrTarifs = () => {
                       {entrepriseGrandeFeatures.map((feature, index) => (
                         <div key={index} className="flex items-start space-x-2">
                           <CheckCircle className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
-                          <span className="text-sm text-gray-700">{feature}</span>
+                          <span className="text-sm text-gray-700 whitespace-pre-line">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -275,7 +275,10 @@ const FrTarifs = () => {
                 
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
                   <div className="p-4 bg-amber-50 rounded-lg border border-amber-200">
-                    <p className="font-semibold text-amber-800 mb-2">Important</p>
+                    <div className="flex items-start space-x-2 mb-2">
+                      <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <p className="font-semibold text-amber-800">Important</p>
+                    </div>
                     <p className="text-sm text-amber-700">
                       Houkouki ne représente pas ses clients devant les juridictions.
                       Nous intervenons en amont, en coordination avec l'avocat du client, et privilégions la médiation et les recours amiables chaque fois que cela est possible.
@@ -283,7 +286,10 @@ const FrTarifs = () => {
                   </div>
                   
                   <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
-                    <p className="font-semibold text-blue-800 mb-2">À noter</p>
+                    <div className="flex items-start space-x-2 mb-2">
+                      <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <p className="font-semibold text-blue-800">À noter</p>
+                    </div>
                     <p className="text-sm text-blue-700">
                       Dans le cadre des démarches amiables (mises en demeure, relances, notifications), les frais de timbres, d'huissier ou de tiers intervenants restent à la charge du client. Ces frais font l'objet d'une information préalable et sont engagés uniquement avec l'accord du client.
                     </p>
@@ -363,16 +369,42 @@ const FrTarifs = () => {
             </Card>
           </section>
 
-          {/* CTA Final */}
+          {/* CTA Final - Première consultation */}
           <section className="text-center">
             <Card className="border-2 border-red-200 bg-gradient-to-br from-red-600 to-red-700 text-white">
               <CardContent className="py-12">
                 <MessageSquare className="w-12 h-12 mx-auto mb-4 opacity-80" />
                 <h3 className="text-2xl font-bold mb-4">Vous hésitez ? Commencez simplement</h3>
-                <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
+                <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
                   Vous pouvez commencer par une première consultation, afin de comprendre votre situation et décider ensuite, en toute liberté.
                 </p>
-                <Button size="lg" variant="secondary" className="bg-white text-red-600 hover:bg-gray-100" asChild>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-2 border-red-200 bg-white mt-8">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-red-800">Première consultation juridique</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                  La première consultation permet de comprendre votre situation, d'obtenir un premier avis juridique et d'identifier les options possibles.
+                </p>
+                <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                  Elle constitue un acte juridique à part entière, réalisé par un juriste, et fait l'objet d'une facturation transparente.
+                </p>
+                <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                  Cette consultation est sans engagement pour la suite : vous restez libre de décider si vous souhaitez poursuivre via une prestation ponctuelle ou un abonnement juridique.
+                </p>
+                
+                <div className="py-6 border-t border-b border-gray-200">
+                  <p className="text-4xl font-bold text-red-600">600 <span className="text-xl font-normal text-gray-600">DH TTC</span></p>
+                </div>
+                
+                <p className="text-sm text-gray-600 max-w-2xl mx-auto">
+                  Cette consultation est sans engagement pour la suite. Vous restez libre de décider si vous souhaitez poursuivre via une prestation ponctuelle ou un abonnement juridique. Si vous choisissez ensuite un abonnement juridique, la consultation peut être prise en compte dans certaines conditions.
+                </p>
+                
+                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white" asChild>
                   <Link to="/fr/contact">
                     Prendre rendez-vous
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -380,6 +412,12 @@ const FrTarifs = () => {
                 </Button>
               </CardContent>
             </Card>
+          </section>
+
+          {/* Footer tagline */}
+          <section className="text-center py-8">
+            <p className="text-xl text-gray-700 font-medium">Houkouki</p>
+            <p className="text-gray-600">Rendre le droit accessible, humain et actionnable.</p>
           </section>
         </div>
       </div>
