@@ -76,6 +76,7 @@ const FrTarifs = () => {
           <div className="max-w-3xl mx-auto space-y-6">
             <p className="text-lg text-gray-700 leading-relaxed">
               Chez Houkouki, l'accompagnement juridique ne doit jamais être une source d'incertitude supplémentaire.
+              <br />
               Notre tarification est conçue pour vous offrir <strong>clarté, accessibilité et maîtrise</strong>, que vous soyez un particulier ou une entreprise.
             </p>
             
