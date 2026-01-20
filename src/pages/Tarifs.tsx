@@ -115,7 +115,7 @@ const FrTarifs = () => {
 
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Particulier */}
-              <Card className="border-2 border-red-200 hover:shadow-xl transition-all duration-300 bg-white">
+              <Card className="border-2 border-red-200 hover:shadow-xl transition-all duration-300 bg-white flex flex-col">
                 <CardHeader className="text-center pb-4">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-red-600 text-white">
                     <Clock className="w-8 h-8" />
@@ -126,7 +126,7 @@ const FrTarifs = () => {
                   </p>
                 </CardHeader>
                 
-                <CardContent className="space-y-6">
+                <CardContent className="space-y-6 flex-1 flex flex-col">
                   <p className="text-sm text-gray-600 leading-relaxed">
                     Cette formule s'adresse aux particuliers qui souhaitent comprendre leur situation juridique, être accompagnés dans leurs démarches et agir avec méthode face aux difficultés de la vie courante (famille, logement, contrats, patrimoine, relations professionnelles ou personnelles).
                   </p>
@@ -143,6 +143,8 @@ const FrTarifs = () => {
                     </div>
                   </div>
                   
+                  <div className="flex-1"></div>
+                  
                   <div className="text-center pt-4 border-t border-gray-100">
                     <p className="text-sm text-gray-500 mb-1">Abonnement annuel</p>
                     <p className="text-3xl font-bold text-red-600">3000 <span className="text-lg font-normal text-gray-600">MAD TTC / an</span></p>
@@ -155,7 +157,7 @@ const FrTarifs = () => {
               </Card>
 
               {/* Entreprise Petite Structure */}
-              <Card className="border-2 border-red-200 hover:shadow-xl transition-all duration-300 bg-white ring-2 ring-red-500 shadow-lg">
+              <Card className="border-2 border-red-200 hover:shadow-xl transition-all duration-300 bg-white ring-2 ring-red-500 shadow-lg flex flex-col">
                 <CardHeader className="text-center pb-4">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-red-500 text-white">
                     <Users className="w-8 h-8" />
@@ -166,7 +168,7 @@ const FrTarifs = () => {
                   </p>
                 </CardHeader>
                 
-                <CardContent className="space-y-6">
+                <CardContent className="space-y-6 flex-1 flex flex-col">
                   <p className="text-sm text-gray-600 leading-relaxed">
                     Cette formule est destinée aux indépendants, TPE et PME qui ont besoin d'un appui juridique régulier pour sécuriser leurs décisions, leurs contrats et leurs relations professionnelles, sans disposer d'un service juridique interne.
                   </p>
@@ -183,6 +185,8 @@ const FrTarifs = () => {
                     </div>
                   </div>
                   
+                  <div className="flex-1"></div>
+                  
                   <div className="text-center pt-4 border-t border-gray-100">
                     <p className="text-sm text-gray-500 mb-1">Abonnement annuel</p>
                     <p className="text-3xl font-bold text-red-600">7200 <span className="text-lg font-normal text-gray-600">MAD TTC / an</span></p>
@@ -195,7 +199,7 @@ const FrTarifs = () => {
               </Card>
 
               {/* Entreprise Plus de 50 salariés */}
-              <Card className="border-2 border-red-200 hover:shadow-xl transition-all duration-300 bg-white">
+              <Card className="border-2 border-red-200 hover:shadow-xl transition-all duration-300 bg-white flex flex-col">
                 <CardHeader className="text-center pb-4">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-red-600 text-white">
                     <Building2 className="w-8 h-8" />
@@ -206,7 +210,7 @@ const FrTarifs = () => {
                   </p>
                 </CardHeader>
                 
-                <CardContent className="space-y-6">
+                <CardContent className="space-y-6 flex-1 flex flex-col">
                   <p className="text-sm text-gray-600 leading-relaxed">
                     Cette formule s'adresse aux entreprises confrontées à des problématiques juridiques récurrentes ou transversales, nécessitant un suivi dans la durée et une coordination entre différents intervenants.
                   </p>
@@ -222,6 +226,8 @@ const FrTarifs = () => {
                       ))}
                     </div>
                   </div>
+                  
+                  <div className="flex-1"></div>
                   
                   <div className="text-center pt-4 border-t border-gray-100">
                     <p className="text-sm text-gray-500 mb-1">Abonnement annuel</p>
