@@ -229,8 +229,8 @@ const FrTarifs = () => {
                     <p className="text-xs text-gray-500 mt-1">(modalités ajustables selon la taille et les besoins spécifiques de l'entreprise)</p>
                   </div>
                   
-                  <Button className="w-full" variant="outline" asChild>
-                    <Link to="/fr/contact">DEMANDER UN DEVIS</Link>
+                  <Button className="w-full bg-red-600 hover:bg-red-700" asChild>
+                    <Link to="/souscription?plan=grande-entreprise">SOUSCRIRE</Link>
                   </Button>
                 </CardContent>
               </Card>
