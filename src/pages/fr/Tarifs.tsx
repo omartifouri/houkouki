@@ -1,485 +1,429 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Clock, Users, Building2, Heart, CheckCircle, Info } from "lucide-react";
+import { Clock, Users, Building2, CheckCircle, FileText, MessageSquare, HelpCircle, ArrowRight, AlertCircle, Info } from "lucide-react";
 import FrenchNavigation from "@/components/FrenchNavigation";
 import Footer from "@/components/Footer";
-import CareerSupportPopup from "@/components/CareerSupportPopup";
-import FloatingDevisButton from "@/components/FloatingDevisButton";
-import { useScrollToAnchor } from "@/hooks/useScrollToAnchor";
+import { Link } from "react-router-dom";
 
 const FrTarifs = () => {
-  useScrollToAnchor();
-
-  // Définition des tooltips pour les fonctionnalités
-  const featureTooltips: { [key: string]: string } = {
-    "Consultations juridiques illimitées*": "Posez toutes vos questions juridiques par téléphone ou visioconférence, sans limite de volume, dans le respect de votre vie privée.\n* Consultations illimitées dans le cadre d'un usage raisonnable et de bonne foi.",
-    "Lecture et explication de documents courants": "Faites relire vos contrats ou courriers simples (devis, conditions générales, mises en demeure, etc.) et recevez un décryptage clair de leurs principales implications.\n\nLes demandes nécessitant une analyse approfondie, une négociation ou une rédaction sur mesure font l'objet d'une prestation complémentaire.",
-    "Assistance et rédaction de courriers standards": "Nos juristes rédigent pour vous des courriers types (réclamations, mises en demeure simples, contestations, relances, etc.) adaptés à votre situation.\n\nLes courriers nécessitant une argumentation juridique approfondie ou une rédaction sur mesure font l'objet d'une prestation complémentaire.", 
-    "Conseil en cas de litige ou de pré-contentieux": "Obtenez un éclairage juridique clair sur votre situation et les options possibles pour gérer un désaccord avant qu'il ne s'aggrave.\n\nNos juristes vous aident à adopter la bonne posture et à préparer vos échanges pour favoriser une issue amiable.\n\nL'accompagnement dans une procédure ou la rédaction d'actes juridiques spécifiques relève d'une prestation complémentaire.",
-    "Accès à l'application mobile et guides juridiques": "Interface dédiée avec guides pratiques, modèles de documents et suivi de vos dossiers en temps réel.",
-    "Suivi par un conseiller référent": "Un interlocuteur unique assure la continuité de votre accompagnement et la cohérence de vos échanges.\n\nLes suivis nécessitant une analyse approfondie ou une gestion de dossier sur la durée font l'objet d'une offre sur mesure.",
-    "Audit de contrats et documents RH": "Vérification et optimisation de vos contrats de travail, règlements intérieurs et procédures RH.",
-    "Sécurisation des procédures RH": "Mise en conformité de vos processus de recrutement, sanctions disciplinaires et ruptures de contrat.",
-    "Rédaction de CGV ou d'actes juridiques": "Création sur-mesure de vos conditions générales de vente, contrats commerciaux et documents juridiques.",
-    "Accompagnement en cas de contrôle ou litige": "Assistance lors des contrôles administratifs (CNSS, inspection du travail) et gestion des contentieux."
-  };
-
-  const services = [
-    // Droit de la famille
-    { name: "Conseil et assistance en matière de divorce", description: "Accompagnement juridique complet dans les procédures de divorce (consentement mutuel, judiciaire)", category: "Droit de la famille" },
-    { name: "Rédaction d'une convention de divorce", description: "Élaboration d'une convention de divorce par consentement mutuel incluant tous les aspects patrimoniaux", category: "Droit de la famille" },
-    { name: "Conseil sur la garde des enfants", description: "Orientation juridique sur les droits de garde, droit de visite et hébergement des enfants", category: "Droit de la famille" },
-    { name: "Conseil en matière de succession et héritage", description: "Accompagnement juridique sur les questions de succession, partage successoral et droits des héritiers", category: "Droit de la famille" },
-    { name: "Rédaction d'un contrat de mariage", description: "Élaboration d'un contrat de mariage définissant le régime matrimonial et les conditions patrimoniales", category: "Droit de la famille" },
-    { name: "Conseil sur la reconnaissance de paternité", description: "Assistance juridique pour les démarches de reconnaissance ou contestation de paternité", category: "Droit de la famille" },
-    { name: "Autre", description: "Autre prestation en droit de la famille", category: "Droit de la famille" },
-    
-    // Droit des sociétés
-    { name: "Conseil + procédure carte auto-entrepreneur", description: "Accompagnement complet pour l'obtention et les démarches liées à la carte d'entrepreneur", category: "Droit des sociétés" },
-    { name: "Création de société", description: "Assistance juridique pour la constitution d'une société selon le statut approprié", category: "Droit des sociétés" },
-    { name: "Augmentation de capital", description: "Procédure d'augmentation du capital social avec rédaction des actes nécessaires", category: "Droit des sociétés" },
-    { name: "Cession des parts", description: "Accompagnement juridique pour la cession de parts sociales ou d'actions", category: "Droit des sociétés" },
-    { name: "Transfert du siège social", description: "Démarches administratives et juridiques pour le changement d'adresse du siège", category: "Droit des sociétés" },
-    { name: "Dissolution / liquidation", description: "Procédure de dissolution et liquidation amiable ou judiciaire d'une société", category: "Droit des sociétés" },
-    { name: "Rédaction d'un contrat de partenariat avec des clauses particulières", description: "Conception sur-mesure de contrats de partenariat commercial ou stratégique", category: "Droit des sociétés" },
-    
-    { name: "Audit des statuts", description: "Analyse et vérification de la conformité des statuts d'une société", category: "Droit des sociétés" },
-    { name: "Audit de contrat", description: "Examen approfondi d'un contrat pour identifier les risques et opportunités", category: "Droit des sociétés" },
-    { name: "Rédaction d'une convention ou d'un contrat de partenariat", description: "Élaboration de conventions de partenariat adaptées aux besoins spécifiques", category: "Droit des sociétés" },
-    { name: "Rédaction d'une procuration générale", description: "Rédaction de procurations pour représentation dans les actes juridiques", category: "Droit des sociétés" },
-    { name: "Audit de contrats et documents RH", description: "Vérification et optimisation de vos contrats de travail, règlements intérieurs et procédures RH", category: "Droit des sociétés" },
-    { name: "Sécurisation des procédures RH", description: "Mise en conformité de vos processus de recrutement, sanctions disciplinaires et ruptures de contrat", category: "Droit des sociétés" },
-    { name: "Autre", description: "Autre prestation en droit des sociétés", category: "Droit des sociétés" },
-
-
-    // Droit foncier
-    { name: "Audit contrat de bail commercial", description: "Analyse complète des clauses d'un bail commercial existant", category: "Droit foncier" },
-    { name: "Rédaction de contrat de bail commercial", description: "Élaboration sur-mesure de contrats de bail commercial", category: "Droit foncier" },
-    { name: "Rédaction de contrat de bail commercial avec des clauses particulières", description: "Conception de baux commerciaux avec clauses spécifiques selon les besoins", category: "Droit foncier" },
-    { name: "Autre", description: "Autre prestation en droit foncier", category: "Droit foncier" },
-    
-
-    // Droit du travail
-    { name: "Rédaction contrat de travail", description: "Élaboration de contrats de travail conformes à la législation", category: "Droit du travail" },
-    { name: "Établir un solde de tout compte", description: "Calcul et rédaction du solde de tout compte lors de la rupture", category: "Droit du travail" },
-    { name: "Audit d'un contrat de travail", description: "Vérification de la conformité et optimisation des contrats existants", category: "Droit du travail" },
-    { name: "Procédure d'inscription des travailleurs de l'étranger", description: "Démarches pour l'emploi légal de travailleurs étrangers", category: "Droit du travail" },
-    { name: "Autre", description: "Autre prestation en droit du travail", category: "Droit du travail" },
-
-    // Droit du consommateur
-    { name: "Conseil + Audit contrat de service ou d'achat de produit", description: "Analyse des contrats de consommation et protection des droits", category: "Droit du consommateur" },
-    { name: "Recours amiable en vue de la réparation du dommage causé à l'acheteur", description: "Médiation pour obtenir réparation des préjudices subis", category: "Droit du consommateur" },
-    { name: "Conseil et démarche à suivre en cas d'une difficulté financière face aux crédits", description: "Assistance pour les problèmes de surendettement et négociation", category: "Droit du consommateur" },
-    { name: "Conseil et démarche à suivre en cas d'un chèque impayé", description: "Procédures à suivre en cas de chèque sans provision", category: "Droit du consommateur" },
-    { name: "Autre", description: "Autre prestation en droit du consommateur", category: "Droit du consommateur" },
-
-    // Droit des assurances
-    { name: "Accompagnement recours amiable pour obtenir les indemnités en cas de sinistre", description: "Négociation amiable pour l'indemnisation des sinistres", category: "Droit des assurances" },
-    { name: "Autre", description: "Autre prestation en droit des assurances", category: "Droit des assurances" },
-
-    // Droit de la protection des données
-    { name: "Suivi des dossiers auprès de la CNDP", description: "Accompagnement dans les relations avec la Commission Nationale de contrôle de la protection des Données Personnelles", category: "Protection des données" },
-    { name: "Autre", description: "Autre prestation en protection des données", category: "Protection des données" },
-
-    // Conseil en financement
-    { name: "Montage financier", description: "Structuration et optimisation de votre plan de financement pour vos projets d'entreprise", category: "Conseil en financement" },
-    { name: "Analyse bilancielle", description: "Analyse détaillée de vos bilans financiers et recommandations stratégiques", category: "Conseil en financement" },
-    { name: "Stratégie de finance", description: "Élaboration de stratégies financières adaptées à vos objectifs de développement", category: "Conseil en financement" },
-
-    // Services transversaux
-    { name: "Coordination d'un recours judiciaire", description: "Organisation et suivi des procédures judiciaires avec les avocats", category: "Services transversaux" },
-    { name: "Recours amiable - Rédaction d'une mise en demeure", description: "Rédaction de courriers de mise en demeure pour résolution amiable", category: "Services transversaux" },
-    { name: "Rédaction de documents juridiques sur mesure", description: "Rédaction personnalisée de vos conditions générales de vente, contrats commerciaux ou autres actes juridiques, adaptés à votre activité et à votre réglementation.", category: "Services transversaux" },
-    { name: "Accompagnement en cas de contrôle ou de litige", description: "Nos juristes vous conseillent sur la conduite à adopter lors d'un contrôle administratif (CNSS, inspection du travail, fiscalité…).\nL'orientation et la stratégie en cas de litige, l'assistance directe auprès des administrations ou la gestion complète d'un dossier contentieux font l'objet d'un devis spécifique.", category: "Services transversaux" },
-    { name: "Orientation et stratégie en cas de contrôle administratif ou de litige", description: "Analyse approfondie de votre situation et élaboration d'une stratégie de réponse ou de négociation adaptée à votre contexte (échanges avec l'administration, rédaction de courriers argumentés, préparation de défense).", category: "Services transversaux" },
-    { name: "Autre", description: "Autre prestation transversale", category: "Services transversaux" },
-
-    // Autres domaines de droits
-    { name: "Autre", description: "Autre prestation dans d'autres domaines de droits", category: "Autres domaines de droits" }
+  const particulierFeatures = [
+    "Consultations juridiques illimitées*, par téléphone, email ou chat",
+    "Lecture et explication de documents courants",
+    "Assistance et rédaction de courriers juridiques standards\n(réclamations, mises en demeure simples, contestations, relances)",
+    "Conseil en cas de litige ou de situation pré contentieuse",
+    "Recours amiables lorsque cela est possible",
+    "Coordination d'un recours judiciaire avec l'avocat du client\n(1 dossier par an)",
+    "Accès à l'application mobile et aux guides juridiques",
+    "Suivi par un conseiller référent"
   ];
 
-  const pricingPlans = [
+  const entreprisePetiteFeatures = [
+    "Consultations juridiques illimitées*, par téléphone, email ou chat",
+    "Analyse, lecture et explication de documents courants",
+    "Assistance et rédaction de courriers juridiques standards",
+    "Conseil en cas de litige ou de situation pré contentieuse",
+    "Recours amiables",
+    "Coordination d'un recours judiciaire avec l'avocat du client\n(1 dossier par an)",
+    "Accès à l'application mobile et aux guides juridiques",
+    "Suivi par un conseiller référent"
+  ];
+
+  const entrepriseGrandeFeatures = [
+    "Consultations juridiques illimitées*, par téléphone, email ou chat",
+    "Analyse et relecture de documents courants",
+    "Assistance et rédaction de courriers juridiques standards",
+    "Conseil en cas de litige ou de situation pré contentieuse",
+    "Recours amiables",
+    "Coordination de procédures judiciaires avec les avocats concernés\n(jusqu'à 2 dossiers par an – ajustable selon les besoins)",
+    "Accès à l'application mobile et aux guides juridiques",
+    "Suivi par un conseiller référent"
+  ];
+
+  const prestationsExemples = [
+    "Consultation juridique ponctuelle",
+    "Analyse ou relecture de document",
+    "Rédaction de courrier spécifique",
+    "Accompagnement précontentieux",
+    "Recours amiables",
+    "Médiation"
+  ];
+
+  const faqItems = [
     {
-      title: "PARTICULIER",
-      icon: Clock,
-      subtitle: "Un recours amiable ou une coordination d'un recours judiciaire gratuit / an",
-      features: [
-        "Consultations juridiques illimitées*",
-        "Lecture et explication de documents courants",
-        "Assistance et rédaction de courriers standards",
-        "Conseil en cas de litige ou précontentieux",
-        "Accès à l'application mobile et guides juridiques",
-        "Suivi par un conseiller référent"
-      ],
-      price: "3000",
-      currency: "MAD TTC",
-      buttonText: "SOUSCRIRE",
-      popular: false
+      question: "Y a-t-il des frais cachés ?",
+      answer: "Non. Tout est présenté et validé à l'avance."
     },
     {
-      title: "1 - 50 EMPLOYÉS",
-      icon: Users,
-      subtitle: "Un recours amiable ou une coordination d'un recours judiciaire gratuit / an",
-      features: [
-        "Consultations juridiques illimitées*",
-        "Lecture et explication de documents courants",
-        "Assistance et rédaction de courriers standards",
-        "Conseil en cas de litige ou de pré-contentieux",
-        "Accès à l'application mobile et guides juridiques",
-        "Suivi par un conseiller référent",
-        "Les prestations complémentaires sont à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés"
-      ],
-      price: "7200",
-      currency: "MAD TTC", 
-      buttonText: "COMMANDER",
-      popular: true
+      question: "Suis-je obligé(e) d'accepter un devis complémentaire ?",
+      answer: "Non. Vous restez libre de votre décision."
     },
     {
-      title: "AU DELÀ DE 50 EMPLOYÉS",
-      icon: Building2,
-      subtitle: "",
-      features: [
-        "Consultations juridiques illimitées*",
-        "Lecture et explication de documents courants",
-        "Assistance et rédaction de courriers standards",
-        "Conseil en cas de litige ou de pré-contentieux",
-        "Accès à l'application mobile et guides juridiques",
-        "Suivi par un conseiller référent",
-        "Suivi prioritaire et dédié",
-        "Réunions de cadrage juridiques sur-mesure",
-        "Politique de gestion des risques juridiques"
-      ],
-      price: "Sur devis",
-      currency: "",
-      buttonText: "DEMANDER UN DEVIS",
-      popular: false
+      question: "Puis-je commencer sans abonnement ?",
+      answer: "Oui, via une prestation à la carte ou une première consultation."
     }
   ];
 
-
   return (
-    <TooltipProvider>
-      <div id="top" className="min-h-screen bg-gradient-to-br from-red-50 to-white">
-        <FrenchNavigation />
+    <div id="top" className="min-h-screen bg-gradient-to-br from-red-50 to-white">
+      <FrenchNavigation />
 
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Nos formules et tarifs</h1>
-          <h2 className="text-2xl text-red-600 mb-8">Une tarification simple, claire et adaptée à vos besoins</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Chez Houkouki, nous croyons que l'accès au droit ne doit pas être un luxe.
-            C'est pourquoi nous vous proposons deux formules tarifaires, selon la nature et la fréquence de vos besoins.
-          </p>
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Tarifs Houkouki</h1>
+          <h2 className="text-2xl md:text-3xl text-red-600 mb-8 font-semibold">Une tarification claire, sans surprise</h2>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Chez Houkouki, l'accompagnement juridique ne doit jamais être une source d'incertitude supplémentaire.
+              <br />
+              Notre tarification est conçue pour vous offrir <strong>clarté, accessibilité et maîtrise</strong>, que vous soyez un particulier ou une entreprise.
+            </p>
+            
+            <Card className="border-2 border-red-200 bg-white/80">
+              <CardContent className="pt-6">
+                <p className="font-semibold text-gray-900 mb-4">Avant toute action :</p>
+                <div className="space-y-3 text-left max-w-md mx-auto">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                    <span className="text-gray-700">vous savez ce qui est inclus,</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                    <span className="text-gray-700">vous êtes informé(e) lorsqu'un devis est nécessaire,</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0" />
+                    <span className="text-gray-700">aucune prestation n'est engagée sans votre accord préalable.</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
-        <div className="max-w-6xl mx-auto space-y-8">
-          {/* Introduction aux formules */}
-          <section>
-            <Card className="border-2 border-red-200">
-              <CardContent className="pt-6">
-                <div className="grid md:grid-cols-3 gap-6 text-center">
-                  <div className="flex flex-col items-center space-y-3 cursor-pointer hover:bg-red-50 p-4 rounded-lg transition-all" onClick={() => {
-                    document.getElementById('abonnement-annuel')?.scrollIntoView({ behavior: 'smooth' });
-                  }}>
-                    <CheckCircle className="h-6 w-6 text-red-600 flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-gray-900">Abonnement</p>
-                      <p className="text-gray-700">Formules d'abonnement annuel</p>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center space-y-3 cursor-pointer hover:bg-red-50 p-4 rounded-lg transition-all" onClick={() => {
-                    document.getElementById('prestations-a-la-carte')?.scrollIntoView({ behavior: 'smooth' });
-                  }}>
-                    <CheckCircle className="h-6 w-6 text-red-600 flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-gray-900">À la carte</p>
-                      <p className="text-gray-700">Prestations ponctuelles</p>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center space-y-3 cursor-pointer hover:bg-red-50 p-4 rounded-lg transition-all" onClick={() => {
-                    document.getElementById('formule-entreprise-social')?.scrollIntoView({ behavior: 'smooth' });
-                  }}>
-                    <CheckCircle className="h-6 w-6 text-red-600 flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-gray-900">Formule entreprise et employés</p>
-                      <p className="text-gray-700">Solutions sur mesure</p>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-gray-700 mt-6 text-center">
-                  Chaque formule vous donne accès à un accompagnement juridique personnalisé, à distance, dans le respect total de la confidentialité.
-                </p>
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Abonnement annuel */}
-          <section id="abonnement-annuel">
-            <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Abonnement annuel</h2>
-            <p className="text-gray-600 text-center mb-12">
-              L'option idéale pour les particuliers, professionnels ou entreprises qui souhaitent un suivi juridique complet tout au long de l'année.
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              {pricingPlans.map((plan, index) => {
-                const Icon = plan.icon;
-                return (
-                  <Card 
-                    key={index} 
-                    className={`border-2 border-red-200 relative overflow-hidden transition-all duration-300 hover:shadow-xl ${
-                      plan.popular 
-                        ? 'ring-2 ring-brand-coral shadow-xl scale-105 bg-gradient-to-br from-brand-coral/20 to-brand-beige/20' 
-                        : 'hover:scale-102 bg-white'
-                    }`}
-                  >
-                    <CardHeader className="text-center pb-4">
-                      <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${
-                        plan.popular ? 'bg-red-500 text-white' : 'bg-red-600 text-white'
-                      }`}>
-                        <Icon className="w-8 h-8" />
-                      </div>
-                      <CardTitle className="text-xl font-bold text-red-800 mb-2">
-                        {plan.title}
-                      </CardTitle>
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        {plan.subtitle}
-                      </p>
-                    </CardHeader>
-                    
-                    <CardContent className="space-y-6">
-                      <div className="space-y-3">
-                        {plan.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                            {featureTooltips[feature] ? (
-                              <Tooltip>
-                                <TooltipTrigger asChild>
-                                  <span className="text-sm text-gray-700 leading-relaxed cursor-help flex items-center gap-1 hover:text-red-600 transition-colors">
-                                    {feature}
-                                    <Info className="w-3 h-3 text-gray-400" />
-                                  </span>
-                                </TooltipTrigger>
-                                <TooltipContent className="max-w-xs">
-                                  <p>{featureTooltips[feature]}</p>
-                                </TooltipContent>
-                              </Tooltip>
-                            ) : feature.includes("Les prestations complémentaires") ? (
-                              <span className="text-sm text-gray-700 leading-relaxed">
-                                Les prestations complémentaires sont à un tarif préférentiel de 600 DH / HT / heure réservé aux abonnés - <button
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    const element = document.getElementById('exemples-prestations');
-                                    if (element) {
-                                      const offset = 100;
-                                      const elementPosition = element.getBoundingClientRect().top;
-                                      const offsetPosition = elementPosition + window.scrollY - offset;
-                                      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                                    }
-                                  }}
-                                  className="text-red-600 underline hover:text-red-800 cursor-pointer"
-                                >
-                                  voir prestations à la carte
-                                </button>
-                              </span>
-                            ) : (
-                              <span className="text-sm text-gray-700 leading-relaxed">
-                                {feature}
-                              </span>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                      
-                      <div className="text-center pt-6 border-t border-gray-200">
-                        <div className="mb-6">
-                          <div className={`text-4xl font-bold ${plan.popular ? 'text-red-600' : 'text-gray-900'}`}>
-                            {plan.price}
-                          </div>
-                          {plan.currency && (
-                            <div className="text-gray-600 text-sm mt-1">{plan.currency}</div>
-                          )}
-                        </div>
-                        
-                        <Button 
-                          className="w-full bg-[#C0997A] hover:bg-[#B8926F] text-white font-semibold py-3"
-                          onClick={() => {
-                            if (plan.price === "Sur devis") {
-                              window.location.href = "/fr/contact";
-                            } else if (plan.buttonText === "SOUSCRIRE" || plan.buttonText === "COMMANDER") {
-                              const planParam = plan.title === "PARTICULIER" ? "PARTICULIER" : "1-50";
-                              window.location.href = `/souscription?plan=${planParam}`;
-                            }
-                          }}
-                        >
-                          {plan.buttonText}
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+        <div className="max-w-6xl mx-auto space-y-20">
+          {/* Section Abonnements */}
+          <section id="abonnements">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-red-800 mb-4">Nos abonnements juridiques annuels</h2>
+              <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Les abonnements Houkouki constituent le socle principal de notre accompagnement.
+                Ils permettent de poser vos questions sans hésiter, d'anticiper les risques et de privilégier les solutions amiables avant que les situations ne se dégradent.
+              </p>
             </div>
 
-            {/* Note importante */}
-            <Card className="border-2 border-red-200 mt-8">
-              <CardContent className="pt-6 text-center">
-                <p className="text-gray-700 mb-4">
-                  <strong>*</strong> Consultations illimitées dans le cadre d'un usage raisonnable et de bonne foi.
-                </p>
-                <p className="text-gray-700 text-sm">
-                  Les tarifs sont exprimés en dirhams marocains (MAD). TVA applicable selon la réglementation en vigueur.
-                  Les prestations sont réalisées par des juristes qualifiés, membres de l'équipe Houkouki.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="grid lg:grid-cols-3 gap-8">
+              {/* Particulier */}
+              <Card className="border-2 border-red-200 hover:shadow-xl transition-all duration-300 bg-white flex flex-col">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-red-600 text-white">
+                    <Clock className="w-8 h-8" />
+                  </div>
+                  <CardTitle className="text-xl font-bold text-red-800 mb-2">PARTICULIER</CardTitle>
+                  <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                    Pour protéger vos droits et sécuriser votre quotidien juridique
+                  </p>
+                </CardHeader>
+                
+                <CardContent className="space-y-6 flex-1 flex flex-col">
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Cette formule s'adresse aux particuliers qui souhaitent comprendre leur situation juridique, être accompagnés dans leurs démarches et agir avec méthode face aux difficultés de la vie courante (famille, logement, contrats, patrimoine, relations professionnelles ou personnelles).
+                  </p>
+                  
+                  <div>
+                    <p className="font-semibold text-gray-800 mb-3">Inclus dans l'abonnement</p>
+                    <div className="space-y-2">
+                      {particulierFeatures.map((feature, index) => (
+                        <div key={index} className="flex items-start space-x-2">
+                          <CheckCircle className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700 whitespace-pre-line">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="flex-1"></div>
+                  
+                  <div className="text-center pt-4 border-t border-gray-100">
+                    <p className="text-sm text-gray-500 mb-1">Abonnement annuel</p>
+                    <p className="text-3xl font-bold text-red-600">3000 <span className="text-lg font-normal text-gray-600">MAD TTC / an</span></p>
+                  </div>
+                  
+                  <Button className="w-full bg-red-600 hover:bg-red-700" asChild>
+                    <Link to="/souscription?plan=particulier">SOUSCRIRE</Link>
+                  </Button>
+                </CardContent>
+              </Card>
 
+              {/* Entreprise Petite Structure */}
+              <Card className="border-2 border-red-200 hover:shadow-xl transition-all duration-300 bg-white ring-2 ring-red-500 shadow-lg flex flex-col">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-red-500 text-white">
+                    <Users className="w-8 h-8" />
+                  </div>
+                  <CardTitle className="text-xl font-bold text-red-800 mb-2">ENTREPRISE – PETITE STRUCTURE</CardTitle>
+                  <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                    Pour sécuriser votre activité sans alourdir votre organisation
+                  </p>
+                </CardHeader>
+                
+                <CardContent className="space-y-6 flex-1 flex flex-col">
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Cette formule est destinée aux indépendants, TPE et PME qui ont besoin d'un appui juridique régulier pour sécuriser leurs décisions, leurs contrats et leurs relations professionnelles, sans disposer d'un service juridique interne.
+                  </p>
+                  
+                  <div>
+                    <p className="font-semibold text-gray-800 mb-3">Inclus dans l'abonnement</p>
+                    <div className="space-y-2">
+                      {entreprisePetiteFeatures.map((feature, index) => (
+                        <div key={index} className="flex items-start space-x-2">
+                          <CheckCircle className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700 whitespace-pre-line">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="flex-1"></div>
+                  
+                  <div className="text-center pt-4 border-t border-gray-100">
+                    <p className="text-sm text-gray-500 mb-1">Abonnement annuel</p>
+                    <p className="text-3xl font-bold text-red-600">7200 <span className="text-lg font-normal text-gray-600">MAD TTC / an</span></p>
+                  </div>
+                  
+                  <Button className="w-full bg-red-600 hover:bg-red-700" asChild>
+                    <Link to="/souscription?plan=entreprise">SOUSCRIRE</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Entreprise Plus de 50 salariés */}
+              <Card className="border-2 border-red-200 hover:shadow-xl transition-all duration-300 bg-white flex flex-col">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-red-600 text-white">
+                    <Building2 className="w-8 h-8" />
+                  </div>
+                  <CardTitle className="text-xl font-bold text-red-800 mb-2">ENTREPRISE – PLUS DE 50 SALARIÉS</CardTitle>
+                  <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                    Pour structurer et coordonner votre accompagnement juridique
+                  </p>
+                </CardHeader>
+                
+                <CardContent className="space-y-6 flex-1 flex flex-col">
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Cette formule s'adresse aux entreprises confrontées à des problématiques juridiques récurrentes ou transversales, nécessitant un suivi dans la durée et une coordination entre différents intervenants.
+                  </p>
+                  
+                  <div>
+                    <p className="font-semibold text-gray-800 mb-3">Inclus dans l'abonnement</p>
+                    <div className="space-y-2">
+                      {entrepriseGrandeFeatures.map((feature, index) => (
+                        <div key={index} className="flex items-start space-x-2">
+                          <CheckCircle className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700 whitespace-pre-line">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="flex-1"></div>
+                  
+                  <div className="text-center pt-4 border-t border-gray-100">
+                    <p className="text-sm text-gray-500 mb-1">Abonnement annuel</p>
+                    <p className="text-3xl font-bold text-red-600">18 000 <span className="text-lg font-normal text-gray-600">MAD TTC / an</span></p>
+                    <p className="text-xs text-gray-500 mt-1">(modalités ajustables selon la taille et les besoins spécifiques de l'entreprise)</p>
+                  </div>
+                  
+                  <Button className="w-full bg-red-600 hover:bg-red-700" asChild>
+                    <Link to="/souscription?plan=grande-entreprise">SOUSCRIRE</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Note consultations illimitées */}
+            <div className="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <p className="text-sm text-gray-600">
+                <span className="font-semibold">* Consultations illimitées</span> : Dans le cadre d'un usage normal, hors dossiers nécessitant un traitement approfondi ou une intervention spécifique faisant l'objet d'un devis complémentaire.
+              </p>
+            </div>
           </section>
 
-          {/* Formule Entreprise + Social */}
-          <section id="formule-entreprise-social">
-            <Card className="border-2 border-red-200 bg-red-50">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-600 text-white flex items-center justify-center">
-                  <Heart className="w-8 h-8" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-red-800 mb-2">
-                  Formule Entreprise + Social
-                </CardTitle>
-                <p className="text-gray-700">
-                  Pour les entreprises souhaitant offrir à la fois un accompagnement juridique complet à leur structure 
-                  et un dispositif de soutien juridique et social à leurs salariés.
-                </p>
-                <div className="text-3xl font-bold text-red-600 mt-4">Sur devis</div>
+          {/* Ce que couvre l'abonnement */}
+          <section>
+            <Card className="border-2 border-red-200 bg-gradient-to-br from-red-50 to-white">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-red-800 text-center">Ce que couvre l'abonnement Houkouki</CardTitle>
               </CardHeader>
-              
-              <CardContent className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-4">Prestations incluses pour l'entreprise :</h4>
-                  <div className="space-y-2">
-                    {[
-                      "Consultations juridiques illimitées sur toutes les problématiques",
-                      "Audit et sécurisation de documents RH et commerciaux", 
-                      "Rédaction de CGV, contrats types, lettres officielles",
-                      "Assistance en cas de contrôle ou contentieux administratif",
-                      "Accès à l'espace entreprise sur l'application Houkouki"
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <CheckCircle className="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-gray-700">{item}</span>
+              <CardContent className="space-y-6">
+                <p className="text-gray-700 text-center">L'abonnement permet de :</p>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                  {[
+                    "poser vos questions sans attendre une urgence,",
+                    "comprendre vos droits et obligations,",
+                    "anticiper les risques juridiques,",
+                    "privilégier les solutions amiables,",
+                    "être accompagné(e) avec méthode et continuité."
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start space-x-2">
+                      <CheckCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                  <div className="p-4 bg-amber-50 rounded-lg border border-amber-200">
+                    <div className="flex items-start space-x-2 mb-2">
+                      <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <p className="font-semibold text-amber-800">Important</p>
+                    </div>
+                    <p className="text-sm text-amber-700">
+                      Houkouki ne représente pas ses clients devant les juridictions.
+                      Nous intervenons en amont, en coordination avec l'avocat du client, et privilégions la médiation et les recours amiables chaque fois que cela est possible.
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <div className="flex items-start space-x-2 mb-2">
+                      <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <p className="font-semibold text-blue-800">À noter</p>
+                    </div>
+                    <p className="text-sm text-blue-700">
+                      Dans le cadre des démarches amiables (mises en demeure, relances, notifications), les frais de timbres, d'huissier ou de tiers intervenants restent à la charge du client. Ces frais font l'objet d'une information préalable et sont engagés uniquement avec l'accord du client.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Prestations à la carte */}
+          <section id="prestations-carte">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-red-800 mb-4">Prestations à la carte</h2>
+              <p className="text-lg text-gray-600">(en complément ou en première approche)</p>
+            </div>
+            
+            <Card className="border-2 border-red-200">
+              <CardContent className="pt-6 space-y-6">
+                <p className="text-gray-700 leading-relaxed">
+                  Vous pouvez avoir besoin d'une aide juridique ponctuelle, sans engagement annuel.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Les prestations à la carte permettent de répondre à un besoin précis ou urgent,
+                  ou de faire une première démarche avant de choisir un abonnement.
+                </p>
+                
+                <div className="mt-8">
+                  <p className="font-semibold text-gray-800 mb-4">Exemples de prestations ponctuelles</p>
+                  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+                    {prestationsExemples.map((prestation, index) => (
+                      <div key={index} className="flex items-center space-x-2 p-3 bg-gray-50 rounded-lg">
+                        <FileText className="w-4 h-4 text-red-600 flex-shrink-0" />
+                        <span className="text-sm text-gray-700">{prestation}</span>
                       </div>
                     ))}
                   </div>
                 </div>
                 
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-4">Prestations dédiées aux salariés :</h4>
-                  <div className="space-y-2">
-                    {[
-                      "Accès direct à un juriste pour questions personnelles",
-                      "Aide à la lecture de documents et rédaction",
-                      "Orientation et soutien en cas de précarité",
-                      "Conseil en financement",
-                      "Confidentialité absolue, sans retour à l'employeur",
-                      "Canal dédié (téléphone ou digital)"
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <CheckCircle className="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-gray-700">{item}</span>
-                      </div>
-                    ))}
-                  </div>
+                <div className="mt-8 p-4 bg-red-50 rounded-lg border border-red-200">
+                  <p className="font-semibold text-red-800 mb-2">Modalités de facturation</p>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    Les prestations à la carte font l'objet d'un devis préalable, établi en fonction de la nature et de la complexité du dossier.
+                    Aucune prestation n'est engagée sans validation expresse du devis par le client.
+                  </p>
+                  <p className="text-sm text-gray-700 mt-3 leading-relaxed">
+                    Lorsque les besoins deviennent récurrents, l'abonnement juridique reste la solution la plus adaptée pour maîtriser votre budget et bénéficier d'un accompagnement continu.
+                  </p>
                 </div>
               </CardContent>
-              
-              <div className="px-6 pb-6 text-center">
-                <Button 
-                  className="bg-[#C0997A] hover:bg-[#B8926F] text-white font-semibold py-3"
-                  onClick={() => {
-                    window.location.href = "/fr/contact";
-                  }}
-                >
-                  Demander un devis sur mesure
-                </Button>
-              </div>
             </Card>
           </section>
 
-          {/* Prestations à la carte */}
-          <section id="prestations-a-la-carte">
-            <h2 className="text-3xl font-bold text-red-800 mb-6 text-center">Prestations à la carte</h2>
-            <p className="text-xl text-gray-600 mb-2 text-center">Payez uniquement ce dont vous avez besoin</p>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-center">
-              Une solution flexible pour celles et ceux qui ont un besoin ponctuel, sans engagement.
-              Nos prestations à la carte sont tarifées en fonction du nombre d'heures nécessaires au tarif de<br />
-              <strong>800 DH HT / heure</strong>.
-            </p>
-
-            {/* Tableau des prestations */}
-            <Card className="border-2 border-red-200 mb-12" id="exemples-prestations">
-              <CardHeader>
-                <CardTitle className="text-xl text-center text-red-800">Liste des prestations</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="overflow-x-auto">
-                  <p className="text-sm text-gray-600 mb-4 text-center italic">
-                    La durée par heures est estimée par l'équipe de nos juristes
-                  </p>
-                  <Accordion type="multiple" className="w-full">
-                    {Object.entries(
-                      services.reduce((acc, service) => {
-                        if (!acc[service.category]) {
-                          acc[service.category] = [];
-                        }
-                        acc[service.category].push(service);
-                        return acc;
-                      }, {} as Record<string, typeof services>)
-                    ).map(([category, categoryServices]) => (
-                      <AccordionItem key={category} value={category} className="border-b border-red-200">
-                        <AccordionTrigger className="text-lg font-semibold text-red-800 hover:text-red-900 py-4">
-                          {category}
-                        </AccordionTrigger>
-                        <AccordionContent>
-                          <table className="w-full border-collapse">
-                            <thead>
-                              <tr className="border-b border-gray-200">
-                                <th className="text-left py-3 px-4 font-medium text-gray-900 w-2/5">Prestation</th>
-                                <th className="text-left py-3 px-4 font-medium text-gray-900">Description</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {categoryServices.map((service, index) => (
-                                <tr 
-                                  key={index} 
-                                  className="border-b border-gray-100 hover:bg-red-50 cursor-pointer transition-colors"
-                                  onClick={() => {
-                                    window.location.href = "/fr/contact#top";
-                                  }}
-                                >
-                                  <td className="py-3 px-4 font-medium text-gray-900 text-sm">{service.name}</td>
-                                  <td className="py-3 px-4 text-gray-600 text-sm">{service.description}</td>
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </div>
+          {/* FAQ */}
+          <section id="faq">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-red-800 mb-4">Questions fréquentes</h2>
+            </div>
+            
+            <Card className="border-2 border-red-200 max-w-3xl mx-auto">
+              <CardContent className="pt-6">
+                <Accordion type="single" collapsible className="w-full">
+                  {faqItems.map((item, index) => (
+                    <AccordionItem key={index} value={`item-${index}`}>
+                      <AccordionTrigger className="text-left">
+                        <div className="flex items-center space-x-3">
+                          <HelpCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+                          <span>{item.question}</span>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-700 pl-8">
+                        {item.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </CardContent>
             </Card>
+          </section>
 
+          {/* CTA Final - Première consultation */}
+          <section className="text-center">
+            <Card className="border-2 border-red-200 bg-gradient-to-br from-red-600 to-red-700 text-white">
+              <CardContent className="py-12">
+                <MessageSquare className="w-12 h-12 mx-auto mb-4 opacity-80" />
+                <h3 className="text-2xl font-bold mb-4">Vous hésitez ? Commencez simplement</h3>
+                <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+                  Vous pouvez commencer par une première consultation, afin de comprendre votre situation et décider ensuite, en toute liberté.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-2 border-red-200 bg-white mt-8">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-red-800">Première consultation juridique</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                  La première consultation permet de comprendre votre situation, d'obtenir un premier avis juridique et d'identifier les options possibles.
+                </p>
+                <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                  Elle constitue un acte juridique à part entière, réalisé par un juriste, et fait l'objet d'une facturation transparente.
+                </p>
+                <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                  Cette consultation est sans engagement pour la suite : vous restez libre de décider si vous souhaitez poursuivre via une prestation ponctuelle ou un abonnement juridique.
+                </p>
+                
+                <div className="py-6 border-t border-b border-gray-200">
+                  <p className="text-4xl font-bold text-red-600">600 <span className="text-xl font-normal text-gray-600">DH TTC</span></p>
+                </div>
+                
+                <p className="text-sm text-gray-600 max-w-2xl mx-auto">
+                  Cette consultation est sans engagement pour la suite. Vous restez libre de décider si vous souhaitez poursuivre via une prestation ponctuelle ou un abonnement juridique. Si vous choisissez ensuite un abonnement juridique, la consultation peut être prise en compte dans certaines conditions.
+                </p>
+                
+                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white" asChild>
+                  <Link to="/fr/contact">
+                    Prendre rendez-vous
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Footer tagline */}
+          <section className="text-center py-8">
+            <p className="text-xl text-gray-700 font-medium">Houkouki</p>
+            <p className="text-gray-600">Rendre le droit accessible, humain et actionnable.</p>
           </section>
         </div>
       </div>
       
       <Footer />
-      <CareerSupportPopup />
-      <FloatingDevisButton />
-      </div>
-    </TooltipProvider>
+    </div>
   );
 };
 
