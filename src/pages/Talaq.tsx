@@ -129,7 +129,7 @@ const Talaq = () => {
 
       {/* Footer minimal */}
       <footer className="py-8 text-center text-gray-500 text-sm border-t border-gray-100 space-y-2">
-        <p className="text-base">Pour plus d'informations : <a href="tel:+212529045989" className="font-semibold text-[hsl(170,40%,40%)] hover:underline">05 29 04 59 89</a></p>
+        <p className="text-base">Pour plus d'informations : <a href="tel:+212529045989" className="font-semibold text-[hsl(170,40%,40%)] hover:underline">+212 5 29 04 59 89</a></p>
         <p className="text-gray-400">© {new Date().getFullYear()} Houkouki × Psyphone — Talaq, Soutien Psychologique et Juridique</p>
       </footer>
     </div>
