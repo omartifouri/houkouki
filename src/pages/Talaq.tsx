@@ -63,66 +63,67 @@ const Talaq = () => {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Services + Form side by side */}
       <section className="py-12 px-4 bg-white/60">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-10">
-            Nous vous offrons
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {services.map((s, i) => (
-              <div key={i} className="flex items-start gap-4 p-6 rounded-xl bg-white shadow-sm border border-gray-100">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[hsl(170,40%,60%)] to-[hsl(0,50%,70%)] flex items-center justify-center flex-shrink-0">
-                  <s.icon className="w-6 h-6 text-white" />
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          {/* Left: Services */}
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
+              Nous vous offrons
+            </h2>
+            <div className="space-y-5">
+              {services.map((s, i) => (
+                <div key={i} className="flex items-start gap-4 p-5 rounded-xl bg-white shadow-sm border border-gray-100">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[hsl(170,40%,60%)] to-[hsl(0,50%,70%)] flex items-center justify-center flex-shrink-0">
+                    <s.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <p className="text-gray-700 text-base md:text-lg pt-2">{s.text}</p>
                 </div>
-                <p className="text-gray-700 text-base md:text-lg pt-2">{s.text}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* Form */}
-      <section className="py-16 px-4">
-        <div className="max-w-xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-2">
-            Contactez-nous
-          </h2>
-          <p className="text-center text-gray-500 mb-8">
-            Remplissez le formulaire ci-dessous et nous vous recontacterons dans les plus brefs délais.
-          </p>
+          {/* Right: Form */}
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+              Contactez-nous
+            </h2>
+            <p className="text-gray-500 mb-6">
+              Remplissez le formulaire et nous vous recontacterons dans les plus brefs délais.
+            </p>
 
-          <form onSubmit={handleSubmit} className="space-y-5 bg-white p-8 rounded-2xl shadow-md border border-gray-100">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="nom">Nom *</Label>
-                <Input id="nom" value={form.nom} onChange={(e) => handleChange("nom", e.target.value)} placeholder="Votre nom" required />
+            <form onSubmit={handleSubmit} className="space-y-5 bg-white p-8 rounded-2xl shadow-md border border-gray-100">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="nom">Nom *</Label>
+                  <Input id="nom" value={form.nom} onChange={(e) => handleChange("nom", e.target.value)} placeholder="Votre nom" required />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="prenom">Prénom *</Label>
+                  <Input id="prenom" value={form.prenom} onChange={(e) => handleChange("prenom", e.target.value)} placeholder="Votre prénom" required />
+                </div>
               </div>
+
               <div className="space-y-2">
-                <Label htmlFor="prenom">Prénom *</Label>
-                <Input id="prenom" value={form.prenom} onChange={(e) => handleChange("prenom", e.target.value)} placeholder="Votre prénom" required />
+                <Label htmlFor="telephone">Téléphone *</Label>
+                <Input id="telephone" type="tel" value={form.telephone} onChange={(e) => handleChange("telephone", e.target.value)} placeholder="06 00 00 00 00" required />
               </div>
-            </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="telephone">Téléphone *</Label>
-              <Input id="telephone" type="tel" value={form.telephone} onChange={(e) => handleChange("telephone", e.target.value)} placeholder="06 00 00 00 00" required />
-            </div>
+              <div className="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} placeholder="votre.email@exemple.com" />
+              </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} placeholder="votre.email@exemple.com" />
-            </div>
+              <div className="space-y-2">
+                <Label htmlFor="message">Message</Label>
+                <Textarea id="message" value={form.message} onChange={(e) => handleChange("message", e.target.value)} placeholder="Décrivez brièvement votre situation..." rows={4} />
+              </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="message">Message</Label>
-              <Textarea id="message" value={form.message} onChange={(e) => handleChange("message", e.target.value)} placeholder="Décrivez brièvement votre situation..." rows={4} />
-            </div>
-
-            <Button type="submit" disabled={loading} className="w-full bg-gradient-to-r from-[hsl(170,40%,50%)] to-[hsl(0,50%,65%)] hover:from-[hsl(170,40%,45%)] hover:to-[hsl(0,50%,60%)] text-white h-12 text-base">
-              {loading ? "Envoi en cours..." : "Envoyer ma demande"}
-            </Button>
-          </form>
+              <Button type="submit" disabled={loading} className="w-full bg-gradient-to-r from-[hsl(170,40%,50%)] to-[hsl(0,50%,65%)] hover:from-[hsl(170,40%,45%)] hover:to-[hsl(0,50%,60%)] text-white h-12 text-base">
+                {loading ? "Envoi en cours..." : "Envoyer ma demande"}
+              </Button>
+            </form>
+          </div>
         </div>
       </section>
 
