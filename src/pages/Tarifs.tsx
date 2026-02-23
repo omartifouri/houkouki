@@ -168,6 +168,10 @@ const FrTarifs = () => {
                   
                   <div className="flex-1"></div>
                   
+                  <div className="p-3 bg-blue-50 rounded-lg border border-blue-200 text-sm text-gray-700">
+                    <p>Pour toutes les autres prestations personnalisées : <strong>600 DH HT/heure</strong></p>
+                  </div>
+
                   <div className="text-center pt-4 border-t border-gray-100">
                     <p className="text-sm text-gray-500 mb-1">Abonnement annuel</p>
                     <p className="text-3xl font-bold text-red-600">3000 <span className="text-lg font-normal text-gray-600">MAD TTC / an</span></p>
@@ -210,6 +214,10 @@ const FrTarifs = () => {
                   
                   <div className="flex-1"></div>
                   
+                  <div className="p-3 bg-blue-50 rounded-lg border border-blue-200 text-sm text-gray-700">
+                    <p>Pour toutes les autres prestations personnalisées : <strong>600 DH HT/heure</strong></p>
+                  </div>
+
                   <div className="text-center pt-4 border-t border-gray-100">
                     <p className="text-sm text-gray-500 mb-1">Abonnement annuel</p>
                     <p className="text-3xl font-bold text-red-600">7200 <span className="text-lg font-normal text-gray-600">MAD TTC / an</span></p>
@@ -252,6 +260,10 @@ const FrTarifs = () => {
                   
                   <div className="flex-1"></div>
                   
+                  <div className="p-3 bg-blue-50 rounded-lg border border-blue-200 text-sm text-gray-700">
+                    <p>Pour toutes les autres prestations personnalisées : <strong>600 DH HT/heure</strong></p>
+                  </div>
+
                   <div className="text-center pt-4 border-t border-gray-100">
                     <p className="text-sm text-gray-500 mb-1">Abonnement annuel</p>
                     <p className="text-3xl font-bold text-red-600">18 000 <span className="text-lg font-normal text-gray-600">MAD TTC / an</span></p>
