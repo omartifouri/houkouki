@@ -69,6 +69,29 @@ const FrTarifs = () => {
       <FrenchNavigation />
 
       <div className="container mx-auto px-4 py-16">
+        {/* Prestation Découverte */}
+        <div className="max-w-3xl mx-auto mb-16">
+          <Card className="border-2 border-red-400 bg-gradient-to-br from-red-600 to-red-700 text-white shadow-xl">
+            <CardContent className="py-10 text-center space-y-4">
+              <MessageSquare className="w-10 h-10 mx-auto opacity-80" />
+              <h2 className="text-2xl md:text-3xl font-bold">Prestation Découverte</h2>
+              <p className="text-lg opacity-90 max-w-xl mx-auto">
+                Une première consultation juridique pour comprendre votre situation et identifier vos options.
+              </p>
+              <div className="pt-4">
+                <p className="text-4xl font-bold">600 <span className="text-xl font-normal opacity-80">DH HT</span></p>
+                <p className="text-lg mt-1 opacity-90">soit <span className="font-semibold">720 DH TTC</span></p>
+              </div>
+              <Button size="lg" className="mt-4 bg-white text-red-700 hover:bg-gray-100 font-semibold" asChild>
+                <Link to="/fr/contact">
+                  Prendre rendez-vous
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Tarifs Houkouki</h1>
