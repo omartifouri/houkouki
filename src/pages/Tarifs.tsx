@@ -397,7 +397,7 @@ const FrTarifs = () => {
                 </p>
                 
                 <div className="py-6 border-t border-b border-gray-200">
-                  <p className="text-4xl font-bold text-red-600">600 <span className="text-xl font-normal text-gray-600">DH TTC</span></p>
+                  <p className="text-4xl font-bold text-red-600">720 <span className="text-xl font-normal text-gray-600">DH TTC</span></p>
                 </div>
                 
                 <p className="text-sm text-gray-600 max-w-2xl mx-auto">
