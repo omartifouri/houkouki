@@ -169,7 +169,7 @@ const FrTarifs = () => {
                   <div className="flex-1"></div>
                   
                   <div className="p-3 bg-blue-50 rounded-lg border border-blue-200 text-sm text-gray-700">
-                    <p>Pour toutes les autres prestations personnalisées : <strong>600 DH HT/heure</strong></p>
+                    <p>Pour toutes les autres prestations personnalisées : <strong>720 DH TTC/heure</strong></p>
                   </div>
 
                   <div className="text-center pt-4 border-t border-gray-100">
@@ -215,7 +215,7 @@ const FrTarifs = () => {
                   <div className="flex-1"></div>
                   
                   <div className="p-3 bg-blue-50 rounded-lg border border-blue-200 text-sm text-gray-700">
-                    <p>Pour toutes les autres prestations personnalisées : <strong>600 DH HT/heure</strong></p>
+                    <p>Pour toutes les autres prestations personnalisées : <strong>720 DH TTC/heure</strong></p>
                   </div>
 
                   <div className="text-center pt-4 border-t border-gray-100">
@@ -261,7 +261,7 @@ const FrTarifs = () => {
                   <div className="flex-1"></div>
                   
                   <div className="p-3 bg-blue-50 rounded-lg border border-blue-200 text-sm text-gray-700">
-                    <p>Pour toutes les autres prestations personnalisées : <strong>600 DH HT/heure</strong></p>
+                    <p>Pour toutes les autres prestations personnalisées : <strong>720 DH TTC/heure</strong></p>
                   </div>
 
                   <div className="text-center pt-4 border-t border-gray-100">
