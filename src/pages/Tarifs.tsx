@@ -350,6 +350,16 @@ const FrTarifs = () => {
                     ))}
                   </div>
                 </div>
+
+                <div className="mt-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
+                  <div className="flex items-start space-x-2 mb-2">
+                    <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                    <p className="font-semibold text-amber-800">Tarif consultation ponctuelle (sans abonnement)</p>
+                  </div>
+                  <p className="text-sm text-gray-700 pl-7">
+                    Si aucun abonnement n'est souscrit, la consultation juridique est facturée <strong>800 DH HT</strong>, soit <strong>920 DH TTC</strong>.
+                  </p>
+                </div>
                 
                 <div className="mt-8 p-4 bg-red-50 rounded-lg border border-red-200">
                   <p className="font-semibold text-red-800 mb-2">Modalités de facturation</p>
